@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Real-time vehicle health analysis and diagnostics dashboard" />
+  <title>Vehicle Health Analysis</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/analysis-style.css" />
+
+  <!-- SVG gradient definitions -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#005f99"/>
+        <stop offset="100%" stop-color="#00e5ff"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#993d00"/>
+        <stop offset="100%" stop-color="#ffab00"/>
+      </linearGradient>
+      <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#00663a"/>
+        <stop offset="100%" stop-color="#69f0ae"/>
+      </linearGradient>
+      <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#990022"/>
+        <stop offset="100%" stop-color="#ff5577"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</head>
+<body>
+
+<!-- Animated background -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanlines"></div>
+
+<div class="dashboard analysis-dashboard">
+
+  <!-- ─── Header ──────────────────────────────── -->
+  <header class="dash-header">
+    <div class="logo">
+      <span class="logo-icon">🔬</span>
+      <h1>Vehicle Health Analysis</h1>
+    </div>
+    <div class="header-actions">
+      <a href="/" class="btn-nav">← Back to Dashboard</a>
+      <div class="conn-status">
+        <span class="conn-dot"></span>
+        <span class="conn-label">DISCONNECTED</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Health Score Card ──────────────────── -->
+  <section class="health-score-section">
+    <div class="health-card">
+      <div class="health-header">
+        <h2>Overall Vehicle Health</h2>
+        <span class="health-status">—</span>
+      </div>
+      <div class="health-score-display">
+        <svg class="health-gauge" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" class="health-bg-arc" />
+          <circle cx="100" cy="100" r="90" class="health-value-arc" />
+          <text x="100" y="100" class="health-number">—</text>
+          <text x="100" y="125" class="health-unit">%</text>
+        </svg>
+      </div>
+      <div class="health-components">
+        <div class="component-score">
+          <span class="comp-label">Speed</span>
+          <div class="comp-bar"><div class="comp-fill speed-fill"></div></div>
+          <span class="comp-value">—</span>
+        </div>
+        <div class="component-score">
+          <span class="comp-label">Temperature</span>
+          <div class="comp-bar"><div class="comp-fill temp-fill"></div></div>
+          <span class="comp-value">—</span>
+        </div>
+        <div class="component-score">
+          <span class="comp-label">Tire Pressure</span>
+          <div class="comp-bar"><div class="comp-fill psi-fill"></div></div>
+          <span class="comp-value">—</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Real-time Metrics ──────────────────── -->
+  <section class="metrics-section">
+    <h2>Real-time Metrics</h2>
+    
+    <div class="metrics-grid">
+      <!-- Speed Metric -->
+      <div class="metric-card speed-metric">
+        <div class="metric-header">
+          <span class="metric-icon">⚡</span>
+          <span class="metric-title">Speed</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— km/h</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-speed">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Average:</span>
+            <span class="detail-value avg-speed">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Trend:</span>
+            <span class="detail-value trend-speed">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temperature Metric -->
+      <div class="metric-card temp-metric">
+        <div class="metric-header">
+          <span class="metric-icon">🌡️</span>
+          <span class="metric-title">Engine Temp</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— °C</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-temp">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Average:</span>
+            <span class="detail-value avg-temp">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Trend:</span>
+            <span class="detail-value trend-temp">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tire Pressure Metric -->
+      <div class="metric-card psi-metric">
+        <div class="metric-header">
+          <span class="metric-icon">🛞</span>
+          <span class="metric-title">Tire Pressure</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— PSI</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-psi">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Average:</span>
+            <span class="detail-value avg-psi">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Trend:</span>
+            <span class="detail-value trend-psi">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Alerts & Diagnostics ──────────────── -->
+  <section class="alerts-section">
+    <div class="alerts-header">
+      <h2>🚨 Diagnostic Alerts</h2>
+      <span class="alert-count">0</span>
+    </div>
+    <div class="alerts-container">
+      <div class="alert-placeholder">No alerts — Vehicle operating normally</div>
+    </div>
+  </section>
+
+  <!-- ─── Session Statistics ──────────────────── -->
+  <section class="stats-section">
+    <h2>Session Statistics</h2>
+    <div class="stats-grid">
+      <div class="stat-card">
+        <span class="stat-label">Session Duration</span>
+        <span class="stat-value session-duration">0s</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Data Points Collected</span>
+        <span class="stat-value data-points">0</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">Analysis Window</span>
+        <span class="stat-value">60 seconds</span>
+      </div>
+      <div class="stat-card">
+        <span class="stat-label">CSV Export</span>
+        <button class="btn-export" id="btn-export-csv">Download</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Trend Charts ──────────────────────── -->
+  <section class="charts-section">
+    <h2>Trend Analysis (Last 60 Seconds)</h2>
+    
+    <div class="charts-grid">
+      <!-- Speed Chart -->
+      <div class="chart-card">
+        <h3>Speed Trend</h3>
+        <canvas id="chart-speed" class="trend-chart"></canvas>
+      </div>
+
+      <!-- Temperature Chart -->
+      <div class="chart-card">
+        <h3>Temperature Trend</h3>
+        <canvas id="chart-temp" class="trend-chart"></canvas>
+      </div>
+
+      <!-- Tire Pressure Chart -->
+      <div class="chart-card">
+        <h3>Tire Pressure Trend</h3>
+        <canvas id="chart-psi" class="trend-chart"></canvas>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<script src="/static/bg.js"></script>
+<script src="/static/analysis.js"></script>
+</body>
+</html>

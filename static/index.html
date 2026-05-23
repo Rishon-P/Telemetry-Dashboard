@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Real-time automotive telemetry dashboard with live WebSocket data streaming" />
+  <title>Telemetry Command Center</title>
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <!-- SVG gradient definitions (referenced by gauge arcs) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#005f99"/>
+        <stop offset="100%" stop-color="#00e5ff"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#993d00"/>
+        <stop offset="100%" stop-color="#ffab00"/>
+      </linearGradient>
+      <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#00663a"/>
+        <stop offset="100%" stop-color="#69f0ae"/>
+      </linearGradient>
+      <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#996600"/>
+        <stop offset="100%" stop-color="#ffdd57"/>
+      </linearGradient>
+      <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#990022"/>
+        <stop offset="100%" stop-color="#ff5577"/>
+      </linearGradient>
+      <linearGradient id="grad-cold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#1565c0"/>
+        <stop offset="100%" stop-color="#90caf9"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</head>
+<body>
+
+<!-- Animated background -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanlines"></div>
+
+<div class="dashboard">
+
+  <!-- ─── Header ──────────────────────────────── -->
+  <header class="dash-header">
+    <div class="logo">
+      <span class="logo-icon">🏎️</span>
+      <h1>Telemetry Command Center</h1>
+    </div>
+    <div class="conn-status">
+      <span class="conn-dot"></span>
+      <span class="conn-label">DISCONNECTED</span>
+    </div>
+  </header>
+
+  <!-- ─── Gauge Cluster ──────────────────────── -->
+  <section class="gauge-cluster">
+
+    <!-- Engine Temperature Gauge -->
+    <div class="gauge-card temp">
+      <span class="gauge-title">Engine Temperature</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc temp-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">°C</text>
+      </svg>
+      <span class="status-badge" data-gauge="temp">—</span>
+    </div>
+
+    <!-- Speed Gauge (center, larger) -->
+    <div class="gauge-card speed center">
+      <span class="gauge-title">Vehicle Speed</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="16" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc speed-arc" cx="120" cy="120" r="90"
+                stroke-width="16" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="36">0</text>
+        <text class="gauge-unit"   x="120" y="144">km/h</text>
+      </svg>
+      <span class="status-badge" data-gauge="speed">—</span>
+    </div>
+
+    <!-- Tire Pressure Gauge -->
+    <div class="gauge-card psi">
+      <span class="gauge-title">Tire Pressure</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc psi-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">PSI</text>
+      </svg>
+      <span class="status-badge" data-gauge="psi">—</span>
+    </div>
+
+  </section>
+
+  <!-- ─── Control Panel ──────────────────────── -->
+  <section class="controls-section">
+
+    <!-- Speed Control -->
+    <div class="control-card ctrl-speed">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">⚡</div>
+        <span class="ctrl-label">Speed Baseline</span>
+      </div>
+      <div class="slider-value-display">80 km/h</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="300" step="1" value="80" data-gauge="speed" />
+        <div class="slider-minmax"><span>0</span><span>300</span></div>
+      </div>
+      <button class="btn-apply" id="btn-speed">APPLY</button>
+    </div>
+
+    <!-- Temperature Control -->
+    <div class="control-card ctrl-temp">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🌡️</div>
+        <span class="ctrl-label">Engine Temp Baseline</span>
+      </div>
+      <div class="slider-value-display">90 °C</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="150" step="0.5" value="90" data-gauge="temp" />
+        <div class="slider-minmax"><span>0</span><span>150</span></div>
+      </div>
+      <button class="btn-apply" id="btn-temp">APPLY</button>
+    </div>
+
+    <!-- Tire Pressure Control -->
+    <div class="control-card ctrl-psi">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🛞</div>
+        <span class="ctrl-label">Tire Pressure Baseline</span>
+      </div>
+      <div class="slider-value-display">32 PSI</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="psi" />
+        <div class="slider-minmax"><span>0</span><span>60</span></div>
+      </div>
+      <button class="btn-apply" id="btn-psi">APPLY</button>
+    </div>
+
+  </section>
+
+  <!-- ─── Data Feed ──────────────────────────── -->
+  <section class="feed-section">
+    <div class="feed-header">
+      <h3>📡 Live Telemetry Feed</h3>
+      <span class="feed-toggle open">▼</span>
+    </div>
+    <div class="feed-log"></div>
+  </section>
+
+</div>
+
+<script src="/static/bg.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

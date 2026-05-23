@@ -1,0 +1,232 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,alerts
+1779521904.201,81.0,91.0,32.0,optimal,optimal,optimal,—,—,—,EXCELLENT,NONE
+1779521905.201,82.6,91.1,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521906.2,79.3,89.1,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521907.201,80.8,90.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521908.203,79.3,90.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521909.204,83.0,89.3,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521910.205,78.8,91.1,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521911.206,80.6,90.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521912.207,81.6,89.1,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521913.208,79.6,89.6,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521914.209,80.2,90.6,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521915.21,77.4,90.1,31.7,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521916.211,78.1,89.0,32.1,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521917.212,78.8,89.2,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521918.213,79.7,89.9,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521919.214,80.8,91.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521920.216,82.5,90.7,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521921.218,79.5,89.6,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521922.219,78.0,89.9,31.6,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521923.22,80.1,89.5,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521924.22,81.4,90.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521925.221,78.9,89.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521926.222,80.2,89.3,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521927.221,81.3,90.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521928.222,79.4,90.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521929.223,80.9,90.5,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521930.224,77.8,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521931.225,77.4,91.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521932.226,78.5,89.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521933.227,77.6,90.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521934.227,82.4,89.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521935.228,81.7,90.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521936.229,78.1,90.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521937.229,81.9,89.5,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521938.23,81.9,91.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521939.23,80.6,89.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521940.231,81.2,88.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521941.231,82.7,90.9,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521942.232,77.2,90.9,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521943.233,80.2,90.9,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521944.234,82.3,90.3,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521945.235,82.2,89.1,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521946.236,79.0,90.0,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521947.237,81.4,89.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521948.238,79.4,89.2,31.9,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521949.238,82.7,90.7,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521950.239,81.3,88.9,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521951.239,82.0,90.5,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521952.24,80.5,88.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521953.241,82.5,90.9,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521954.241,78.6,89.6,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521955.242,80.3,90.4,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521956.243,78.1,90.2,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521957.244,79.5,91.1,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521958.245,81.8,89.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521959.246,80.6,88.6,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521960.247,79.7,90.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521961.248,77.7,90.6,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521962.249,78.4,91.5,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779521963.248,80.7,90.2,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521964.249,82.9,89.5,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779521965.25,80.7,88.7,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521966.25,78.3,90.6,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521967.25,79.0,90.2,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521968.251,78.5,89.3,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521969.251,79.4,90.6,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521970.252,79.7,88.9,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521971.253,82.8,90.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521972.254,81.8,91.4,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521973.255,77.3,89.1,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521974.255,81.2,89.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521975.256,79.9,91.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521976.257,81.0,90.6,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521977.258,77.3,89.7,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521978.259,78.2,90.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521979.26,82.9,90.1,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521980.261,79.2,89.7,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521981.262,80.4,91.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521982.263,81.5,90.1,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521983.263,80.7,88.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521984.263,77.9,89.2,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521985.263,80.3,91.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521986.264,79.6,89.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521987.264,82.8,89.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521988.264,79.7,90.8,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779521989.265,78.6,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521990.266,82.4,88.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521991.266,80.7,88.7,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521992.267,77.8,90.3,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779521993.268,81.6,89.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521994.268,77.7,90.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521995.269,77.1,89.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521996.27,77.0,91.0,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779521997.271,78.8,89.9,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521998.272,80.9,91.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779521999.273,80.8,89.0,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522000.274,81.4,88.5,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522001.275,79.4,89.7,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522002.276,77.4,88.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522003.277,81.4,89.9,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522004.278,82.4,90.0,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522005.279,78.0,91.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522006.28,79.1,90.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522007.281,82.3,89.4,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522008.282,79.0,89.1,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522009.283,78.4,91.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522010.284,82.7,91.4,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522011.285,78.1,91.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522012.286,77.1,91.3,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522013.287,82.6,89.0,31.7,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522014.288,79.4,89.4,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522015.288,79.6,89.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522016.289,80.3,90.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522017.29,81.2,89.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522018.291,80.0,90.1,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522019.292,83.0,88.8,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522020.293,79.4,89.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522021.294,81.0,89.0,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522022.295,78.6,90.8,31.9,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522023.296,78.5,90.4,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522024.296,78.0,90.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522025.297,78.6,90.7,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522026.297,80.8,148.9,32.3,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522027.298,82.1,149.3,31.6,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522028.299,80.1,149.3,31.6,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522029.3,81.8,148.7,32.0,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522030.3,79.1,150.0,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522031.3,82.6,149.5,31.9,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522032.301,77.2,148.7,32.3,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522033.301,79.0,148.7,32.3,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522034.303,79.8,150.3,31.9,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522035.304,79.8,150.5,32.0,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522036.305,78.1,151.3,32.4,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522037.306,79.1,148.9,32.0,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522038.307,77.2,149.9,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522039.309,80.3,148.6,31.9,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522040.31,82.0,149.4,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522041.311,81.2,148.9,32.3,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522042.312,78.7,150.1,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522043.313,79.9,150.7,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522044.314,77.3,150.2,32.1,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522045.315,80.1,149.5,32.2,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522046.315,80.7,149.6,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522047.315,79.7,149.4,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522048.317,79.3,149.6,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522049.318,78.1,148.8,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522050.319,79.9,149.7,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522051.32,81.6,149.7,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522052.321,77.8,148.9,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522053.321,82.0,150.8,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522054.322,79.5,149.7,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522055.322,77.7,148.6,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522056.323,80.3,151.3,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522057.324,80.8,150.4,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522058.325,83.0,149.8,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522059.326,79.9,151.4,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522060.326,80.9,150.6,31.8,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522061.327,82.0,148.8,31.8,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522062.328,79.5,151.1,32.2,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522063.328,82.9,150.9,31.8,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522064.33,78.5,151.5,32.3,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522065.331,77.8,151.5,32.1,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522066.332,78.0,151.0,32.3,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522067.333,78.2,149.0,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522068.333,78.0,148.9,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522069.334,80.7,150.6,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522070.334,82.3,149.0,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522071.335,80.6,148.9,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522072.336,79.9,150.5,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522073.337,80.9,148.8,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522074.339,82.4,149.8,31.7,optimal,danger,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522075.338,78.7,150.6,31.7,optimal,danger,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522076.338,79.7,149.1,31.9,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522077.339,81.9,150.3,32.0,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522078.339,80.2,150.3,31.7,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522079.34,77.7,151.1,32.0,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522080.341,77.7,151.4,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522081.341,82.5,149.3,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522082.342,78.2,151.4,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522083.343,77.4,149.5,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522084.344,79.9,149.6,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522085.345,82.5,149.1,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522086.346,81.5,150.7,32.1,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522087.347,79.6,150.4,32.1,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522088.347,77.9,150.2,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522089.349,77.4,150.8,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522090.35,78.6,150.3,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522091.351,81.6,149.8,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522092.351,82.2,150.6,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522093.352,80.8,148.8,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522094.353,77.0,150.1,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522095.354,79.2,150.2,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522096.355,82.6,150.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522097.356,81.1,149.0,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522098.355,82.6,150.0,32.4,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522099.356,77.5,150.8,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522100.356,81.0,150.5,32.3,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522101.356,79.2,151.2,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522102.357,82.4,150.3,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522103.358,79.6,151.3,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522104.359,81.2,149.9,32.3,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522105.36,78.5,148.8,32.3,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522106.361,81.9,150.9,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522107.363,77.4,150.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522108.363,78.5,150.5,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522109.364,78.3,150.7,31.6,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522110.365,77.8,150.8,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522111.366,81.4,150.8,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522112.367,81.4,151.2,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522113.368,80.4,150.5,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522114.369,80.6,151.0,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522115.37,78.7,150.7,31.6,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522116.37,83.0,148.8,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522117.371,82.6,149.2,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522118.372,79.3,149.3,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522119.373,82.5,150.1,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522120.374,82.7,149.9,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522121.375,78.8,148.8,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522122.374,80.4,150.8,31.8,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522123.376,77.1,150.3,32.2,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522124.377,79.2,150.5,31.7,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522125.378,78.1,148.6,31.6,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522126.379,79.5,151.1,32.1,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522127.38,80.6,150.4,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522128.381,78.4,150.0,31.6,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522129.382,82.4,151.0,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522130.382,78.3,150.5,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522131.382,77.9,148.7,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522132.383,80.4,149.1,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522133.383,81.1,149.7,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522134.384,78.4,150.5,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
