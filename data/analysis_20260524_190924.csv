@@ -1,0 +1,22 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,alerts
+1779629964.749,81.1,91.1,32.2,optimal,optimal,optimal,—,—,—,EXCELLENT,NONE
+1779629965.749,77.1,91.3,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629966.75,82.6,90.4,32.3,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629967.751,79.6,90.2,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629968.753,82.4,89.4,32.3,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629969.753,81.6,90.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629970.754,77.3,88.9,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629971.755,81.1,90.0,31.6,optimal,optimal,optimal,→ stable,↓ decreasing,↓ decreasing,EXCELLENT,NONE
+1779629972.757,77.9,88.9,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629973.758,79.1,88.6,31.7,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629974.758,82.9,91.1,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629975.76,81.2,91.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629976.761,82.7,90.6,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629977.762,77.6,89.5,32.4,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629978.762,80.5,90.7,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629979.764,82.1,90.9,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629980.765,80.3,90.8,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629981.765,78.6,89.3,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629982.766,80.8,88.5,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629983.768,77.1,89.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629984.769,82.8,89.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE

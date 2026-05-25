@@ -578,6 +578,230 @@
   }
 }
 
+/* ── Emergency Status Styling ──────────────────────────────────── */
+.health-status.status-emergency {
+  background: rgba(255, 0, 0, 0.2);
+  color: #ff0000;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.8);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  animation: pulse 0.5s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    opacity: 0.7;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
+  }
+}
+
+.status-emergency {
+  background: rgba(255, 0, 0, 0.15) !important;
+  color: #ff0000 !important;
+  text-shadow: 0 0 15px rgba(255, 0, 0, 0.8) !important;
+}
+
+/* ── Contradictions Container ──────────────────────────────────── */
+.contradictions-container {
+  animation: slide-down 0.4s ease-out;
+}
+
+@keyframes slide-down {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
+
+/* ── Service Center Recommendation Section ─────────────────────── */
+.recommendation-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.recommendation-section h2 {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-2);
+}
+
+.recommendation-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.recommendation-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--green), transparent);
+  opacity: 0.6;
+}
+
+.recommendation-status {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 8px;
+  background: rgba(0, 230, 118, 0.1);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+  transition: all 0.4s;
+}
+
+.recommendation-status.status-emergency {
+  background: rgba(255, 0, 0, 0.15);
+  border: 1px solid rgba(255, 0, 0, 0.5);
+  animation: pulse 0.5s infinite;
+}
+
+.recommendation-status.status-critical {
+  background: rgba(255, 45, 85, 0.12);
+  border: 1px solid rgba(255, 45, 85, 0.4);
+}
+
+.recommendation-status.status-warning {
+  background: rgba(255, 171, 0, 0.1);
+  border: 1px solid rgba(255, 171, 0, 0.3);
+}
+
+.recommendation-status.status-good {
+  background: rgba(0, 230, 118, 0.1);
+  border: 1px solid rgba(0, 230, 118, 0.3);
+}
+
+.recommendation-status.status-excellent {
+  background: rgba(0, 230, 118, 0.15);
+  border: 1px solid rgba(0, 230, 118, 0.5);
+}
+
+.recommendation-icon {
+  font-size: 1.8rem;
+  min-width: 40px;
+}
+
+.recommendation-text {
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-1);
+  flex: 1;
+}
+
+.recommendation-details {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.detail-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.detail-label {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-2);
+}
+
+.detail-value {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--text-1);
+}
+
+.recommendation-health {
+  color: var(--blue);
+  text-shadow: 0 0 10px rgba(0, 180, 255, 0.4);
+}
+
+.recommendation-critical {
+  color: var(--green);
+}
+
+.recommendation-action {
+  color: var(--green);
+  font-size: 0.95rem;
+}
+
+/* ── Download Info Notification ────────────────────────────────── */
+.download-info {
+  animation: slide-up 0.4s ease-out;
+}
+
+/* ── Physics Metrics Display ───────────────────────────────────── */
+.physics-metrics {
+  font-family: 'Rajdhani', monospace;
+  font-size: 0.85rem;
+  color: var(--blue);
+  background: rgba(0, 180, 255, 0.05);
+  padding: 0.75rem;
+  border-radius: 6px;
+  border-left: 2px solid var(--blue);
+}
+
+/* ── Status Colors ─────────────────────────────────────────────── */
+.status-optimal {
+  background: rgba(0, 230, 118, 0.1) !important;
+  color: var(--green) !important;
+  text-shadow: 0 0 10px rgba(0, 230, 118, 0.5) !important;
+}
+
+.status-warning {
+  background: rgba(255, 171, 0, 0.1) !important;
+  color: var(--amber) !important;
+  text-shadow: 0 0 10px rgba(255, 171, 0, 0.5) !important;
+}
+
+.status-danger {
+  background: rgba(255, 45, 85, 0.15) !important;
+  color: var(--red) !important;
+  text-shadow: 0 0 10px rgba(255, 45, 85, 0.6) !important;
+}
+
 /* ── Animations ────────────────────────────────────────────────── */
 @keyframes fade-in-up {
   from {

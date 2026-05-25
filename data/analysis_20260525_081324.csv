@@ -1,0 +1,18 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,health_status,emergency,contradictions,tire_speed_risk,temp_correlation_penalty,alerts
+1779677004.582,81.0,89.0,32.3,optimal,optimal,optimal,—,—,—,96.9,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677005.582,77.5,89.1,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,97.0,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677006.583,80.7,88.7,31.7,optimal,optimal,optimal,→ stable,→ stable,↓ decreasing,96.2,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677007.584,77.2,89.2,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677008.585,78.0,90.9,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,↓ decreasing,96.3,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677009.585,78.0,89.0,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677010.586,77.5,90.5,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,97.0,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677011.587,80.3,89.8,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677012.589,79.5,90.4,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677013.589,81.3,90.0,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677014.589,81.3,88.9,31.6,optimal,optimal,optimal,→ stable,→ stable,↓ decreasing,96.1,✅ EXCELLENT,False,NONE,3.9,0,💨 PRESSURE_LEAK: Tire pressure dropping
+1779677015.589,80.7,90.7,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677016.59,79.3,91.0,31.8,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677017.59,79.8,90.2,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677018.591,78.6,90.7,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677019.591,82.0,91.3,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779677020.592,81.9,88.6,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.3,✅ EXCELLENT,False,NONE,3.7,0,NONE

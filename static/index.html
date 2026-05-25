@@ -110,6 +110,128 @@
 
   </section>
 
+  <!-- ─── Additional Gauges (RPM, Oil, Battery) ──────────────────────── -->
+  <section class="gauge-cluster">
+
+    <!-- Engine RPM Gauge -->
+    <div class="gauge-card rpm">
+      <span class="gauge-title">Engine RPM</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc rpm-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">RPM</text>
+      </svg>
+      <span class="status-badge" data-gauge="rpm">—</span>
+    </div>
+
+    <!-- Oil Pressure Gauge -->
+    <div class="gauge-card oil">
+      <span class="gauge-title">Oil Pressure</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc oil-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">PSI</text>
+      </svg>
+      <span class="status-badge" data-gauge="oil">—</span>
+    </div>
+
+    <!-- Battery Voltage Gauge -->
+    <div class="gauge-card battery">
+      <span class="gauge-title">Battery Voltage</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc battery-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">V</text>
+      </svg>
+      <span class="status-badge" data-gauge="battery">—</span>
+    </div>
+
+  </section>
+
+  <!-- ─── Tire Pressure Gauges (Individual) ──────────────────────── -->
+  <section class="gauge-cluster">
+
+    <!-- Front Left Tire Pressure -->
+    <div class="gauge-card tire-fl">
+      <span class="gauge-title">Tire Pressure FL</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc tire-fl-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">PSI</text>
+      </svg>
+      <span class="status-badge" data-gauge="tire_fl">—</span>
+    </div>
+
+    <!-- Front Right Tire Pressure -->
+    <div class="gauge-card tire-fr">
+      <span class="gauge-title">Tire Pressure FR</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc tire-fr-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">PSI</text>
+      </svg>
+      <span class="status-badge" data-gauge="tire_fr">—</span>
+    </div>
+
+    <!-- Rear Left Tire Pressure -->
+    <div class="gauge-card tire-rl">
+      <span class="gauge-title">Tire Pressure RL</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc tire-rl-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">PSI</text>
+      </svg>
+      <span class="status-badge" data-gauge="tire_rl">—</span>
+    </div>
+
+    <!-- Rear Right Tire Pressure -->
+    <div class="gauge-card tire-rr">
+      <span class="gauge-title">Tire Pressure RR</span>
+      <svg class="gauge-svg" viewBox="0 0 240 240">
+        <g class="gauge-ticks"></g>
+        <circle class="gauge-bg-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-value-arc tire-rr-arc" cx="120" cy="120" r="90"
+                stroke-width="14" transform="rotate(135 120 120)"/>
+        <circle class="gauge-center-circle" cx="120" cy="120" r="55"/>
+        <text class="gauge-number" x="120" y="114" font-size="28">0</text>
+        <text class="gauge-unit"   x="120" y="140">PSI</text>
+      </svg>
+      <span class="status-badge" data-gauge="tire_rr">—</span>
+    </div>
+
+  </section>
+
   <!-- ─── Control Panel ──────────────────────── -->
   <section class="controls-section">
 
@@ -156,6 +278,111 @@
         <div class="slider-minmax"><span>0</span><span>60</span></div>
       </div>
       <button class="btn-apply" id="btn-psi">APPLY</button>
+    </div>
+
+    <!-- Engine RPM Control -->
+    <div class="control-card ctrl-rpm">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">⚙️</div>
+        <span class="ctrl-label">Engine RPM</span>
+      </div>
+      <div class="slider-value-display">1500 RPM</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="7000" step="100" value="1500" data-gauge="rpm" />
+        <div class="slider-minmax"><span>0</span><span>7000</span></div>
+      </div>
+      <button class="btn-apply" id="btn-rpm">APPLY</button>
+    </div>
+
+    <!-- Oil Pressure Control -->
+    <div class="control-card ctrl-oil">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🛢️</div>
+        <span class="ctrl-label">Oil Pressure</span>
+      </div>
+      <div class="slider-value-display">45 PSI</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="100" step="1" value="45" data-gauge="oil" />
+        <div class="slider-minmax"><span>0</span><span>100</span></div>
+      </div>
+      <button class="btn-apply" id="btn-oil">APPLY</button>
+    </div>
+
+    <!-- Battery Voltage Control -->
+    <div class="control-card ctrl-battery">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🔋</div>
+        <span class="ctrl-label">Battery Voltage</span>
+      </div>
+      <div class="slider-value-display">13.8 V</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="10" max="16" step="0.1" value="13.8" data-gauge="battery" />
+        <div class="slider-minmax"><span>10</span><span>16</span></div>
+      </div>
+      <button class="btn-apply" id="btn-battery">APPLY</button>
+    </div>
+
+    <!-- Tire Pressure FL Control -->
+    <div class="control-card ctrl-tire-fl">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🛞</div>
+        <span class="ctrl-label">Tire Pressure FL</span>
+      </div>
+      <div class="slider-value-display">32 PSI</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_fl" />
+        <div class="slider-minmax"><span>0</span><span>60</span></div>
+      </div>
+      <button class="btn-apply" id="btn-tire-fl">APPLY</button>
+    </div>
+
+    <!-- Tire Pressure FR Control -->
+    <div class="control-card ctrl-tire-fr">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🛞</div>
+        <span class="ctrl-label">Tire Pressure FR</span>
+      </div>
+      <div class="slider-value-display">32 PSI</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_fr" />
+        <div class="slider-minmax"><span>0</span><span>60</span></div>
+      </div>
+      <button class="btn-apply" id="btn-tire-fr">APPLY</button>
+    </div>
+
+    <!-- Tire Pressure RL Control -->
+    <div class="control-card ctrl-tire-rl">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🛞</div>
+        <span class="ctrl-label">Tire Pressure RL</span>
+      </div>
+      <div class="slider-value-display">32 PSI</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_rl" />
+        <div class="slider-minmax"><span>0</span><span>60</span></div>
+      </div>
+      <button class="btn-apply" id="btn-tire-rl">APPLY</button>
+    </div>
+
+    <!-- Tire Pressure RR Control -->
+    <div class="control-card ctrl-tire-rr">
+      <div class="ctrl-header">
+        <div class="ctrl-icon">🛞</div>
+        <span class="ctrl-label">Tire Pressure RR</span>
+      </div>
+      <div class="slider-value-display">32 PSI</div>
+      <div class="slider-wrap">
+        <div class="slider-fill-track"></div>
+        <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_rr" />
+        <div class="slider-minmax"><span>0</span><span>60</span></div>
+      </div>
+      <button class="btn-apply" id="btn-tire-rr">APPLY</button>
     </div>
 
   </section>

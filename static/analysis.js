@@ -20,6 +20,10 @@
 
   const MAX_CHART_POINTS = 60;
 
+  /* ── Session tracking ──────────────────────────── */
+  let sessionStartTime = Date.now();
+  let lastContradictions = [];
+
   /* ── WebSocket connection ──────────────────────── */
   let ws;
   let reconnectTimer;
@@ -90,6 +94,7 @@
 
     console.log("📈 Current values:", analysis.current_values);
     console.log("📊 Health score:", analysis.health_score);
+    console.log("🚨 Contradictions:", analysis.health_score.contradictions);
 
     // Update health score
     updateHealthScore(analysis.health_score);
@@ -106,6 +111,28 @@
     // Update session stats
     updateSessionStats(analysis.window_size);
     
+    // Get contradictions from health_score
+    const contradictions = analysis.health_score.contradictions || [];
+    
+    // Display contradictions if any
+    if (contradictions.length > 0) {
+      console.log("🚨 Displaying contradictions:", contradictions);
+      displayContradictions(contradictions);
+    } else {
+      // Clear contradictions if none
+      console.log("✅ Clearing contradictions");
+      displayContradictions([]);
+    }
+    
+    // Update service recommendation
+    console.log("🔧 Updating service recommendation with:", { score: analysis.health_score.score, contradictions });
+    updateServiceRecommendation(analysis.health_score, contradictions);
+    
+    // Display physics metrics
+    if (analysis.health_score.tire_speed_risk !== undefined) {
+      displayPhysicsMetrics(analysis.health_score);
+    }
+    
     console.log("✅ Dashboard updated successfully");
   }
 
@@ -113,6 +140,7 @@
   function updateHealthScore(healthScore) {
     const score = healthScore.score;
     const status = healthScore.status;
+    const isEmergency = healthScore.emergency || false;
 
     // Update score display
     const healthNumber = $(".health-number");
@@ -125,14 +153,29 @@
 
     if (healthStatus) {
       healthStatus.textContent = status;
-      healthStatus.className = `health-status status-${getStatusClass(status)}`;
+      
+      // Apply emergency styling
+      if (isEmergency) {
+        healthStatus.className = `health-status status-emergency`;
+        // Add pulsing animation for emergency
+        healthStatus.style.animation = "pulse 0.5s infinite";
+      } else {
+        healthStatus.className = `health-status status-${getStatusClass(status)}`;
+        healthStatus.style.animation = "none";
+      }
     }
 
-    // Update arc
+    // Update arc with emergency color
     if (healthArc) {
       const progress = score / 100;
       const offset = 424.12 * (1 - progress);
       healthArc.style.strokeDashoffset = offset;
+      
+      if (isEmergency) {
+        healthArc.style.stroke = "#ff0000";
+      } else {
+        healthArc.style.stroke = getArcColor(score);
+      }
     }
 
     // Update component scores
@@ -140,6 +183,95 @@
     updateComponentBar(".comp-fill.speed-fill", componentScores.speed);
     updateComponentBar(".comp-fill.temp-fill", componentScores.temperature);
     updateComponentBar(".comp-fill.psi-fill", componentScores.tire_pressure);
+    
+    // Display physics metrics
+    if (healthScore.tire_speed_risk !== undefined) {
+      displayPhysicsMetrics(healthScore);
+    }
+  }
+
+  function getArcColor(score) {
+    if (score >= 80) return "#00ff00";
+    if (score >= 60) return "#00b4ff";
+    if (score >= 40) return "#ffaa00";
+    return "#ff6b35";
+  }
+
+  function displayContradictions(contradictions) {
+    // Only show contradictions if they're different from last time
+    const contradictionStr = JSON.stringify(contradictions);
+    const lastStr = JSON.stringify(lastContradictions);
+    
+    if (contradictionStr === lastStr && contradictions.length > 0) {
+      // Same contradictions, don't update
+      return;
+    }
+    
+    lastContradictions = contradictions;
+    
+    // If no contradictions, remove the container
+    if (contradictions.length === 0) {
+      const existingContainer = document.querySelector(".contradictions-container");
+      if (existingContainer) {
+        existingContainer.style.animation = "slide-up 0.3s ease-out";
+        setTimeout(() => existingContainer.remove(), 300);
+      }
+      return;
+    }
+    
+    // Remove old container if exists
+    const oldContainer = document.querySelector(".contradictions-container");
+    if (oldContainer) {
+      oldContainer.remove();
+    }
+    
+    // Create new container
+    const container = document.createElement("div");
+    container.className = "contradictions-container";
+    container.style.cssText = `
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 0, 0, 0.9);
+      border: 2px solid #ff0000;
+      border-radius: 8px;
+      padding: 15px;
+      max-width: 400px;
+      z-index: 10000;
+      font-family: 'Rajdhani', monospace;
+      color: #fff;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      animation: slide-down 0.4s ease-out;
+    `;
+    
+    container.innerHTML = `
+      <div style="font-weight: bold; margin-bottom: 10px; font-size: 14px;">
+        🚨 SYSTEM CONTRADICTIONS DETECTED
+      </div>
+      ${contradictions.map(c => `<div style="font-size: 12px; margin: 5px 0;">• ${c}</div>`).join("")}
+    `;
+    
+    document.body.appendChild(container);
+  }
+
+  function displayPhysicsMetrics(healthScore) {
+    const physicsContainer = document.querySelector(".physics-metrics");
+    if (!physicsContainer) return;
+    
+    const tireSpeedRisk = healthScore.tire_speed_risk || 0;
+    const tempPenalty = healthScore.temp_correlation_penalty || 0;
+    
+    let riskLevel = "LOW";
+    if (tireSpeedRisk > 70) riskLevel = "CRITICAL";
+    else if (tireSpeedRisk > 40) riskLevel = "HIGH";
+    else if (tireSpeedRisk > 20) riskLevel = "MODERATE";
+    
+    physicsContainer.innerHTML = `
+      <div style="font-size: 11px; color: #00b4ff; margin-top: 10px;">
+        <div>Tire-Speed Risk: ${tireSpeedRisk}% (${riskLevel})</div>
+        <div>Temp Correlation Penalty: ${tempPenalty.toFixed(1)}°</div>
+      </div>
+    `;
   }
 
   function updateComponentBar(selector, score) {
@@ -150,28 +282,40 @@
   }
 
   function getStatusClass(status) {
-    if (status === "EXCELLENT") return "optimal";
-    if (status === "GOOD") return "optimal";
-    if (status === "FAIR") return "warning";
-    return "danger";
+    if (status.includes("EMERGENCY")) return "emergency";
+    if (status.includes("EXCELLENT")) return "optimal";
+    if (status.includes("GOOD")) return "optimal";
+    if (status.includes("FAIR")) return "warning";
+    if (status.includes("CRITICAL")) return "danger";
+    return "warning";
   }
 
   /* ── Metrics Update ────────────────────────────── */
   function updateMetrics(values, status, trends) {
-    updateMetricCard("speed", values.speed_kmh, status.speed, trends.speed);
-    updateMetricCard("temp", values.engine_temp_c, status.temp, trends.temp);
-    updateMetricCard("psi", values.tire_pressure_psi, status.psi, trends.psi);
+    updateMetricCard("speed", values.speed_kmh, status.speed, trends.speed, "km/h");
+    updateMetricCard("temp", values.engine_temp_c, status.temp, trends.temp, "°C");
+    updateMetricCard("psi", values.tire_pressure_psi, status.psi, trends.psi, "PSI");
+    updateMetricCard("rpm", values.engine_rpm, status.rpm, null, "RPM");
+    updateMetricCard("oil", values.oil_pressure_psi, status.oil, null, "PSI");
+    updateMetricCard("battery", values.battery_voltage_v, status.battery, null, "V");
   }
 
-  function updateMetricCard(type, value, status, trend) {
+  function updateMetricCard(type, value, status, trend, unit) {
     const card = $(`.metric-card.${type}-metric`);
-    if (!card) return;
+    if (!card) {
+      console.error(`❌ Card not found for type: ${type}`);
+      return;
+    }
+
+    console.log(`📊 Updating ${type} metric:`, { value, status, trend });
 
     // Update value
     const metricValue = card.querySelector(".metric-value");
     if (metricValue) {
-      const unit = type === "speed" ? " km/h" : type === "temp" ? " °C" : " PSI";
-      metricValue.textContent = value.toFixed(1) + unit;
+      metricValue.textContent = value.toFixed(1) + " " + unit;
+      console.log(`✅ ${type} value updated:`, metricValue.textContent);
+    } else {
+      console.error(`❌ metric-value not found for ${type}`);
     }
 
     // Update status badge
@@ -179,11 +323,21 @@
     if (statusBadge) {
       statusBadge.textContent = status.toUpperCase();
       statusBadge.className = `metric-status status-${status}`;
+      console.log(`✅ ${type} status updated:`, status);
+    } else {
+      console.error(`❌ metric-status not found for ${type}`);
     }
 
     // Update details
     updateDetailValue(card, ".current-" + type, value.toFixed(1));
-    updateDetailValue(card, ".trend-" + type, trend.direction);
+    
+    // Update trend if available
+    if (trend) {
+      updateDetailValue(card, ".trend-" + type, trend.direction);
+    } else {
+      // For new metrics without trends, show status
+      updateDetailValue(card, "." + type + "-status", status.toUpperCase());
+    }
   }
 
   function updateDetailValue(card, selector, value) {
@@ -343,8 +497,16 @@
 
     const sessionDuration = $(".session-duration");
     if (sessionDuration) {
-      // Calculate duration from window size (1 reading per second)
-      sessionDuration.textContent = windowSize + "s";
+      // Calculate actual duration from session start time
+      const elapsedSeconds = Math.floor((Date.now() - sessionStartTime) / 1000);
+      const minutes = Math.floor(elapsedSeconds / 60);
+      const seconds = elapsedSeconds % 60;
+      
+      if (minutes > 0) {
+        sessionDuration.textContent = `${minutes}m ${seconds}s`;
+      } else {
+        sessionDuration.textContent = `${seconds}s`;
+      }
     }
   }
 
@@ -369,6 +531,94 @@
     );
   }
 
+  /* ── Service Center Recommendation ─────────────── */
+  function updateServiceRecommendation(healthScore, contradictions) {
+    const recommendationStatus = $(".recommendation-status");
+    const recommendationIcon = $(".recommendation-icon");
+    const recommendationText = $(".recommendation-text");
+    const recommendationHealth = $(".recommendation-health");
+    const recommendationCritical = $(".recommendation-critical");
+    const recommendationAction = $(".recommendation-action");
+    
+    if (!recommendationStatus) {
+      console.error("❌ Recommendation status element not found");
+      return;
+    }
+    
+    const score = healthScore.score || 0;
+    const status = healthScore.status || "UNKNOWN";
+    const isEmergency = healthScore.emergency === true;
+    
+    console.log("🔧 Updating recommendation:", { score, status, isEmergency, contradictions });
+    
+    // Determine recommendation based on health score and contradictions
+    let icon, text, action, criticalCount;
+    
+    if (isEmergency || contradictions.length > 0) {
+      icon = "🚨";
+      text = "IMMEDIATE SERVICE REQUIRED";
+      action = "⚠️ STOP VEHICLE - Take to service center immediately";
+      recommendationStatus.className = "recommendation-status status-emergency";
+      criticalCount = contradictions.length > 0 ? contradictions.length : 1;
+      console.log("✅ Set to EMERGENCY");
+    } else if (score < 30) {
+      icon = "🔴";
+      text = "CRITICAL - Service required soon";
+      action = "⚠️ Reduce speed and proceed to nearest service center";
+      recommendationStatus.className = "recommendation-status status-critical";
+      criticalCount = 1;
+      console.log("✅ Set to CRITICAL");
+    } else if (score < 60) {
+      icon = "🟡";
+      text = "WARNING - Schedule service";
+      action = "⚠️ Schedule service within 24 hours";
+      recommendationStatus.className = "recommendation-status status-warning";
+      criticalCount = 0;
+      console.log("✅ Set to WARNING");
+    } else if (score < 80) {
+      icon = "🟢";
+      text = "GOOD - Routine maintenance recommended";
+      action = "✅ Continue journey, schedule routine maintenance";
+      recommendationStatus.className = "recommendation-status status-good";
+      criticalCount = 0;
+      console.log("✅ Set to GOOD");
+    } else {
+      icon = "✅";
+      text = "EXCELLENT - Vehicle is safe";
+      action = "✅ Continue journey safely";
+      recommendationStatus.className = "recommendation-status status-excellent";
+      criticalCount = 0;
+      console.log("✅ Set to EXCELLENT");
+    }
+    
+    if (recommendationIcon) {
+      recommendationIcon.textContent = icon;
+      console.log("✅ Icon updated:", icon);
+    }
+    if (recommendationText) {
+      recommendationText.textContent = text;
+      console.log("✅ Text updated:", text);
+    }
+    if (recommendationHealth) {
+      recommendationHealth.textContent = `${score.toFixed(1)}/100 (${status})`;
+      console.log("✅ Health updated:", recommendationHealth.textContent);
+    }
+    if (recommendationCritical) {
+      if (criticalCount === 0) {
+        recommendationCritical.textContent = "None";
+        recommendationCritical.style.color = "#69f0ae";
+      } else {
+        recommendationCritical.textContent = `${criticalCount} issue${criticalCount > 1 ? 's' : ''}`;
+        recommendationCritical.style.color = "#ff5577";
+      }
+      console.log("✅ Critical count updated:", recommendationCritical.textContent);
+    }
+    if (recommendationAction) {
+      recommendationAction.textContent = action;
+      console.log("✅ Action updated:", action);
+    }
+  }
+
   /* ── Smooth number animation ───────────────────── */
   function animateNumber(el, from, to, duration) {
     const start = performance.now();
@@ -390,12 +640,70 @@
     btnExportCsv.addEventListener("click", () => {
       if (ws && ws.readyState === WebSocket.OPEN) {
         ws.send(JSON.stringify({ action: "get_summary" }));
+        
+        // Show download info
+        const originalText = btnExportCsv.textContent;
         btnExportCsv.textContent = "EXPORTING...";
+        
+        // Create and show download info
+        showDownloadInfo();
+        
         setTimeout(() => {
-          btnExportCsv.textContent = "Download";
-        }, 1500);
+          btnExportCsv.textContent = originalText;
+        }, 2000);
+      } else {
+        alert("WebSocket not connected. Please refresh the page.");
       }
     });
+  }
+
+  function showDownloadInfo() {
+    // Remove old info if exists
+    const oldInfo = document.querySelector(".download-info");
+    if (oldInfo) oldInfo.remove();
+    
+    const info = document.createElement("div");
+    info.className = "download-info";
+    info.style.cssText = `
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: rgba(0, 230, 118, 0.15);
+      border: 2px solid rgba(0, 230, 118, 0.5);
+      border-radius: 8px;
+      padding: 15px;
+      max-width: 350px;
+      z-index: 9999;
+      font-family: 'Rajdhani', monospace;
+      color: #69f0ae;
+      box-shadow: 0 0 20px rgba(0, 230, 118, 0.3);
+      animation: slide-up 0.4s ease-out;
+    `;
+    
+    const timestamp = new Date().toLocaleString();
+    info.innerHTML = `
+      <div style="font-weight: bold; margin-bottom: 10px; font-size: 13px;">
+        ✅ CSV EXPORT READY
+      </div>
+      <div style="font-size: 11px; line-height: 1.6;">
+        <div><strong>File:</strong> analysis_[timestamp].csv</div>
+        <div><strong>Location:</strong> /data/ directory</div>
+        <div><strong>Server Path:</strong> /home/rishon-pravin/Desktop/telemetry-dashboard/data/</div>
+        <div style="margin-top: 8px; padding-top: 8px; border-top: 1px solid rgba(0, 230, 118, 0.3);">
+          <strong>Access via:</strong>
+          <div>• Browser: Download folder</div>
+          <div>• Terminal: cd data/ && ls -la</div>
+        </div>
+      </div>
+    `;
+    
+    document.body.appendChild(info);
+    
+    // Auto-remove after 8 seconds
+    setTimeout(() => {
+      info.style.animation = "slide-down 0.3s ease-out";
+      setTimeout(() => info.remove(), 300);
+    }, 8000);
   }
 
   /* ── Init ──────────────────────────────────────── */

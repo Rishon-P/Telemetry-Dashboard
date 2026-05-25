@@ -1,0 +1,518 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,health_status,emergency,contradictions,tire_speed_risk,temp_correlation_penalty,alerts
+1779676445.036,79.1,89.4,31.8,optimal,optimal,optimal,—,—,—,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779676446.037,81.7,91.3,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.3,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779676447.038,78.1,90.0,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779676448.039,81.4,91.1,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.3,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779676449.039,82.9,90.2,31.7,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.1,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779676450.04,82.8,89.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.1,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779676451.04,79.3,90.4,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779676452.041,79.9,89.6,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779676453.042,82.7,88.6,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.6,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779676454.043,80.5,90.7,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779676455.043,78.3,91.3,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.3,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779676456.043,79.7,89.2,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.7,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779676457.044,81.7,90.6,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.3,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779676458.045,82.6,89.9,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779676459.046,81.3,89.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779676460.047,79.6,90.1,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.9,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779676461.048,78.5,89.8,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.9,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779676462.049,80.5,90.0,32.0,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779676463.05,82.4,91.1,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.7,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779676464.05,81.1,90.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779676465.051,78.1,91.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779676466.052,78.6,90.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.2,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779676467.053,80.4,89.7,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.6,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779676468.054,81.3,88.6,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.5,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779676469.054,79.0,89.8,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.2,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779676470.055,80.6,89.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779676471.056,80.0,89.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.8,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779676472.057,83.0,90.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.1,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779676473.057,299.4,90.3,32.0,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.7,🟢 GOOD,False,NONE,12.8,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676474.058,297.2,91.2,31.9,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.5,🟢 GOOD,False,NONE,13.2,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676475.058,297.9,89.3,32.4,danger,optimal,optimal,↑ increasing,→ stable,→ stable,70.1,🟢 GOOD,False,NONE,11.1,1.1,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676476.059,301.7,89.2,32.2,danger,optimal,optimal,↑ increasing,↓ decreasing,→ stable,69.2,🟢 GOOD,False,NONE,12.0,1.2,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676477.059,300.3,89.8,32.3,danger,optimal,optimal,↑ increasing,→ stable,→ stable,70.4,🟢 GOOD,False,NONE,11.6,0.3,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676478.06,302.3,90.8,32.4,danger,optimal,optimal,↑ increasing,→ stable,→ stable,71.1,🟢 GOOD,False,NONE,11.1,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676479.06,301.1,90.3,31.9,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.4,🟢 GOOD,False,NONE,13.3,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676480.061,297.6,90.3,32.2,danger,optimal,optimal,↑ increasing,→ stable,→ stable,70.5,🟢 GOOD,False,NONE,11.9,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676481.063,298.6,91.3,31.7,danger,optimal,optimal,↑ increasing,→ stable,→ stable,68.7,🟢 GOOD,False,NONE,14.1,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676482.064,297.2,88.9,32.3,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.2,🟢 GOOD,False,NONE,11.5,1.6,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676483.065,298.1,88.6,32.3,danger,optimal,optimal,↑ increasing,→ stable,→ stable,68.7,🟢 GOOD,False,NONE,11.5,2.1,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676484.066,301.5,90.7,32.1,danger,optimal,optimal,↑ increasing,→ stable,→ stable,70.1,🟢 GOOD,False,NONE,12.4,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676485.067,300.0,91.3,31.8,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.0,🟢 GOOD,False,NONE,13.7,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676486.068,301.4,90.6,32.4,danger,optimal,optimal,↑ increasing,↑ increasing,→ stable,71.1,🟢 GOOD,False,NONE,11.1,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676487.068,298.9,90.4,31.9,danger,optimal,optimal,↑ increasing,↑ increasing,→ stable,69.4,🟢 GOOD,False,NONE,13.2,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676488.068,297.2,91.3,32.2,danger,optimal,optimal,↑ increasing,→ stable,→ stable,70.5,🟢 GOOD,False,NONE,11.9,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676489.07,298.9,90.8,31.8,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.1,🟢 GOOD,False,NONE,13.7,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676490.071,297.7,90.1,32.4,danger,optimal,optimal,↑ increasing,→ stable,→ stable,71.2,🟢 GOOD,False,NONE,11.1,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676491.072,297.1,91.1,32.0,danger,optimal,optimal,↑ increasing,→ stable,→ stable,69.8,🟢 GOOD,False,NONE,12.7,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676492.072,299.7,89.2,32.2,danger,optimal,optimal,→ stable,→ stable,→ stable,69.2,🟢 GOOD,False,NONE,12.0,1.2,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676493.073,299.2,90.0,31.9,danger,optimal,optimal,→ stable,↑ increasing,→ stable,69.4,🟢 GOOD,False,NONE,13.3,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676494.073,298.0,89.6,31.9,danger,optimal,optimal,↓ decreasing,↑ increasing,→ stable,68.8,🟢 GOOD,False,NONE,13.2,0.6,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676495.074,302.8,88.8,31.7,danger,optimal,optimal,↓ decreasing,→ stable,→ stable,66.9,🟢 GOOD,False,NONE,14.1,1.8,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676496.075,297.5,90.9,31.9,danger,optimal,optimal,↓ decreasing,→ stable,→ stable,69.5,🟢 GOOD,False,NONE,13.2,0,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779676497.076,11.3,89.0,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676498.076,10.4,91.0,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676499.078,15.2,90.9,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.3,✅ EXCELLENT,False,NONE,0.7,0,NONE
+1779676500.079,11.5,89.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676501.079,13.7,90.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676502.079,14.9,89.1,32.4,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,99.4,✅ EXCELLENT,False,NONE,0.6,0,NONE
+1779676503.081,11.4,88.8,32.1,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676504.082,14.2,89.0,32.4,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676505.083,11.2,91.3,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.5,✅ EXCELLENT,False,NONE,0.5,0,NONE
+1779676506.084,15.8,91.0,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.3,✅ EXCELLENT,False,NONE,0.7,0,NONE
+1779676507.085,15.1,89.7,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.3,✅ EXCELLENT,False,NONE,0.7,0,NONE
+1779676508.085,15.9,128.8,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,11.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE|RAPID_TEMP_SPIKE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|📈 WARNING: Rapid engine temperature spike detected|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676509.085,12.2,129.5,31.8,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,11.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE|RAPID_TEMP_SPIKE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|📈 WARNING: Rapid engine temperature spike detected|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676510.086,11.0,130.1,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,11.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE|RAPID_TEMP_SPIKE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|📈 WARNING: Rapid engine temperature spike detected|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676511.086,12.0,128.7,31.6,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,11.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE|RAPID_TEMP_SPIKE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|📈 WARNING: Rapid engine temperature spike detected|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676512.087,15.5,127.9,32.2,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676513.089,11.0,129.3,31.9,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676514.09,14.8,129.2,31.9,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676515.091,12.6,129.4,31.8,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676516.092,15.3,127.8,31.9,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676517.093,15.1,127.9,31.6,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676518.093,10.6,128.2,31.6,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676519.094,13.5,129.0,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676520.094,11.6,129.1,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676521.095,15.7,128.2,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676522.095,14.1,129.1,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676523.095,15.6,129.1,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676524.096,10.1,129.4,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676525.096,11.8,127.9,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676526.096,15.9,128.6,32.0,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779676527.098,10.7,130.1,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676528.098,11.3,129.8,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676529.099,13.1,129.4,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676530.1,14.6,127.6,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676531.101,10.9,128.9,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676532.103,15.9,128.3,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676533.103,10.6,127.6,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676534.104,14.3,127.9,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676535.105,12.5,128.2,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676536.106,14.8,129.0,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676537.107,15.1,130.1,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676538.109,12.5,128.2,32.3,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676539.11,10.5,129.6,31.7,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676540.111,11.7,128.5,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676541.112,12.7,129.8,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676542.114,13.3,130.0,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676543.115,15.2,129.7,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676544.116,13.7,128.1,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676545.116,13.4,129.5,31.9,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676546.117,11.8,129.4,31.6,optimal,danger,optimal,→ stable,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676547.118,10.6,127.9,32.4,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.4,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676548.118,13.4,128.9,32.2,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676549.119,13.6,128.0,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676550.12,10.5,128.3,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.4,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676551.12,13.4,128.8,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676552.122,15.9,129.4,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676553.122,11.8,129.8,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676554.123,13.4,128.8,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676555.124,10.6,130.2,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.5,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676556.125,14.0,127.5,31.7,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676557.125,12.8,128.0,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676558.125,15.7,127.6,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,26.5,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.7,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676559.125,12.0,128.0,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676560.126,13.8,128.1,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676561.128,12.4,129.6,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676562.129,10.1,129.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,26.7,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.4,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676563.13,14.2,129.5,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,26.6,🚨 EMERGENCY,True,COOLING_SYSTEM_FAILURE,0.6,30,🔥 CRITICAL: Cooling system failure - Engine overheating at low speed|🔥 OVERHEATING: Engine temperature critical - Pull over safely
+1779676564.131,15.0,94.9,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.3,✅ EXCELLENT,False,NONE,0.7,0,NONE
+1779676565.131,12.8,94.8,31.9,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,99.4,✅ EXCELLENT,False,NONE,0.6,0,NONE
+1779676566.132,11.0,93.8,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.6,✅ EXCELLENT,False,NONE,0.4,0,NONE
+1779676567.133,13.3,62.9,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.7,✅ EXCELLENT,False,NONE,0.6,10.7,NONE
+1779676568.134,14.1,61.0,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,85.9,✅ EXCELLENT,False,NONE,0.6,13.5,NONE
+1779676569.135,12.6,61.4,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,86.6,✅ EXCELLENT,False,NONE,0.5,12.9,NONE
+1779676570.136,12.9,60.5,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,85.2,✅ EXCELLENT,False,NONE,0.6,14.2,NONE
+1779676571.137,15.7,63.0,31.6,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.7,✅ EXCELLENT,False,NONE,0.8,10.5,NONE
+1779676572.138,12.3,62.8,32.2,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,88.7,✅ EXCELLENT,False,NONE,0.5,10.8,NONE
+1779676573.138,12.9,61.0,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,85.9,✅ EXCELLENT,False,NONE,0.6,13.5,NONE
+1779676574.139,11.0,62.2,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.8,✅ EXCELLENT,False,NONE,0.5,11.7,NONE
+1779676575.14,13.9,62.6,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.3,✅ EXCELLENT,False,NONE,0.6,11.1,NONE
+1779676576.14,10.8,60.7,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,85.6,✅ EXCELLENT,False,NONE,0.5,13.9,NONE
+1779676577.141,10.4,63.2,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,89.3,✅ EXCELLENT,False,NONE,0.5,10.2,NONE
+1779676578.142,11.1,61.4,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,86.7,✅ EXCELLENT,False,NONE,0.4,12.9,NONE
+1779676579.143,14.1,62.6,32.4,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.4,✅ EXCELLENT,False,NONE,0.5,11.1,NONE
+1779676580.144,15.9,63.0,32.4,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.9,✅ EXCELLENT,False,NONE,0.6,10.5,NONE
+1779676581.145,14.9,63.0,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.9,✅ EXCELLENT,False,NONE,0.6,10.5,NONE
+1779676582.146,14.9,61.7,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,86.9,✅ EXCELLENT,False,NONE,0.7,12.4,NONE
+1779676583.147,10.9,61.6,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.0,✅ EXCELLENT,False,NONE,0.4,12.6,NONE
+1779676584.147,14.0,63.3,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,89.4,✅ EXCELLENT,False,NONE,0.5,10.1,NONE
+1779676585.148,10.7,61.6,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,86.9,✅ EXCELLENT,False,NONE,0.5,12.6,NONE
+1779676586.15,13.2,60.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,85.2,✅ EXCELLENT,False,NONE,0.5,14.2,NONE
+1779676587.151,11.6,62.4,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.5,11.4,NONE
+1779676588.152,12.6,60.6,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.4,✅ EXCELLENT,False,NONE,0.5,14.1,NONE
+1779676589.153,13.1,63.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.7,✅ EXCELLENT,False,NONE,0.5,9.8,NONE
+1779676590.154,15.8,63.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.8,✅ EXCELLENT,False,NONE,0.7,10.5,NONE
+1779676591.155,14.3,63.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.2,✅ EXCELLENT,False,NONE,0.6,10.2,NONE
+1779676592.155,10.1,62.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.9,✅ EXCELLENT,False,NONE,0.4,11.7,NONE
+1779676593.156,-0.5,60.8,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676594.157,-2.5,62.6,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676595.159,0.2,62.1,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.0,11.8,NONE
+1779676596.16,-0.1,62.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676597.161,-1.7,60.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676598.161,0.0,62.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.3,✅ EXCELLENT,False,NONE,0.0,11.7,NONE
+1779676599.163,-1.6,62.2,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676600.163,2.1,63.0,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.4,✅ EXCELLENT,False,NONE,0.1,10.5,NONE
+1779676601.164,-2.9,62.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676602.164,2.4,62.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.2,✅ EXCELLENT,False,NONE,0.1,11.7,NONE
+1779676603.165,-2.4,61.1,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676604.166,-0.1,62.0,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676605.167,-1.7,61.9,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676606.168,-1.1,62.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676607.168,1.4,62.3,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.4,✅ EXCELLENT,False,NONE,0.1,11.6,NONE
+1779676608.169,2.5,63.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,90.0,✅ EXCELLENT,False,NONE,0.1,9.9,NONE
+1779676609.169,-0.6,61.6,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676610.17,-0.4,63.5,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676611.17,-0.1,63.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676612.171,2.3,62.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.8,✅ EXCELLENT,False,NONE,0.1,11.1,NONE
+1779676613.171,-2.9,63.4,32.4,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676614.173,2.2,61.3,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,86.8,✅ EXCELLENT,False,NONE,0.1,13.1,NONE
+1779676615.173,2.4,62.6,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,88.8,✅ EXCELLENT,False,NONE,0.1,11.1,NONE
+1779676616.174,-3.0,61.6,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676617.175,1.7,60.9,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676618.175,2.8,62.3,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.3,✅ EXCELLENT,False,NONE,0.1,11.6,NONE
+1779676619.176,-0.5,62.6,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676620.178,-1.5,62.3,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676621.178,0.4,63.3,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.9,✅ EXCELLENT,False,NONE,0.0,10.1,NONE
+1779676622.18,0.8,61.1,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.6,✅ EXCELLENT,False,NONE,0.0,13.3,NONE
+1779676623.181,0.9,63.2,31.6,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,89.8,✅ EXCELLENT,False,NONE,0.0,10.2,NONE
+1779676624.182,-0.7,60.6,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676625.183,-0.6,62.5,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676626.184,1.2,60.6,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,85.9,✅ EXCELLENT,False,NONE,0.0,14.1,NONE
+1779676627.185,0.3,63.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,90.1,✅ EXCELLENT,False,NONE,0.0,9.9,NONE
+1779676628.186,-1.9,61.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676629.187,-0.8,63.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676630.188,-1.3,61.1,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676631.189,1.8,62.7,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.0,✅ EXCELLENT,False,NONE,0.1,10.9,NONE
+1779676632.189,2.8,63.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.4,✅ EXCELLENT,False,NONE,0.1,10.5,NONE
+1779676633.189,-0.5,63.1,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676634.19,-0.6,62.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676635.191,1.7,60.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,85.7,✅ EXCELLENT,False,NONE,0.1,14.2,NONE
+1779676636.191,-2.2,62.9,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676637.193,1.9,60.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676638.194,1.8,62.6,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.8,✅ EXCELLENT,False,NONE,0.1,11.1,NONE
+1779676639.195,-2.8,63.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676640.196,2.5,63.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.7,✅ EXCELLENT,False,NONE,0.1,10.2,NONE
+1779676641.196,2.6,62.3,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.3,✅ EXCELLENT,False,NONE,0.1,11.6,NONE
+1779676642.198,1.3,62.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.1,11.8,NONE
+1779676643.2,1.6,63.1,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.1,10.3,NONE
+1779676644.2,0.1,62.6,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.9,✅ EXCELLENT,False,NONE,0.0,11.1,NONE
+1779676645.201,-2.8,62.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676646.201,-0.1,63.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676647.201,0.9,62.1,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,88.1,✅ EXCELLENT,False,NONE,0.0,11.8,NONE
+1779676648.202,2.3,60.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.2,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676649.203,-1.7,62.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676650.204,0.3,60.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.0,13.7,NONE
+1779676651.204,-2.3,60.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676652.205,-1.7,61.5,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676653.207,0.4,61.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,87.8,✅ EXCELLENT,False,NONE,0.0,12.2,NONE
+1779676654.209,-0.8,62.8,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676655.21,-2.8,61.6,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676656.211,-0.1,60.8,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676657.211,1.1,60.6,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,85.9,✅ EXCELLENT,False,NONE,0.0,14.1,NONE
+1779676658.213,-0.4,61.8,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676659.213,1.6,62.9,31.6,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,89.3,✅ EXCELLENT,False,NONE,0.1,10.7,NONE
+1779676660.214,2.7,60.8,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,86.1,✅ EXCELLENT,False,NONE,0.1,13.8,NONE
+1779676661.214,2.9,62.8,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.1,✅ EXCELLENT,False,NONE,0.1,10.8,NONE
+1779676662.215,2.6,61.4,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,87.0,✅ EXCELLENT,False,NONE,0.1,12.9,NONE
+1779676663.216,0.5,63.1,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.0,10.3,NONE
+1779676664.216,1.9,63.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.9,✅ EXCELLENT,False,NONE,0.1,10.1,NONE
+1779676665.218,-1.9,61.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676666.219,-2.0,61.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676667.22,1.9,61.2,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,86.7,✅ EXCELLENT,False,NONE,0.1,13.2,NONE
+1779676668.22,0.8,62.1,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.0,11.8,NONE
+1779676669.22,-2.7,63.2,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676670.222,-2.0,63.2,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676671.223,0.3,61.7,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.5,✅ EXCELLENT,False,NONE,0.0,12.4,NONE
+1779676672.224,0.1,62.4,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.6,✅ EXCELLENT,False,NONE,0.0,11.4,NONE
+1779676673.226,-0.5,61.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676674.227,2.3,61.0,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,86.4,✅ EXCELLENT,False,NONE,0.1,13.5,NONE
+1779676675.228,1.4,61.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,87.8,✅ EXCELLENT,False,NONE,0.1,12.2,NONE
+1779676676.228,-2.5,61.1,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676677.229,-2.9,63.2,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676678.23,1.3,61.2,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,86.7,✅ EXCELLENT,False,NONE,0.1,13.2,NONE
+1779676679.231,2.1,63.1,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.1,10.3,NONE
+1779676680.232,1.9,62.0,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.9,✅ EXCELLENT,False,NONE,0.1,12.0,NONE
+1779676681.233,-2.2,61.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676682.234,-0.6,61.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676683.234,1.4,60.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.7,✅ EXCELLENT,False,NONE,0.1,14.2,NONE
+1779676684.234,-0.1,61.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676685.236,1.2,61.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.3,✅ EXCELLENT,False,NONE,0.1,12.6,NONE
+1779676686.237,0.4,61.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.1,✅ EXCELLENT,False,NONE,0.0,12.9,NONE
+1779676687.238,1.6,63.1,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.1,10.3,NONE
+1779676688.238,-2.3,61.6,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676689.24,-0.9,61.4,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676690.24,2.3,62.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.0,✅ EXCELLENT,False,NONE,0.1,10.9,NONE
+1779676691.24,0.6,61.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.5,✅ EXCELLENT,False,NONE,0.0,12.4,NONE
+1779676692.241,-2.8,63.5,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676693.243,-0.1,61.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676694.244,2.3,63.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.7,✅ EXCELLENT,False,NONE,0.1,10.2,NONE
+1779676695.245,-2.3,61.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676696.245,0.1,62.4,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,88.6,✅ EXCELLENT,False,NONE,0.0,11.4,NONE
+1779676697.245,-3.0,62.2,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676698.247,0.6,61.2,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,86.8,✅ EXCELLENT,False,NONE,0.0,13.2,NONE
+1779676699.247,0.8,61.5,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,87.2,✅ EXCELLENT,False,NONE,0.0,12.8,NONE
+1779676700.249,-0.2,61.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676701.249,-2.9,61.3,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676702.251,-2.7,61.4,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676703.251,1.1,62.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.3,✅ EXCELLENT,False,NONE,0.0,11.7,NONE
+1779676704.252,-1.1,60.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676705.253,-2.2,60.8,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676706.254,1.0,63.1,32.1,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,89.6,✅ EXCELLENT,False,NONE,0.0,10.3,NONE
+1779676707.255,0.4,61.6,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.4,✅ EXCELLENT,False,NONE,0.0,12.6,NONE
+1779676708.256,0.4,62.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.9,✅ EXCELLENT,False,NONE,0.0,11.1,NONE
+1779676709.256,-0.5,61.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676710.259,0.9,60.7,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.0,✅ EXCELLENT,False,NONE,0.0,13.9,NONE
+1779676711.259,3.0,61.2,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.7,✅ EXCELLENT,False,NONE,0.1,13.2,NONE
+1779676712.26,-1.1,62.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676713.26,2.4,61.6,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,87.3,✅ EXCELLENT,False,NONE,0.1,12.6,NONE
+1779676714.261,-0.2,63.4,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676715.261,-2.2,63.4,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676716.261,-0.7,61.7,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.4,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676717.263,-0.8,60.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676718.264,1.0,61.5,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,87.2,✅ EXCELLENT,False,NONE,0.0,12.8,NONE
+1779676719.265,0.3,63.1,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.0,10.3,NONE
+1779676720.266,-0.3,63.0,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676721.266,-2.3,61.2,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676722.268,2.3,62.0,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.9,✅ EXCELLENT,False,NONE,0.1,12.0,NONE
+1779676723.27,-0.1,62.7,32.4,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676724.271,0.4,63.1,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.0,10.3,NONE
+1779676725.271,-1.8,61.4,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676726.272,0.5,62.9,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.3,✅ EXCELLENT,False,NONE,0.0,10.7,NONE
+1779676727.272,1.1,61.0,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.5,✅ EXCELLENT,False,NONE,0.0,13.5,NONE
+1779676728.273,2.1,62.8,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.1,✅ EXCELLENT,False,NONE,0.1,10.8,NONE
+1779676729.274,-2.6,61.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676730.275,-2.1,63.5,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676731.275,0.5,61.6,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.4,✅ EXCELLENT,False,NONE,0.0,12.6,NONE
+1779676732.277,-2.3,63.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676733.277,-2.6,62.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676734.277,1.2,61.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.7,✅ EXCELLENT,False,NONE,0.0,12.3,NONE
+1779676735.278,-1.1,62.3,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676736.278,0.9,62.1,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.0,11.8,NONE
+1779676737.279,-2.1,60.8,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676738.28,-0.7,61.7,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.4,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676739.281,-1.3,60.9,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676740.281,-0.8,61.3,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676741.282,2.9,62.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.5,✅ EXCELLENT,False,NONE,0.1,11.4,NONE
+1779676742.283,1.4,62.8,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,89.1,✅ EXCELLENT,False,NONE,0.1,10.8,NONE
+1779676743.283,-0.9,63.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676744.285,-1.4,60.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676745.286,-0.3,63.2,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676746.287,1.9,61.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.7,✅ EXCELLENT,False,NONE,0.1,13.2,NONE
+1779676747.288,2.0,60.9,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676748.289,-0.3,61.2,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676749.289,-1.3,61.8,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676750.291,1.7,61.7,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,87.5,✅ EXCELLENT,False,NONE,0.1,12.4,NONE
+1779676751.292,-0.7,63.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676752.293,1.9,62.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.3,✅ EXCELLENT,False,NONE,0.1,10.7,NONE
+1779676753.294,1.2,61.0,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.5,✅ EXCELLENT,False,NONE,0.0,13.5,NONE
+1779676754.295,1.4,60.6,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.8,✅ EXCELLENT,False,NONE,0.1,14.1,NONE
+1779676755.296,-1.6,62.3,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676756.297,2.1,62.8,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.1,✅ EXCELLENT,False,NONE,0.1,10.8,NONE
+1779676757.297,-2.4,63.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676758.297,-1.7,60.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676759.297,-0.2,61.2,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676760.297,-2.5,61.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676761.298,-1.1,63.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676762.298,0.7,62.8,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.2,✅ EXCELLENT,False,NONE,0.0,10.8,NONE
+1779676763.299,-2.4,63.2,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676764.3,0.6,63.4,32.0,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,90.1,✅ EXCELLENT,False,NONE,0.0,9.9,NONE
+1779676765.301,2.9,63.3,32.4,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,89.8,✅ EXCELLENT,False,NONE,0.1,10.1,NONE
+1779676766.303,0.3,63.2,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,89.8,✅ EXCELLENT,False,NONE,0.0,10.2,NONE
+1779676767.304,1.8,61.9,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.8,✅ EXCELLENT,False,NONE,0.1,12.2,NONE
+1779676768.305,0.4,62.6,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,88.9,✅ EXCELLENT,False,NONE,0.0,11.1,NONE
+1779676769.305,-2.3,60.7,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676770.306,1.5,63.1,31.6,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,89.6,✅ EXCELLENT,False,NONE,0.1,10.3,NONE
+1779676771.308,1.9,62.5,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,88.7,✅ EXCELLENT,False,NONE,0.1,11.2,NONE
+1779676772.308,-2.8,62.7,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676773.31,-1.8,63.0,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676774.311,2.5,62.4,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.5,✅ EXCELLENT,False,NONE,0.1,11.4,NONE
+1779676775.311,-2.2,63.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676776.312,-0.9,61.5,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676777.314,-2.7,63.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676778.315,-0.5,62.9,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676779.316,1.9,62.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.2,✅ EXCELLENT,False,NONE,0.1,11.7,NONE
+1779676780.318,1.3,62.6,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.8,✅ EXCELLENT,False,NONE,0.1,11.1,NONE
+1779676781.319,-0.5,61.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676782.32,-0.3,61.3,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676783.322,-2.1,62.3,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676784.323,-2.0,62.7,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676785.324,-0.9,62.7,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676786.324,-2.0,61.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676787.325,2.7,63.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,90.0,✅ EXCELLENT,False,NONE,0.1,9.9,NONE
+1779676788.326,1.3,60.6,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.8,✅ EXCELLENT,False,NONE,0.1,14.1,NONE
+1779676789.326,-1.3,62.0,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676790.326,-0.0,62.1,31.6,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,88.2,✅ EXCELLENT,False,NONE,-0.0,11.8,NONE
+1779676791.326,-0.5,62.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676792.327,1.6,63.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.7,✅ EXCELLENT,False,NONE,0.1,10.2,NONE
+1779676793.328,1.8,62.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.9,✅ EXCELLENT,False,NONE,0.1,12.0,NONE
+1779676794.329,1.4,62.4,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.5,✅ EXCELLENT,False,NONE,0.1,11.4,NONE
+1779676795.329,-0.4,61.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676796.33,1.2,63.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.9,✅ EXCELLENT,False,NONE,0.0,10.1,NONE
+1779676797.331,0.0,63.5,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,90.2,✅ EXCELLENT,False,NONE,0.0,9.8,NONE
+1779676798.331,2.2,61.7,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,87.5,✅ EXCELLENT,False,NONE,0.1,12.4,NONE
+1779676799.333,2.3,60.6,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.8,✅ EXCELLENT,False,NONE,0.1,14.1,NONE
+1779676800.333,-0.4,60.9,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676801.334,-1.4,61.3,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676802.334,-2.5,61.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676803.336,1.1,60.8,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,86.2,✅ EXCELLENT,False,NONE,0.0,13.8,NONE
+1779676804.336,1.8,61.4,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.0,✅ EXCELLENT,False,NONE,0.1,12.9,NONE
+1779676805.337,0.6,62.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.7,✅ EXCELLENT,False,NONE,0.0,11.2,NONE
+1779676806.337,2.0,62.0,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.9,✅ EXCELLENT,False,NONE,0.1,12.0,NONE
+1779676807.338,-1.4,63.2,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676808.338,2.4,61.5,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.1,✅ EXCELLENT,False,NONE,0.1,12.8,NONE
+1779676809.338,1.1,61.1,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,86.6,✅ EXCELLENT,False,NONE,0.1,13.3,NONE
+1779676810.34,2.4,62.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.1,✅ EXCELLENT,False,NONE,0.1,10.8,NONE
+1779676811.341,0.5,61.4,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.1,✅ EXCELLENT,False,NONE,0.0,12.9,NONE
+1779676812.341,3.0,61.3,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.8,✅ EXCELLENT,False,NONE,0.1,13.1,NONE
+1779676813.343,-1.7,63.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676814.344,2.0,62.6,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,88.8,✅ EXCELLENT,False,NONE,0.1,11.1,NONE
+1779676815.344,-0.2,62.7,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676816.344,-2.5,62.0,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676817.346,-1.6,63.4,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676818.347,0.4,62.9,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,89.3,✅ EXCELLENT,False,NONE,0.0,10.7,NONE
+1779676819.348,1.2,63.2,31.6,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,89.7,✅ EXCELLENT,False,NONE,0.1,10.2,NONE
+1779676820.348,-2.0,60.6,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676821.349,1.1,62.0,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,88.0,✅ EXCELLENT,False,NONE,0.0,12.0,NONE
+1779676822.351,-1.7,62.0,32.0,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676823.352,-2.3,61.0,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676824.352,1.6,60.8,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,86.1,✅ EXCELLENT,False,NONE,0.1,13.8,NONE
+1779676825.352,-0.7,63.1,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676826.354,-0.5,61.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676827.355,0.3,62.6,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.9,✅ EXCELLENT,False,NONE,0.0,11.1,NONE
+1779676828.356,0.1,60.8,31.7,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,86.2,✅ EXCELLENT,False,NONE,0.0,13.8,NONE
+1779676829.358,1.4,63.3,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,89.9,✅ EXCELLENT,False,NONE,0.1,10.1,NONE
+1779676830.358,-0.9,60.5,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676831.36,-1.5,62.2,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676832.361,0.5,61.3,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,86.9,✅ EXCELLENT,False,NONE,0.0,13.1,NONE
+1779676833.361,1.1,61.0,32.0,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,86.5,✅ EXCELLENT,False,NONE,0.0,13.5,NONE
+1779676834.363,0.5,61.9,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,87.8,✅ EXCELLENT,False,NONE,0.0,12.2,NONE
+1779676835.364,-2.8,62.3,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676836.365,0.3,60.9,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.0,13.7,NONE
+1779676837.365,2.8,61.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.5,✅ EXCELLENT,False,NONE,0.1,13.3,NONE
+1779676838.367,2.4,62.9,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.3,✅ EXCELLENT,False,NONE,0.1,10.7,NONE
+1779676839.368,-2.9,63.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676840.368,1.4,62.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.8,✅ EXCELLENT,False,NONE,0.1,11.1,NONE
+1779676841.368,2.4,61.3,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.8,✅ EXCELLENT,False,NONE,0.1,13.1,NONE
+1779676842.37,1.9,60.9,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676843.371,-0.7,61.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676844.372,-1.3,62.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.4,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676845.373,-0.3,60.8,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676846.374,-1.2,61.6,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676847.375,-0.6,63.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676848.375,1.2,62.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.5,✅ EXCELLENT,False,NONE,0.1,11.4,NONE
+1779676849.375,-0.4,63.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,9.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676850.375,0.4,61.4,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.1,✅ EXCELLENT,False,NONE,0.0,12.9,NONE
+1779676851.377,-2.9,62.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676852.378,1.9,60.6,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,85.8,✅ EXCELLENT,False,NONE,0.1,14.1,NONE
+1779676853.378,2.8,63.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.7,✅ EXCELLENT,False,NONE,0.1,10.2,NONE
+1779676854.38,2.3,63.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.9,✅ EXCELLENT,False,NONE,0.1,10.1,NONE
+1779676855.381,-1.8,61.7,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.4,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676856.382,0.4,61.7,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,87.5,✅ EXCELLENT,False,NONE,0.0,12.4,NONE
+1779676857.382,-2.1,63.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676858.383,0.8,60.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.0,✅ EXCELLENT,False,NONE,0.0,13.9,NONE
+1779676859.383,0.5,62.5,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.7,✅ EXCELLENT,False,NONE,0.0,11.2,NONE
+1779676860.383,-0.6,62.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676861.384,-1.6,61.4,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676862.384,0.9,62.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.0,✅ EXCELLENT,False,NONE,0.0,12.0,NONE
+1779676863.385,-1.6,62.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676864.386,1.9,61.8,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,87.6,✅ EXCELLENT,False,NONE,0.1,12.3,NONE
+1779676865.387,1.5,62.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.3,✅ EXCELLENT,False,NONE,0.1,10.7,NONE
+1779676866.388,-1.4,63.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676867.388,-2.8,62.0,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676868.388,0.1,63.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.5,✅ EXCELLENT,False,NONE,0.0,10.5,NONE
+1779676869.389,2.8,61.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.8,✅ EXCELLENT,False,NONE,0.1,13.1,NONE
+1779676870.389,0.2,61.8,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.7,✅ EXCELLENT,False,NONE,0.0,12.3,NONE
+1779676871.39,-2.1,62.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676872.39,1.8,62.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.3,✅ EXCELLENT,False,NONE,0.1,10.7,NONE
+1779676873.391,1.8,60.7,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.0,✅ EXCELLENT,False,NONE,0.1,13.9,NONE
+1779676874.393,-1.7,62.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676875.393,0.7,62.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.0,11.8,NONE
+1779676876.394,-0.9,60.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676877.394,-2.7,61.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676878.395,-2.9,60.7,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676879.395,-0.3,62.5,32.1,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676880.395,2.1,60.6,31.6,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,85.8,✅ EXCELLENT,False,NONE,0.1,14.1,NONE
+1779676881.397,2.9,60.8,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,86.1,✅ EXCELLENT,False,NONE,0.1,13.8,NONE
+1779676882.399,0.1,61.5,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,87.2,✅ EXCELLENT,False,NONE,0.0,12.8,NONE
+1779676883.4,-3.0,61.9,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676884.4,-1.6,61.5,31.7,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676885.401,-2.6,62.2,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676886.402,-1.1,61.6,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676887.403,2.0,61.6,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.3,✅ EXCELLENT,False,NONE,0.1,12.6,NONE
+1779676888.404,-2.2,63.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676889.404,-0.6,60.6,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676890.405,-1.4,61.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676891.406,2.8,61.7,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,87.4,✅ EXCELLENT,False,NONE,0.1,12.4,NONE
+1779676892.407,-0.8,61.4,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676893.408,0.9,63.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.0,10.3,NONE
+1779676894.409,-0.9,61.3,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676895.409,-0.8,62.4,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.4,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676896.411,-0.8,63.3,31.6,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676897.412,2.7,63.0,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,89.4,✅ EXCELLENT,False,NONE,0.1,10.5,NONE
+1779676898.413,0.8,60.6,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.9,✅ EXCELLENT,False,NONE,0.0,14.1,NONE
+1779676899.413,2.9,63.1,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,89.5,✅ EXCELLENT,False,NONE,0.1,10.3,NONE
+1779676900.413,2.0,63.1,32.0,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,89.6,✅ EXCELLENT,False,NONE,0.1,10.3,NONE
+1779676901.415,-2.4,61.3,31.7,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676902.416,1.4,62.5,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,88.7,✅ EXCELLENT,False,NONE,0.1,11.2,NONE
+1779676903.417,1.3,60.5,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,85.7,✅ EXCELLENT,False,NONE,0.1,14.2,NONE
+1779676904.418,-1.7,61.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676905.419,-1.8,62.9,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676906.42,1.3,63.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.7,✅ EXCELLENT,False,NONE,0.1,10.2,NONE
+1779676907.42,-2.9,62.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676908.421,0.3,61.4,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.1,✅ EXCELLENT,False,NONE,0.0,12.9,NONE
+1779676909.422,-2.1,62.4,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.4,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676910.423,-0.6,61.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676911.424,-1.3,60.6,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676912.424,2.6,63.3,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.8,✅ EXCELLENT,False,NONE,0.1,10.1,NONE
+1779676913.425,-0.9,60.9,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676914.426,-0.4,60.6,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676915.427,1.8,62.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,88.2,✅ EXCELLENT,False,NONE,0.1,11.7,NONE
+1779676916.429,-2.6,61.8,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676917.43,-1.3,63.0,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.5,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676918.43,-1.6,60.6,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676919.432,1.0,62.1,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.1,✅ EXCELLENT,False,NONE,0.0,11.8,NONE
+1779676920.433,-2.5,62.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676921.434,1.0,62.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.6,✅ EXCELLENT,False,NONE,0.0,11.4,NONE
+1779676922.434,-0.8,60.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,14.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676923.435,-2.9,63.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676924.436,-1.6,61.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676925.437,2.7,62.0,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,87.9,✅ EXCELLENT,False,NONE,0.1,12.0,NONE
+1779676926.438,-2.0,61.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676927.439,-2.8,62.7,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676928.439,-0.7,62.9,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676929.439,2.7,61.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.7,✅ EXCELLENT,False,NONE,0.1,12.2,NONE
+1779676930.441,0.3,63.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,89.5,✅ EXCELLENT,False,NONE,0.0,10.5,NONE
+1779676931.441,2.0,60.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,85.7,✅ EXCELLENT,False,NONE,0.1,14.2,NONE
+1779676932.442,0.7,61.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.8,✅ EXCELLENT,False,NONE,0.0,13.2,NONE
+1779676933.442,-2.1,62.9,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.7,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676934.444,-1.8,61.1,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.3,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676935.445,2.7,60.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.2,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676936.445,2.7,62.2,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.2,✅ EXCELLENT,False,NONE,0.1,11.7,NONE
+1779676937.445,2.0,63.3,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,89.9,✅ EXCELLENT,False,NONE,0.1,10.1,NONE
+1779676938.445,1.8,62.2,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.2,✅ EXCELLENT,False,NONE,0.1,11.7,NONE
+1779676939.445,1.3,61.3,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.9,✅ EXCELLENT,False,NONE,0.1,13.1,NONE
+1779676940.446,-1.1,61.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.1,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676941.448,2.3,62.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.2,✅ EXCELLENT,False,NONE,0.1,11.7,NONE
+1779676942.449,-2.3,61.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676943.449,-0.8,61.5,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676944.45,0.8,62.5,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,88.7,✅ EXCELLENT,False,NONE,0.0,11.2,NONE
+1779676945.451,2.4,60.9,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,86.3,✅ EXCELLENT,False,NONE,0.1,13.7,NONE
+1779676946.452,0.9,62.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.7,✅ EXCELLENT,False,NONE,0.0,11.2,NONE
+1779676947.452,-1.0,62.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,10.8,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676948.452,1.9,60.6,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,85.8,✅ EXCELLENT,False,NONE,0.1,14.1,NONE
+1779676949.453,-1.7,61.9,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676950.453,-0.8,62.3,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,11.6,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676951.454,2.2,61.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,87.0,✅ EXCELLENT,False,NONE,0.1,12.9,NONE
+1779676952.455,2.3,62.7,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,88.9,✅ EXCELLENT,False,NONE,0.1,10.9,NONE
+1779676953.456,1.4,61.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,87.2,✅ EXCELLENT,False,NONE,0.1,12.8,NONE
+1779676954.456,-2.3,61.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676955.456,0.2,63.1,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,89.6,✅ EXCELLENT,False,NONE,0.0,10.3,NONE
+1779676956.457,-2.0,61.2,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.2,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676957.458,2.5,63.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,90.0,✅ EXCELLENT,False,NONE,0.1,9.9,NONE
+1779676958.459,0.3,61.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.8,✅ EXCELLENT,False,NONE,0.0,13.2,NONE
+1779676959.46,1.6,61.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,86.7,✅ EXCELLENT,False,NONE,0.1,13.2,NONE
+1779676960.46,-2.2,61.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,12.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779676961.46,-2.4,60.7,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,0,🚨 EMERGENCY,True,NONE,100.0,13.9,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed

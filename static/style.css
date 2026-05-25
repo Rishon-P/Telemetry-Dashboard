@@ -142,6 +142,20 @@ body {
 .gauge-card.speed:hover { box-shadow: var(--glow-blue); }
 .gauge-card.temp:hover  { box-shadow: var(--glow-orange); }
 .gauge-card.psi:hover   { box-shadow: var(--glow-green); }
+.gauge-card.rpm { --gauge-accent: var(--blue); }
+.gauge-card.oil { --gauge-accent: var(--orange); }
+.gauge-card.battery { --gauge-accent: var(--blue); }
+.gauge-card.rpm:hover { box-shadow: var(--glow-blue); }
+.gauge-card.oil:hover { box-shadow: var(--glow-orange); }
+.gauge-card.battery:hover { box-shadow: var(--glow-blue); }
+.gauge-card.tire-fl { --gauge-accent: var(--green); }
+.gauge-card.tire-fr { --gauge-accent: var(--green); }
+.gauge-card.tire-rl { --gauge-accent: var(--green); }
+.gauge-card.tire-rr { --gauge-accent: var(--green); }
+.gauge-card.tire-fl:hover { box-shadow: var(--glow-green); }
+.gauge-card.tire-fr:hover { box-shadow: var(--glow-green); }
+.gauge-card.tire-rl:hover { box-shadow: var(--glow-green); }
+.gauge-card.tire-rr:hover { box-shadow: var(--glow-green); }
 
 .gauge-card.center { padding: 2rem 1rem; }
 
@@ -286,6 +300,13 @@ body {
 .control-card.ctrl-speed { --ctrl-accent: var(--blue); }
 .control-card.ctrl-temp  { --ctrl-accent: var(--orange); }
 .control-card.ctrl-psi   { --ctrl-accent: var(--green); }
+.control-card.ctrl-rpm   { --ctrl-accent: var(--blue); }
+.control-card.ctrl-oil   { --ctrl-accent: var(--orange); }
+.control-card.ctrl-battery { --ctrl-accent: var(--blue); }
+.control-card.ctrl-tire-fl { --ctrl-accent: var(--green); }
+.control-card.ctrl-tire-fr { --ctrl-accent: var(--green); }
+.control-card.ctrl-tire-rl { --ctrl-accent: var(--green); }
+.control-card.ctrl-tire-rr { --ctrl-accent: var(--green); }
 
 .ctrl-header {
   display: flex; align-items: center; gap: 0.75rem;
@@ -368,6 +389,34 @@ input[type="range"]::-webkit-slider-thumb {
   background: var(--green);
   box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
 }
+.ctrl-rpm input[type="range"]::-webkit-slider-thumb {
+  background: var(--blue);
+  box-shadow: 0 0 12px rgba(0,180,255,0.5), 0 0 30px rgba(0,180,255,0.2);
+}
+.ctrl-oil input[type="range"]::-webkit-slider-thumb {
+  background: var(--orange);
+  box-shadow: 0 0 12px rgba(255,107,53,0.5), 0 0 30px rgba(255,107,53,0.2);
+}
+.ctrl-battery input[type="range"]::-webkit-slider-thumb {
+  background: var(--blue);
+  box-shadow: 0 0 12px rgba(0,180,255,0.5), 0 0 30px rgba(0,180,255,0.2);
+}
+.ctrl-tire-fl input[type="range"]::-webkit-slider-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
+}
+.ctrl-tire-fr input[type="range"]::-webkit-slider-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
+}
+.ctrl-tire-rl input[type="range"]::-webkit-slider-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
+}
+.ctrl-tire-rr input[type="range"]::-webkit-slider-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
+}
 input[type="range"]::-webkit-slider-thumb:hover {
   transform: scale(1.25);
 }
@@ -395,6 +444,34 @@ input[type="range"]::-moz-range-thumb {
   box-shadow: 0 0 12px rgba(255,107,53,0.5);
 }
 .ctrl-psi input[type="range"]::-moz-range-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5);
+}
+.ctrl-rpm input[type="range"]::-moz-range-thumb {
+  background: var(--blue);
+  box-shadow: 0 0 12px rgba(0,180,255,0.5);
+}
+.ctrl-oil input[type="range"]::-moz-range-thumb {
+  background: var(--orange);
+  box-shadow: 0 0 12px rgba(255,107,53,0.5);
+}
+.ctrl-battery input[type="range"]::-moz-range-thumb {
+  background: var(--blue);
+  box-shadow: 0 0 12px rgba(0,180,255,0.5);
+}
+.ctrl-tire-fl input[type="range"]::-moz-range-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5);
+}
+.ctrl-tire-fr input[type="range"]::-moz-range-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5);
+}
+.ctrl-tire-rl input[type="range"]::-moz-range-thumb {
+  background: var(--green);
+  box-shadow: 0 0 12px rgba(0,230,118,0.5);
+}
+.ctrl-tire-rr input[type="range"]::-moz-range-thumb {
   background: var(--green);
   box-shadow: 0 0 12px rgba(0,230,118,0.5);
 }
@@ -433,6 +510,48 @@ input[type="range"]::-moz-range-thumb {
   color: var(--orange);
 }
 .ctrl-psi .btn-apply:hover {
+  background: rgba(0,230,118,0.12);
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(0,230,118,0.2);
+  color: var(--green);
+}
+.ctrl-rpm .btn-apply:hover {
+  background: rgba(0,180,255,0.12);
+  border-color: var(--blue);
+  box-shadow: 0 0 20px rgba(0,180,255,0.2);
+  color: var(--blue);
+}
+.ctrl-oil .btn-apply:hover {
+  background: rgba(255,107,53,0.12);
+  border-color: var(--orange);
+  box-shadow: 0 0 20px rgba(255,107,53,0.2);
+  color: var(--orange);
+}
+.ctrl-battery .btn-apply:hover {
+  background: rgba(0,180,255,0.12);
+  border-color: var(--blue);
+  box-shadow: 0 0 20px rgba(0,180,255,0.2);
+  color: var(--blue);
+}
+.ctrl-tire-fl .btn-apply:hover {
+  background: rgba(0,230,118,0.12);
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(0,230,118,0.2);
+  color: var(--green);
+}
+.ctrl-tire-fr .btn-apply:hover {
+  background: rgba(0,230,118,0.12);
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(0,230,118,0.2);
+  color: var(--green);
+}
+.ctrl-tire-rl .btn-apply:hover {
+  background: rgba(0,230,118,0.12);
+  border-color: var(--green);
+  box-shadow: 0 0 20px rgba(0,230,118,0.2);
+  color: var(--green);
+}
+.ctrl-tire-rr .btn-apply:hover {
   background: rgba(0,230,118,0.12);
   border-color: var(--green);
   box-shadow: 0 0 20px rgba(0,230,118,0.2);
@@ -532,3 +651,10 @@ input[type="range"]::-moz-range-thumb {
 .ctrl-speed .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
 .ctrl-temp  .slider-fill-track { background: linear-gradient(90deg, rgba(255,107,53,0.2), var(--orange)); }
 .ctrl-psi   .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.ctrl-rpm   .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
+.ctrl-oil   .slider-fill-track { background: linear-gradient(90deg, rgba(255,107,53,0.2), var(--orange)); }
+.ctrl-battery .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
+.ctrl-tire-fl .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.ctrl-tire-fr .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.ctrl-tire-rl .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.ctrl-tire-rr .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }

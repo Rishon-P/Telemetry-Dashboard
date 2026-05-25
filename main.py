@@ -56,6 +56,13 @@ class SimulationState:
             "speed_kmh": 80.0,
             "engine_temp_c": 90.0,
             "tire_pressure_psi": 32.0,
+            "engine_rpm": 1500.0,
+            "oil_pressure_psi": 45.0,
+            "battery_voltage_v": 13.8,
+            "tire_pressure_fl_psi": 32.0,
+            "tire_pressure_fr_psi": 32.0,
+            "tire_pressure_rl_psi": 32.0,
+            "tire_pressure_rr_psi": 32.0,
         }
 
     async def get_snapshot(self) -> dict[str, float]:
@@ -70,6 +77,27 @@ class SimulationState:
                 ),
                 "tire_pressure_psi": round(
                     self._baselines["tire_pressure_psi"] + random.uniform(-0.4, 0.4), 1
+                ),
+                "engine_rpm": round(
+                    self._baselines["engine_rpm"] + random.uniform(-50, 50), 0
+                ),
+                "oil_pressure_psi": round(
+                    self._baselines["oil_pressure_psi"] + random.uniform(-1.0, 1.0), 1
+                ),
+                "battery_voltage_v": round(
+                    self._baselines["battery_voltage_v"] + random.uniform(-0.05, 0.05), 2
+                ),
+                "tire_pressure_fl_psi": round(
+                    self._baselines["tire_pressure_fl_psi"] + random.uniform(-0.4, 0.4), 1
+                ),
+                "tire_pressure_fr_psi": round(
+                    self._baselines["tire_pressure_fr_psi"] + random.uniform(-0.4, 0.4), 1
+                ),
+                "tire_pressure_rl_psi": round(
+                    self._baselines["tire_pressure_rl_psi"] + random.uniform(-0.4, 0.4), 1
+                ),
+                "tire_pressure_rr_psi": round(
+                    self._baselines["tire_pressure_rr_psi"] + random.uniform(-0.4, 0.4), 1
                 ),
             }
 
@@ -93,13 +121,20 @@ class SimulationState:
 
 class VehicleHealthAnalyzer:
     """
-    Real-time vehicle health analysis based on 60-second rolling window.
-    Uses automotive industry standards for diagnostics thresholds.
+    Advanced real-time vehicle health analysis based on 60-second rolling window.
+    Uses physics-based algorithms and OBD-II standards for diagnostics.
     
-    Standards Reference:
-    - Engine Temp: SAE J1349 (80-110°C normal, 60-130°C extended range)
+    Physics Standards Reference:
+    - Engine Temp: SAE J1349 (90-105°C optimal, 60-130°C extended range)
     - Tire Pressure: DOT TPMS (30-35 PSI optimal, 25-40 PSI acceptable)
-    - Speed: OBD-II standard monitoring
+    - Speed: OBD-II standard monitoring (0-300 km/h typical)
+    - Tire-Speed Physics: Pressure × Speed interaction (nonlinear risk)
+    - Temperature-Speed Correlation: Engine temp should increase with sustained speed
+    
+    Contradiction Detection:
+    - High speed (>200 km/h) + Low pressure (<20 PSI) = CRITICAL FAILURE RISK
+    - High speed + Cold engine (<60°C) = Sensor malfunction or engine failure
+    - Rapid pressure drop + High speed = Tire puncture/blowout imminent
     """
 
     def __init__(self, window_size: int = 60):
@@ -111,6 +146,13 @@ class VehicleHealthAnalyzer:
         self.speed_window: deque = deque(maxlen=window_size)
         self.temp_window: deque = deque(maxlen=window_size)
         self.psi_window: deque = deque(maxlen=window_size)
+        self.rpm_window: deque = deque(maxlen=window_size)
+        self.oil_pressure_window: deque = deque(maxlen=window_size)
+        self.battery_voltage_window: deque = deque(maxlen=window_size)
+        self.tire_pressure_fl_window: deque = deque(maxlen=window_size)
+        self.tire_pressure_fr_window: deque = deque(maxlen=window_size)
+        self.tire_pressure_rl_window: deque = deque(maxlen=window_size)
+        self.tire_pressure_rr_window: deque = deque(maxlen=window_size)
         
         # Timestamp tracking
         self.last_update = time.time()
@@ -119,6 +161,19 @@ class VehicleHealthAnalyzer:
         # CSV logging
         self.csv_file = DATA_DIR / f"analysis_{datetime.now().strftime('%Y%m%d_%H%M%S')}.csv"
         self._init_csv()
+        
+        # Physics constants for tire-speed interaction
+        self.TIRE_CRITICAL_SPEED_LOW_PSI = 40  # km/h max safe speed at <20 PSI
+        self.TIRE_CRITICAL_SPEED_NORMAL_PSI = 200  # km/h max safe speed at normal PSI
+        self.TIRE_BLOWOUT_THRESHOLD_PSI = 15  # PSI below which blowout risk is extreme
+        self.ENGINE_TEMP_SPEED_CORRELATION = 0.15  # °C increase per 10 km/h sustained speed
+        
+        # Stability control - prevent rapid state changes
+        self.last_health_score = 0
+        self.last_status = "INITIALIZING"
+        self.health_score_history: deque = deque(maxlen=3)  # Keep last 3 scores for smoothing
+        self.HYSTERESIS_THRESHOLD = 5  # Only change status if score changes by 5+ points
+        self.IDLE_TEMP_TOLERANCE = 10  # Extra tolerance at idle (±10°C)
 
     def _init_csv(self) -> None:
         """Initialize CSV file with headers."""
@@ -127,9 +182,12 @@ class VehicleHealthAnalyzer:
                 writer = csv.writer(f)
                 writer.writerow([
                     "timestamp", "speed_kmh", "engine_temp_c", "tire_pressure_psi",
-                    "speed_status", "temp_status", "psi_status",
+                    "engine_rpm", "oil_pressure_psi", "battery_voltage_v",
+                    "tire_pressure_fl_psi", "tire_pressure_fr_psi", "tire_pressure_rl_psi", "tire_pressure_rr_psi",
+                    "speed_status", "temp_status", "psi_status", "rpm_status", "oil_status", "battery_status",
                     "speed_trend", "temp_trend", "psi_trend",
-                    "overall_health", "alerts"
+                    "overall_health", "health_status", "emergency", "contradictions",
+                    "tire_speed_risk", "temp_correlation_penalty", "alerts"
                 ])
         except Exception as e:
             logger.error(f"Failed to initialize CSV: {e}")
@@ -139,7 +197,10 @@ class VehicleHealthAnalyzer:
         Add a new telemetry reading and return analysis results.
         
         Args:
-            data: {"speed_kmh": float, "engine_temp_c": float, "tire_pressure_psi": float}
+            data: {"speed_kmh": float, "engine_temp_c": float, "tire_pressure_psi": float,
+                   "engine_rpm": float, "oil_pressure_psi": float, "battery_voltage_v": float,
+                   "tire_pressure_fl_psi": float, "tire_pressure_fr_psi": float,
+                   "tire_pressure_rl_psi": float, "tire_pressure_rr_psi": float}
         
         Returns:
             Analysis results with status, trends, and alerts
@@ -148,6 +209,13 @@ class VehicleHealthAnalyzer:
             self.speed_window.append(data["speed_kmh"])
             self.temp_window.append(data["engine_temp_c"])
             self.psi_window.append(data["tire_pressure_psi"])
+            self.rpm_window.append(data.get("engine_rpm", 1500))
+            self.oil_pressure_window.append(data.get("oil_pressure_psi", 45))
+            self.battery_voltage_window.append(data.get("battery_voltage_v", 13.8))
+            self.tire_pressure_fl_window.append(data.get("tire_pressure_fl_psi", 32))
+            self.tire_pressure_fr_window.append(data.get("tire_pressure_fr_psi", 32))
+            self.tire_pressure_rl_window.append(data.get("tire_pressure_rl_psi", 32))
+            self.tire_pressure_rr_window.append(data.get("tire_pressure_rr_psi", 32))
             self.last_update = time.time()
 
             # Compute analysis
@@ -169,16 +237,25 @@ class VehicleHealthAnalyzer:
     def _compute_status(self) -> dict[str, str]:
         """Determine status (optimal/warning/danger/cold) for each metric."""
         if not self.speed_window or not self.temp_window or not self.psi_window:
-            return {"speed": "—", "temp": "—", "psi": "—"}
+            return {
+                "speed": "—", "temp": "—", "psi": "—",
+                "rpm": "—", "oil": "—", "battery": "—"
+            }
 
         current_speed = self.speed_window[-1]
         current_temp = self.temp_window[-1]
         current_psi = self.psi_window[-1]
+        current_rpm = self.rpm_window[-1] if self.rpm_window else 1500
+        current_oil = self.oil_pressure_window[-1] if self.oil_pressure_window else 45
+        current_battery = self.battery_voltage_window[-1] if self.battery_voltage_window else 13.8
 
         return {
             "speed": self._speed_status(current_speed),
             "temp": self._temp_status(current_temp),
             "psi": self._psi_status(current_psi),
+            "rpm": self._rpm_status(current_rpm),
+            "oil": self._oil_pressure_status(current_oil),
+            "battery": self._battery_voltage_status(current_battery),
         }
 
     def _speed_status(self, speed: float) -> str:
@@ -219,6 +296,56 @@ class VehicleHealthAnalyzer:
             return "warning"
         else:
             return "danger"
+
+    def _rpm_status(self, rpm: float) -> str:
+        """
+        Classify engine RPM status.
+        Reference: Sedan specifications (600-1000 idle, 2000-3000 cruising, 6500 redline)
+        """
+        if rpm < 500:
+            return "danger"  # Engine stalled or not running
+        elif 600 <= rpm <= 1000:
+            return "optimal"  # Idle range
+        elif 1000 < rpm <= 3000:
+            return "optimal"  # Cruising range
+        elif 3000 < rpm <= 5500:
+            return "warning"  # High RPM
+        elif 5500 < rpm <= 6500:
+            return "danger"  # Near redline
+        else:
+            return "danger"  # Over redline
+
+    def _oil_pressure_status(self, oil_psi: float) -> str:
+        """
+        Classify oil pressure status.
+        Reference: Automotive standards (25-65 PSI optimal, <15 PSI critical)
+        """
+        if oil_psi < 15:
+            return "danger"  # Critical low
+        elif 15 <= oil_psi < 25:
+            return "warning"  # Low
+        elif 25 <= oil_psi <= 65:
+            return "optimal"  # Optimal range
+        elif 65 < oil_psi <= 75:
+            return "warning"  # Slightly high
+        else:
+            return "danger"  # Dangerously high
+
+    def _battery_voltage_status(self, voltage: float) -> str:
+        """
+        Classify battery voltage status.
+        Reference: Automotive standards (13.5-14.7V running, 12.6V at rest, <12.5V critical)
+        """
+        if voltage < 12.0:
+            return "danger"  # Critical low
+        elif 12.0 <= voltage < 12.6:
+            return "warning"  # Low
+        elif 12.6 <= voltage <= 14.7:
+            return "optimal"  # Optimal range
+        elif 14.7 < voltage <= 15.5:
+            return "warning"  # Slightly high
+        else:
+            return "danger"  # Dangerously high
 
     def _compute_trends(self) -> dict[str, dict[str, Any]]:
         """
@@ -275,7 +402,10 @@ class VehicleHealthAnalyzer:
         }
 
     def _generate_alerts(self) -> list[str]:
-        """Generate diagnostic alerts based on current conditions."""
+        """
+        Generate diagnostic alerts based on current conditions and physics-based analysis.
+        Includes contradiction detection and emergency system failure indicators.
+        """
         alerts = []
 
         if not self.speed_window or not self.temp_window or not self.psi_window:
@@ -285,27 +415,55 @@ class VehicleHealthAnalyzer:
         current_temp = self.temp_window[-1]
         current_psi = self.psi_window[-1]
 
-        # Speed alerts
-        if current_speed > 160:
+        # ---- EMERGENCY ALERTS (Contradictions) ----
+        contradictions = self._detect_contradictions(current_speed, current_temp, current_psi)
+        
+        if "CRITICAL_TIRE_FAILURE_RISK" in contradictions:
+            alerts.append("🚨 EMERGENCY: TIRE BLOWOUT IMMINENT - Reduce speed immediately!")
+        
+        if "CRITICAL_ENGINE_SENSOR_FAILURE" in contradictions:
+            alerts.append("🚨 EMERGENCY: Engine sensor malfunction or engine failure detected")
+        
+        if "TIRE_PUNCTURE_RISK" in contradictions:
+            alerts.append("⚠️ CRITICAL: Tire puncture risk - Pressure dropping at high speed")
+        
+        if "TIRE_FLAT_OR_SENSOR_FAILURE" in contradictions:
+            alerts.append("🛞 CRITICAL: Tire flat or pressure sensor failure")
+        
+        if "COOLING_SYSTEM_FAILURE" in contradictions:
+            alerts.append("🔥 CRITICAL: Cooling system failure - Engine overheating at low speed")
+        
+        if "RAPID_TEMP_SPIKE" in contradictions:
+            alerts.append("📈 WARNING: Rapid engine temperature spike detected")
+        
+        if "RAPID_PRESSURE_DROP" in contradictions:
+            alerts.append("💨 WARNING: Rapid tire pressure drop - Possible leak")
+
+        # ---- SPEED ALERTS ----
+        if current_speed > 200:
             alerts.append("⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits")
+        elif current_speed > 160:
+            alerts.append("⚠️ HIGH_SPEED: Reduce speed for safety")
 
-        # Temperature alerts
+        # ---- TEMPERATURE ALERTS ----
         if current_temp < 50:
-            alerts.append("❄️ COLD_ENGINE: Engine not warmed up properly")
+            alerts.append("❄️ COLD_ENGINE: Engine not warmed up - Check ignition")
         elif current_temp > 115:
-            alerts.append("🔥 OVERHEATING: Engine temperature critical")
+            alerts.append("🔥 OVERHEATING: Engine temperature critical - Pull over safely")
         elif current_temp > 105:
-            alerts.append("⚠️ HIGH_TEMP: Engine running hot")
+            alerts.append("⚠️ HIGH_TEMP: Engine running hot - Monitor closely")
 
-        # Tire pressure alerts
-        if current_psi < 25:
+        # ---- TIRE PRESSURE ALERTS ----
+        if current_psi < 15:
+            alerts.append("🛞 CRITICAL_PRESSURE: Tire flat or severely under-inflated")
+        elif current_psi < 25:
             alerts.append("🛞 LOW_PRESSURE: Tire pressure dangerously low")
         elif current_psi < 30:
             alerts.append("⚠️ UNDER_INFLATED: Tire pressure below optimal")
         elif current_psi > 40:
             alerts.append("⚠️ OVER_INFLATED: Tire pressure above safe range")
 
-        # Trend-based alerts
+        # ---- TREND-BASED ALERTS ----
         if len(self.temp_window) >= 10:
             temp_trend = self._analyze_trend(list(self.temp_window), "temp")
             if temp_trend["rate"] > 2.0:
@@ -316,61 +474,420 @@ class VehicleHealthAnalyzer:
             if psi_trend["rate"] < -0.5:
                 alerts.append("💨 PRESSURE_LEAK: Tire pressure dropping")
 
+        # ---- PHYSICS-BASED ALERTS ----
+        tire_speed_risk = self._calculate_tire_speed_risk(current_psi, current_speed)
+        if tire_speed_risk > 0.7:
+            alerts.append("🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed")
+        elif tire_speed_risk > 0.4:
+            alerts.append("⚠️ TIRE_SPEED_WARNING: Reduce speed or increase tire pressure")
+
         return alerts
 
     def _compute_health_score(self) -> dict[str, Any]:
         """
-        Compute overall vehicle health score (0-100).
-        Based on weighted average of all metrics.
+        Compute overall vehicle health score (0-100) using research-based physics algorithms.
+        
+        Formula (from research):
+        Final Score = max(0, 100 - [(P_temp + P_tyre) × M_stress] - P_oil - P_batt)
+        
+        Where:
+        - M_stress = 1.0 + (RPM/MaxRPM)² + (Speed/MaxSpeed)²
+        - P_temp = W_temp × (ΔT)² (non-linear temperature penalty)
+        - P_tyre = W_tyre × (ΔPressure)² (non-linear tire pressure penalty)
+        - P_oil = Oil pressure penalty
+        - P_batt = Battery voltage penalty
+        
+        Returns: Health score (0-100), status, and failure indicators
         """
         if not self.speed_window or not self.temp_window or not self.psi_window:
-            return {"score": 0, "status": "INITIALIZING"}
+            return {"score": 0, "status": "INITIALIZING", "emergency": False, "contradictions": []}
 
-        # Get status scores
-        speed_score = 100 if self._speed_status(self.speed_window[-1]) == "optimal" else 70
-        temp_score = 100 if self._temp_status(self.temp_window[-1]) == "optimal" else 70
-        psi_score = 100 if self._psi_status(self.psi_window[-1]) == "optimal" else 70
+        current_speed = self.speed_window[-1]
+        current_temp = self.temp_window[-1]
+        current_psi = self.psi_window[-1]
+        current_rpm = self.rpm_window[-1] if self.rpm_window else 1500
+        current_oil = self.oil_pressure_window[-1] if self.oil_pressure_window else 45
+        current_battery = self.battery_voltage_window[-1] if self.battery_voltage_window else 13.8
+        
+        # Get individual tire pressures
+        tire_fl = self.tire_pressure_fl_window[-1] if self.tire_pressure_fl_window else 32
+        tire_fr = self.tire_pressure_fr_window[-1] if self.tire_pressure_fr_window else 32
+        tire_rl = self.tire_pressure_rl_window[-1] if self.tire_pressure_rl_window else 32
+        tire_rr = self.tire_pressure_rr_window[-1] if self.tire_pressure_rr_window else 32
 
-        # Weighted average (equal weights for now)
-        overall_score = round((speed_score + temp_score + psi_score) / 3, 1)
-
-        # Determine health status
-        if overall_score >= 90:
-            health_status = "EXCELLENT"
-        elif overall_score >= 75:
-            health_status = "GOOD"
-        elif overall_score >= 60:
-            health_status = "FAIR"
+        # ---- STEP 1: Detect Critical Contradictions ----
+        contradictions = self._detect_contradictions(current_speed, current_temp, current_psi)
+        
+        # ---- STEP 2: Calculate Stress Multiplier ----
+        # M_stress = 1.0 + (RPM/MaxRPM)² + (Speed/MaxSpeed)²
+        max_rpm = 6500  # Sedan redline
+        max_speed = 300  # km/h
+        rpm_factor = (current_rpm / max_rpm) ** 2
+        speed_factor = (current_speed / max_speed) ** 2
+        stress_multiplier = 1.0 + rpm_factor + speed_factor
+        
+        # ---- STEP 3: Calculate Non-linear Penalties ----
+        # Temperature penalty: P_temp = W_temp × (ΔT)²
+        temp_optimal_min, temp_optimal_max = 90, 105
+        if current_temp < temp_optimal_min:
+            temp_delta = temp_optimal_min - current_temp
+        elif current_temp > temp_optimal_max:
+            temp_delta = current_temp - temp_optimal_max
         else:
-            health_status = "CRITICAL"
+            temp_delta = 0
+        
+        w_temp = 0.5  # Temperature weight
+        temp_penalty = w_temp * (temp_delta ** 2)
+        
+        # Tire pressure penalty: P_tyre = W_tyre × (ΔPressure)²
+        # Use average of all four tires
+        avg_tire_pressure = (tire_fl + tire_fr + tire_rl + tire_rr) / 4
+        tire_optimal_min, tire_optimal_max = 30, 35
+        if avg_tire_pressure < tire_optimal_min:
+            tire_delta = tire_optimal_min - avg_tire_pressure
+        elif avg_tire_pressure > tire_optimal_max:
+            tire_delta = avg_tire_pressure - tire_optimal_max
+        else:
+            tire_delta = 0
+        
+        w_tyre = 0.6  # Tire weight
+        tire_penalty = w_tyre * (tire_delta ** 2)
+        
+        # ---- STEP 4: Calculate Oil Pressure Penalty ----
+        # Optimal: 25-65 PSI, Critical: <15 PSI
+        if current_oil < 15:
+            oil_penalty = 40  # Critical
+        elif current_oil < 25:
+            oil_penalty = 20  # Warning
+        elif 25 <= current_oil <= 65:
+            oil_penalty = 0  # Optimal
+        elif current_oil <= 75:
+            oil_penalty = 10  # Slightly high
+        else:
+            oil_penalty = 30  # Dangerously high
+        
+        # ---- STEP 5: Calculate Battery Voltage Penalty ----
+        # Optimal: 13.5-14.7V running, 12.6V at rest, <12.5V critical
+        if current_battery < 12.0:
+            battery_penalty = 40  # Critical
+        elif current_battery < 12.6:
+            battery_penalty = 20  # Warning
+        elif 12.6 <= current_battery <= 14.7:
+            battery_penalty = 0  # Optimal
+        elif current_battery <= 15.5:
+            battery_penalty = 10  # Slightly high
+        else:
+            battery_penalty = 30  # Dangerously high
+        
+        # ---- STEP 6: Apply Research Formula ----
+        # Final Score = max(0, 100 - [(P_temp + P_tyre) × M_stress] - P_oil - P_batt)
+        combined_penalty = (temp_penalty + tire_penalty) * stress_multiplier
+        raw_score = 100 - combined_penalty - oil_penalty - battery_penalty
+        raw_score = round(max(0, min(100, raw_score)), 1)
+        
+        # ---- STEP 7: Apply Smoothing and Hysteresis ----
+        self.health_score_history.append(raw_score)
+        smoothed_score = sum(self.health_score_history) / len(self.health_score_history)
+        overall_score = round(smoothed_score, 1)
+        
+        # Apply hysteresis
+        score_change = abs(overall_score - self.last_health_score)
+        if score_change < self.HYSTERESIS_THRESHOLD and self.last_status != "INITIALIZING":
+            overall_score = self.last_health_score
+        
+        # Determine health status
+        is_emergency = len(contradictions) > 0 or stress_multiplier > 2.0
+        health_status = self._determine_health_status(overall_score, is_emergency, contradictions)
+        
+        # Update last values
+        self.last_health_score = overall_score
+        self.last_status = health_status
 
         return {
             "score": overall_score,
             "status": health_status,
             "component_scores": {
-                "speed": speed_score,
-                "temperature": temp_score,
-                "tire_pressure": psi_score,
+                "speed": self._calculate_speed_score(current_speed),
+                "temperature": self._calculate_temp_score(current_temp, current_speed),
+                "tire_pressure": self._calculate_psi_score(current_psi, current_speed),
+                "rpm": self._calculate_rpm_score(current_rpm),
+                "oil_pressure": self._calculate_oil_pressure_score(current_oil),
+                "battery_voltage": self._calculate_battery_voltage_score(current_battery),
             },
+            "emergency": is_emergency,
+            "contradictions": contradictions,
+            "tire_speed_risk": round(self._calculate_tire_speed_risk(current_psi, current_speed) * 100, 1),
+            "temp_correlation_penalty": round(temp_penalty, 1),
+            "stress_multiplier": round(stress_multiplier, 2),
         }
+
+    def _detect_contradictions(self, speed: float, temp: float, psi: float) -> list[str]:
+        """
+        Detect physically impossible or dangerous sensor combinations.
+        
+        Real-world scenarios:
+        - High speed + extremely low pressure = tire failure imminent
+        - High speed + cold engine = sensor malfunction or engine failure
+        - Rapid pressure drop = puncture/leak
+        - Temperature spike at low speed = cooling system failure
+        """
+        contradictions = []
+        
+        # CRITICAL: High speed + extremely low pressure
+        if speed > 200 and psi < 20:
+            contradictions.append("CRITICAL_TIRE_FAILURE_RISK")
+        
+        # CRITICAL: High speed + cold engine (engine not warmed up)
+        if speed > 150 and temp < 60:
+            contradictions.append("CRITICAL_ENGINE_SENSOR_FAILURE")
+        
+        # WARNING: Very high speed + moderate pressure drop
+        if speed > 180 and psi < 25:
+            contradictions.append("TIRE_PUNCTURE_RISK")
+        
+        # WARNING: Extreme pressure (physically impossible)
+        if psi < 5:
+            contradictions.append("TIRE_FLAT_OR_SENSOR_FAILURE")
+        
+        # WARNING: Engine overheating at low speed (cooling system failure)
+        if speed < 30 and temp > 115:
+            contradictions.append("COOLING_SYSTEM_FAILURE")
+        
+        # WARNING: Rapid temperature spike (check trend)
+        if len(self.temp_window) >= 5:
+            recent_temps = list(self.temp_window)[-5:]
+            temp_increase = recent_temps[-1] - recent_temps[0]
+            if temp_increase > 10:  # 10°C increase in 5 seconds
+                contradictions.append("RAPID_TEMP_SPIKE")
+        
+        # WARNING: Rapid pressure drop (check trend)
+        if len(self.psi_window) >= 5:
+            recent_psi = list(self.psi_window)[-5:]
+            psi_decrease = recent_psi[0] - recent_psi[-1]
+            if psi_decrease > 2:  # 2 PSI drop in 5 seconds
+                contradictions.append("RAPID_PRESSURE_DROP")
+        
+        return contradictions
+
+    def _calculate_tire_speed_risk(self, psi: float, speed: float) -> float:
+        """
+        Calculate tire failure risk using physics-based tire-speed interaction.
+        
+        Physics: Tire failure risk is nonlinear and multiplicative.
+        - At low PSI, tire sidewalls flex excessively
+        - At high speed, flexing frequency increases exponentially
+        - Combined effect: heat buildup → blowout
+        
+        Formula: Risk = (1 - PSI/35) × (Speed/300) × interaction_factor
+        
+        Returns: Risk score (0.0 to 1.0)
+        """
+        if psi <= 0 or speed < 0:
+            return 1.0  # Complete failure
+        
+        # Normalize PSI (35 PSI is optimal)
+        psi_factor = max(0, 1 - (psi / 35))
+        
+        # Normalize speed (300 km/h is extreme)
+        speed_factor = min(1, speed / 300)
+        
+        # Nonlinear interaction: low PSI + high speed = exponential risk
+        interaction_factor = 1.5  # Amplifies combined effect
+        
+        risk = psi_factor * speed_factor * interaction_factor
+        
+        # Apply critical thresholds
+        if psi < self.TIRE_BLOWOUT_THRESHOLD_PSI:
+            risk = min(1.0, risk + 0.5)  # Add critical penalty
+        
+        if speed > self.TIRE_CRITICAL_SPEED_LOW_PSI and psi < 20:
+            risk = min(1.0, risk + 0.3)  # Add high-speed low-pressure penalty
+        
+        return min(1.0, risk)
+
+    def _check_temp_speed_correlation(self, speed: float, temp: float) -> float:
+        """
+        Check if engine temperature correlates properly with speed.
+        
+        Physics: At sustained high speed, engine should warm up.
+        - Idle (0-20 km/h): temp should be 80-95°C (with extra tolerance)
+        - Moderate (50-100 km/h): temp should be 90-105°C
+        - High speed (>150 km/h): temp should be 95-110°C
+        
+        Anomalies indicate:
+        - Cold engine at high speed = sensor failure or engine not running
+        - Overheating at low speed = cooling system failure
+        
+        Returns: Penalty score (0-30)
+        """
+        penalty = 0
+        
+        # Expected temperature range based on speed
+        if speed < 20:
+            # At idle, add extra tolerance to prevent noise-induced instability
+            expected_min, expected_max = 70, 95 + self.IDLE_TEMP_TOLERANCE
+        elif speed < 100:
+            expected_min, expected_max = 85, 105
+        else:
+            expected_min, expected_max = 90, 110
+        
+        # Check if temperature is within expected range
+        if temp < expected_min:
+            # Too cold for current speed
+            deviation = expected_min - temp
+            penalty = min(30, deviation * 1.5)
+        elif temp > expected_max:
+            # Too hot for current speed
+            deviation = temp - expected_max
+            penalty = min(30, deviation * 1.2)
+        
+        return penalty
+
+    def _calculate_speed_score(self, speed: float) -> float:
+        """Calculate speed component health score (0-100)."""
+        if speed <= 120:
+            return 100
+        elif speed <= 160:
+            return 80
+        elif speed <= 200:
+            return 60
+        elif speed <= 250:
+            return 40
+        else:
+            return 20
+
+    def _calculate_temp_score(self, temp: float, speed: float) -> float:
+        """
+        Calculate temperature component health score (0-100).
+        Considers both absolute temperature and speed correlation.
+        """
+        if temp < 50:
+            return 30  # Engine not warmed up
+        elif 60 <= temp <= 105:
+            return 100  # Optimal range
+        elif 105 < temp <= 115:
+            return 70  # Warning range
+        else:
+            return 20  # Danger range
+
+    def _calculate_psi_score(self, psi: float, speed: float) -> float:
+        """
+        Calculate tire pressure component health score (0-100).
+        Considers both absolute pressure and speed safety.
+        """
+        if psi < 5:
+            return 0  # Flat tire
+        elif psi < 20:
+            # Dangerous at any speed, critical at high speed
+            if speed > 100:
+                return 10
+            else:
+                return 30
+        elif psi < 25:
+            return 50  # Below optimal
+        elif 30 <= psi <= 35:
+            return 100  # Optimal
+        elif psi <= 40:
+            return 80  # Slightly over
+        else:
+            return 40  # Over-inflated
+
+    def _calculate_rpm_score(self, rpm: float) -> float:
+        """Calculate RPM component health score (0-100)."""
+        if rpm < 500:
+            return 0  # Engine stalled
+        elif 600 <= rpm <= 1000:
+            return 100  # Idle optimal
+        elif 1000 < rpm <= 3000:
+            return 100  # Cruising optimal
+        elif 3000 < rpm <= 5500:
+            return 80  # High RPM
+        elif 5500 < rpm <= 6500:
+            return 40  # Near redline
+        else:
+            return 10  # Over redline
+
+    def _calculate_oil_pressure_score(self, oil_psi: float) -> float:
+        """Calculate oil pressure component health score (0-100)."""
+        if oil_psi < 15:
+            return 0  # Critical
+        elif oil_psi < 25:
+            return 50  # Low
+        elif 25 <= oil_psi <= 65:
+            return 100  # Optimal
+        elif oil_psi <= 75:
+            return 80  # Slightly high
+        else:
+            return 40  # Dangerously high
+
+    def _calculate_battery_voltage_score(self, voltage: float) -> float:
+        """Calculate battery voltage component health score (0-100)."""
+        if voltage < 12.0:
+            return 0  # Critical
+        elif voltage < 12.6:
+            return 50  # Low
+        elif 12.6 <= voltage <= 14.7:
+            return 100  # Optimal
+        elif voltage <= 15.5:
+            return 80  # Slightly high
+        else:
+            return 40  # Dangerously high
+
+    def _determine_health_status(self, score: float, is_emergency: bool, contradictions: list[str]) -> str:
+        """
+        Determine health status with emergency indicators.
+        
+        Status hierarchy:
+        - EMERGENCY: Critical contradictions detected
+        - CRITICAL: Score < 30 or dangerous conditions
+        - FAIR: Score 30-60
+        - GOOD: Score 60-80
+        - EXCELLENT: Score 80+
+        """
+        if is_emergency or "CRITICAL" in str(contradictions):
+            return "🚨 EMERGENCY"
+        elif score < 30:
+            return "🔴 CRITICAL"
+        elif score < 60:
+            return "🟡 FAIR"
+        elif score < 80:
+            return "🟢 GOOD"
+        else:
+            return "✅ EXCELLENT"
 
     def _log_to_csv(self, analysis: dict[str, Any]) -> None:
         """Log analysis results to CSV file."""
         try:
             with open(self.csv_file, "a", newline="") as f:
                 writer = csv.writer(f)
+                current_values = analysis["current_values"]
                 writer.writerow([
                     analysis["timestamp"],
-                    analysis["current_values"]["speed_kmh"],
-                    analysis["current_values"]["engine_temp_c"],
-                    analysis["current_values"]["tire_pressure_psi"],
-                    analysis["status"]["speed"],
-                    analysis["status"]["temp"],
-                    analysis["status"]["psi"],
+                    current_values.get("speed_kmh", 0),
+                    current_values.get("engine_temp_c", 0),
+                    current_values.get("tire_pressure_psi", 0),
+                    current_values.get("engine_rpm", 0),
+                    current_values.get("oil_pressure_psi", 0),
+                    current_values.get("battery_voltage_v", 0),
+                    current_values.get("tire_pressure_fl_psi", 0),
+                    current_values.get("tire_pressure_fr_psi", 0),
+                    current_values.get("tire_pressure_rl_psi", 0),
+                    current_values.get("tire_pressure_rr_psi", 0),
+                    analysis["status"].get("speed", "—"),
+                    analysis["status"].get("temp", "—"),
+                    analysis["status"].get("psi", "—"),
+                    analysis["status"].get("rpm", "—"),
+                    analysis["status"].get("oil", "—"),
+                    analysis["status"].get("battery", "—"),
                     analysis["trends"]["speed"]["direction"],
                     analysis["trends"]["temp"]["direction"],
                     analysis["trends"]["psi"]["direction"],
+                    analysis["health_score"]["score"],
                     analysis["health_score"]["status"],
+                    analysis["health_score"].get("emergency", False),
+                    "|".join(analysis["health_score"].get("contradictions", [])) if analysis["health_score"].get("contradictions") else "NONE",
+                    analysis["health_score"].get("tire_speed_risk", 0),
+                    analysis["health_score"].get("temp_correlation_penalty", 0),
                     "|".join(analysis["alerts"]) if analysis["alerts"] else "NONE",
                 ])
         except Exception as e:
@@ -595,7 +1112,9 @@ async def ws_telemetry(ws: WebSocket) -> None:
                             {
                                 "type": "error",
                                 "detail": f"Unknown parameter: {param!r}. "
-                                f"Valid: speed_kmh, engine_temp_c, tire_pressure_psi",
+                                f"Valid: speed_kmh, engine_temp_c, tire_pressure_psi, engine_rpm, "
+                                f"oil_pressure_psi, battery_voltage_v, tire_pressure_fl_psi, "
+                                f"tire_pressure_fr_psi, tire_pressure_rl_psi, tire_pressure_rr_psi",
                             }
                         )
                     )

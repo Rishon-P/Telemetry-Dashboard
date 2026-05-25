@@ -1,0 +1,1001 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,health_status,emergency,contradictions,tire_speed_risk,temp_correlation_penalty,alerts
+1779677021.015,80.3,89.4,31.9,optimal,optimal,optimal,—,—,—,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677022.015,79.7,89.3,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677023.015,78.7,88.6,32.4,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677024.016,82.6,90.7,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677025.017,78.0,89.7,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677026.018,78.8,89.0,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677027.019,82.8,88.8,32.2,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677028.021,81.1,90.8,31.7,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677029.02,80.0,89.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677030.02,79.2,88.8,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677031.021,82.4,89.0,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677032.021,77.8,90.1,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677033.022,77.5,90.4,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677034.023,78.5,91.2,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677035.024,80.1,88.8,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677036.025,78.1,89.2,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677037.026,81.3,88.9,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677038.027,80.5,90.0,31.6,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677039.028,80.6,91.5,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779677040.028,79.1,89.5,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677041.029,77.8,90.9,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677042.03,80.2,89.1,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677043.03,78.1,88.7,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677044.03,80.9,90.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677045.031,80.5,91.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677046.032,77.6,90.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677047.033,81.1,88.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677048.034,77.6,88.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677049.034,77.2,89.3,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677050.034,79.6,90.7,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677051.035,78.9,88.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677052.035,77.6,89.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677053.036,80.2,90.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677054.037,78.0,90.8,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677055.037,81.1,91.4,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677056.038,82.7,90.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677057.039,80.6,88.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677058.04,82.5,89.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677059.04,78.6,89.7,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677060.041,80.6,90.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677061.042,81.2,90.8,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677062.042,78.9,90.4,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677063.043,78.6,88.7,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677064.043,77.5,90.9,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677065.044,82.0,89.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677066.044,79.1,89.0,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677067.044,81.7,89.5,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677068.045,82.5,88.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677069.046,81.7,90.1,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677070.047,82.7,88.8,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677071.048,82.9,90.4,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677072.048,78.5,91.1,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677073.048,80.4,89.9,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677074.048,78.0,88.8,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677075.049,78.6,90.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677076.05,81.5,90.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677077.051,78.6,91.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677078.051,81.8,90.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677079.052,78.1,90.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677080.052,77.3,89.1,32.0,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677081.054,80.6,91.2,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677082.055,77.9,91.1,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677083.055,82.9,89.5,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677084.056,80.0,90.1,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677085.056,82.6,88.9,32.4,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677086.057,82.4,89.3,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677087.058,77.8,89.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677088.058,78.9,89.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677089.058,82.5,89.7,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677090.059,79.9,90.2,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677091.059,82.7,89.4,32.3,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677092.06,78.1,90.4,32.4,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677093.061,82.5,89.0,32.4,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677094.062,80.4,88.5,32.0,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677095.063,78.4,89.4,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677096.063,78.3,90.6,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677097.063,78.9,90.6,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677098.065,77.2,90.1,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677099.065,78.2,90.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677100.065,81.2,91.3,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677101.066,78.9,91.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677102.067,77.1,90.5,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677103.068,78.8,89.1,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677104.069,81.8,90.6,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677105.069,78.6,89.8,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677106.07,78.4,88.6,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677107.071,79.6,88.6,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677108.072,82.7,90.9,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677109.073,78.8,90.5,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677110.074,81.9,88.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677111.075,78.2,88.9,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677112.076,79.6,91.1,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677113.076,82.7,89.5,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677114.077,81.8,90.3,32.3,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677115.078,81.0,88.6,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677116.078,78.3,91.1,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677117.078,80.5,89.5,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677118.079,82.3,90.2,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677119.079,78.2,88.5,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677120.08,80.6,89.2,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677121.08,78.3,89.1,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677122.082,79.9,91.1,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677123.083,80.7,91.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677124.084,80.9,89.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677125.085,80.6,90.3,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677126.086,81.5,91.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677127.087,80.2,91.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677128.088,82.6,89.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677129.088,79.7,90.9,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677130.089,80.2,90.0,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677131.091,82.2,89.9,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677132.092,80.8,90.7,31.6,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677133.093,82.3,89.7,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677134.094,78.5,91.4,32.1,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677135.095,80.4,90.9,32.0,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677136.095,78.6,91.0,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677137.097,81.4,89.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677138.098,78.0,88.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677139.099,79.0,89.9,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677140.1,77.8,89.5,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677141.101,80.5,90.5,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677142.102,77.0,90.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677143.103,81.1,88.8,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677144.103,77.9,91.4,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677145.105,77.4,89.7,32.1,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677146.105,78.7,90.1,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677147.106,78.1,89.6,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677148.106,77.1,88.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677149.107,80.8,90.3,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677150.107,77.2,90.6,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677151.108,80.6,91.5,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677152.107,82.0,90.2,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677153.108,82.4,88.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677154.109,78.0,89.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677155.109,80.0,89.1,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677156.109,80.0,89.7,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677157.109,82.8,90.4,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677158.11,81.9,89.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677159.111,78.3,90.9,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677160.111,82.8,90.4,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677161.111,77.8,91.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677162.112,82.8,89.6,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677163.113,82.0,91.2,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677164.114,80.7,91.0,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677165.115,81.0,91.5,32.1,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677166.115,81.2,89.4,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677167.116,80.1,88.7,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677168.117,82.8,89.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677169.118,82.1,89.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677170.118,78.8,90.1,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677171.119,78.6,89.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677172.119,82.5,91.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677173.119,77.3,89.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677174.119,80.5,89.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677175.119,77.9,91.3,32.4,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677176.119,82.3,89.0,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677177.119,77.9,90.2,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677178.119,82.5,89.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677179.12,78.1,89.7,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677180.12,81.0,89.8,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677181.121,80.9,91.2,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677182.121,82.4,90.1,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677183.122,78.9,89.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677184.123,80.5,90.3,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677185.124,78.8,90.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677186.125,82.8,89.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677187.125,81.8,91.2,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677188.125,77.1,90.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677189.125,77.4,91.4,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677190.126,82.8,89.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677191.127,82.6,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677192.127,82.5,90.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677193.128,79.5,89.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677194.128,77.4,90.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677195.129,79.3,90.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677196.13,81.9,89.7,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677197.131,80.4,88.6,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677198.132,80.7,90.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677199.132,81.9,91.2,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677200.132,78.1,91.3,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677201.132,80.3,89.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677202.134,77.1,90.1,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677203.134,79.5,89.1,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677204.135,80.7,89.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677205.135,82.6,89.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677206.135,78.4,89.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677207.136,81.3,90.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677208.137,77.2,89.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677209.138,77.4,90.2,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677210.139,83.0,89.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677211.14,78.7,88.8,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677212.141,79.2,89.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677213.142,79.6,89.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677214.143,81.6,91.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677215.144,80.5,89.1,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677216.144,82.1,91.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677217.145,78.3,90.3,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677218.146,81.0,89.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677219.146,83.0,91.1,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677220.148,77.4,90.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677221.149,78.2,89.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677222.15,77.1,89.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677223.151,77.4,90.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677224.151,79.4,90.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677225.152,77.7,89.6,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677226.153,82.5,90.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677227.154,82.7,89.0,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677228.155,82.3,91.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677229.155,78.2,90.0,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677230.155,77.3,90.4,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677231.156,79.5,90.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677232.157,77.7,88.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677233.158,77.3,90.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677234.159,78.5,88.8,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677235.16,80.3,91.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677236.16,78.0,89.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677237.16,77.9,90.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677238.161,77.6,91.5,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677239.162,81.4,90.7,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677240.163,80.1,90.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677241.164,77.4,90.6,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677242.164,82.0,89.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677243.165,77.2,91.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677244.167,78.1,91.3,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677245.168,78.0,90.3,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677246.169,80.9,89.5,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677247.17,80.4,89.4,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677248.171,77.2,90.2,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677249.172,81.3,88.8,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677250.173,80.5,89.4,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677251.174,80.6,91.2,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677252.175,82.2,88.8,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677253.174,79.2,90.6,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677254.175,77.3,89.8,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677255.175,80.5,89.0,32.4,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677256.176,77.8,90.1,31.7,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677257.176,77.3,89.3,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677258.176,81.7,90.4,31.9,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677259.176,82.9,88.8,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677260.176,81.8,90.4,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677261.177,78.3,89.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677262.178,81.2,88.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677263.179,82.8,89.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677264.18,77.1,91.0,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677265.181,82.7,89.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677266.182,81.8,90.0,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677267.183,82.6,91.1,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677268.183,79.2,90.6,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677269.183,81.5,91.5,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677270.184,80.9,91.3,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677271.185,79.4,90.1,32.0,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677272.185,80.2,89.6,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677273.185,78.9,89.1,32.4,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677274.185,81.0,89.5,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677275.186,82.8,88.6,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677276.187,81.6,88.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677277.187,77.5,88.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677278.188,81.2,91.5,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677279.188,78.3,90.6,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677280.19,78.6,89.1,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677281.191,78.3,90.6,32.1,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677282.192,82.8,90.1,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677283.193,79.5,89.5,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677284.193,78.4,90.3,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677285.194,80.5,88.5,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677286.194,78.3,89.7,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677287.195,77.7,88.6,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677288.196,81.3,88.9,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677289.197,79.9,90.1,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677290.198,77.2,89.4,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677291.199,80.6,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677292.2,78.0,89.3,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677293.2,77.8,90.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677294.201,78.4,89.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677295.202,77.3,90.9,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677296.203,81.7,90.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677297.204,77.8,89.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677298.205,82.7,89.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677299.206,82.4,89.5,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677300.206,80.4,91.5,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677301.206,77.9,90.4,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677302.207,79.7,89.8,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677303.208,79.7,89.4,31.7,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677304.209,78.4,90.5,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677305.21,77.6,88.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677306.21,77.8,91.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677307.211,77.8,91.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677308.211,82.9,91.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677309.211,79.1,89.8,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677310.212,77.3,91.4,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677311.213,78.9,89.4,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677312.214,80.5,91.1,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677313.214,78.5,89.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677314.214,82.3,90.3,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677315.215,80.1,88.9,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677316.216,80.8,90.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677317.216,78.3,91.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677318.217,77.9,89.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677319.218,82.6,90.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677320.219,82.5,89.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677321.22,77.3,89.8,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677322.22,79.0,90.0,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677323.221,78.8,90.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677324.221,77.6,89.9,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677325.222,80.7,88.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677326.223,82.5,90.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677327.223,79.9,91.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677328.224,79.8,89.9,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677329.225,78.6,89.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677330.225,78.7,88.5,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677331.226,81.4,91.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677332.226,79.3,91.5,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677333.226,82.8,90.7,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677334.227,79.4,90.3,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677335.228,79.4,89.9,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677336.229,77.0,91.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677337.23,82.6,90.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677338.231,78.4,88.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677339.232,81.3,91.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677340.233,81.6,90.5,32.4,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677341.234,82.0,88.6,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677342.235,81.8,89.7,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677343.235,77.1,91.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677344.235,79.5,89.6,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677345.236,82.6,90.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677346.236,80.9,88.9,31.8,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677347.237,81.7,91.2,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677348.238,81.1,90.0,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677349.238,77.2,89.7,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677350.24,78.4,89.3,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677351.24,78.1,88.6,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677352.242,80.7,90.4,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677353.243,82.2,91.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677354.243,82.5,88.6,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677355.244,81.1,90.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677356.245,79.3,89.5,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677357.246,79.3,90.4,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677358.246,78.9,90.0,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,2.9,0,NONE
+1779677359.247,79.7,90.2,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677360.248,81.1,89.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677361.249,81.9,90.0,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677362.25,82.8,89.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677363.25,81.2,88.6,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677364.251,80.9,91.3,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677365.253,78.1,89.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677366.253,79.4,88.8,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677367.254,80.3,88.9,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677368.255,80.1,90.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677369.256,78.1,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677370.256,79.2,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677371.257,81.8,89.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677372.257,81.6,88.8,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677373.258,81.4,89.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677374.259,81.4,90.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677375.26,77.1,90.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677376.261,83.0,88.8,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677377.262,77.1,88.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677378.263,78.6,89.8,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677379.264,81.0,89.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677380.265,82.6,90.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677381.265,77.1,88.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677382.266,82.2,90.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677383.266,80.0,90.9,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677384.267,80.2,89.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677385.268,79.0,88.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677386.267,82.8,90.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677387.267,81.5,91.5,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677388.268,82.2,90.7,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677389.269,80.1,89.6,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677390.27,81.2,90.8,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677391.271,81.0,88.7,32.1,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677392.271,79.9,88.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677393.271,82.7,89.0,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677394.272,77.7,91.0,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677395.273,80.1,89.6,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677396.274,79.0,90.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677397.275,82.7,91.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677398.276,81.9,88.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677399.277,77.3,89.8,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677400.277,82.7,90.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677401.278,78.5,89.4,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677402.278,81.6,89.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677403.278,82.6,90.5,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677404.279,80.7,90.9,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677405.28,78.5,90.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677406.28,79.6,91.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677407.28,79.6,91.2,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677408.28,78.9,91.1,32.0,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677409.28,82.6,89.7,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677410.28,81.7,88.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677411.281,79.4,90.3,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677412.281,81.4,88.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,4.0,0,NONE
+1779677413.281,82.9,90.4,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677414.281,79.5,91.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677415.282,82.1,91.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677416.282,78.8,91.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677417.283,79.1,89.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677418.283,78.4,91.2,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677419.283,78.1,91.4,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.5,0,NONE
+1779677420.284,80.2,89.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677421.286,82.4,88.7,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677422.287,82.5,91.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.8,0,NONE
+1779677423.288,78.1,90.0,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.2,0,NONE
+1779677424.288,82.4,89.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677425.289,79.5,90.6,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.9,0,NONE
+1779677426.29,78.4,91.3,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.4,0,NONE
+1779677427.291,81.5,89.7,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.6,0,NONE
+1779677428.291,77.5,88.9,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.0,0,NONE
+1779677429.291,79.9,88.5,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677430.291,79.6,91.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.3,0,NONE
+1779677431.291,81.3,90.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.7,0,NONE
+1779677432.292,77.9,90.8,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,96.4,✅ EXCELLENT,False,NONE,3.1,0,NONE
+1779677433.293,-0.8,88.8,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,64.4,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677434.294,1.9,90.6,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,64.4,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677435.295,1.9,89.0,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,64.4,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677436.296,0.5,91.2,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677437.296,-2.1,90.6,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677438.297,-0.1,88.6,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677439.298,-0.6,90.5,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677440.298,2.8,88.8,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677441.299,0.8,89.7,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677442.3,2.6,91.0,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677443.3,0.6,89.4,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677444.301,-3.0,89.2,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677445.301,-2.4,88.6,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677446.302,-0.4,90.7,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677447.302,1.2,88.9,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677448.302,2.0,90.4,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677449.302,-2.4,89.7,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677450.302,1.7,90.2,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677451.302,-0.6,89.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677452.303,1.6,89.1,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677453.304,-0.9,90.7,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677454.305,-2.6,91.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677455.306,-0.8,91.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677456.307,1.0,91.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677457.308,-1.4,89.1,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677458.309,2.4,90.9,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677459.309,0.7,90.8,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677460.309,2.7,89.7,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677461.309,-0.5,89.1,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677462.309,-1.2,91.2,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677463.309,-3.0,90.5,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677464.309,-2.3,90.6,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677465.309,-0.7,90.7,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677466.31,2.4,91.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677467.31,-0.4,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677468.31,1.1,89.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677469.311,2.8,90.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677470.312,-2.3,89.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677471.313,2.4,89.6,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677472.313,-1.2,88.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677473.314,-1.4,91.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677474.314,1.8,91.0,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677475.314,-0.4,90.7,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677476.314,2.6,89.5,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677477.315,2.3,89.1,31.7,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677478.316,-2.5,90.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677479.316,0.7,90.6,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677480.316,-0.6,90.0,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677481.316,1.0,91.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677482.316,-2.1,90.7,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677483.317,-0.4,88.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677484.317,2.4,91.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677485.319,-0.9,89.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677486.32,-0.9,90.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677487.321,-0.6,91.3,32.0,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677488.321,-2.3,88.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677489.322,2.3,89.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677490.322,-2.0,90.0,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677491.322,1.4,90.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677492.322,-2.8,90.5,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677493.322,0.4,89.3,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677494.322,2.5,88.8,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677495.322,-1.1,89.7,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677496.322,-0.8,89.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677497.323,2.2,90.2,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677498.323,2.6,90.6,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677499.325,-2.7,89.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677500.326,-1.6,90.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677501.326,2.4,89.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677502.326,-2.0,90.5,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677503.327,-1.7,90.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677504.327,2.1,88.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677505.327,2.5,91.1,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677506.327,-2.0,91.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677507.329,2.9,90.2,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677508.33,-1.2,90.4,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677509.331,1.4,91.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677510.331,2.5,91.5,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677511.332,2.9,89.2,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677512.333,1.7,90.9,32.0,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677513.334,-2.7,89.8,31.6,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677514.334,-2.4,90.2,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677515.334,1.6,89.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677516.334,-1.5,90.3,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677517.335,2.9,91.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677518.336,1.0,90.0,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677519.337,1.6,88.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677520.337,-3.0,90.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677521.337,-1.0,88.7,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677522.338,2.2,90.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677523.338,-0.7,90.2,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677524.339,0.9,89.9,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677525.34,2.4,90.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677526.34,-2.3,90.6,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677527.34,-1.5,90.5,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677528.342,2.3,90.2,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677529.342,-2.4,90.0,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677530.342,0.3,89.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677531.343,-1.8,88.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677532.343,2.7,90.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677533.343,0.5,89.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677534.344,2.3,89.7,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677535.345,-1.2,91.2,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677536.345,0.5,90.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677537.345,1.5,90.3,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677538.346,2.1,89.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677539.346,1.4,90.6,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677540.347,-2.3,90.3,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677541.348,-0.2,89.4,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677542.348,2.5,91.2,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677543.349,0.5,89.3,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677544.35,1.9,89.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677545.35,-1.0,88.6,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677546.351,2.9,89.5,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677547.351,0.5,89.8,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677548.352,2.2,89.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677549.352,0.5,91.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677550.353,1.1,91.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677551.353,-0.1,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677552.354,2.2,91.3,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677553.354,1.5,89.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677554.354,-2.0,91.0,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677555.354,-0.8,90.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677556.355,1.9,90.7,32.4,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677557.356,2.8,91.1,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677558.357,0.4,89.4,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677559.357,1.3,89.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677560.358,3.0,88.7,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677561.359,-1.9,91.2,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677562.36,-1.1,90.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677563.361,-2.9,90.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677564.361,1.2,90.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677565.361,0.1,89.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677566.362,-0.6,91.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677567.363,2.6,89.8,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677568.363,2.2,91.2,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677569.364,0.7,90.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677570.364,0.1,89.4,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677571.365,-1.8,91.1,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677572.366,-1.9,89.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677573.367,0.1,89.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677574.367,1.2,90.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677575.368,1.8,88.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677576.368,1.3,88.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677577.369,0.6,88.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677578.37,-2.6,89.3,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677579.371,-1.5,91.1,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677580.371,-2.6,90.1,31.7,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677581.371,2.5,89.4,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677582.372,2.5,88.9,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677583.372,2.5,90.5,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677584.373,1.9,90.0,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677585.374,0.3,89.1,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677586.376,2.0,90.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677587.376,1.1,88.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677588.377,2.9,88.7,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677589.378,-2.9,90.7,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677590.378,1.6,89.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677591.378,-1.5,89.2,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677592.378,2.4,89.6,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677593.379,-1.7,89.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677594.38,-1.2,90.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677595.381,0.1,89.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677596.382,0.6,90.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677597.383,0.3,89.1,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677598.383,-1.2,91.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677599.383,1.8,88.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677600.383,2.0,88.8,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677601.383,1.5,89.6,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677602.384,1.8,88.6,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677603.385,-2.2,90.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677604.386,-0.5,90.4,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677605.387,-2.6,90.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677606.388,-2.6,88.6,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677607.389,0.3,88.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677608.389,-2.5,90.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677609.389,2.3,89.4,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677610.391,-0.7,90.2,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677611.392,-2.6,90.1,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677612.393,2.9,91.2,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677613.393,-2.0,88.6,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677614.394,0.2,90.7,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677615.394,1.9,91.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677616.394,2.4,90.9,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677617.394,-2.0,90.8,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677618.395,-2.1,89.0,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677619.396,1.6,90.8,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677620.397,-0.4,89.2,31.7,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677621.397,0.9,90.7,32.1,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677622.397,-0.2,89.4,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677623.398,-2.8,91.0,32.1,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677624.399,2.0,89.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677625.4,1.5,89.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677626.401,2.9,91.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677627.402,2.5,91.1,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677628.403,-0.9,89.1,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677629.404,-0.3,90.8,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677630.405,0.5,89.4,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677631.406,1.3,90.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677632.406,-1.8,90.7,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677633.406,-2.9,89.1,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677634.408,1.4,91.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677635.408,0.6,90.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677636.409,2.6,91.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677637.41,1.4,88.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677638.411,1.0,89.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677639.412,-1.6,90.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677640.412,1.1,88.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677641.413,-0.7,91.0,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677642.413,-0.1,90.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677643.414,-0.6,88.8,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677644.415,-1.5,90.0,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677645.416,-1.4,89.2,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677646.417,0.9,88.9,31.6,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677647.418,-2.7,90.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677648.419,0.5,90.7,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677649.419,-1.4,90.9,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677650.42,-0.2,90.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677651.421,-2.6,89.3,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677652.421,-0.7,91.0,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677653.421,2.5,89.3,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677654.422,1.4,90.2,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677655.423,-2.2,89.8,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677656.423,2.9,89.9,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677657.424,-0.9,90.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677658.425,-0.9,90.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677659.426,1.6,89.4,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677660.427,-1.4,88.5,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677661.427,-0.3,89.1,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677662.428,1.7,89.6,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677663.429,2.6,89.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677664.43,-2.8,91.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677665.431,-2.2,89.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677666.432,-2.6,88.5,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677667.432,2.0,91.2,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677668.434,-2.9,89.5,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677669.435,2.9,90.6,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677670.436,-2.3,90.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677671.437,2.5,90.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677672.437,1.6,88.9,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677673.438,1.2,89.8,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677674.438,0.9,89.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677675.439,1.8,88.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677676.44,-0.3,89.0,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677677.441,-2.9,89.7,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677678.442,1.2,91.0,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677679.442,-0.0,88.8,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,-0.0,0,NONE
+1779677680.443,-0.7,88.5,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677681.443,2.7,90.9,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677682.443,-1.3,89.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677683.444,0.9,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677684.444,2.7,89.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677685.445,-2.7,88.9,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677686.446,1.2,91.4,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677687.447,-2.1,90.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677688.447,0.7,91.2,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677689.448,-0.5,91.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677690.448,0.1,89.2,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677691.449,0.8,89.6,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677692.45,2.6,90.7,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677693.451,-1.9,89.4,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677694.452,-0.1,89.6,31.7,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677695.453,-1.3,90.8,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677696.453,-1.3,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677697.454,-1.0,88.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677698.454,0.6,90.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677699.454,1.3,89.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677700.455,-0.5,91.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677701.456,1.0,90.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677702.457,-1.5,89.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677703.457,0.3,90.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677704.458,-2.2,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677705.459,-0.4,89.1,31.6,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677706.46,2.8,90.0,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677707.461,2.9,90.0,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677708.461,-2.5,89.3,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677709.461,-2.9,90.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677710.463,-2.3,89.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677711.464,-3.0,89.3,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677712.465,1.2,89.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677713.465,-2.4,90.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677714.466,-2.3,91.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677715.467,-2.9,90.0,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677716.467,-1.7,90.3,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677717.467,2.7,88.8,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677718.468,-2.4,91.5,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677719.468,-1.5,89.5,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677720.469,0.0,89.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677721.47,2.4,89.5,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677722.47,2.3,90.3,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677723.471,2.6,89.0,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677724.472,-0.6,90.0,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677725.472,-0.2,89.0,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677726.472,1.0,90.6,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677727.472,1.9,89.4,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677728.473,0.2,89.8,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677729.474,1.5,89.3,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677730.475,-0.8,89.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677731.475,1.7,89.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677732.476,1.5,89.2,32.3,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677733.477,2.8,91.2,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677734.477,2.0,89.7,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677735.478,-0.4,89.6,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677736.478,2.9,89.9,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677737.478,-1.0,89.1,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677738.479,-2.7,91.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677739.479,1.2,89.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677740.48,0.3,91.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677741.48,1.9,91.5,31.6,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677742.48,1.0,88.9,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677743.48,-0.5,90.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677744.48,3.0,89.6,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677745.48,-1.0,89.4,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677746.48,2.2,88.8,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677747.481,2.6,89.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677748.481,-1.8,90.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677749.483,2.3,88.6,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677750.483,0.7,90.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677751.484,-1.1,90.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677752.485,-2.1,91.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677753.485,2.9,91.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677754.486,-1.7,90.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677755.487,-1.4,89.2,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677756.488,-0.1,88.9,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677757.488,-2.2,90.9,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677758.488,-2.6,91.5,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677759.489,0.7,90.2,31.8,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677760.489,-2.6,88.7,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677761.49,1.9,90.3,31.6,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677762.49,-2.8,91.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677763.491,-0.2,90.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677764.491,2.4,89.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677765.491,1.3,89.4,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677766.491,1.6,90.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677767.492,1.2,91.1,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677768.492,-0.9,90.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677769.493,-2.7,90.4,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677770.494,-2.0,89.2,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677771.495,-0.6,89.8,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677772.495,0.3,91.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677773.496,0.6,90.7,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677774.497,1.4,89.4,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677775.498,1.6,89.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677776.498,-0.6,91.4,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677777.498,0.8,90.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677778.498,2.6,90.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677779.499,2.5,90.5,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677780.499,-2.1,91.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677781.499,-2.9,91.2,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677782.499,-1.8,91.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677783.5,-0.4,90.8,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677784.502,-1.8,90.8,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677785.502,-1.3,90.4,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677786.503,2.6,89.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677787.504,0.5,90.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677788.505,0.1,91.3,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677789.505,0.1,89.1,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677790.505,-1.2,90.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677791.505,-1.7,90.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677792.505,2.7,89.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677793.507,-1.7,88.9,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677794.507,0.4,90.5,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677795.507,-1.9,91.0,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677796.507,0.6,91.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677797.508,-0.5,89.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677798.508,2.4,90.6,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677799.509,1.1,90.3,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677800.509,2.1,88.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677801.51,-1.1,90.6,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677802.511,1.9,90.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677803.512,-0.6,90.3,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677804.513,1.3,90.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677805.514,0.6,89.9,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677806.514,2.0,90.6,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677807.515,-2.4,91.3,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677808.515,2.5,89.8,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677809.515,0.3,88.9,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677810.515,3.0,89.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677811.516,0.1,89.2,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677812.516,0.4,88.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677813.516,-3.0,91.5,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677814.517,2.7,90.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677815.518,0.3,91.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677816.518,1.4,88.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677817.519,0.9,89.2,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677818.519,-2.6,91.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677819.52,-0.7,88.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677820.521,1.1,88.8,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677821.521,2.8,89.3,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677822.521,1.3,89.0,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677823.522,-2.4,89.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677824.522,0.9,90.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677825.522,2.4,89.4,32.4,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677826.523,0.3,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677827.523,1.1,90.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677828.523,-0.9,90.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677829.524,2.5,91.1,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677830.525,-0.1,89.7,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677831.525,-0.8,91.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677832.526,0.6,90.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677833.527,0.4,89.8,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677834.528,1.6,90.7,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677835.528,3.0,88.7,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677836.529,-1.3,89.2,31.6,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677837.529,-1.6,89.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677838.531,0.6,91.1,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677839.531,-0.3,91.0,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677840.532,1.4,90.9,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677841.533,-0.5,88.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677842.534,-0.6,89.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677843.535,1.2,88.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677844.535,0.6,91.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677845.536,2.4,91.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677846.537,0.7,88.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677847.538,2.2,89.0,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677848.539,-2.4,88.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677849.539,-2.1,90.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677850.54,2.7,91.2,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677851.542,-1.7,90.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677852.543,0.1,90.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677853.543,-1.7,89.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677854.543,-2.2,89.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677855.543,-0.4,90.6,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677856.543,-2.4,90.7,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677857.544,0.3,88.5,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677858.545,0.5,90.3,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677859.546,-2.2,89.2,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677860.547,1.3,88.5,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677861.547,-0.4,91.0,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677862.548,0.9,88.8,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677863.548,-0.4,89.6,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677864.549,-0.8,90.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677865.55,3.0,90.1,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677866.551,-2.3,88.8,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677867.551,-1.0,91.4,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677868.551,-2.9,90.0,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677869.551,-1.9,90.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677870.552,1.0,88.9,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677871.553,2.7,89.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677872.554,-1.8,91.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677873.554,-2.9,89.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677874.555,-2.7,91.0,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677875.556,-0.8,89.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677876.556,-0.0,89.4,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,33.3,🟡 FAIR,False,NONE,-0.0,0,NONE
+1779677877.557,-1.9,89.8,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677878.558,-0.7,89.4,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677879.559,2.3,91.0,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677880.56,-1.7,89.5,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677881.561,-0.4,91.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677882.562,-1.6,88.9,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677883.563,1.3,91.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677884.564,0.4,91.4,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677885.565,-1.2,90.1,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677886.565,1.2,90.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677887.566,2.4,90.3,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677888.567,-1.7,91.0,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677889.568,-2.2,88.6,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677890.568,-2.1,91.0,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677891.57,0.4,89.7,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677892.571,-2.9,90.4,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677893.572,2.7,89.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677894.573,3.0,91.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677895.573,-0.2,88.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677896.574,-1.4,89.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677897.574,2.5,90.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677898.574,-2.5,89.0,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677899.574,1.9,89.8,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677900.576,0.2,90.8,32.3,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677901.576,-2.1,89.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677902.577,2.5,89.8,32.0,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677903.578,-1.3,89.7,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677904.579,-1.2,90.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677905.58,-3.0,91.4,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677906.581,1.9,88.7,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677907.582,-1.7,91.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677908.582,0.2,88.9,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677909.584,-1.5,88.7,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677910.585,-0.6,91.5,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677911.585,-1.1,91.0,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677912.585,1.5,89.4,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677913.586,-0.5,89.7,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677914.586,-0.2,91.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677915.587,-0.0,88.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,-0.0,0,NONE
+1779677916.588,2.7,90.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677917.588,-2.8,88.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677918.589,-2.7,91.0,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677919.589,-0.6,90.9,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677920.589,1.8,88.8,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677921.589,1.0,88.9,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677922.589,1.9,90.7,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677923.59,2.9,88.8,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677924.591,1.8,90.4,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677925.591,-2.0,91.3,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677926.592,-2.9,90.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677927.593,0.3,90.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677928.594,0.6,90.8,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677929.595,-2.3,90.6,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677930.596,0.9,90.9,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677931.597,-0.5,91.2,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677932.598,1.1,88.6,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677933.598,0.1,91.4,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677934.598,1.1,88.9,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677935.599,2.3,90.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677936.6,-2.0,88.7,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677937.6,-1.8,89.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677938.6,2.9,90.2,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677939.601,2.4,89.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677940.602,1.4,88.7,31.7,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677941.603,2.4,91.3,31.7,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677942.604,-1.5,88.9,31.8,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677943.605,-0.2,89.9,32.2,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677944.606,-1.9,89.8,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677945.606,1.1,88.8,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677946.606,0.4,90.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677947.607,-0.5,91.2,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677948.608,2.8,90.2,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677949.609,1.6,90.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677950.61,-0.9,91.0,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.7,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677951.611,0.9,88.8,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.7,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677952.611,-0.5,90.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677953.611,-0.7,89.0,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677954.613,1.8,90.8,31.8,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677955.613,-2.5,91.2,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677956.614,2.7,89.1,31.6,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677957.614,2.4,89.5,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677958.615,-1.9,90.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677959.616,1.7,90.8,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677960.617,1.6,91.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677961.618,2.9,91.1,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677962.619,-1.9,89.8,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677963.619,0.3,90.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677964.62,2.4,90.4,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677965.621,-2.8,88.8,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677966.622,0.4,89.6,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677967.623,1.6,89.2,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677968.623,-1.5,90.4,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677969.624,2.8,90.2,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677970.625,1.6,90.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677971.625,0.4,89.5,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677972.625,-1.9,88.6,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677973.625,-2.3,90.5,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677974.626,2.9,89.9,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779677975.627,2.2,89.7,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677976.628,0.7,91.3,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.0,0,NONE
+1779677977.629,-1.5,89.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677978.629,0.9,89.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677979.629,1.9,91.4,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677980.629,2.4,89.5,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677981.63,-0.4,91.5,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677982.631,1.8,90.3,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677983.631,2.3,89.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677984.631,-0.9,90.8,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677985.632,0.0,88.8,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779677986.632,3.0,90.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677987.632,3.0,91.4,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677988.633,2.4,90.7,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,99.9,✅ EXCELLENT,False,NONE,0.1,0,NONE
+1779677989.633,-0.2,89.1,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677990.635,3.0,89.3,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677991.636,-2.0,89.4,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677992.636,-2.2,90.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677993.636,-1.0,90.9,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677994.636,-2.8,89.3,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677995.637,-2.7,90.9,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677996.637,0.4,89.1,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779677997.638,2.8,89.6,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779677998.639,-2.4,90.3,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779677999.639,-0.4,89.9,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678000.639,-2.2,88.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678001.64,-1.6,90.9,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678002.64,-2.7,90.1,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678003.64,-0.3,91.1,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678004.641,0.6,89.1,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE
+1779678005.642,-2.5,91.1,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678006.643,2.7,89.0,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779678007.643,-1.5,91.0,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678008.643,-2.7,91.4,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678009.643,2.2,89.8,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779678010.644,2.5,90.0,31.6,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779678011.644,-2.9,90.2,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678012.645,2.2,89.0,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.1,0,NONE
+1779678013.646,-2.5,90.4,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678014.646,-1.5,90.3,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678015.646,2.1,89.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,33.3,🟡 FAIR,False,NONE,0.1,0,NONE
+1779678016.646,0.3,89.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,66.6,🟢 GOOD,False,NONE,0.0,0,NONE
+1779678017.647,-1.5,88.5,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,66.6,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678018.648,-0.5,90.1,31.8,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,33.3,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678019.648,-0.8,90.4,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,0.0,🚨 EMERGENCY,True,NONE,100.0,0,🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed
+1779678020.649,0.8,90.9,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,33.3,🟡 FAIR,False,NONE,0.0,0,NONE

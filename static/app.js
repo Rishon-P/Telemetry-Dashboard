@@ -12,6 +12,13 @@
     speed: { min: 0, max: 300, unit: "km/h", param: "speed_kmh",          key: "speed_kmh" },
     temp:  { min: 0, max: 150, unit: "°C",   param: "engine_temp_c",      key: "engine_temp_c" },
     psi:   { min: 0, max: 60,  unit: "PSI",  param: "tire_pressure_psi",  key: "tire_pressure_psi" },
+    rpm:   { min: 0, max: 7000, unit: "RPM", param: "engine_rpm",         key: "engine_rpm" },
+    oil:   { min: 0, max: 100, unit: "PSI",  param: "oil_pressure_psi",   key: "oil_pressure_psi" },
+    battery: { min: 10, max: 16, unit: "V", param: "battery_voltage_v",  key: "battery_voltage_v" },
+    tire_fl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fl_psi", key: "tire_pressure_fl_psi" },
+    tire_fr: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fr_psi", key: "tire_pressure_fr_psi" },
+    tire_rl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_rl_psi", key: "tire_pressure_rl_psi" },
+    tire_rr: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_rr_psi", key: "tire_pressure_rr_psi" },
   };
 
   /* ── Optimal automotive ranges (real-world data) ── */
@@ -31,6 +38,56 @@
       { max: Infinity, status: "danger", label: "CRITICAL" },
     ],
     psi: [
+      { max: 25,   status: "danger",  label: "LOW DANGER" },
+      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
+      { max: 35,   status: "optimal", label: "OPTIMAL" },
+      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: Infinity, status: "danger", label: "HIGH DANGER" },
+    ],
+    rpm: [
+      { max: 500,  status: "danger",  label: "STALLED" },
+      { max: 1000, status: "optimal", label: "IDLE" },
+      { max: 3000, status: "optimal", label: "CRUISING" },
+      { max: 5500, status: "warning", label: "HIGH RPM" },
+      { max: 6500, status: "danger",  label: "REDLINE" },
+      { max: Infinity, status: "danger", label: "OVER-REV" },
+    ],
+    oil: [
+      { max: 15,   status: "danger",  label: "CRITICAL" },
+      { max: 25,   status: "warning", label: "LOW" },
+      { max: 65,   status: "optimal", label: "OPTIMAL" },
+      { max: 75,   status: "warning", label: "HIGH" },
+      { max: Infinity, status: "danger", label: "CRITICAL HIGH" },
+    ],
+    battery: [
+      { max: 12.0, status: "danger",  label: "CRITICAL" },
+      { max: 12.6, status: "warning", label: "LOW" },
+      { max: 14.7, status: "optimal", label: "OPTIMAL" },
+      { max: 15.5, status: "warning", label: "HIGH" },
+      { max: Infinity, status: "danger", label: "CRITICAL HIGH" },
+    ],
+    tire_fl: [
+      { max: 25,   status: "danger",  label: "LOW DANGER" },
+      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
+      { max: 35,   status: "optimal", label: "OPTIMAL" },
+      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: Infinity, status: "danger", label: "HIGH DANGER" },
+    ],
+    tire_fr: [
+      { max: 25,   status: "danger",  label: "LOW DANGER" },
+      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
+      { max: 35,   status: "optimal", label: "OPTIMAL" },
+      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: Infinity, status: "danger", label: "HIGH DANGER" },
+    ],
+    tire_rl: [
+      { max: 25,   status: "danger",  label: "LOW DANGER" },
+      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
+      { max: 35,   status: "optimal", label: "OPTIMAL" },
+      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: Infinity, status: "danger", label: "HIGH DANGER" },
+    ],
+    tire_rr: [
       { max: 25,   status: "danger",  label: "LOW DANGER" },
       { max: 30,   status: "warning", label: "UNDER-INFLATED" },
       { max: 35,   status: "optimal", label: "OPTIMAL" },
@@ -108,7 +165,15 @@
     const progress = (clamped - cfg.min) / (cfg.max - cfg.min);
     const offset = ARC * (1 - progress);
 
-    const cardClass = type === "psi" ? "psi" : type;
+    let cardClass;
+    if (type === "psi") {
+      cardClass = "psi";
+    } else if (type.startsWith("tire_")) {
+      cardClass = type.replace("_", "-");
+    } else {
+      cardClass = type;
+    }
+    
     const arc   = $(`.gauge-card.${cardClass} .gauge-value-arc`);
     const num   = $(`.gauge-card.${cardClass} .gauge-number`);
     const badge = $(`.gauge-card.${cardClass} .status-badge`);
@@ -185,6 +250,13 @@
         setGaugeValue("speed", msg.data.speed_kmh);
         setGaugeValue("temp",  msg.data.engine_temp_c);
         setGaugeValue("psi",   msg.data.tire_pressure_psi);
+        setGaugeValue("rpm",   msg.data.engine_rpm);
+        setGaugeValue("oil",   msg.data.oil_pressure_psi);
+        setGaugeValue("battery", msg.data.battery_voltage_v);
+        setGaugeValue("tire_fl", msg.data.tire_pressure_fl_psi);
+        setGaugeValue("tire_fr", msg.data.tire_pressure_fr_psi);
+        setGaugeValue("tire_rl", msg.data.tire_pressure_rl_psi);
+        setGaugeValue("tire_rr", msg.data.tire_pressure_rr_psi);
         addFeedEntry(
           `SPD <span class="val-speed">${msg.data.speed_kmh}</span> · ` +
           `TMP <span class="val-temp">${msg.data.engine_temp_c}</span> · ` +
@@ -222,8 +294,15 @@
   document.addEventListener("DOMContentLoaded", () => {
     // Build ticks for each gauge
     Object.entries(GAUGES).forEach(([type, cfg]) => {
-      const cardClass = type === "psi" ? "psi" : type;
-      const svg = $(`.gauge-card.${cardClass} .gauge-svg`);
+      let svg;
+      if (type === "psi") {
+        svg = $(`.gauge-card.psi .gauge-svg`);
+      } else if (type.startsWith("tire_")) {
+        const tireType = type.replace("_", "-");
+        svg = $(`.gauge-card.${tireType} .gauge-svg`);
+      } else {
+        svg = $(`.gauge-card.${type} .gauge-svg`);
+      }
       if (svg) buildTicks(svg, cfg);
     });
 
