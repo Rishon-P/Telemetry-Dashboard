@@ -1,0 +1,9 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,engine_rpm,oil_pressure_psi,battery_voltage_v,tire_pressure_fl_psi,tire_pressure_fr_psi,tire_pressure_rl_psi,tire_pressure_rr_psi,speed_status,temp_status,psi_status,rpm_status,oil_status,battery_status,speed_trend,temp_trend,psi_trend,overall_health,health_status,emergency,contradictions,tire_speed_risk,temp_correlation_penalty,alerts
+1780032173.185,77.3,91.4,32.4,1501.0,44.5,13.84,31.9,32.3,31.7,32.3,optimal,optimal,optimal,optimal,optimal,optimal,—,—,—,100.0,✅ EXCELLENT,False,NONE,2.9,0.0,NONE
+1780032174.186,79.0,91.1,32.0,1515.0,45.2,13.84,31.7,32.2,32.4,31.6,optimal,optimal,optimal,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.4,0.0,NONE
+1780032175.186,77.7,89.0,32.3,1547.0,45.3,13.83,32.2,32.0,32.3,31.9,optimal,optimal,optimal,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.0,0.5,NONE
+1780032176.186,77.7,89.1,31.9,1462.0,44.8,13.81,31.6,31.8,32.3,32.1,optimal,optimal,optimal,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.4,0.4,NONE
+1780032177.186,78.9,90.5,32.3,1514.0,45.6,13.77,32.1,32.4,31.7,32.2,optimal,optimal,optimal,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.0,0.0,NONE
+1780032178.187,78.4,91.3,31.9,1474.0,45.9,13.81,31.8,31.6,31.7,32.0,optimal,optimal,optimal,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.5,0.0,NONE
+1780032179.187,79.0,90.9,31.7,1535.0,44.1,13.75,32.0,31.7,32.0,32.1,optimal,optimal,optimal,optimal,optimal,optimal,↑ increasing,→ stable,↓ decreasing,100.0,✅ EXCELLENT,False,NONE,3.7,0.0,NONE
+1780032180.187,77.7,91.3,32.2,1541.0,44.6,13.79,32.0,32.1,31.8,32.0,optimal,optimal,optimal,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.1,0.0,NONE

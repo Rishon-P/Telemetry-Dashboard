@@ -24,10 +24,16 @@ from datetime import datetime
 from pathlib import Path
 from typing import Any
 
+from dotenv import load_dotenv
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
+
+from ai_analyzer import GeminiVehicleAnalyzer
+
+# Load environment variables from .env file
+load_dotenv()
 
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 DATA_DIR = Path(__file__).resolve().parent / "data"
@@ -932,6 +938,11 @@ state = SimulationState()
 connected_clients: set[WebSocket] = set()
 analysis_clients: set[WebSocket] = set()
 analyzer = VehicleHealthAnalyzer(window_size=60)
+ai_analyzer = GeminiVehicleAnalyzer()
+
+# Track AI analysis timing
+_ai_analysis_counter = 0
+_AI_INTERVAL = 30  # Run AI every 30 seconds (free-tier friendly)
 
 # ---------------------------------------------------------------------------
 # Background broadcaster
@@ -939,6 +950,7 @@ analyzer = VehicleHealthAnalyzer(window_size=60)
 
 async def broadcast_telemetry() -> None:
     """Push a noisy telemetry snapshot to every connected client each second."""
+    global _ai_analysis_counter
     while True:
         # Always generate snapshot (for analysis even if no telemetry clients)
         snapshot = await state.get_snapshot()
@@ -962,10 +974,32 @@ async def broadcast_telemetry() -> None:
                 connected_clients.discard(ws)
                 logger.warning("Dropped stale WebSocket client.")
         
-        # Always analyze and broadcast to analysis clients
-        # (analysis runs continuously for real-time diagnostics)
+        # Always run rule engine analysis
+        analysis_result = await analyzer.add_reading(snapshot)
+        _ai_analysis_counter += 1
+        
+        # Run AI analysis every _AI_INTERVAL seconds — only if someone is watching
+        ai_diagnosis = None
         if analysis_clients:
-            analysis_result = await analyzer.add_reading(snapshot)
+            if _ai_analysis_counter % _AI_INTERVAL == 0:
+                try:
+                    ai_diagnosis = await ai_analyzer.analyze(
+                        telemetry=snapshot,
+                        rule_analysis=analysis_result,
+                    )
+                except Exception as e:
+                    logger.error(f"AI analysis error: {e}")
+                    ai_diagnosis = ai_analyzer.cached_diagnosis
+            else:
+                # Use cached AI result between calls
+                ai_diagnosis = ai_analyzer.cached_diagnosis
+        
+        # Broadcast to analysis clients with AI data included
+        if analysis_clients:
+            # Attach AI diagnosis to the analysis payload
+            analysis_result["ai_diagnosis"] = ai_diagnosis
+            analysis_result["ai_status"] = ai_analyzer.get_status()
+            
             analysis_payload = json.dumps(
                 {
                     "type": "analysis",
@@ -982,10 +1016,6 @@ async def broadcast_telemetry() -> None:
             for ws in stale_analysis:
                 analysis_clients.discard(ws)
                 logger.warning("Dropped stale analysis WebSocket client.")
-        else:
-            # Even if no analysis clients connected, keep analyzer running
-            # so data is ready when they connect
-            await analyzer.add_reading(snapshot)
         
         await asyncio.sleep(1)
 
@@ -1034,6 +1064,16 @@ app.mount("/static", StaticFiles(directory=STATIC_DIR), name="static")
 @app.get("/health")
 async def health() -> dict[str, str]:
     return {"status": "ok"}
+
+
+@app.get("/ai/status")
+async def ai_status() -> dict[str, Any]:
+    """Return the AI analyzer status and configuration."""
+    return {
+        "ai": ai_analyzer.get_status(),
+        "rule_engine": "active",
+        "hybrid_mode": ai_analyzer.enabled,
+    }
 
 
 @app.get("/baselines")
@@ -1196,6 +1236,25 @@ async def ws_data_analysis(ws: WebSocket) -> None:
                         )
                     )
 
+                # ---- Handle "force_ai_analysis" action ----
+                elif action == "force_ai_analysis":
+                    # Force an immediate AI analysis (bypasses rate limiting)
+                    snapshot = await state.get_snapshot()
+                    rule_result = await analyzer.add_reading(snapshot)
+                    ai_result = await ai_analyzer.analyze(
+                        telemetry=snapshot,
+                        rule_analysis=rule_result,
+                        force=True,
+                    )
+                    await ws.send_text(
+                        json.dumps(
+                            {
+                                "type": "ai_diagnosis",
+                                "data": ai_result,
+                            }
+                        )
+                    )
+
                 # ---- Unknown action ----
                 else:
                     await ws.send_text(
@@ -1203,7 +1262,7 @@ async def ws_data_analysis(ws: WebSocket) -> None:
                             {
                                 "type": "error",
                                 "detail": f"Unknown action: {action!r}. "
-                                f"Supported: 'get_summary'",
+                                f"Supported: 'get_summary', 'force_ai_analysis'",
                             }
                         )
                     )

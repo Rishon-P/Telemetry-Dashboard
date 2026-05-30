@@ -834,3 +834,401 @@
 .chart-card:nth-child(1) { animation-delay: 1s; }
 .chart-card:nth-child(2) { animation-delay: 1.1s; }
 .chart-card:nth-child(3) { animation-delay: 1.2s; }
+
+/* ═══════════════════════════════════════════════════════════════════
+   AI DIAGNOSIS PANEL STYLES
+   ═══════════════════════════════════════════════════════════════════ */
+
+/* ── AI Section Layout ─────────────────────────────────────────── */
+.ai-diagnosis-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: fade-in-up 0.6s ease-out both;
+  animation-delay: 0.15s;
+}
+
+.ai-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.ai-header h2 {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--text-2);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.ai-brain-icon {
+  font-size: 1.3rem;
+  filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.6));
+  animation: ai-pulse-icon 3s ease-in-out infinite;
+}
+
+@keyframes ai-pulse-icon {
+  0%, 100% { transform: scale(1); filter: drop-shadow(0 0 6px rgba(168, 85, 247, 0.6)); }
+  50%      { transform: scale(1.15); filter: drop-shadow(0 0 12px rgba(168, 85, 247, 0.9)); }
+}
+
+.ai-meta {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* ── AI Model Badge ────────────────────────────────────────────── */
+.ai-model-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.8rem;
+  border-radius: 20px;
+  background: rgba(168, 85, 247, 0.1);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #c084fc;
+}
+
+.ai-model-badge.ai-active {
+  border-color: rgba(74, 222, 128, 0.5);
+  background: rgba(74, 222, 128, 0.08);
+}
+
+.ai-model-badge.ai-active .ai-model-name {
+  color: #4ade80;
+}
+
+.ai-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #888;
+  transition: background 0.4s, box-shadow 0.4s;
+}
+
+.ai-model-badge.ai-active .ai-dot {
+  background: #4ade80;
+  box-shadow: 0 0 8px rgba(74, 222, 128, 0.7);
+  animation: ai-dot-blink 2s ease-in-out infinite;
+}
+
+.ai-model-badge.ai-offline .ai-dot {
+  background: #f87171;
+  box-shadow: 0 0 8px rgba(248, 113, 113, 0.5);
+}
+
+@keyframes ai-dot-blink {
+  0%, 100% { opacity: 1; }
+  50%      { opacity: 0.5; }
+}
+
+/* ── Force Analyze Button ──────────────────────────────────────── */
+.btn-force-ai {
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.45rem 1rem;
+  border: 1px solid rgba(168, 85, 247, 0.5);
+  border-radius: 6px;
+  background: rgba(168, 85, 247, 0.08);
+  color: #c084fc;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-force-ai:hover {
+  background: rgba(168, 85, 247, 0.2);
+  box-shadow: 0 0 18px rgba(168, 85, 247, 0.35);
+  transform: translateY(-1px);
+}
+
+.btn-force-ai:active {
+  transform: scale(0.97) translateY(0);
+}
+
+/* ── AI Card (Main Container) ──────────────────────────────────── */
+.ai-card {
+  background: var(--surface);
+  border: 1px solid rgba(168, 85, 247, 0.2);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s, box-shadow 0.4s;
+}
+
+.ai-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #a855f7, #6366f1, #a855f7, transparent);
+  background-size: 200% 100%;
+  animation: ai-gradient-slide 4s linear infinite;
+  opacity: 0.8;
+}
+
+@keyframes ai-gradient-slide {
+  0%   { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.ai-card:hover {
+  border-color: rgba(168, 85, 247, 0.35);
+  box-shadow: 0 0 40px rgba(168, 85, 247, 0.12);
+}
+
+/* ── Severity Banner ───────────────────────────────────────────── */
+.ai-severity-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 1.5rem;
+  background: rgba(168, 85, 247, 0.06);
+  border-bottom: 1px solid rgba(168, 85, 247, 0.12);
+  transition: background 0.5s, border-color 0.5s;
+}
+
+.ai-severity-banner.severity-SAFE {
+  background: rgba(74, 222, 128, 0.08);
+  border-bottom-color: rgba(74, 222, 128, 0.2);
+}
+.ai-severity-banner.severity-MONITOR {
+  background: rgba(96, 165, 250, 0.08);
+  border-bottom-color: rgba(96, 165, 250, 0.2);
+}
+.ai-severity-banner.severity-WARNING {
+  background: rgba(251, 191, 36, 0.08);
+  border-bottom-color: rgba(251, 191, 36, 0.2);
+}
+.ai-severity-banner.severity-CRITICAL {
+  background: rgba(251, 113, 60, 0.1);
+  border-bottom-color: rgba(251, 113, 60, 0.3);
+}
+.ai-severity-banner.severity-EMERGENCY {
+  background: rgba(239, 68, 68, 0.12);
+  border-bottom-color: rgba(239, 68, 68, 0.4);
+  animation: ai-emergency-flash 1s ease-in-out infinite;
+}
+
+@keyframes ai-emergency-flash {
+  0%, 100% { background: rgba(239, 68, 68, 0.12); }
+  50%      { background: rgba(239, 68, 68, 0.22); }
+}
+
+.ai-severity-icon {
+  font-size: 1.4rem;
+  min-width: 30px;
+}
+
+.ai-severity-label {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 900;
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: var(--text-1);
+  flex: 1;
+}
+
+.severity-SAFE .ai-severity-label    { color: #4ade80; text-shadow: 0 0 10px rgba(74, 222, 128, 0.5); }
+.severity-MONITOR .ai-severity-label { color: #60a5fa; text-shadow: 0 0 10px rgba(96, 165, 250, 0.5); }
+.severity-WARNING .ai-severity-label { color: #fbbf24; text-shadow: 0 0 10px rgba(251, 191, 36, 0.5); }
+.severity-CRITICAL .ai-severity-label { color: #fb713c; text-shadow: 0 0 10px rgba(251, 113, 60, 0.5); }
+.severity-EMERGENCY .ai-severity-label { color: #ef4444; text-shadow: 0 0 15px rgba(239, 68, 68, 0.7); }
+
+.ai-confidence {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.85rem;
+  color: var(--text-3);
+  margin-left: auto;
+}
+
+.ai-confidence-value {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #c084fc;
+  text-shadow: 0 0 8px rgba(168, 85, 247, 0.4);
+}
+
+/* ── Diagnosis Content Fields ──────────────────────────────────── */
+.ai-diagnosis-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.ai-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.ai-field-label {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #c084fc;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.ai-field-icon {
+  font-size: 0.9rem;
+}
+
+.ai-field-text {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--text-1);
+  padding: 0.75rem 1rem;
+  background: rgba(168, 85, 247, 0.04);
+  border-left: 2px solid rgba(168, 85, 247, 0.25);
+  border-radius: 0 6px 6px 0;
+  transition: background 0.3s, border-color 0.3s;
+}
+
+.ai-field-text:hover {
+  background: rgba(168, 85, 247, 0.08);
+  border-left-color: rgba(168, 85, 247, 0.5);
+}
+
+.ai-action-text {
+  border-left-color: rgba(74, 222, 128, 0.4);
+  background: rgba(74, 222, 128, 0.04);
+  color: #86efac;
+  font-weight: 600;
+}
+
+.ai-action-text:hover {
+  background: rgba(74, 222, 128, 0.08);
+  border-left-color: rgba(74, 222, 128, 0.6);
+}
+
+/* ── Affected Systems Tags ─────────────────────────────────────── */
+.ai-systems-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  border-top: 1px solid rgba(168, 85, 247, 0.1);
+  flex-wrap: wrap;
+}
+
+.ai-systems-label {
+  font-family: 'Teko', sans-serif;
+  font-weight: 600;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: var(--text-3);
+  white-space: nowrap;
+}
+
+.ai-systems-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.ai-tag {
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.2rem 0.6rem;
+  border-radius: 12px;
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  background: rgba(168, 85, 247, 0.1);
+  color: #c084fc;
+  transition: all 0.3s;
+}
+
+.ai-tag:hover {
+  background: rgba(168, 85, 247, 0.2);
+  transform: translateY(-1px);
+}
+
+.ai-tag-none {
+  border-color: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.03);
+  color: var(--text-3);
+}
+
+.ai-tag-engine { border-color: rgba(251, 113, 60, 0.4); background: rgba(251, 113, 60, 0.08); color: #fb923c; }
+.ai-tag-tires  { border-color: rgba(74, 222, 128, 0.4); background: rgba(74, 222, 128, 0.08); color: #4ade80; }
+.ai-tag-battery { border-color: rgba(96, 165, 250, 0.4); background: rgba(96, 165, 250, 0.08); color: #60a5fa; }
+.ai-tag-oil    { border-color: rgba(251, 191, 36, 0.4); background: rgba(251, 191, 36, 0.08); color: #fbbf24; }
+.ai-tag-speed  { border-color: rgba(0, 180, 255, 0.4); background: rgba(0, 180, 255, 0.08); color: #00b4ff; }
+.ai-tag-cooling { border-color: rgba(239, 68, 68, 0.4); background: rgba(239, 68, 68, 0.08); color: #f87171; }
+.ai-tag-electrical { border-color: rgba(168, 85, 247, 0.4); background: rgba(168, 85, 247, 0.08); color: #c084fc; }
+
+/* ── AI Footer Stats ───────────────────────────────────────────── */
+.ai-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.6rem 1.5rem;
+  background: rgba(0, 0, 0, 0.15);
+  border-top: 1px solid rgba(168, 85, 247, 0.1);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.ai-stat {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-3);
+  letter-spacing: 0.5px;
+}
+
+/* ── AI Typing/Loading Animation ───────────────────────────────── */
+.ai-loading .ai-field-text {
+  position: relative;
+  overflow: hidden;
+}
+
+.ai-loading .ai-field-text::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.1), transparent);
+  animation: ai-shimmer 1.5s ease-in-out infinite;
+}
+
+@keyframes ai-shimmer {
+  0%   { left: -100%; }
+  100% { left: 100%; }
+}

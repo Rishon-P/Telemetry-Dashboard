@@ -1,0 +1,13 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,engine_rpm,oil_pressure_psi,battery_voltage_v,tire_pressure_fl_psi,tire_pressure_fr_psi,tire_pressure_rl_psi,tire_pressure_rr_psi,speed_status,temp_status,psi_status,rpm_status,oil_status,battery_status,speed_trend,temp_trend,psi_trend,overall_health,health_status,emergency,contradictions,tire_speed_risk,temp_correlation_penalty,alerts
+1780032182.023,81.3,89.8,31.9,1539.0,44.1,13.82,32.3,32.2,31.7,32.2,optimal,optimal,optimal,optimal,optimal,optimal,—,—,—,100.0,✅ EXCELLENT,False,NONE,3.6,0.0,NONE
+1780032183.023,79.0,90.8,32.1,1519.0,45.7,13.76,31.7,32.0,31.8,32.0,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.3,0.0,NONE
+1780032184.023,82.8,90.5,32.1,1499.0,45.4,13.76,32.1,32.3,32.3,32.2,optimal,optimal,optimal,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.4,0.0,NONE
+1780032185.024,80.5,88.8,32.0,1483.0,45.7,13.83,31.7,32.0,32.2,32.3,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.5,0.7,NONE
+1780032186.024,81.3,90.3,32.0,1507.0,45.3,13.75,32.1,31.6,32.4,32.1,optimal,optimal,optimal,optimal,optimal,optimal,→ stable,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.5,0.0,NONE
+1780032187.024,77.5,89.4,31.7,1495.0,44.2,13.78,31.7,31.8,32.2,32.3,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.7,0.2,NONE
+1780032188.024,82.1,89.7,32.3,1505.0,44.8,13.76,32.1,32.1,31.6,32.0,optimal,optimal,optimal,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.2,0.0,NONE
+1780032189.025,77.8,89.2,32.2,1534.0,44.6,13.81,31.8,31.7,31.7,31.7,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.1,0.3,NONE
+1780032190.026,77.5,89.7,31.7,1523.0,44.5,13.84,32.3,31.6,32.2,31.8,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.7,0.0,NONE
+1780032191.026,78.7,90.0,31.9,1521.0,44.7,13.81,32.0,32.4,31.8,31.6,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.5,0.0,NONE
+1780032192.027,79.4,90.9,31.8,1481.0,44.5,13.83,31.6,32.4,31.9,32.0,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,100.0,✅ EXCELLENT,False,NONE,3.6,0.0,NONE
+1780032193.028,80.4,89.8,32.0,1526.0,45.2,13.82,31.8,32.0,31.8,32.2,optimal,optimal,optimal,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,100.0,✅ EXCELLENT,False,NONE,3.4,0.0,NONE

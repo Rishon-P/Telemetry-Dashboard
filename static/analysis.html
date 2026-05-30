@@ -88,6 +88,82 @@
     </div>
   </section>
 
+  <!-- ─── AI Diagnosis Panel ──────────────────── -->
+  <section class="ai-diagnosis-section" id="ai-diagnosis-section">
+    <div class="ai-header">
+      <h2><span class="ai-brain-icon">🧠</span> AI Diagnosis</h2>
+      <div class="ai-meta">
+        <span class="ai-model-badge" id="ai-model-badge">
+          <span class="ai-dot"></span>
+          <span class="ai-model-name">INITIALIZING</span>
+        </span>
+        <button class="btn-force-ai" id="btn-force-ai" title="Force immediate AI analysis">
+          ⚡ Analyze Now
+        </button>
+      </div>
+    </div>
+
+    <div class="ai-card" id="ai-card">
+      <!-- Severity Banner -->
+      <div class="ai-severity-banner" id="ai-severity-banner">
+        <span class="ai-severity-icon" id="ai-severity-icon">🔄</span>
+        <span class="ai-severity-label" id="ai-severity-label">AWAITING DATA</span>
+        <span class="ai-confidence" id="ai-confidence">
+          <span class="ai-confidence-label">Confidence:</span>
+          <span class="ai-confidence-value" id="ai-confidence-value">—</span>
+        </span>
+      </div>
+
+      <!-- Main Diagnosis -->
+      <div class="ai-diagnosis-content">
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">🔍</span> Diagnosis
+          </div>
+          <div class="ai-field-text" id="ai-diagnosis-text">
+            Waiting for AI analysis... The AI engine analyzes telemetry every 10 seconds.
+          </div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">🔬</span> Root Cause
+          </div>
+          <div class="ai-field-text" id="ai-root-cause-text">—</div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">📈</span> Prediction
+          </div>
+          <div class="ai-field-text" id="ai-prediction-text">—</div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">🎯</span> Recommended Action
+          </div>
+          <div class="ai-field-text ai-action-text" id="ai-action-text">—</div>
+        </div>
+      </div>
+
+      <!-- Affected Systems Tags -->
+      <div class="ai-systems-row">
+        <span class="ai-systems-label">Affected Systems:</span>
+        <div class="ai-systems-tags" id="ai-systems-tags">
+          <span class="ai-tag ai-tag-none">None detected</span>
+        </div>
+      </div>
+
+      <!-- AI Stats Footer -->
+      <div class="ai-footer">
+        <span class="ai-stat" id="ai-call-count">AI Calls: 0</span>
+        <span class="ai-stat" id="ai-last-updated">Last updated: —</span>
+        <span class="ai-stat" id="ai-interval">Interval: 10s</span>
+      </div>
+    </div>
+  </section>
+
   <!-- ─── Real-time Metrics ──────────────────── -->
   <section class="metrics-section">
     <h2>Real-time Metrics</h2>

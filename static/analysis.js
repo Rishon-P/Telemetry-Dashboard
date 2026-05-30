@@ -9,6 +9,22 @@
   const connDot = $(".conn-dot");
   const connLabel = $(".conn-label");
   const alertsContainer = $(".alerts-container");
+
+  /* ── AI DOM refs ────────────────────────────── */
+  const aiCard = $("#ai-card");
+  const aiModelBadge = $("#ai-model-badge");
+  const aiSeverityBanner = $("#ai-severity-banner");
+  const aiSeverityIcon = $("#ai-severity-icon");
+  const aiSeverityLabel = $("#ai-severity-label");
+  const aiConfidenceValue = $("#ai-confidence-value");
+  const aiDiagnosisText = $("#ai-diagnosis-text");
+  const aiRootCauseText = $("#ai-root-cause-text");
+  const aiPredictionText = $("#ai-prediction-text");
+  const aiActionText = $("#ai-action-text");
+  const aiSystemsTags = $("#ai-systems-tags");
+  const aiCallCount = $("#ai-call-count");
+  const aiLastUpdated = $("#ai-last-updated");
+  const btnForceAI = $("#btn-force-ai");
   const btnExportCsv = $("#btn-export-csv");
 
   /* ── Data buffers for charts ───────────────────── */
@@ -76,6 +92,9 @@
       } else if (msg.type === "summary") {
         console.log("✅ Processing summary data");
         updateSessionSummary(msg.data);
+      } else if (msg.type === "ai_diagnosis" && msg.data) {
+        console.log("🧠 Processing forced AI diagnosis");
+        updateAIDiagnosis(msg.data);
       } else {
         console.warn("⚠️ Unknown message type:", msg.type);
       }
@@ -131,6 +150,14 @@
     // Display physics metrics
     if (analysis.health_score.tire_speed_risk !== undefined) {
       displayPhysicsMetrics(analysis.health_score);
+    }
+
+    // Update AI diagnosis panel
+    if (analysis.ai_diagnosis) {
+      updateAIDiagnosis(analysis.ai_diagnosis);
+    }
+    if (analysis.ai_status) {
+      updateAIStatusBadge(analysis.ai_status);
     }
     
     console.log("✅ Dashboard updated successfully");
@@ -635,6 +662,113 @@
     requestAnimationFrame(tick);
   }
 
+  /* ── AI Diagnosis Update ──────────────────────── */
+  const SEVERITY_CONFIG = {
+    SAFE:      { icon: "✅", color: "#4ade80" },
+    MONITOR:   { icon: "🔵", color: "#60a5fa" },
+    WARNING:   { icon: "⚠️",  color: "#fbbf24" },
+    CRITICAL:  { icon: "🔴", color: "#fb713c" },
+    EMERGENCY: { icon: "🚨", color: "#ef4444" },
+  };
+
+  const SYSTEM_TAG_CLASSES = {
+    engine: "ai-tag-engine",
+    tires: "ai-tag-tires",
+    tire: "ai-tag-tires",
+    battery: "ai-tag-battery",
+    oil: "ai-tag-oil",
+    speed: "ai-tag-speed",
+    cooling: "ai-tag-cooling",
+    electrical: "ai-tag-electrical",
+    brakes: "ai-tag-engine",
+  };
+
+  function updateAIDiagnosis(ai) {
+    if (!ai) return;
+
+    const severity = ai.severity || "MONITOR";
+    const config = SEVERITY_CONFIG[severity] || SEVERITY_CONFIG.MONITOR;
+
+    // Update severity banner
+    if (aiSeverityBanner) {
+      aiSeverityBanner.className = `ai-severity-banner severity-${severity}`;
+    }
+    if (aiSeverityIcon) {
+      aiSeverityIcon.textContent = config.icon;
+    }
+    if (aiSeverityLabel) {
+      aiSeverityLabel.textContent = severity;
+    }
+
+    // Update confidence
+    if (aiConfidenceValue) {
+      const conf = ai.confidence != null ? ai.confidence : 0;
+      aiConfidenceValue.textContent = (conf * 100).toFixed(0) + "%";
+    }
+
+    // Update text fields with typing effect
+    setFieldText(aiDiagnosisText, ai.diagnosis || "—");
+    setFieldText(aiRootCauseText, ai.root_cause || "—");
+    setFieldText(aiPredictionText, ai.prediction || "—");
+    setFieldText(aiActionText, ai.action || "—");
+
+    // Update affected systems tags
+    if (aiSystemsTags) {
+      const systems = ai.affected_systems || [];
+      if (systems.length === 0) {
+        aiSystemsTags.innerHTML = '<span class="ai-tag ai-tag-none">None detected</span>';
+      } else {
+        aiSystemsTags.innerHTML = systems
+          .map((sys) => {
+            const lower = sys.toLowerCase();
+            const tagClass = SYSTEM_TAG_CLASSES[lower] || "";
+            return `<span class="ai-tag ${tagClass}">${sys}</span>`;
+          })
+          .join("");
+      }
+    }
+
+    // Update footer stats
+    if (aiCallCount && ai.call_count != null) {
+      aiCallCount.textContent = `AI Calls: ${ai.call_count}`;
+    }
+    if (aiLastUpdated && ai.timestamp) {
+      const d = new Date(ai.timestamp * 1000);
+      aiLastUpdated.textContent = `Last updated: ${d.toLocaleTimeString()}`;
+    }
+
+    // Remove loading state
+    if (aiCard) aiCard.classList.remove("ai-loading");
+
+    console.log(`🧠 AI updated: ${severity} (conf: ${ai.confidence})`);
+  }
+
+  function updateAIStatusBadge(status) {
+    if (!aiModelBadge) return;
+
+    const modelName = aiModelBadge.querySelector(".ai-model-name");
+
+    if (status.enabled) {
+      aiModelBadge.className = "ai-model-badge ai-active";
+      if (modelName) modelName.textContent = status.model || "GEMINI FLASH";
+    } else {
+      aiModelBadge.className = "ai-model-badge ai-offline";
+      if (modelName) modelName.textContent = "AI OFFLINE";
+    }
+  }
+
+  function setFieldText(el, text) {
+    if (!el) return;
+    // Only update if text actually changed to avoid flicker
+    if (el.textContent !== text) {
+      el.style.opacity = "0.5";
+      setTimeout(() => {
+        el.textContent = text;
+        el.style.opacity = "1";
+      }, 150);
+    }
+  }
+
   /* ── CSV Export ────────────────────────────────── */
   if (btnExportCsv) {
     btnExportCsv.addEventListener("click", () => {
@@ -704,6 +838,28 @@
       info.style.animation = "slide-down 0.3s ease-out";
       setTimeout(() => info.remove(), 300);
     }, 8000);
+  }
+
+  /* ── Force AI Analysis Button ──────────────────── */
+  if (btnForceAI) {
+    btnForceAI.addEventListener("click", () => {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        // Show loading state
+        if (aiCard) aiCard.classList.add("ai-loading");
+        btnForceAI.textContent = "⏳ Analyzing...";
+        btnForceAI.disabled = true;
+
+        ws.send(JSON.stringify({ action: "force_ai_analysis" }));
+
+        // Reset button after timeout
+        setTimeout(() => {
+          btnForceAI.textContent = "⚡ Analyze Now";
+          btnForceAI.disabled = false;
+        }, 5000);
+      } else {
+        alert("WebSocket not connected. Please refresh the page.");
+      }
+    });
   }
 
   /* ── Init ──────────────────────────────────────── */
