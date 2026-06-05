@@ -399,7 +399,8 @@ Based on ALL the above data, provide your expert automotive diagnosis."""
                     logger.error(f"❌ AI analysis error #{self.error_count}: {e}")
 
                 # Return cached or fallback — never crash the dashboard
-                return self.cached_diagnosis or self._get_fallback_diagnosis()
+                fallback_reason = "AI API Rate Limit (Quota Exceeded). Please try again later." if "429" in error_str or "RESOURCE_EXHAUSTED" in error_str else f"AI Error: {e}"
+                return self.cached_diagnosis or self._get_fallback_diagnosis(reason=fallback_reason)
 
     def _get_fallback_diagnosis(self, reason: str | None = None) -> dict[str, Any]:
         """Return a fallback when AI is not available."""

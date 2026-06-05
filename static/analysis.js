@@ -9,6 +9,7 @@
   const connDot = $(".conn-dot");
   const connLabel = $(".conn-label");
   const alertsContainer = $(".alerts-container");
+  const mlAnalysisContent = $("#ml-analysis-content");
 
   /* ── AI DOM refs ────────────────────────────── */
   const aiCard = $("#ai-card");
@@ -115,8 +116,14 @@
     console.log("📊 Health score:", analysis.health_score);
     console.log("🚨 Contradictions:", analysis.health_score.contradictions);
 
-    // Update health score
-    updateHealthScore(analysis.health_score);
+    // Health gauge uses gateway score (97.5 / 87.5 / 0), not hysteresis-locked rule engine
+    updateHealthScore(
+      analysis.health_score,
+      analysis.gateway_status,
+      analysis.gateway_health_score
+    );
+
+    updateMLAnalysis(analysis.gateway_alerts);
 
     // Update metrics
     updateMetrics(analysis.current_values, analysis.status, analysis.trends);
@@ -145,7 +152,17 @@
     
     // Update service recommendation
     console.log("🔧 Updating service recommendation with:", { score: analysis.health_score.score, contradictions });
-    updateServiceRecommendation(analysis.health_score, contradictions);
+    updateServiceRecommendation(
+      {
+        ...analysis.health_score,
+        score:
+          analysis.gateway_health_score != null
+            ? analysis.gateway_health_score
+            : analysis.health_score.score,
+      },
+      contradictions,
+      analysis.gateway_status
+    );
     
     // Display physics metrics
     if (analysis.health_score.tire_speed_risk !== undefined) {
@@ -163,11 +180,55 @@
     console.log("✅ Dashboard updated successfully");
   }
 
+  /* ── ML Model Analysis (Layer 2 only — not physical gateway / not Gemini) ─ */
+  function updateMLAnalysis(gatewayAlerts) {
+    if (!mlAnalysisContent) return;
+
+    if (!gatewayAlerts || typeof gatewayAlerts !== "object") {
+      mlAnalysisContent.innerHTML =
+        '<p class="ml-result-unavailable">No ML data in this broadcast yet.</p>';
+      return;
+    }
+
+    const isAnomaly = gatewayAlerts.ml_anomaly === true;
+    const mlScore =
+      gatewayAlerts.ml_score != null
+        ? Number(gatewayAlerts.ml_score).toFixed(4)
+        : "N/A";
+    const rootCause = gatewayAlerts.ml_root_cause;
+    const featureLabel = rootCause
+      ? rootCause.replace(/_/g, " ").toUpperCase()
+      : "—";
+
+    if (isAnomaly) {
+      mlAnalysisContent.innerHTML = `
+        <div class="ml-result-anomaly">
+          <strong>⚠️ ML Anomaly Detected</strong> (Isolation Forest prediction: <code>-1</code>)<br>
+          <span style="display:inline-block;margin-top:8px;">
+            Highest scaled deviation: <strong>${featureLabel}</strong>
+          </span><br>
+          <span style="display:inline-block;margin-top:6px;color:#888;">
+            Anomaly score: ${mlScore} (lower = more anomalous)
+          </span>
+        </div>`;
+    } else {
+      mlAnalysisContent.innerHTML = `
+        <div class="ml-result-normal">
+          <strong>✅ ML Normal</strong> (Isolation Forest prediction: <code>1</code>)<br>
+          <span style="display:inline-block;margin-top:6px;color:#888;">
+            Anomaly score: ${mlScore}
+          </span>
+        </div>`;
+    }
+  }
+
   /* ── Health Score Update ───────────────────────── */
-  function updateHealthScore(healthScore) {
-    const score = healthScore.score;
-    const status = healthScore.status;
-    const isEmergency = healthScore.emergency || false;
+  function updateHealthScore(healthScore, gatewayStatus, gatewayHealthScore) {
+    const score =
+      gatewayHealthScore != null ? gatewayHealthScore : healthScore.score;
+    const status = gatewayStatus || healthScore.status;
+    const isEmergency =
+      gatewayStatus === "EMERGENCY" || healthScore.emergency || false;
 
     // Update score display
     const healthNumber = $(".health-number");
@@ -305,16 +366,23 @@
     const bar = $(selector);
     if (bar) {
       bar.style.width = score + "%";
+      const container = bar.closest(".component-score");
+      if (container) {
+        const valEl = container.querySelector(".comp-value");
+        if (valEl) valEl.textContent = Math.round(score) + "/100";
+      }
     }
   }
 
   function getStatusClass(status) {
-    if (status.includes("EMERGENCY")) return "emergency";
+    if (!status) return "warning";
+    if (status === "EMERGENCY" || status.includes("EMERGENCY")) return "emergency";
+    if (status === "WARNING" || status.includes("WARNING")) return "warning";
     if (status.includes("EXCELLENT")) return "optimal";
     if (status.includes("GOOD")) return "optimal";
     if (status.includes("FAIR")) return "warning";
     if (status.includes("CRITICAL")) return "danger";
-    return "warning";
+    return "optimal";
   }
 
   /* ── Metrics Update ────────────────────────────── */
@@ -376,6 +444,11 @@
 
   /* ── Alerts Update ─────────────────────────────── */
   function updateAlerts(alerts) {
+    // Rule engine sends a list; gateway_alerts is a separate object
+    if (!Array.isArray(alerts)) {
+      return;
+    }
+
     const alertCount = $(".alert-count");
     if (alertCount) {
       alertCount.textContent = alerts.length;
@@ -559,7 +632,7 @@
   }
 
   /* ── Service Center Recommendation ─────────────── */
-  function updateServiceRecommendation(healthScore, contradictions) {
+  function updateServiceRecommendation(healthScore, contradictions, gatewayStatus) {
     const recommendationStatus = $(".recommendation-status");
     const recommendationIcon = $(".recommendation-icon");
     const recommendationText = $(".recommendation-text");
@@ -573,21 +646,28 @@
     }
     
     const score = healthScore.score || 0;
-    const status = healthScore.status || "UNKNOWN";
-    const isEmergency = healthScore.emergency === true;
+    const status = gatewayStatus || healthScore.status || "UNKNOWN";
+    const isEmergency = status === "EMERGENCY" || healthScore.emergency === true;
     
     console.log("🔧 Updating recommendation:", { score, status, isEmergency, contradictions });
     
-    // Determine recommendation based on health score and contradictions
+    // Gateway status from 1s broadcast is authoritative (Rule 1)
     let icon, text, action, criticalCount;
     
-    if (isEmergency || contradictions.length > 0) {
+    if (status === "EMERGENCY" || isEmergency) {
       icon = "🚨";
       text = "IMMEDIATE SERVICE REQUIRED";
       action = "⚠️ STOP VEHICLE - Take to service center immediately";
       recommendationStatus.className = "recommendation-status status-emergency";
       criticalCount = contradictions.length > 0 ? contradictions.length : 1;
       console.log("✅ Set to EMERGENCY");
+    } else if (status === "WARNING") {
+      icon = "🟡";
+      text = "WARNING - Schedule service";
+      action = "⚠️ Schedule service within 24 hours";
+      recommendationStatus.className = "recommendation-status status-warning";
+      criticalCount = 0;
+      console.log("✅ Set to WARNING (ML Anomaly)");
     } else if (score < 30) {
       icon = "🔴";
       text = "CRITICAL - Service required soon";

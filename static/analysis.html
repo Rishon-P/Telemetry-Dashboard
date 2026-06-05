@@ -88,6 +88,15 @@
     </div>
   </section>
 
+  <!-- ─── ML Model Analysis (Isolation Forest only) ─────────── -->
+  <section class="ml-analysis-section">
+    <h2 class="ml-analysis-title"><span>🤖</span> ML Model Analysis</h2>
+    <p class="ml-analysis-subtitle">Isolation Forest · scaled telemetry · Layer 2 only</p>
+    <div id="ml-analysis-content" class="ml-analysis-content">
+      Waiting for analysis stream…
+    </div>
+  </section>
+
   <!-- ─── AI Diagnosis Panel ──────────────────── -->
   <section class="ai-diagnosis-section" id="ai-diagnosis-section">
     <div class="ai-header">
@@ -339,53 +348,7 @@
     </div>
   </section>
 
-  <!-- ─── Session Statistics ──────────────────── -->
-  <section class="stats-section">
-    <h2>Session Statistics</h2>
-    <div class="stats-grid">
-      <div class="stat-card">
-        <span class="stat-label">Session Duration</span>
-        <span class="stat-value session-duration">0s</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">Data Points Collected</span>
-        <span class="stat-value data-points">0</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">Analysis Window</span>
-        <span class="stat-value">60 seconds</span>
-      </div>
-      <div class="stat-card">
-        <span class="stat-label">CSV Export</span>
-        <button class="btn-export" id="btn-export-csv">Download</button>
-      </div>
-    </div>
-  </section>
 
-  <!-- ─── Trend Charts ──────────────────────── -->
-  <section class="charts-section">
-    <h2>Trend Analysis (Last 60 Seconds)</h2>
-    
-    <div class="charts-grid">
-      <!-- Speed Chart -->
-      <div class="chart-card">
-        <h3>Speed Trend</h3>
-        <canvas id="chart-speed" class="trend-chart"></canvas>
-      </div>
-
-      <!-- Temperature Chart -->
-      <div class="chart-card">
-        <h3>Temperature Trend</h3>
-        <canvas id="chart-temp" class="trend-chart"></canvas>
-      </div>
-
-      <!-- Tire Pressure Chart -->
-      <div class="chart-card">
-        <h3>Tire Pressure Trend</h3>
-        <canvas id="chart-psi" class="trend-chart"></canvas>
-      </div>
-    </div>
-  </section>
 
 </div>
 

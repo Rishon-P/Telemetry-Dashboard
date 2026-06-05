@@ -13,8 +13,12 @@
     temp:  { min: 0, max: 150, unit: "°C",   param: "engine_temp_c",      key: "engine_temp_c" },
     psi:   { min: 0, max: 60,  unit: "PSI",  param: "tire_pressure_psi",  key: "tire_pressure_psi" },
     rpm:   { min: 0, max: 7000, unit: "RPM", param: "engine_rpm",         key: "engine_rpm" },
+    throttle: { min: 0, max: 100, unit: "%", param: "throttle_pct", key: "throttle_pct" },
+    load: { min: 0, max: 100, unit: "%", param: "engine_load_pct", key: "engine_load_pct" },
+    maf: { min: 0, max: 655, unit: "g/s", param: "maf_g_sec", key: "maf_g_sec" },
     oil:   { min: 0, max: 100, unit: "PSI",  param: "oil_pressure_psi",   key: "oil_pressure_psi" },
     battery: { min: 10, max: 16, unit: "V", param: "battery_voltage_v",  key: "battery_voltage_v" },
+    fuel:    { min: 0, max: 100, unit: "%", param: "fuel_level_pct",     key: "fuel_level_pct" },
     tire_fl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fl_psi", key: "tire_pressure_fl_psi" },
     tire_fr: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fr_psi", key: "tire_pressure_fr_psi" },
     tire_rl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_rl_psi", key: "tire_pressure_rl_psi" },
@@ -66,6 +70,26 @@
       { max: 15.5, status: "warning", label: "HIGH" },
       { max: Infinity, status: "danger", label: "CRITICAL HIGH" },
     ],
+        throttle: [
+      { max: 50, status: "optimal", label: "NORMAL" },
+      { max: 85, status: "warning", label: "HIGH" },
+      { max: Infinity, status: "danger", label: "WOT" },
+    ],
+    load: [
+      { max: 40, status: "optimal", label: "LIGHT" },
+      { max: 80, status: "warning", label: "HEAVY" },
+      { max: Infinity, status: "danger", label: "MAX LOAD" },
+    ],
+    maf: [
+      { max: 150, status: "optimal", label: "NORMAL" },
+      { max: 400, status: "warning", label: "HIGH" },
+      { max: Infinity, status: "danger", label: "MAX FLOW" },
+    ],
+    fuel: [
+      { max: 10,   status: "danger",  label: "CRITICAL LOW" },
+      { max: 25,   status: "warning", label: "LOW" },
+      { max: Infinity, status: "optimal", label: "OPTIMAL" },
+    ],
     tire_fl: [
       { max: 25,   status: "danger",  label: "LOW DANGER" },
       { max: 30,   status: "warning", label: "UNDER-INFLATED" },
@@ -112,49 +136,6 @@
   const connLabel = $(".conn-label");
   const feedLog   = $(".feed-log");
 
-  /* ── Build SVG tick marks ──────────────────────── */
-  function buildTicks(svgEl, cfg) {
-    const g = svgEl.querySelector(".gauge-ticks");
-    if (!g) return;
-    const cx = 120, cy = 120, r = GAUGE_RADIUS;
-    const majorCount = 10;
-    const minorPerMajor = 4;
-    const totalMinor = majorCount * minorPerMajor;
-
-    for (let i = 0; i <= totalMinor; i++) {
-      const frac = i / totalMinor;
-      const angle = (START_ANGLE + frac * 270) * (Math.PI / 180);
-      const isMajor = i % minorPerMajor === 0;
-      const innerR = isMajor ? r + 8 : r + 10;
-      const outerR = isMajor ? r + 18 : r + 15;
-
-      const x1 = cx + innerR * Math.cos(angle);
-      const y1 = cy + innerR * Math.sin(angle);
-      const x2 = cx + outerR * Math.cos(angle);
-      const y2 = cy + outerR * Math.sin(angle);
-
-      const line = document.createElementNS("http://www.w3.org/2000/svg", "line");
-      line.setAttribute("x1", x1); line.setAttribute("y1", y1);
-      line.setAttribute("x2", x2); line.setAttribute("y2", y2);
-      line.classList.add("gauge-tick");
-      if (isMajor) line.classList.add("major");
-      g.appendChild(line);
-
-      /* Label for major ticks */
-      if (isMajor) {
-        const labelR = r + 27;
-        const lx = cx + labelR * Math.cos(angle);
-        const ly = cy + labelR * Math.sin(angle);
-        const val = Math.round(cfg.min + frac * (cfg.max - cfg.min));
-        const txt = document.createElementNS("http://www.w3.org/2000/svg", "text");
-        txt.setAttribute("x", lx);
-        txt.setAttribute("y", ly);
-        txt.classList.add("gauge-tick-label");
-        txt.textContent = val;
-        g.appendChild(txt);
-      }
-    }
-  }
 
   /* ── Gauge update ──────────────────────────────── */
   const STATUS_CLASSES = ["status-optimal", "status-warning", "status-danger", "status-cold"];
@@ -163,7 +144,7 @@
     const cfg = GAUGES[type];
     const clamped = Math.max(cfg.min, Math.min(cfg.max, value));
     const progress = (clamped - cfg.min) / (cfg.max - cfg.min);
-    const offset = ARC * (1 - progress);
+    const pct = progress * 100;
 
     let cardClass;
     if (type === "psi") {
@@ -174,11 +155,11 @@
       cardClass = type;
     }
     
-    const arc   = $(`.gauge-card.${cardClass} .gauge-value-arc`);
+    const fill = $(`.gauge-card.${cardClass} .horiz-gauge-fill`);
     const num   = $(`.gauge-card.${cardClass} .gauge-number`);
     const badge = $(`.gauge-card.${cardClass} .status-badge`);
 
-    if (arc) arc.style.strokeDashoffset = offset;
+    if (fill) fill.style.width = pct + "%";
     if (num) {
       animateNumber(num, parseFloat(num.textContent) || 0, clamped, 400);
     }
@@ -186,7 +167,7 @@
     /* Apply status coloring */
     const st = getStatus(type, clamped);
     const cls = `status-${st.status}`;
-    if (arc) { STATUS_CLASSES.forEach(c => arc.classList.remove(c)); arc.classList.add(cls); }
+    if (fill) { STATUS_CLASSES.forEach(c => fill.classList.remove(c)); fill.classList.add(cls); }
     if (num) { STATUS_CLASSES.forEach(c => num.classList.remove(c)); num.classList.add(cls); }
     if (badge) {
       badge.className = "status-badge " + st.status;
@@ -251,8 +232,12 @@
         setGaugeValue("temp",  msg.data.engine_temp_c);
         setGaugeValue("psi",   msg.data.tire_pressure_psi);
         setGaugeValue("rpm",   msg.data.engine_rpm);
+        setGaugeValue("throttle", msg.data.throttle_pct);
+        setGaugeValue("load", msg.data.engine_load_pct);
+        setGaugeValue("maf", msg.data.maf_g_sec);
         setGaugeValue("oil",   msg.data.oil_pressure_psi);
         setGaugeValue("battery", msg.data.battery_voltage_v);
+        setGaugeValue("fuel",  msg.data.fuel_level_pct);
         setGaugeValue("tire_fl", msg.data.tire_pressure_fl_psi);
         setGaugeValue("tire_fr", msg.data.tire_pressure_fr_psi);
         setGaugeValue("tire_rl", msg.data.tire_pressure_rl_psi);
@@ -292,45 +277,88 @@
 
   /* ── Init ──────────────────────────────────────── */
   document.addEventListener("DOMContentLoaded", () => {
-    // Build ticks for each gauge
-    Object.entries(GAUGES).forEach(([type, cfg]) => {
-      let svg;
-      if (type === "psi") {
-        svg = $(`.gauge-card.psi .gauge-svg`);
-      } else if (type.startsWith("tire_")) {
-        const tireType = type.replace("_", "-");
-        svg = $(`.gauge-card.${tireType} .gauge-svg`);
-      } else {
-        svg = $(`.gauge-card.${type} .gauge-svg`);
-      }
-      if (svg) buildTicks(svg, cfg);
-    });
-
-    // Set initial arc attributes
-    $$(".gauge-value-arc, .gauge-bg-arc").forEach((el) => {
-      el.setAttribute("stroke-dasharray", `${ARC} ${CIRC}`);
-    });
-    $$(".gauge-value-arc").forEach((el) => {
-      el.style.strokeDashoffset = ARC;      // 0%
-    });
-
     // Slider events
     $$("input[type='range']").forEach((slider) => {
       updateSliderFill(slider);
-      updateSliderStatus(slider); // initial status
       slider.addEventListener("input", () => {
-        const display = slider.closest(".control-card").querySelector(".slider-value-display");
+        const display = slider.closest(".gauge-card").querySelector(".slider-value-display");
         const cfg = GAUGES[slider.dataset.gauge];
-        display.textContent = `${slider.value} ${cfg.unit}`;
+        if (display && !display.querySelector("input")) {
+          display.textContent = `${slider.value} ${cfg.unit}`;
+        }
         updateSliderFill(slider);
-        updateSliderStatus(slider);
+        // Status badges update only from telemetry heartbeat, not local slider
+      });
+    });
+
+    // Make value displays editable
+    $$(".slider-value-display").forEach((display) => {
+      display.style.cursor = "pointer";
+      display.title = "Click to edit manually";
+      
+      display.addEventListener("click", function() {
+        if (this.querySelector("input")) return;
+        
+        const card = this.closest(".gauge-card");
+        const slider = card.querySelector("input[type='range']");
+        const cfg = GAUGES[slider.dataset.gauge];
+        
+        const input = document.createElement("input");
+        input.type = "number";
+        input.value = slider.value;
+        input.step = slider.step || "1";
+        input.min = slider.min;
+        input.max = slider.max;
+        input.style.width = "60px";
+        input.style.background = "rgba(0, 0, 0, 0.5)";
+        input.style.color = "#00e5ff";
+        input.style.border = "1px solid #00e5ff";
+        input.style.borderRadius = "3px";
+        input.style.padding = "2px 4px";
+        input.style.fontFamily = "inherit";
+        input.style.fontSize = "inherit";
+        input.style.textAlign = "right";
+        input.style.outline = "none";
+        
+        const unitSpan = document.createElement("span");
+        unitSpan.textContent = " " + cfg.unit;
+        
+        this.innerHTML = "";
+        this.appendChild(input);
+        this.appendChild(unitSpan);
+        
+        input.focus();
+        input.select();
+        
+        const applyValue = () => {
+          let val = parseFloat(input.value);
+          if (isNaN(val)) val = parseFloat(slider.value);
+          val = Math.max(parseFloat(slider.min), Math.min(parseFloat(slider.max), val));
+          slider.value = val;
+          display.textContent = `${slider.value} ${cfg.unit}`;
+          slider.dispatchEvent(new Event('input'));
+          
+          if (ws && ws.readyState === WebSocket.OPEN) {
+            ws.send(JSON.stringify({ action: "update", parameter: cfg.param, value: val }));
+          }
+        };
+        
+        input.addEventListener("blur", applyValue);
+        input.addEventListener("keydown", (e) => {
+          if (e.key === "Enter") {
+            input.blur();
+            // Trigger APPLY button click automatically
+            const btnApply = card.querySelector(".btn-apply");
+            if (btnApply) btnApply.click();
+          }
+        });
       });
     });
 
     // Apply buttons
     $$(".btn-apply").forEach((btn) => {
       btn.addEventListener("click", () => {
-        const card = btn.closest(".control-card");
+        const card = btn.closest(".gauge-card");
         const slider = card.querySelector("input[type='range']");
         const gauge = slider.dataset.gauge;
         const cfg = GAUGES[gauge];
@@ -360,6 +388,107 @@
 
     // Connect WS
     connect();
+
+    // --- Auto-Drive Logic ---
+    let isAutomated = false;
+    let autoClock = 0;
+    const btnAuto = document.getElementById("btn-auto-drive");
+    const sliders = $$("input[type='range']");
+
+    if (btnAuto) {
+      btnAuto.addEventListener("click", () => {
+        isAutomated = !isAutomated;
+        btnAuto.textContent = `Toggle Auto-Drive: ${isAutomated ? "ON" : "OFF"}`;
+        btnAuto.style.background = isAutomated ? "#00663a" : "#222";
+        
+        // Send toggle_auto_drive action to backend
+        if (ws && ws.readyState === WebSocket.OPEN) {
+          ws.send(JSON.stringify({ action: "toggle_auto_drive" }));
+        }
+        
+        sliders.forEach(s => {
+          s.disabled = isAutomated;
+          s.style.opacity = isAutomated ? "0.5" : "1";
+        });
+        
+        if (isAutomated) {
+          autoClock = 0;
+        }
+      });
+    }
+
+    setInterval(() => {
+      if (!isAutomated) return;
+
+      // 90-second driving cycle with highway phases
+      let tSpeed = 0, tRpm = 800, tThrottle = 0, tLoad = 15, tMaf = 4, tTemp = 90;
+      
+      if (autoClock >= 0 && autoClock <= 10) {
+        // Seconds 0-10: Idling
+        tSpeed = 0; tRpm = 800; tThrottle = 0; tLoad = 15; tMaf = 4;
+      } else if (autoClock >= 11 && autoClock <= 25) {
+        // Seconds 11-25: City Acceleration
+        tSpeed = 60; tRpm = 3000; tThrottle = 40; tLoad = 60; tMaf = 35;
+      } else if (autoClock >= 26 && autoClock <= 40) {
+        // Seconds 26-40: City Cruising
+        tSpeed = 60; tRpm = 2000; tThrottle = 15; tLoad = 30; tMaf = 20;
+      } else if (autoClock >= 41 && autoClock <= 55) {
+        // Seconds 41-55: Highway Acceleration
+        tSpeed = 130; tRpm = 4000; tThrottle = 65; tLoad = 85; tMaf = 60;
+      } else if (autoClock >= 56 && autoClock <= 75) {
+        // Seconds 56-75: Highway Cruising
+        tSpeed = 130; tRpm = 2800; tThrottle = 25; tLoad = 45; tMaf = 40;
+      } else if (autoClock >= 76 && autoClock <= 90) {
+        // Seconds 76-90: Deceleration
+        tSpeed = 0; tRpm = 800; tThrottle = 0; tLoad = 0; tMaf = 4;
+      }
+
+      const targets = {
+        speed: tSpeed,
+        rpm: tRpm,
+        throttle: tThrottle,
+        load: tLoad,
+        maf: tMaf,
+        temp: tTemp,
+        tire_fl: 32,
+        tire_fr: 32,
+        tire_rl: 32,
+        tire_rr: 32,
+        battery: 14.2,
+        oil: 40
+      };
+
+      const bulkData = {};
+      bulkData["tire_pressure_psi"] = 32.0; // fallback for rule engine
+
+      sliders.forEach(slider => {
+        const gauge = slider.dataset.gauge;
+        let current = parseFloat(slider.value);
+        
+        if (gauge === 'fuel') {
+          current = Math.max(0, current - 0.01);
+        } else if (targets[gauge] !== undefined) {
+          current = current + (targets[gauge] - current) * 0.15;
+        }
+        
+        slider.value = current;
+        slider.dispatchEvent(new Event('input'));
+        
+        const cfg = GAUGES[gauge];
+        if (cfg && cfg.param) {
+          bulkData[cfg.param] = current;
+        }
+      });
+
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        ws.send(JSON.stringify({ action: "bulk_update", data: bulkData }));
+      }
+
+      autoClock++;
+      if (autoClock > 90) {
+        autoClock = 0;
+      }
+    }, 1000);
   });
 
   /* ── Slider status coloring ────────────────────── */
@@ -367,7 +496,7 @@
     const gauge = slider.dataset.gauge;
     const val = parseFloat(slider.value);
     const st = getStatus(gauge, val);
-    const display = slider.closest(".control-card").querySelector(".slider-value-display");
+    const display = slider.closest(".gauge-card").querySelector(".slider-value-display");
     if (display) {
       STATUS_CLASSES.forEach(c => display.classList.remove(c));
       display.classList.add(`status-${st.status}`);

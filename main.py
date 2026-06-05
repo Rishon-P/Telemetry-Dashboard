@@ -31,6 +31,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from ai_analyzer import GeminiVehicleAnalyzer
+from safety_gateway import evaluate_telemetry
 
 # Load environment variables from .env file
 load_dotenv()
@@ -38,6 +39,14 @@ load_dotenv()
 STATIC_DIR = Path(__file__).resolve().parent / "static"
 DATA_DIR = Path(__file__).resolve().parent / "data"
 DATA_DIR.mkdir(exist_ok=True)
+
+TRAINING_CSV = DATA_DIR / "vehicle_training_data.csv"
+if not TRAINING_CSV.exists():
+    try:
+        with open(TRAINING_CSV, "w") as f:
+            f.write("timestamp,speed,rpm,throttle,engine_load,maf,engine_temp,oil_pressure,battery_voltage,fuel_level,tp_fl,tp_fr,tp_rl,tp_rr\n")
+    except Exception as e:
+        logger.error(f"Failed to create training CSV: {e}")
 
 # ---------------------------------------------------------------------------
 # Logging
@@ -63,13 +72,19 @@ class SimulationState:
             "engine_temp_c": 90.0,
             "tire_pressure_psi": 32.0,
             "engine_rpm": 1500.0,
+            "throttle_pct": 20.0,
+            "engine_load_pct": 35.0,
+            "maf_g_sec": 45.0,
             "oil_pressure_psi": 45.0,
             "battery_voltage_v": 13.8,
+            "fuel_level_pct": 85.0,
             "tire_pressure_fl_psi": 32.0,
             "tire_pressure_fr_psi": 32.0,
             "tire_pressure_rl_psi": 32.0,
             "tire_pressure_rr_psi": 32.0,
         }
+        # Auto-drive state flag
+        self.auto_drive_enabled = False
 
     async def get_snapshot(self) -> dict[str, float]:
         """Return a *noisy* copy of the current baselines (simulates live data)."""
@@ -84,6 +99,15 @@ class SimulationState:
                 "tire_pressure_psi": round(
                     self._baselines["tire_pressure_psi"] + random.uniform(-0.4, 0.4), 1
                 ),
+                "throttle_pct": round(
+                    self._baselines["throttle_pct"] + random.uniform(-1.0, 1.0), 1
+                ),
+                "engine_load_pct": round(
+                    self._baselines["engine_load_pct"] + random.uniform(-2.0, 2.0), 1
+                ),
+                "maf_g_sec": round(
+                    self._baselines["maf_g_sec"] + random.uniform(-2.0, 2.0), 1
+                ),
                 "engine_rpm": round(
                     self._baselines["engine_rpm"] + random.uniform(-50, 50), 0
                 ),
@@ -92,6 +116,9 @@ class SimulationState:
                 ),
                 "battery_voltage_v": round(
                     self._baselines["battery_voltage_v"] + random.uniform(-0.05, 0.05), 2
+                ),
+                "fuel_level_pct": round(
+                    self._baselines["fuel_level_pct"] + random.uniform(-0.1, 0.1), 1
                 ),
                 "tire_pressure_fl_psi": round(
                     self._baselines["tire_pressure_fl_psi"] + random.uniform(-0.4, 0.4), 1
@@ -255,10 +282,16 @@ class VehicleHealthAnalyzer:
         current_oil = self.oil_pressure_window[-1] if self.oil_pressure_window else 45
         current_battery = self.battery_voltage_window[-1] if self.battery_voltage_window else 13.8
 
+        tire_fl = self.tire_pressure_fl_window[-1] if self.tire_pressure_fl_window else 32
+        tire_fr = self.tire_pressure_fr_window[-1] if self.tire_pressure_fr_window else 32
+        tire_rl = self.tire_pressure_rl_window[-1] if self.tire_pressure_rl_window else 32
+        tire_rr = self.tire_pressure_rr_window[-1] if self.tire_pressure_rr_window else 32
+        min_tire_psi = min(current_psi, tire_fl, tire_fr, tire_rl, tire_rr)
+
         return {
             "speed": self._speed_status(current_speed),
             "temp": self._temp_status(current_temp),
-            "psi": self._psi_status(current_psi),
+            "psi": self._psi_status(min_tire_psi),
             "rpm": self._rpm_status(current_rpm),
             "oil": self._oil_pressure_status(current_oil),
             "battery": self._battery_voltage_status(current_battery),
@@ -420,9 +453,17 @@ class VehicleHealthAnalyzer:
         current_speed = self.speed_window[-1]
         current_temp = self.temp_window[-1]
         current_psi = self.psi_window[-1]
+        
+        tire_fl = self.tire_pressure_fl_window[-1] if self.tire_pressure_fl_window else 32
+        tire_fr = self.tire_pressure_fr_window[-1] if self.tire_pressure_fr_window else 32
+        tire_rl = self.tire_pressure_rl_window[-1] if self.tire_pressure_rl_window else 32
+        tire_rr = self.tire_pressure_rr_window[-1] if self.tire_pressure_rr_window else 32
+        
+        min_tire_psi = min(current_psi, tire_fl, tire_fr, tire_rl, tire_rr)
+        max_tire_psi = max(current_psi, tire_fl, tire_fr, tire_rl, tire_rr)
 
         # ---- EMERGENCY ALERTS (Contradictions) ----
-        contradictions = self._detect_contradictions(current_speed, current_temp, current_psi)
+        contradictions = self._detect_contradictions(current_speed, current_temp, min_tire_psi)
         
         if "CRITICAL_TIRE_FAILURE_RISK" in contradictions:
             alerts.append("🚨 EMERGENCY: TIRE BLOWOUT IMMINENT - Reduce speed immediately!")
@@ -460,13 +501,13 @@ class VehicleHealthAnalyzer:
             alerts.append("⚠️ HIGH_TEMP: Engine running hot - Monitor closely")
 
         # ---- TIRE PRESSURE ALERTS ----
-        if current_psi < 15:
+        if min_tire_psi < 15:
             alerts.append("🛞 CRITICAL_PRESSURE: Tire flat or severely under-inflated")
-        elif current_psi < 25:
+        elif min_tire_psi < 25:
             alerts.append("🛞 LOW_PRESSURE: Tire pressure dangerously low")
-        elif current_psi < 30:
+        elif min_tire_psi < 30:
             alerts.append("⚠️ UNDER_INFLATED: Tire pressure below optimal")
-        elif current_psi > 40:
+        elif max_tire_psi > 40:
             alerts.append("⚠️ OVER_INFLATED: Tire pressure above safe range")
 
         # ---- TREND-BASED ALERTS ----
@@ -481,7 +522,7 @@ class VehicleHealthAnalyzer:
                 alerts.append("💨 PRESSURE_LEAK: Tire pressure dropping")
 
         # ---- PHYSICS-BASED ALERTS ----
-        tire_speed_risk = self._calculate_tire_speed_risk(current_psi, current_speed)
+        tire_speed_risk = self._calculate_tire_speed_risk(min_tire_psi, current_speed)
         if tire_speed_risk > 0.7:
             alerts.append("🚨 TIRE_SPEED_MISMATCH: Tire pressure unsafe for current speed")
         elif tire_speed_risk > 0.4:
@@ -520,9 +561,11 @@ class VehicleHealthAnalyzer:
         tire_fr = self.tire_pressure_fr_window[-1] if self.tire_pressure_fr_window else 32
         tire_rl = self.tire_pressure_rl_window[-1] if self.tire_pressure_rl_window else 32
         tire_rr = self.tire_pressure_rr_window[-1] if self.tire_pressure_rr_window else 32
+        
+        min_tire_psi = min(current_psi, tire_fl, tire_fr, tire_rl, tire_rr)
 
         # ---- STEP 1: Detect Critical Contradictions ----
-        contradictions = self._detect_contradictions(current_speed, current_temp, current_psi)
+        contradictions = self._detect_contradictions(current_speed, current_temp, min_tire_psi)
         
         # ---- STEP 2: Calculate Stress Multiplier ----
         # M_stress = 1.0 + (RPM/MaxRPM)² + (Speed/MaxSpeed)²
@@ -546,16 +589,20 @@ class VehicleHealthAnalyzer:
         temp_penalty = w_temp * (temp_delta ** 2)
         
         # Tire pressure penalty: P_tyre = W_tyre × (ΔPressure)²
-        # Use average of all four tires
-        avg_tire_pressure = (tire_fl + tire_fr + tire_rl + tire_rr) / 4
+        # Find the max deviation from optimal among all tires
         tire_optimal_min, tire_optimal_max = 30, 35
-        if avg_tire_pressure < tire_optimal_min:
-            tire_delta = tire_optimal_min - avg_tire_pressure
-        elif avg_tire_pressure > tire_optimal_max:
-            tire_delta = avg_tire_pressure - tire_optimal_max
-        else:
-            tire_delta = 0
-        
+        max_tire_delta = 0
+        for tp in [tire_fl, tire_fr, tire_rl, tire_rr, current_psi]:
+            if tp < tire_optimal_min:
+                delta = tire_optimal_min - tp
+            elif tp > tire_optimal_max:
+                delta = tp - tire_optimal_max
+            else:
+                delta = 0
+            if delta > max_tire_delta:
+                max_tire_delta = delta
+                
+        tire_delta = max_tire_delta
         w_tyre = 0.6  # Tire weight
         tire_penalty = w_tyre * (tire_delta ** 2)
         
@@ -615,14 +662,14 @@ class VehicleHealthAnalyzer:
             "component_scores": {
                 "speed": self._calculate_speed_score(current_speed),
                 "temperature": self._calculate_temp_score(current_temp, current_speed),
-                "tire_pressure": self._calculate_psi_score(current_psi, current_speed),
+                "tire_pressure": self._calculate_psi_score(min_tire_psi, current_speed),
                 "rpm": self._calculate_rpm_score(current_rpm),
                 "oil_pressure": self._calculate_oil_pressure_score(current_oil),
                 "battery_voltage": self._calculate_battery_voltage_score(current_battery),
             },
             "emergency": is_emergency,
             "contradictions": contradictions,
-            "tire_speed_risk": round(self._calculate_tire_speed_risk(current_psi, current_speed) * 100, 1),
+            "tire_speed_risk": round(self._calculate_tire_speed_risk(min_tire_psi, current_speed) * 100, 1),
             "temp_correlation_penalty": round(temp_penalty, 1),
             "stress_multiplier": round(stress_multiplier, 2),
         }
@@ -636,8 +683,17 @@ class VehicleHealthAnalyzer:
         - High speed + cold engine = sensor malfunction or engine failure
         - Rapid pressure drop = puncture/leak
         - Temperature spike at low speed = cooling system failure
+        - HIGH SPEED + ZERO RPM = Transmission disconnected/slipping
         """
         contradictions = []
+        
+        # CRITICAL: High speed + zero/near-zero RPM (transmission failure)
+        # Check RPM from window if available
+        if speed > 100:
+            if self.rpm_window:
+                avg_rpm = sum(self.rpm_window) / len(self.rpm_window)
+                if avg_rpm < 500:  # Near zero RPM
+                    contradictions.append("CRITICAL_TRANSMISSION_DISCONNECT")
         
         # CRITICAL: High speed + extremely low pressure
         if speed > 200 and psi < 20:
@@ -862,42 +918,34 @@ class VehicleHealthAnalyzer:
             return "✅ EXCELLENT"
 
     def _log_to_csv(self, analysis: dict[str, Any]) -> None:
-        """Log analysis results to CSV file."""
+        """Log telemetry data to vehicle_training_data.csv file only when auto-drive is enabled."""
+        # Only log data when auto-drive is enabled
+        if not state.auto_drive_enabled:
+            return
+        
         try:
-            with open(self.csv_file, "a", newline="") as f:
+            with open(TRAINING_CSV, "a", newline="") as f:
                 writer = csv.writer(f)
                 current_values = analysis["current_values"]
                 writer.writerow([
                     analysis["timestamp"],
                     current_values.get("speed_kmh", 0),
-                    current_values.get("engine_temp_c", 0),
-                    current_values.get("tire_pressure_psi", 0),
                     current_values.get("engine_rpm", 0),
+                    current_values.get("throttle_pct", 0),
+                    current_values.get("engine_load_pct", 0),
+                    current_values.get("maf_g_sec", 0),
+                    current_values.get("engine_temp_c", 0),
                     current_values.get("oil_pressure_psi", 0),
                     current_values.get("battery_voltage_v", 0),
+                    current_values.get("fuel_level_pct", 0),
                     current_values.get("tire_pressure_fl_psi", 0),
                     current_values.get("tire_pressure_fr_psi", 0),
                     current_values.get("tire_pressure_rl_psi", 0),
                     current_values.get("tire_pressure_rr_psi", 0),
-                    analysis["status"].get("speed", "—"),
-                    analysis["status"].get("temp", "—"),
-                    analysis["status"].get("psi", "—"),
-                    analysis["status"].get("rpm", "—"),
-                    analysis["status"].get("oil", "—"),
-                    analysis["status"].get("battery", "—"),
-                    analysis["trends"]["speed"]["direction"],
-                    analysis["trends"]["temp"]["direction"],
-                    analysis["trends"]["psi"]["direction"],
-                    analysis["health_score"]["score"],
-                    analysis["health_score"]["status"],
-                    analysis["health_score"].get("emergency", False),
-                    "|".join(analysis["health_score"].get("contradictions", [])) if analysis["health_score"].get("contradictions") else "NONE",
-                    analysis["health_score"].get("tire_speed_risk", 0),
-                    analysis["health_score"].get("temp_correlation_penalty", 0),
-                    "|".join(analysis["alerts"]) if analysis["alerts"] else "NONE",
                 ])
+                f.flush()  # Ensure data is written to disk immediately
         except Exception as e:
-            logger.error(f"Failed to log to CSV: {e}")
+            logger.error(f"Failed to log to vehicle_training_data.csv: {e}")
 
     async def get_session_summary(self) -> dict[str, Any]:
         """Get summary statistics for current session."""
@@ -942,26 +990,71 @@ ai_analyzer = GeminiVehicleAnalyzer()
 
 # Track AI analysis timing
 _ai_analysis_counter = 0
-_AI_INTERVAL = 30  # Run AI every 30 seconds (free-tier friendly)
+_AI_INTERVAL = 60  # Strict 60-second debounce for Gemini API rate limiting
+
+# ---------------------------------------------------------------------------
+# 3-Layer Safety Gateway — ML Model & Constants
+# ---------------------------------------------------------------------------
+
+# Rate-limit tracker for Gemini API calls (Rule 4: 60-second debounce)
+last_gemini_call_time: float = 0
 
 # ---------------------------------------------------------------------------
 # Background broadcaster
 # ---------------------------------------------------------------------------
 
 async def broadcast_telemetry() -> None:
-    """Push a noisy telemetry snapshot to every connected client each second."""
-    global _ai_analysis_counter
+    """
+    Push a noisy telemetry snapshot to every connected client each second.
+
+    Single source of truth for gateway status. Layer 1 (physics) overrides
+    Layer 2 (ML). Gemini is debounced to once per 60s on WARNING/EMERGENCY only.
+    """
+    global _ai_analysis_counter, last_gemini_call_time
+
     while True:
-        # Always generate snapshot (for analysis even if no telemetry clients)
         snapshot = await state.get_snapshot()
-        
-        # Broadcast to telemetry clients
+
+        # ── 3-Layer Safety Gateway (Layer 1 → Layer 2 → route) ───────────
+        gateway = evaluate_telemetry(snapshot)
+        final_status = gateway["status"]
+        final_health_score = gateway["health_score"]
+        root_cause = gateway["root_cause"]
+        gateway_decision = gateway["gateway_decision"]
+        gateway_note = gateway["gateway_note"]
+        ml_anomaly_score = gateway["ml_anomaly_score"]
+        ml_root_cause = gateway["ml_root_cause"]
+        is_ml_anomaly = gateway["is_ml_anomaly"]
+        layer_1_triggered = gateway["layer_1_triggered"]
+        layer_1_cause = gateway["layer_1_cause"]
+        safety_violations = gateway["safety_violations"]
+
+        structured_alerts = {
+            "ml_anomaly": is_ml_anomaly,
+            "ml_prediction": gateway.get("ml_prediction", 1),
+            "ml_root_cause": ml_root_cause,
+            "ml_score": ml_anomaly_score,
+            "layer_1_triggered": layer_1_triggered,
+            "layer_1_cause": layer_1_cause,
+            "gateway_status": final_status,
+        }
+
+        # ── Broadcast to telemetry clients ─────────────────────────────
         if connected_clients:
             payload = json.dumps(
                 {
                     "type": "telemetry",
                     "timestamp": round(time.time(), 3),
                     "data": snapshot,
+                    # ─── Safety Gateway Fields ───
+                    "gateway_status": final_status,
+                    "gateway_health_score": final_health_score,
+                    "gateway_decision": gateway_decision,
+                    "gateway_note": gateway_note,
+                    "ml_anomaly_score": ml_anomaly_score,
+                    "is_physically_dangerous": layer_1_triggered,
+                    "safety_violations": safety_violations,
+                    "root_cause": root_cause,
                 }
             )
             stale: list[WebSocket] = []
@@ -973,33 +1066,70 @@ async def broadcast_telemetry() -> None:
             for ws in stale:
                 connected_clients.discard(ws)
                 logger.warning("Dropped stale WebSocket client.")
-        
-        # Always run rule engine analysis
+
+        # ── Rule engine analysis (health bars, component scores) ──────
         analysis_result = await analyzer.add_reading(snapshot)
         _ai_analysis_counter += 1
-        
-        # Run AI analysis every _AI_INTERVAL seconds — only if someone is watching
+
+        # ── Gemini AI: WARNING/EMERGENCY only + 60-second debounce (Rule 4) ─
         ai_diagnosis = None
         if analysis_clients:
-            if _ai_analysis_counter % _AI_INTERVAL == 0:
+            now = time.time()
+            in_alert_state = final_status in ("WARNING", "EMERGENCY")
+            debounce_elapsed = (now - last_gemini_call_time) >= _AI_INTERVAL
+
+            if in_alert_state and debounce_elapsed:
                 try:
                     ai_diagnosis = await ai_analyzer.analyze(
                         telemetry=snapshot,
                         rule_analysis=analysis_result,
                     )
+                    last_gemini_call_time = now
+                    logger.info(
+                        "Gemini API called (%s). Next eligible: %s",
+                        final_status,
+                        now + _AI_INTERVAL,
+                    )
                 except Exception as e:
                     logger.error(f"AI analysis error: {e}")
                     ai_diagnosis = ai_analyzer.cached_diagnosis
             else:
-                # Use cached AI result between calls
                 ai_diagnosis = ai_analyzer.cached_diagnosis
-        
-        # Broadcast to analysis clients with AI data included
+
+        # ── Broadcast to analysis clients ─────────────────────────────
         if analysis_clients:
-            # Attach AI diagnosis to the analysis payload
             analysis_result["ai_diagnosis"] = ai_diagnosis
             analysis_result["ai_status"] = ai_analyzer.get_status()
-            
+
+            # Gateway is authoritative for analysis UI (Rule 1 / single source of truth)
+            analysis_result["health_score"]["score"] = final_health_score
+            analysis_result["health_score"]["status"] = final_status
+            analysis_result["health_score"]["emergency"] = final_status == "EMERGENCY"
+            if final_status == "EMERGENCY" and safety_violations:
+                existing = analysis_result["health_score"].get("contradictions", [])
+                for v in safety_violations:
+                    if v not in existing:
+                        existing.append(v)
+                analysis_result["health_score"]["contradictions"] = existing
+
+            # Add emergency/critical reasons to diagnostic alerts
+            contradictions = analysis_result["health_score"].get("contradictions", [])
+            alerts = analysis_result.get("alerts", [])
+            for c in contradictions:
+                if c not in alerts:
+                    alerts.insert(0, c)
+            analysis_result["alerts"] = alerts
+
+            # Keep rule-engine alert strings; expose gateway ML/L1 state separately
+            analysis_result["gateway_alerts"] = structured_alerts
+
+            analysis_result["gateway_status"] = final_status
+            analysis_result["gateway_health_score"] = final_health_score
+            analysis_result["gateway_decision"] = gateway_decision
+            analysis_result["is_physically_dangerous"] = layer_1_triggered
+            analysis_result["safety_violations"] = safety_violations
+            analysis_result["root_cause"] = root_cause
+
             analysis_payload = json.dumps(
                 {
                     "type": "analysis",
@@ -1016,7 +1146,7 @@ async def broadcast_telemetry() -> None:
             for ws in stale_analysis:
                 analysis_clients.discard(ws)
                 logger.warning("Dropped stale analysis WebSocket client.")
-        
+
         await asyncio.sleep(1)
 
 # ---------------------------------------------------------------------------
@@ -1106,8 +1236,80 @@ async def ws_telemetry(ws: WebSocket) -> None:
 
             action = msg.get("action")
 
+            # --- Write to CSV for Machine Learning ---
+            try:
+                data_obj = msg.get("data") if action == "bulk_update" else msg
+                if isinstance(data_obj, dict) and any(k in data_obj for k in ["speed_kmh", "engine_rpm", "throttle_pct"]):
+                    # Only write to CSV if auto-drive is enabled
+                    if state.auto_drive_enabled:
+                        row = [
+                            time.time(),
+                            data_obj.get("speed_kmh", ""),
+                            data_obj.get("engine_rpm", ""),
+                            data_obj.get("throttle_pct", ""),
+                            data_obj.get("engine_load_pct", ""),
+                            data_obj.get("maf_g_sec", ""),
+                            data_obj.get("engine_temp_c", ""),
+                            data_obj.get("oil_pressure_psi", ""),
+                            data_obj.get("battery_voltage_v", ""),
+                            data_obj.get("fuel_level_pct", ""),
+                            data_obj.get("tire_pressure_fl_psi", ""),
+                            data_obj.get("tire_pressure_fr_psi", ""),
+                            data_obj.get("tire_pressure_rl_psi", ""),
+                            data_obj.get("tire_pressure_rr_psi", "")
+                        ]
+                        with open(TRAINING_CSV, "a") as f:
+                            f.write(",".join(map(str, row)) + "\n")
+            except Exception:
+                pass  # Ensure it logs silently without crashing
+
+            # ---- Handle "toggle_auto_drive" action ----
+            if action == "toggle_auto_drive":
+                state.auto_drive_enabled = not state.auto_drive_enabled
+                logger.info("Client %s toggled auto-drive to: %s", client_id, state.auto_drive_enabled)
+                await ws.send_text(
+                    json.dumps(
+                        {
+                            "type": "ack",
+                            "detail": f"Auto-drive {'enabled' if state.auto_drive_enabled else 'disabled'}",
+                            "auto_drive_enabled": state.auto_drive_enabled,
+                        }
+                    )
+                )
+
+            # ---- Handle "bulk_update" action ----
+            if action == "bulk_update":
+                data = msg.get("data")
+                if not isinstance(data, dict):
+                    await ws.send_text(
+                        json.dumps({"type": "error", "detail": "Missing or invalid 'data' field."})
+                    )
+                    continue
+
+                for param, value in data.items():
+                    try:
+                        await state.update(param, float(value))
+                    except (TypeError, ValueError):
+                        pass
+
+                logger.info("Client %s performed bulk update", client_id)
+                
+                # ─── SINGLE SOURCE OF TRUTH ───
+                # DO NOT evaluate gateway here. Frontend relies EXCLUSIVELY on
+                # broadcast_telemetry() via ws_data_analysis for all gateway decisions.
+                # This prevents race conditions and split-brain issues.
+                await ws.send_text(
+                    json.dumps(
+                        {
+                            "type": "ack",
+                            "detail": "Bulk update applied",
+                            "baselines": await state.get_baselines(),
+                        }
+                    )
+                )
+
             # ---- Handle "update" action ----
-            if action == "update":
+            elif action == "update":
                 param = msg.get("parameter")
                 value = msg.get("value")
 
@@ -1137,6 +1339,11 @@ async def ws_telemetry(ws: WebSocket) -> None:
                     logger.info(
                         "Client %s updated %s → %s", client_id, param, value
                     )
+                    
+                    # ─── SINGLE SOURCE OF TRUTH ───
+                    # DO NOT evaluate gateway here. Frontend relies EXCLUSIVELY on
+                    # broadcast_telemetry() via ws_data_analysis for all gateway decisions.
+                    # This prevents race conditions and split-brain issues.
                     await ws.send_text(
                         json.dumps(
                             {

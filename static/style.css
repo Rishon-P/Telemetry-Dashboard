@@ -108,19 +108,21 @@ body {
 }
 
 /* ── Gauge Cluster ────────────────────────────────── */
+
+/* ── Gauge Cluster ────────────────────────────────── */
 .gauge-cluster {
   display: grid;
-  grid-template-columns: 1fr 1.5fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 1.5rem;
-  align-items: center;
+  align-items: stretch;
 }
 .gauge-card {
   background: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius);
   backdrop-filter: blur(20px);
-  padding: 1.5rem 1rem;
-  display: flex; flex-direction: column; align-items: center;
+  padding: 1.5rem;
+  display: flex; flex-direction: column;
   transition: border-color 0.4s, box-shadow 0.4s;
   position: relative;
   overflow: hidden;
@@ -132,437 +134,186 @@ body {
   background: linear-gradient(90deg, transparent, var(--gauge-accent, var(--blue)), transparent);
   opacity: 0.6;
 }
-.gauge-card:hover {
-  border-color: rgba(255,255,255,0.12);
-}
+.gauge-card:hover { border-color: rgba(255,255,255,0.12); }
+
 .gauge-card.speed { --gauge-accent: var(--blue); }
 .gauge-card.temp  { --gauge-accent: var(--orange); }
 .gauge-card.psi   { --gauge-accent: var(--green); }
-
-.gauge-card.speed:hover { box-shadow: var(--glow-blue); }
-.gauge-card.temp:hover  { box-shadow: var(--glow-orange); }
-.gauge-card.psi:hover   { box-shadow: var(--glow-green); }
-.gauge-card.rpm { --gauge-accent: var(--blue); }
-.gauge-card.oil { --gauge-accent: var(--orange); }
+.gauge-card.rpm   { --gauge-accent: var(--blue); }
+.gauge-card.oil   { --gauge-accent: var(--orange); }
 .gauge-card.battery { --gauge-accent: var(--blue); }
-.gauge-card.rpm:hover { box-shadow: var(--glow-blue); }
-.gauge-card.oil:hover { box-shadow: var(--glow-orange); }
-.gauge-card.battery:hover { box-shadow: var(--glow-blue); }
+.gauge-card.fuel  { --gauge-accent: var(--orange); }
 .gauge-card.tire-fl { --gauge-accent: var(--green); }
 .gauge-card.tire-fr { --gauge-accent: var(--green); }
 .gauge-card.tire-rl { --gauge-accent: var(--green); }
 .gauge-card.tire-rr { --gauge-accent: var(--green); }
+
+.gauge-card.speed:hover { box-shadow: var(--glow-blue); }
+.gauge-card.temp:hover  { box-shadow: var(--glow-orange); }
+.gauge-card.psi:hover   { box-shadow: var(--glow-green); }
+.gauge-card.rpm:hover { box-shadow: var(--glow-blue); }
+.gauge-card.oil:hover { box-shadow: var(--glow-orange); }
+.gauge-card.battery:hover { box-shadow: var(--glow-blue); }
+.gauge-card.fuel:hover { box-shadow: var(--glow-orange); }
 .gauge-card.tire-fl:hover { box-shadow: var(--glow-green); }
 .gauge-card.tire-fr:hover { box-shadow: var(--glow-green); }
 .gauge-card.tire-rl:hover { box-shadow: var(--glow-green); }
 .gauge-card.tire-rr:hover { box-shadow: var(--glow-green); }
 
-.gauge-card.center { padding: 2rem 1rem; }
+.gauge-card-header {
+  display: flex; justify-content: space-between; align-items: center;
+  margin-bottom: 1.5rem; width: 100%;
+}
+.header-left {
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.ctrl-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.2rem; background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+.speed .ctrl-icon { background: rgba(0,180,255,0.08); border-color: rgba(0,180,255,0.15); }
+.temp .ctrl-icon { background: rgba(255,107,53,0.08); border-color: rgba(255,107,53,0.15); }
+.psi .ctrl-icon { background: rgba(0,230,118,0.08); border-color: rgba(0,230,118,0.15); }
 
 .gauge-title {
   font-family: 'Teko', sans-serif;
-  font-weight: 600; font-size: 1rem;
+  font-weight: 600; font-size: 1.1rem;
   text-transform: uppercase; letter-spacing: 4px;
   color: var(--text-2);
-  margin-bottom: 0.5rem;
   text-shadow: 0 0 8px rgba(255,255,255,0.08);
 }
-.gauge-svg { width: 100%; max-width: 260px; }
-.gauge-card.center .gauge-svg { max-width: 320px; }
-
-/* SVG gauge arcs */
-.gauge-bg-arc {
-  fill: none;
-  stroke: rgba(255,255,255,0.06);
-  stroke-linecap: round;
-}
-.gauge-value-arc {
-  fill: none;
-  stroke-linecap: round;
-  transition: stroke-dashoffset 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  filter: drop-shadow(0 0 6px currentColor);
-}
-.gauge-value-arc.speed-arc { stroke: url(#grad-blue); }
-.gauge-value-arc.temp-arc  { stroke: url(#grad-orange); }
-.gauge-value-arc.psi-arc   { stroke: url(#grad-green); }
-
-.gauge-center-circle {
-  fill: rgba(6,6,16,0.7);
-  stroke: rgba(255,255,255,0.04);
-  stroke-width: 1;
+.gauge-value {
+  display: flex; align-items: baseline; gap: 0.3rem;
 }
 .gauge-number {
   font-family: 'Orbitron', sans-serif;
-  font-weight: 900;
-  fill: var(--text-1);
-  text-anchor: middle;
-  dominant-baseline: central;
-  transition: fill 0.4s;
+  font-weight: 900; font-size: 2rem;
+  color: var(--text-1); transition: color 0.4s;
 }
-.gauge-card.center .gauge-number { font-size: 2.4rem; }
-.gauge-card:not(.center) .gauge-number { font-size: 1.8rem; }
 .gauge-unit {
   font-family: 'Teko', sans-serif;
-  font-weight: 500; font-size: 0.95rem;
-  fill: var(--text-2);
-  text-anchor: middle;
-  letter-spacing: 2px;
+  font-weight: 500; font-size: 1rem;
+  color: var(--text-2); letter-spacing: 2px;
 }
 
-/* ── Status indicator badge ──────────────────────── */
+/* Status indicator badge */
 .status-badge {
   font-family: 'Teko', sans-serif;
   font-weight: 600; font-size: 0.7rem;
   text-transform: uppercase; letter-spacing: 2px;
-  padding: 0.2rem 0.75rem;
-  border-radius: 20px;
-  margin-top: 0.4rem;
-  transition: all 0.4s;
-  border: 1px solid transparent;
+  padding: 0.2rem 0.75rem; border-radius: 20px;
+  transition: all 0.4s; border: 1px solid transparent;
 }
-.status-badge.optimal {
-  color: #00e676; background: rgba(0,230,118,0.1);
-  border-color: rgba(0,230,118,0.25);
-  text-shadow: 0 0 8px rgba(0,230,118,0.4);
-}
-.status-badge.warning {
-  color: #ffab00; background: rgba(255,171,0,0.1);
-  border-color: rgba(255,171,0,0.25);
-  text-shadow: 0 0 8px rgba(255,171,0,0.4);
-  animation: badge-pulse 1.5s ease-in-out infinite;
-}
-.status-badge.danger {
-  color: #ff2d55; background: rgba(255,45,85,0.12);
-  border-color: rgba(255,45,85,0.3);
-  text-shadow: 0 0 10px rgba(255,45,85,0.5);
-  animation: badge-pulse 0.8s ease-in-out infinite;
-}
-.status-badge.cold {
-  color: #64b5f6; background: rgba(100,181,246,0.1);
-  border-color: rgba(100,181,246,0.25);
-  text-shadow: 0 0 8px rgba(100,181,246,0.4);
-}
-@keyframes badge-pulse {
-  0%, 100% { opacity: 1; }
-  50%      { opacity: 0.6; }
-}
+.status-badge.optimal { color: #00e676; background: rgba(0,230,118,0.1); border-color: rgba(0,230,118,0.25); text-shadow: 0 0 8px rgba(0,230,118,0.4); }
+.status-badge.warning { color: #ffab00; background: rgba(255,171,0,0.1); border-color: rgba(255,171,0,0.25); text-shadow: 0 0 8px rgba(255,171,0,0.4); animation: badge-pulse 1.5s infinite; }
+.status-badge.danger { color: #ff2d55; background: rgba(255,45,85,0.12); border-color: rgba(255,45,85,0.3); text-shadow: 0 0 10px rgba(255,45,85,0.5); animation: badge-pulse 0.8s infinite; }
+.status-badge.cold { color: #64b5f6; background: rgba(100,181,246,0.1); border-color: rgba(100,181,246,0.25); text-shadow: 0 0 8px rgba(100,181,246,0.4); }
 
-/* Dynamic gauge glow per status */
-.gauge-value-arc.status-optimal { stroke: url(#grad-green) !important; filter: drop-shadow(0 0 8px rgba(0,230,118,0.5)); }
-.gauge-value-arc.status-warning { stroke: url(#grad-amber) !important; filter: drop-shadow(0 0 10px rgba(255,171,0,0.6)); }
-.gauge-value-arc.status-danger  { stroke: url(#grad-red)   !important; filter: drop-shadow(0 0 14px rgba(255,45,85,0.7)); }
-.gauge-value-arc.status-cold    { stroke: url(#grad-cold)  !important; filter: drop-shadow(0 0 8px rgba(100,181,246,0.5)); }
+.gauge-number.status-optimal { color: #00e676; }
+.gauge-number.status-warning { color: #ffab00; }
+.gauge-number.status-danger  { color: #ff2d55; }
+.gauge-number.status-cold    { color: #64b5f6; }
 
-.gauge-number.status-optimal { fill: #00e676; }
-.gauge-number.status-warning { fill: #ffab00; }
-.gauge-number.status-danger  { fill: #ff2d55; }
-.gauge-number.status-cold    { fill: #64b5f6; }
-.gauge-tick {
-  stroke: rgba(255,255,255,0.15);
-  stroke-width: 1.5;
-  stroke-linecap: round;
+/* ── Horizontal Row layout ── */
+.gauge-row {
+  display: flex; width: 100%; gap: 1.5rem; align-items: center;
 }
-.gauge-tick.major { stroke: rgba(255,255,255,0.35); stroke-width: 2; }
-.gauge-tick-label {
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.55rem;
-  fill: var(--text-3);
-  text-anchor: middle;
-  dominant-baseline: central;
-}
+.horiz-gauge-col { flex: 1; display: flex; flex-direction: column; }
+.inline-slider-col { flex: 1; display: flex; flex-direction: column; padding-left: 1.5rem; border-left: 1px solid var(--border); }
 
-/* ── Controls Section ─────────────────────────────── */
-.controls-section {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
-}
-.control-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  backdrop-filter: blur(20px);
-  padding: 1.5rem;
-  display: flex; flex-direction: column; gap: 1rem;
-  transition: border-color 0.4s, box-shadow 0.4s;
-  position: relative;
-  overflow: hidden;
-}
-.control-card::before {
-  content: '';
-  position: absolute; top: 0; left: 0; right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, var(--ctrl-accent, var(--blue)), transparent);
-  opacity: 0.5;
-}
-.control-card:hover { border-color: rgba(255,255,255,0.12); }
-
-.control-card.ctrl-speed { --ctrl-accent: var(--blue); }
-.control-card.ctrl-temp  { --ctrl-accent: var(--orange); }
-.control-card.ctrl-psi   { --ctrl-accent: var(--green); }
-.control-card.ctrl-rpm   { --ctrl-accent: var(--blue); }
-.control-card.ctrl-oil   { --ctrl-accent: var(--orange); }
-.control-card.ctrl-battery { --ctrl-accent: var(--blue); }
-.control-card.ctrl-tire-fl { --ctrl-accent: var(--green); }
-.control-card.ctrl-tire-fr { --ctrl-accent: var(--green); }
-.control-card.ctrl-tire-rl { --ctrl-accent: var(--green); }
-.control-card.ctrl-tire-rr { --ctrl-accent: var(--green); }
-
-.ctrl-header {
-  display: flex; align-items: center; gap: 0.75rem;
-}
-.ctrl-icon {
-  width: 40px; height: 40px;
-  border-radius: 10px;
-  display: flex; align-items: center; justify-content: center;
-  font-size: 1.2rem;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.06);
-}
-.ctrl-speed .ctrl-icon { background: rgba(0,180,255,0.08); border-color: rgba(0,180,255,0.15); }
-.ctrl-temp  .ctrl-icon { background: rgba(255,107,53,0.08); border-color: rgba(255,107,53,0.15); }
-.ctrl-psi   .ctrl-icon { background: rgba(0,230,118,0.08); border-color: rgba(0,230,118,0.15); }
-
-.ctrl-label {
-  font-family: 'Teko', sans-serif;
-  font-weight: 600; font-size: 1rem;
-  text-transform: uppercase; letter-spacing: 3px;
-  color: var(--text-2);
-  text-shadow: 0 0 6px rgba(255,255,255,0.05);
-}
-
-/* Status colors on slider displays */
-.slider-value-display.status-optimal { color: #00e676 !important; text-shadow: 0 0 20px rgba(0,230,118,0.5) !important; }
-.slider-value-display.status-warning { color: #ffab00 !important; text-shadow: 0 0 20px rgba(255,171,0,0.5) !important; }
-.slider-value-display.status-danger  { color: #ff2d55 !important; text-shadow: 0 0 20px rgba(255,45,85,0.5) !important; }
-.slider-value-display.status-cold    { color: #64b5f6 !important; text-shadow: 0 0 20px rgba(100,181,246,0.5) !important; }
-
-/* ── Custom Range Slider ──────────────────────────── */
-.slider-wrap {
-  position: relative; padding: 0.5rem 0;
-}
-.slider-value-display {
-  font-family: 'Orbitron', sans-serif;
-  font-size: 1.5rem; font-weight: 700;
-  text-align: center;
-  margin-bottom: 0.75rem;
-  color: var(--text-1);
-}
-.ctrl-speed .slider-value-display { color: var(--blue); text-shadow: 0 0 20px rgba(0,180,255,0.4); }
-.ctrl-temp  .slider-value-display { color: var(--orange); text-shadow: 0 0 20px rgba(255,107,53,0.4); }
-.ctrl-psi   .slider-value-display { color: var(--green); text-shadow: 0 0 20px rgba(0,230,118,0.4); }
-
-input[type="range"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 100%;
-  height: 6px;
-  border-radius: 3px;
-  outline: none;
-  cursor: pointer;
-  background: transparent;
-  position: relative;
-}
-input[type="range"]::-webkit-slider-runnable-track {
-  height: 6px;
-  border-radius: 3px;
-  background: rgba(255,255,255,0.08);
-}
-input[type="range"]::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  width: 22px; height: 22px;
-  border-radius: 50%;
-  margin-top: -8px;
-  cursor: pointer;
-  border: 2px solid rgba(255,255,255,0.3);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-.ctrl-speed input[type="range"]::-webkit-slider-thumb {
-  background: var(--blue);
-  box-shadow: 0 0 12px rgba(0,180,255,0.5), 0 0 30px rgba(0,180,255,0.2);
-}
-.ctrl-temp input[type="range"]::-webkit-slider-thumb {
-  background: var(--orange);
-  box-shadow: 0 0 12px rgba(255,107,53,0.5), 0 0 30px rgba(255,107,53,0.2);
-}
-.ctrl-psi input[type="range"]::-webkit-slider-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
-}
-.ctrl-rpm input[type="range"]::-webkit-slider-thumb {
-  background: var(--blue);
-  box-shadow: 0 0 12px rgba(0,180,255,0.5), 0 0 30px rgba(0,180,255,0.2);
-}
-.ctrl-oil input[type="range"]::-webkit-slider-thumb {
-  background: var(--orange);
-  box-shadow: 0 0 12px rgba(255,107,53,0.5), 0 0 30px rgba(255,107,53,0.2);
-}
-.ctrl-battery input[type="range"]::-webkit-slider-thumb {
-  background: var(--blue);
-  box-shadow: 0 0 12px rgba(0,180,255,0.5), 0 0 30px rgba(0,180,255,0.2);
-}
-.ctrl-tire-fl input[type="range"]::-webkit-slider-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
-}
-.ctrl-tire-fr input[type="range"]::-webkit-slider-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
-}
-.ctrl-tire-rl input[type="range"]::-webkit-slider-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
-}
-.ctrl-tire-rr input[type="range"]::-webkit-slider-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5), 0 0 30px rgba(0,230,118,0.2);
-}
-input[type="range"]::-webkit-slider-thumb:hover {
-  transform: scale(1.25);
-}
-input[type="range"]:active::-webkit-slider-thumb {
-  transform: scale(1.15);
-}
-
-/* Firefox */
-input[type="range"]::-moz-range-track {
-  height: 6px; border-radius: 3px;
-  background: rgba(255,255,255,0.08);
-  border: none;
-}
-input[type="range"]::-moz-range-thumb {
-  width: 22px; height: 22px; border-radius: 50%;
-  border: 2px solid rgba(255,255,255,0.3);
-  cursor: pointer;
-}
-.ctrl-speed input[type="range"]::-moz-range-thumb {
-  background: var(--blue);
-  box-shadow: 0 0 12px rgba(0,180,255,0.5);
-}
-.ctrl-temp input[type="range"]::-moz-range-thumb {
-  background: var(--orange);
-  box-shadow: 0 0 12px rgba(255,107,53,0.5);
-}
-.ctrl-psi input[type="range"]::-moz-range-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5);
-}
-.ctrl-rpm input[type="range"]::-moz-range-thumb {
-  background: var(--blue);
-  box-shadow: 0 0 12px rgba(0,180,255,0.5);
-}
-.ctrl-oil input[type="range"]::-moz-range-thumb {
-  background: var(--orange);
-  box-shadow: 0 0 12px rgba(255,107,53,0.5);
-}
-.ctrl-battery input[type="range"]::-moz-range-thumb {
-  background: var(--blue);
-  box-shadow: 0 0 12px rgba(0,180,255,0.5);
-}
-.ctrl-tire-fl input[type="range"]::-moz-range-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5);
-}
-.ctrl-tire-fr input[type="range"]::-moz-range-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5);
-}
-.ctrl-tire-rl input[type="range"]::-moz-range-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5);
-}
-.ctrl-tire-rr input[type="range"]::-moz-range-thumb {
-  background: var(--green);
-  box-shadow: 0 0 12px rgba(0,230,118,0.5);
-}
-
-.slider-minmax {
+.gauge-minmax, .slider-minmax {
   display: flex; justify-content: space-between;
-  margin-top: 0.35rem;
-  font-family: 'Rajdhani', sans-serif;
-  font-size: 0.72rem; color: var(--text-3);
+  font-family: 'Rajdhani', sans-serif; font-size: 0.72rem; color: var(--text-3);
+  margin-bottom: 0.35rem;
+}
+.horiz-gauge-track {
+  width: 100%; height: 14px; background: rgba(255,255,255,0.06);
+  border-radius: 7px; position: relative; overflow: hidden;
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.5); margin-bottom: 0.5rem;
+}
+.horiz-gauge-fill {
+  height: 100%; width: 0%; border-radius: 7px;
+  transition: width 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.speed-fill, .rpm-fill, .battery-fill { background: linear-gradient(90deg, rgba(0,180,255,0.3), var(--blue)); box-shadow: var(--glow-blue); }
+.temp-fill, .oil-fill, .fuel-fill { background: linear-gradient(90deg, rgba(255,107,53,0.3), var(--orange)); box-shadow: var(--glow-orange); }
+.psi-fill, .tire-fl-fill, .tire-fr-fill, .tire-rl-fill, .tire-rr-fill { background: linear-gradient(90deg, rgba(0,230,118,0.3), var(--green)); box-shadow: var(--glow-green); }
+
+.horiz-gauge-fill.status-optimal { background: linear-gradient(90deg, rgba(0,230,118,0.3), #00e676) !important; box-shadow: 0 0 15px rgba(0,230,118,0.5); }
+.horiz-gauge-fill.status-warning { background: linear-gradient(90deg, rgba(255,171,0,0.3), #ffab00) !important; box-shadow: 0 0 15px rgba(255,171,0,0.5); }
+.horiz-gauge-fill.status-danger  { background: linear-gradient(90deg, rgba(255,45,85,0.3), #ff2d55) !important; box-shadow: 0 0 15px rgba(255,45,85,0.5); }
+.horiz-gauge-fill.status-cold    { background: linear-gradient(90deg, rgba(100,181,246,0.3), #64b5f6) !important; box-shadow: 0 0 15px rgba(100,181,246,0.5); }
+
+.gauge-label-sub {
+  font-family: 'Rajdhani', sans-serif; font-size: 0.65rem; color: var(--text-3); letter-spacing: 2px;
 }
 
-/* ── Apply Button ─────────────────────────────────── */
+.slider-top-row { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 0.35rem; }
+.slider-top-row .slider-minmax { margin-bottom: 0; width: 60%; }
+.slider-value-display { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; color: var(--text-1); margin-bottom: 0; }
+
+.speed .slider-value-display { color: var(--blue); text-shadow: 0 0 20px rgba(0,180,255,0.4); }
+.temp .slider-value-display { color: var(--orange); text-shadow: 0 0 20px rgba(255,107,53,0.4); }
+.psi .slider-value-display { color: var(--green); text-shadow: 0 0 20px rgba(0,230,118,0.4); }
+
+.slider-control-row { display: flex; gap: 1rem; align-items: center; margin-bottom: 0.5rem; }
+.slider-wrap { flex: 1; position: relative; }
+input[type="range"] {
+  -webkit-appearance: none; appearance: none; width: 100%; height: 6px; border-radius: 3px;
+  outline: none; cursor: pointer; background: transparent; position: relative; z-index: 2;
+}
+input[type="range"]::-webkit-slider-runnable-track { height: 6px; border-radius: 3px; background: rgba(255,255,255,0.08); }
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; width: 18px; height: 18px; border-radius: 50%; margin-top: -6px; cursor: pointer;
+  border: 2px solid rgba(255,255,255,0.3); transition: transform 0.2s, box-shadow 0.2s;
+}
+.speed input[type="range"]::-webkit-slider-thumb { background: var(--blue); box-shadow: 0 0 12px rgba(0,180,255,0.5); }
+.temp input[type="range"]::-webkit-slider-thumb { background: var(--orange); box-shadow: 0 0 12px rgba(255,107,53,0.5); }
+.psi input[type="range"]::-webkit-slider-thumb { background: var(--green); box-shadow: 0 0 12px rgba(0,230,118,0.5); }
+.rpm input[type="range"]::-webkit-slider-thumb { background: var(--blue); box-shadow: 0 0 12px rgba(0,180,255,0.5); }
+.oil input[type="range"]::-webkit-slider-thumb { background: var(--orange); box-shadow: 0 0 12px rgba(255,107,53,0.5); }
+.battery input[type="range"]::-webkit-slider-thumb { background: var(--blue); box-shadow: 0 0 12px rgba(0,180,255,0.5); }
+.fuel input[type="range"]::-webkit-slider-thumb { background: var(--orange); box-shadow: 0 0 12px rgba(255,107,53,0.5); }
+.tire-fl input[type="range"]::-webkit-slider-thumb { background: var(--green); box-shadow: 0 0 12px rgba(0,230,118,0.5); }
+.tire-fr input[type="range"]::-webkit-slider-thumb { background: var(--green); box-shadow: 0 0 12px rgba(0,230,118,0.5); }
+.tire-rl input[type="range"]::-webkit-slider-thumb { background: var(--green); box-shadow: 0 0 12px rgba(0,230,118,0.5); }
+.tire-rr input[type="range"]::-webkit-slider-thumb { background: var(--green); box-shadow: 0 0 12px rgba(0,230,118,0.5); }
+
+.slider-fill-track {
+  position: absolute; left: 0; top: calc(50% - 3px); height: 6px; border-radius: 3px; pointer-events: none; opacity: 0.5; z-index: 1;
+}
+.speed .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
+.temp .slider-fill-track { background: linear-gradient(90deg, rgba(255,107,53,0.2), var(--orange)); }
+.psi .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.rpm .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
+.oil .slider-fill-track { background: linear-gradient(90deg, rgba(255,107,53,0.2), var(--orange)); }
+.battery .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
+.fuel .slider-fill-track { background: linear-gradient(90deg, rgba(255,107,53,0.2), var(--orange)); }
+.tire-fl .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.tire-fr .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.tire-rl .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+.tire-rr .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+
 .btn-apply {
-  font-family: 'Teko', sans-serif;
-  font-weight: 700; font-size: 1rem;
-  text-transform: uppercase; letter-spacing: 3px;
-  padding: 0.65rem 1.5rem;
-  border: 1px solid rgba(255,255,255,0.12);
-  border-radius: 8px;
-  cursor: pointer;
-  color: var(--text-1);
-  background: rgba(255,255,255,0.04);
-  transition: all 0.3s;
-  width: 100%;
+  font-family: 'Teko', sans-serif; font-weight: 700; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px;
+  padding: 0.35rem 1rem; border: 1px solid rgba(255,255,255,0.12); border-radius: 6px; cursor: pointer; color: var(--text-1); background: rgba(255,255,255,0.04); transition: all 0.3s;
 }
-.ctrl-speed .btn-apply:hover {
-  background: rgba(0,180,255,0.12);
-  border-color: var(--blue);
-  box-shadow: 0 0 20px rgba(0,180,255,0.2);
-  color: var(--blue);
-}
-.ctrl-temp .btn-apply:hover {
-  background: rgba(255,107,53,0.12);
-  border-color: var(--orange);
-  box-shadow: 0 0 20px rgba(255,107,53,0.2);
-  color: var(--orange);
-}
-.ctrl-psi .btn-apply:hover {
-  background: rgba(0,230,118,0.12);
-  border-color: var(--green);
-  box-shadow: 0 0 20px rgba(0,230,118,0.2);
-  color: var(--green);
-}
-.ctrl-rpm .btn-apply:hover {
-  background: rgba(0,180,255,0.12);
-  border-color: var(--blue);
-  box-shadow: 0 0 20px rgba(0,180,255,0.2);
-  color: var(--blue);
-}
-.ctrl-oil .btn-apply:hover {
-  background: rgba(255,107,53,0.12);
-  border-color: var(--orange);
-  box-shadow: 0 0 20px rgba(255,107,53,0.2);
-  color: var(--orange);
-}
-.ctrl-battery .btn-apply:hover {
-  background: rgba(0,180,255,0.12);
-  border-color: var(--blue);
-  box-shadow: 0 0 20px rgba(0,180,255,0.2);
-  color: var(--blue);
-}
-.ctrl-tire-fl .btn-apply:hover {
-  background: rgba(0,230,118,0.12);
-  border-color: var(--green);
-  box-shadow: 0 0 20px rgba(0,230,118,0.2);
-  color: var(--green);
-}
-.ctrl-tire-fr .btn-apply:hover {
-  background: rgba(0,230,118,0.12);
-  border-color: var(--green);
-  box-shadow: 0 0 20px rgba(0,230,118,0.2);
-  color: var(--green);
-}
-.ctrl-tire-rl .btn-apply:hover {
-  background: rgba(0,230,118,0.12);
-  border-color: var(--green);
-  box-shadow: 0 0 20px rgba(0,230,118,0.2);
-  color: var(--green);
-}
-.ctrl-tire-rr .btn-apply:hover {
-  background: rgba(0,230,118,0.12);
-  border-color: var(--green);
-  box-shadow: 0 0 20px rgba(0,230,118,0.2);
-  color: var(--green);
-}
+.speed .btn-apply:hover { background: rgba(0,180,255,0.12); border-color: var(--blue); box-shadow: 0 0 20px rgba(0,180,255,0.2); color: var(--blue); }
+.temp .btn-apply:hover { background: rgba(255,107,53,0.12); border-color: var(--orange); box-shadow: 0 0 20px rgba(255,107,53,0.2); color: var(--orange); }
+.psi .btn-apply:hover { background: rgba(0,230,118,0.12); border-color: var(--green); box-shadow: 0 0 20px rgba(0,230,118,0.2); color: var(--green); }
+.rpm .btn-apply:hover { background: rgba(0,180,255,0.12); border-color: var(--blue); box-shadow: 0 0 20px rgba(0,180,255,0.2); color: var(--blue); }
+.oil .btn-apply:hover { background: rgba(255,107,53,0.12); border-color: var(--orange); box-shadow: 0 0 20px rgba(255,107,53,0.2); color: var(--orange); }
+.battery .btn-apply:hover { background: rgba(0,180,255,0.12); border-color: var(--blue); box-shadow: 0 0 20px rgba(0,180,255,0.2); color: var(--blue); }
+.fuel .btn-apply:hover { background: rgba(255,107,53,0.12); border-color: var(--orange); box-shadow: 0 0 20px rgba(255,107,53,0.2); color: var(--orange); }
+.tire-fl .btn-apply:hover { background: rgba(0,230,118,0.12); border-color: var(--green); box-shadow: 0 0 20px rgba(0,230,118,0.2); color: var(--green); }
+.tire-fr .btn-apply:hover { background: rgba(0,230,118,0.12); border-color: var(--green); box-shadow: 0 0 20px rgba(0,230,118,0.2); color: var(--green); }
+.tire-rl .btn-apply:hover { background: rgba(0,230,118,0.12); border-color: var(--green); box-shadow: 0 0 20px rgba(0,230,118,0.2); color: var(--green); }
+.tire-rr .btn-apply:hover { background: rgba(0,230,118,0.12); border-color: var(--green); box-shadow: 0 0 20px rgba(0,230,118,0.2); color: var(--green); }
+
 .btn-apply:active { transform: scale(0.97); }
-.btn-apply.sent {
-  background: rgba(0,230,118,0.15) !important;
-  border-color: var(--green) !important;
-  color: var(--green) !important;
-}
+.btn-apply.sent { background: rgba(0,230,118,0.15) !important; border-color: var(--green) !important; color: var(--green) !important; }
 
 /* ── Data Feed ────────────────────────────────────── */
 .feed-section {
@@ -615,13 +366,12 @@ input[type="range"]::-moz-range-thumb {
 /* ── Responsive ───────────────────────────────────── */
 @media (max-width: 900px) {
   .gauge-cluster { grid-template-columns: 1fr; }
-  .controls-section { grid-template-columns: 1fr; }
   .dashboard { padding: 1rem; }
-  .gauge-card.center .gauge-svg { max-width: 260px; }
+  .gauge-row { flex-direction: column; gap: 1rem; }
+  .inline-slider-col { padding-left: 0; border-left: none; padding-top: 1rem; border-top: 1px solid var(--border); width: 100%; }
 }
 @media (min-width: 901px) and (max-width: 1200px) {
-  .gauge-cluster { grid-template-columns: 1fr 1.3fr 1fr; gap: 1rem; }
-  .controls-section { grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+  .gauge-cluster { grid-template-columns: 1fr; gap: 1rem; }
 }
 
 /* ── Animations ───────────────────────────────────── */
@@ -658,3 +408,35 @@ input[type="range"]::-moz-range-thumb {
 .ctrl-tire-fr .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
 .ctrl-tire-rl .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
 .ctrl-tire-rr .slider-fill-track { background: linear-gradient(90deg, rgba(0,230,118,0.2), var(--green)); }
+
+.gauge-card.throttle  { --gauge-accent: var(--orange); }
+.gauge-card.load  { --gauge-accent: var(--blue); }
+.gauge-card.maf  { --gauge-accent: var(--cyan); }
+
+.gauge-card.throttle:hover { box-shadow: var(--glow-orange); }
+.gauge-card.load:hover { box-shadow: var(--glow-blue); }
+.gauge-card.maf:hover { box-shadow: 0 0 30px rgba(0,229,255,0.25); }
+
+.throttle-fill { background: linear-gradient(90deg, rgba(255,107,53,0.3), var(--orange)); box-shadow: var(--glow-orange); }
+.load-fill { background: linear-gradient(90deg, rgba(0,180,255,0.3), var(--blue)); box-shadow: var(--glow-blue); }
+.maf-fill { background: linear-gradient(90deg, rgba(0,229,255,0.3), var(--cyan)); box-shadow: 0 0 30px rgba(0,229,255,0.25); }
+
+.throttle .ctrl-icon { background: rgba(255,107,53,0.08); border-color: rgba(255,107,53,0.15); }
+.load .ctrl-icon { background: rgba(0,180,255,0.08); border-color: rgba(0,180,255,0.15); }
+.maf .ctrl-icon { background: rgba(0,229,255,0.08); border-color: rgba(0,229,255,0.15); }
+
+.throttle .slider-value-display { color: var(--orange); text-shadow: 0 0 20px rgba(255,107,53,0.4); }
+.load .slider-value-display { color: var(--blue); text-shadow: 0 0 20px rgba(0,180,255,0.4); }
+.maf .slider-value-display { color: var(--cyan); text-shadow: 0 0 20px rgba(0,229,255,0.4); }
+
+.throttle input[type="range"]::-webkit-slider-thumb { background: var(--orange); box-shadow: 0 0 12px rgba(255,107,53,0.5); }
+.load input[type="range"]::-webkit-slider-thumb { background: var(--blue); box-shadow: 0 0 12px rgba(0,180,255,0.5); }
+.maf input[type="range"]::-webkit-slider-thumb { background: var(--cyan); box-shadow: 0 0 12px rgba(0,229,255,0.5); }
+
+.throttle .slider-fill-track { background: linear-gradient(90deg, rgba(255,107,53,0.2), var(--orange)); }
+.load .slider-fill-track { background: linear-gradient(90deg, rgba(0,180,255,0.2), var(--blue)); }
+.maf .slider-fill-track { background: linear-gradient(90deg, rgba(0,229,255,0.2), var(--cyan)); }
+
+.throttle .btn-apply:hover { background: rgba(255,107,53,0.12); border-color: var(--orange); box-shadow: 0 0 20px rgba(255,107,53,0.2); color: var(--orange); }
+.load .btn-apply:hover { background: rgba(0,180,255,0.12); border-color: var(--blue); box-shadow: 0 0 20px rgba(0,180,255,0.2); color: var(--blue); }
+.maf .btn-apply:hover { background: rgba(0,229,255,0.12); border-color: var(--cyan); box-shadow: 0 0 20px rgba(0,229,255,0.2); color: var(--cyan); }

@@ -43,6 +43,52 @@
   box-shadow: 0 0 15px rgba(0, 180, 255, 0.3);
 }
 
+/* ── ML Model Analysis (Layer 2 only) ───────────────────────────── */
+.ml-analysis-section {
+  background: var(--surface);
+  border: 1px solid rgba(0, 229, 255, 0.35);
+  border-radius: var(--radius);
+  backdrop-filter: blur(20px);
+  padding: 1.5rem 2rem;
+  margin: 0;
+}
+
+.ml-analysis-title {
+  margin: 0 0 0.25rem;
+  font-family: 'Teko', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #00e5ff;
+}
+
+.ml-analysis-subtitle {
+  margin: 0 0 1rem;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.45);
+  letter-spacing: 0.5px;
+}
+
+.ml-analysis-content {
+  color: #aaa;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.ml-analysis-content .ml-result-normal {
+  color: #69f0ae;
+}
+
+.ml-analysis-content .ml-result-anomaly {
+  color: #ffaa00;
+}
+
+.ml-analysis-content .ml-result-unavailable {
+  color: #888;
+}
+
 /* ── Health Score Section ──────────────────────────────────────── */
 .health-score-section {
   display: grid;
