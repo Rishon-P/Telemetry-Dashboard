@@ -17,7 +17,7 @@
     load: { min: 0, max: 100, unit: "%", param: "engine_load_pct", key: "engine_load_pct" },
     maf: { min: 0, max: 655, unit: "g/s", param: "maf_g_sec", key: "maf_g_sec" },
     oil:   { min: 0, max: 100, unit: "PSI",  param: "oil_pressure_psi",   key: "oil_pressure_psi" },
-    battery: { min: 10, max: 16, unit: "V", param: "battery_voltage_v",  key: "battery_voltage_v" },
+    battery: { min: 0, max: 16, unit: "V", param: "battery_voltage_v",  key: "battery_voltage_v" },
     fuel:    { min: 0, max: 100, unit: "%", param: "fuel_level_pct",     key: "fuel_level_pct" },
     tire_fl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fl_psi", key: "tire_pressure_fl_psi" },
     tire_fr: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fr_psi", key: "tire_pressure_fr_psi" },

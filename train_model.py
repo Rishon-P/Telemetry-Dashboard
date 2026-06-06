@@ -75,6 +75,36 @@ print(f"    - Min: {df.min().min():.2f}")
 print(f"    - Max: {df.max().max():.2f}")
 print(f"    - Mean: {df.mean().mean():.2f}")
 
+# ==========================================
+# DATA AUGMENTATION (Realistic Engineering Tolerances)
+# ==========================================
+print("\n[Data Augmentation] Injecting real-world mechanical noise...")
+
+# We hard-code realistic standard deviations so the AI doesn't panic over normal vibrations
+engineering_tolerances = {
+    'battery_voltage': 0.5,   # +/- 0.5V normal driving fluctuation
+    'oil_pressure': 2.0,      # +/- 2.0 PSI normal vibration
+    'engine_temp': 2.0,       # +/- 2.0 Degrees
+    'rpm': 100.0,
+    'speed': 2.0,
+    'throttle': 2.0,
+    'engine_load': 2.0,
+    'maf': 2.0,
+    'fuel_level': 1.0,
+    'tp_fl': 1.0, 'tp_fr': 1.0, 'tp_rl': 1.0, 'tp_rr': 1.0
+}
+
+FEATURE_NAMES = ['speed', 'rpm', 'throttle', 'engine_load', 'maf', 'engine_temp', 'oil_pressure', 'battery_voltage', 'fuel_level', 'tp_fl', 'tp_fr', 'tp_rl', 'tp_rr']
+
+for col in FEATURE_NAMES:
+    if col in df.columns:
+        std_dev = engineering_tolerances.get(col, 1.0)
+        # Inject realistic Gaussian noise
+        noise = np.random.normal(0, std_dev, size=len(df))
+        df[col] = df[col] + noise
+
+print("✓ Applied realistic mechanical noise to training data.")
+
 # ─────────────────────────────────────────────────────────────────────────────
 # Step 4: Normalize features using StandardScaler
 # ─────────────────────────────────────────────────────────────────────────────
