@@ -225,6 +225,9 @@ class MLScout:
             # ==========================================
             # THE HYBRID ML LOGIC
             # ==========================================
+            # Extract the raw fuel value safely using your mapping
+            fuel_val = data.get(_REVERSE_MAPPING.get("fuel_level", "fuel_level_pct"), 100)
+
             if prediction == -1:
                 # Scenario A: Isolation Forest found a complex, multi-sensor anomaly
                 is_ml_anomaly = True
@@ -236,6 +239,13 @@ class MLScout:
                 is_ml_anomaly = True
                 root_cause = FEATURE_NAMES[max_dev_index]
                 prediction = -1 # Force the prediction to -1 so the gateway understands it
+
+            elif fuel_val < 10.0:
+                # Scenario C: Predictive Maintenance (Low Fuel Warning)
+                logger.warning(f"ML Scout Predictive Warning: Fuel Level low at {fuel_val:.1f}%.")
+                is_ml_anomaly = True
+                root_cause = "fuel_level"
+                prediction = -1
 
             return prediction, anomaly_score, root_cause, is_ml_anomaly
             
