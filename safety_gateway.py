@@ -192,8 +192,26 @@ class MLScout:
 
             # 2. Z-Score Calculations
             abs_z_scores = np.abs(scaled_data[0])
+            
+            # --- THE WEIGHTING FIX ---
+            # Discount the tire pressures so they don't steal the root cause
+            # from complex engine anomalies due to minor 2 PSI fluctuations.
+            # Indices 9, 10, 11, 12 are the four tires.
+            for i in range(9, 13):
+                abs_z_scores[i] = abs_z_scores[i] * 0.3 # Reduce their mathematical loudness by 70%
+
             max_z_score = float(np.max(abs_z_scores))
             max_dev_index = int(np.argmax(abs_z_scores))
+
+            # === PASTE THIS DIAGNOSTIC PROBE HERE ===
+            print("\n--- Z-SCORE DIAGNOSTIC DUMP ---")
+            for name, z_val in zip(FEATURE_NAMES, abs_z_scores):
+                print(f"{name}: {z_val:.3f}")
+            print("-------------------------------")
+            # ========================================
+            
+            is_ml_anomaly = False
+            root_cause = None
             
             is_ml_anomaly = False
             root_cause = None
