@@ -74,6 +74,7 @@ class SafetyBoundaryChecker:
         engine_temp = data.get("engine_temp_c", 0)
         oil_pressure = data.get("oil_pressure_psi", 50)
         maf = data.get("maf_g_sec", 45)
+        fuel_level = data.get("fuel_level_pct", 100)
         tp_fl = data.get("tire_pressure_fl_psi", 32)
         tp_fr = data.get("tire_pressure_fr_psi", 32)
         tp_rl = data.get("tire_pressure_rl_psi", 32)
@@ -134,6 +135,11 @@ class SafetyBoundaryChecker:
             layer_1_cause = layer_1_cause or "battery_critical_high"
             violations.append(
                 f"CRITICAL: Battery voltage critically high at {battery_voltage}V (limit: 15.5V)"
+            )
+        if fuel_level <= 0.8 and rpm > 0:
+            layer_1_cause = layer_1_cause or "out_of_fuel"
+            violations.append(
+                f"CRITICAL: Vehicle out of fuel (0%) while engine running at {rpm} RPM"
             )
 
         return len(violations) > 0, violations, layer_1_cause

@@ -90,7 +90,7 @@ engineering_tolerances = {
     'throttle': 2.0,
     'engine_load': 2.0,
     'maf': 2.0,
-    'fuel_level': 1.0,
+    'fuel_level': 30.0,
     'tp_fl': 1.0, 'tp_fr': 1.0, 'tp_rl': 1.0, 'tp_rr': 1.0
 }
 
