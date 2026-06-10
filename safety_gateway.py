@@ -35,6 +35,9 @@ FEATURE_NAMES = [
     "tp_fr",
     "tp_rl",
     "tp_rr",
+    "airflow_deviation",
+    "transmission_deviation",
+    "tire_thermal_deviation"
 ]
 
 FEATURE_MAPPING = {
@@ -52,6 +55,18 @@ FEATURE_MAPPING = {
     "tire_pressure_rl_psi": "tp_rl",
     "tire_pressure_rr_psi": "tp_rr",
 }
+
+TIRE_RADIUS_M = 0.31
+FINAL_DRIVE = 3.50
+GEAR_RATIOS = {1: 2.97, 2: 2.07, 3: 1.43, 4: 1.00, 5: 0.84, 6: 0.56}
+
+def get_gear(speed):
+    if speed < 15: return 1
+    elif speed < 30: return 2
+    elif speed < 45: return 3
+    elif speed < 60: return 4
+    elif speed < 75: return 5
+    else: return 6
 
 _REVERSE_MAPPING = {v: k for k, v in FEATURE_MAPPING.items()}
 
@@ -126,7 +141,7 @@ class SafetyBoundaryChecker:
 
         # Rule F: Battery voltage anomalies
         battery_voltage = data.get("battery_voltage_v", 13.8)
-        if battery_voltage < 10.0:
+        if battery_voltage < 12.0:
             layer_1_cause = layer_1_cause or "battery_critical_low"
             violations.append(
                 f"CRITICAL: Battery voltage critically low at {battery_voltage}V (limit: 12.0V)"
@@ -187,9 +202,52 @@ class MLScout:
             return 1, -0.4, None, False
 
         try:
+            # --- LIVE FEATURE ENGINEERING (DUAL RESIDUALS) ---
+            rpm_val = data.get(_REVERSE_MAPPING.get("rpm", "engine_rpm"), 800.0)
+            load_val = data.get(_REVERSE_MAPPING.get("engine_load", "engine_load_pct"), 15.0)
+            maf_val = data.get(_REVERSE_MAPPING.get("maf", "maf_g_sec"), 2.45)
+            speed_val = data.get(_REVERSE_MAPPING.get("speed", "vehicle_speed"), 0.0)
+            throttle_val = data.get(_REVERSE_MAPPING.get("throttle", "throttle_position"), 0.0)
+            
+            # 1. Air Intake Diagnostics
+            safe_rpm = max(1.0, float(rpm_val))
+            safe_load = max(1.0, float(load_val))
+            expected_maf = (safe_rpm * safe_load * 2.0 * 1.225) / 12000.0
+            data["airflow_deviation"] = abs(float(maf_val) - expected_maf)
+
+            # 2. Drivetrain & Kinematic Diagnostics
+            expected_gear = get_gear(float(speed_val))
+            base_rpm = (float(speed_val) * GEAR_RATIOS[expected_gear] * FINAL_DRIVE / TIRE_RADIUS_M) * 2.65258
+            expected_rpm = max(800.0, base_rpm) + (float(throttle_val) * 5.0)
+            data["transmission_deviation"] = abs(float(rpm_val) - expected_rpm)
+
+            # --- PASTE THE NEW RULE 3 RIGHT HERE ---
+            # 3. Tire Thermal & Asymmetry Diagnostics
+            expected_tp = 32.0 + (float(speed_val) / 38.0)
+            
+            tp_fl = float(data.get(_REVERSE_MAPPING.get("tp_fl", "tire_pressure_fl"), 32.0))
+            tp_fr = float(data.get(_REVERSE_MAPPING.get("tp_fr", "tire_pressure_fr"), 32.0))
+            tp_rl = float(data.get(_REVERSE_MAPPING.get("tp_rl", "tire_pressure_rl"), 32.0))
+            tp_rr = float(data.get(_REVERSE_MAPPING.get("tp_rr", "tire_pressure_rr"), 32.0))
+
+            data["tire_thermal_deviation"] = max(
+                abs(tp_fl - expected_tp), abs(tp_fr - expected_tp),
+                abs(tp_rl - expected_tp), abs(tp_rr - expected_tp)
+            )
+            # ---------------------------------------
+
             raw_data_array = [
-                data.get(_REVERSE_MAPPING[feat], 0) for feat in FEATURE_NAMES
+                data.get(_REVERSE_MAPPING.get(feat, feat), 0) for feat in FEATURE_NAMES
             ]
+
+            # --- DIAGNOSTIC PROOF BLOCK ---
+            print("\n=== DIAGNOSTIC PROOF ===")
+            print(f"Live Speed: {speed_val} | Live Throttle: {throttle_val}")
+            print(f"Expected RPM: {expected_rpm} | Actual RPM: {rpm_val}")
+            print(f"Calculated Transmission Deviation: {data['transmission_deviation']}")
+            print(f"16-Feature Array Sent to AI: {raw_data_array}")
+            print("========================\n")
+
             scaled_data = self.scaler.transform([raw_data_array])
             
             # 1. Base ML Predictions

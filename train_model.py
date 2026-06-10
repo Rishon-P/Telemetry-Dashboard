@@ -94,7 +94,7 @@ engineering_tolerances = {
     'tp_fl': 1.0, 'tp_fr': 1.0, 'tp_rl': 1.0, 'tp_rr': 1.0
 }
 
-FEATURE_NAMES = ['speed', 'rpm', 'throttle', 'engine_load', 'maf', 'engine_temp', 'oil_pressure', 'battery_voltage', 'fuel_level', 'tp_fl', 'tp_fr', 'tp_rl', 'tp_rr']
+FEATURE_NAMES = ['speed', 'rpm', 'throttle', 'engine_load', 'maf', 'engine_temp', 'oil_pressure', 'battery_voltage', 'fuel_level', 'tp_fl', 'tp_fr', 'tp_rl', 'tp_rr', 'volumetric_efficiency','tire_thermal_deviation']
 
 for col in FEATURE_NAMES:
     if col in df.columns:
