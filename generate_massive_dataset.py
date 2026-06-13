@@ -7,7 +7,7 @@ import numpy as np
 # ==========================================
 NUM_ROWS = 100000
 FILENAME = "data/vehicle_training_data.csv" # Ensures it saves into your data folder
-FEATURE_NAMES = ['speed', 'rpm', 'throttle', 'engine_load', 'maf', 'engine_temp', 'oil_pressure', 'battery_voltage', 'fuel_level', 'tp_fl', 'tp_fr', 'tp_rl', 'tp_rr', 'airflow_deviation','transmission_deviation','tire_thermal_deviation']
+FEATURE_NAMES = ['speed', 'rpm', 'throttle', 'engine_load', 'maf', 'engine_temp', 'oil_pressure', 'battery_voltage', 'fuel_level', 'tp_fl', 'tp_fr', 'tp_rl', 'tp_rr', 'airflow_deviation','transmission_deviation','tire_thermal_deviation','electrical_deviation']
 
 # Physics Constants (2.0L Sedan)
 DISPLACEMENT_L = 2.0
@@ -125,7 +125,7 @@ def generate_dataset():
             temp_target = 85.0 + (engine_load * 0.15)
             engine_temp = engine_temp + (temp_target - engine_temp) * 0.01
             oil_pressure = 25.0 + (rpm / 1000.0) * 8.0 
-            battery_voltage = 13.8 if rpm > 800 else 12.6
+            battery_voltage = 13.8 if rpm > 400 else 12.6
             
             # Tire Physics (Friction heat expands pressure)
             tire_expansion = (speed / 100.0) * 1.2
@@ -174,7 +174,11 @@ def generate_dataset():
             )
             # --------------------------------------------
             
-            # 6. WRITE ROW (Updated to 16 features)
+            # 4. Electrical Residual
+            expected_voltage = 13.8 if rpm_out > 400.0 else 12.6
+            electrical_deviation = abs(batt_out - expected_voltage)
+            
+            # 6. WRITE ROW (Updated to 17 features)
             row = [
                 round(speed_out, 2), round(rpm_out, 2), round(throttle_out, 2), round(load_out, 2), 
                 round(maf_out, 2), round(temp_out, 2), round(oil_out, 2), 
@@ -182,7 +186,8 @@ def generate_dataset():
                 round(tires_out[0], 2), round(tires_out[1], 2), round(tires_out[2], 2), round(tires_out[3], 2),
                 round(airflow_deviation, 4),
                 round(transmission_deviation, 4),
-                round(tire_thermal_deviation, 4) # <-- THE 16TH FEATURE
+                round(tire_thermal_deviation, 4),
+                round(electrical_deviation, 4) # <-- THE 17TH FEATURE
             ]
             writer.writerow(row)
 

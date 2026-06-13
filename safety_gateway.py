@@ -37,7 +37,8 @@ FEATURE_NAMES = [
     "tp_rr",
     "airflow_deviation",
     "transmission_deviation",
-    "tire_thermal_deviation"
+    "tire_thermal_deviation",
+    "electrical_deviation"
 ]
 
 FEATURE_MAPPING = {
@@ -62,10 +63,10 @@ GEAR_RATIOS = {1: 2.97, 2: 2.07, 3: 1.43, 4: 1.00, 5: 0.84, 6: 0.56}
 
 def get_gear(speed):
     if speed < 15: return 1
-    elif speed < 30: return 2
-    elif speed < 45: return 3
-    elif speed < 60: return 4
-    elif speed < 75: return 5
+    elif speed < 35: return 2
+    elif speed < 60: return 3
+    elif speed < 90: return 4
+    elif speed < 120: return 5
     else: return 6
 
 _REVERSE_MAPPING = {v: k for k, v in FEATURE_MAPPING.items()}
@@ -234,6 +235,13 @@ class MLScout:
                 abs(tp_fl - expected_tp), abs(tp_fr - expected_tp),
                 abs(tp_rl - expected_tp), abs(tp_rr - expected_tp)
             )
+            # ---------------------------------------
+
+            # 4. Electrical System Diagnostics
+            expected_voltage = 13.8 if float(rpm_val) > 400.0 else 12.6
+            batt_val = float(data.get(_REVERSE_MAPPING.get("battery_voltage", "battery_voltage"), 12.6))
+            
+            data["electrical_deviation"] = abs(batt_val - expected_voltage)
             # ---------------------------------------
 
             raw_data_array = [
