@@ -19,6 +19,8 @@ from typing import Any
 import numpy as np
 import time
 
+from layer_3_telematics import generate_diagnostic_report
+
 logger = logging.getLogger("safety_gateway")
 
 FEATURE_NAMES = [
@@ -59,15 +61,10 @@ FEATURE_MAPPING = {
 
 TIRE_RADIUS_M = 0.31
 FINAL_DRIVE = 3.50
-GEAR_RATIOS = {1: 2.97, 2: 2.07, 3: 1.43, 4: 1.00, 5: 0.84, 6: 0.56}
+GEAR_RATIOS = {0: 0.0, 1: 2.97, 2: 2.07, 3: 1.43, 4: 1.00, 5: 0.84, 6: 0.56}
 
-def get_gear(speed):
-    if speed < 15: return 1
-    elif speed < 35: return 2
-    elif speed < 60: return 3
-    elif speed < 90: return 4
-    elif speed < 120: return 5
-    else: return 6
+# REDLINE threshold — expected_rpm above this triggers a physical warning
+REDLINE_RPM = 6000
 
 _REVERSE_MAPPING = {v: k for k, v in FEATURE_MAPPING.items()}
 
@@ -216,11 +213,24 @@ class MLScout:
             expected_maf = (safe_rpm * safe_load * 2.0 * 1.225) / 12000.0
             data["airflow_deviation"] = abs(float(maf_val) - expected_maf)
 
-            # 2. Drivetrain & Kinematic Diagnostics
-            expected_gear = get_gear(float(speed_val))
-            base_rpm = (float(speed_val) * GEAR_RATIOS[expected_gear] * FINAL_DRIVE / TIRE_RADIUS_M) * 2.65258
-            expected_rpm = max(800.0, base_rpm) + (float(throttle_val) * 5.0)
+            # 2. Drivetrain & Kinematic Diagnostics — MANUAL TRANSMISSION (user-selected gear)
+            expected_gear = int(data.get("selected_gear", 6))
+            # Clamp to valid range: 0 (Neutral) to 6
+            expected_gear = max(0, min(6, expected_gear)) 
+
+            if expected_gear == 0:
+                # NEUTRAL STATE: Drivetrain disconnected. 
+                # RPM is dictated purely by engine idle (800) and free-revving throttle multiplier.
+                expected_rpm = 800.0 + (float(throttle_val) * 30.0)
+            else:
+                # IN-GEAR STATE: Drivetrain connected.
+                base_rpm = (float(speed_val) * GEAR_RATIOS[expected_gear] * FINAL_DRIVE / TIRE_RADIUS_M) * 2.65258
+                expected_rpm = max(400.0, base_rpm + (float(throttle_val) * 5.0))
+                
             data["transmission_deviation"] = abs(float(rpm_val) - expected_rpm)
+
+            # Redline Warning: high speed + low gear → expected_rpm spikes over REDLINE_RPM
+            data["redline_warning"] = 1.0 if expected_rpm > REDLINE_RPM else 0.0
 
             # --- PASTE THE NEW RULE 3 RIGHT HERE ---
             # 3. Tire Thermal & Asymmetry Diagnostics
@@ -251,7 +261,8 @@ class MLScout:
             # --- DIAGNOSTIC PROOF BLOCK ---
             print("\n=== DIAGNOSTIC PROOF ===")
             print(f"Live Speed: {speed_val} | Live Throttle: {throttle_val}")
-            print(f"Expected RPM: {expected_rpm} | Actual RPM: {rpm_val}")
+            print(f"Selected Gear: {expected_gear} | Expected RPM: {expected_rpm:.0f} | Actual RPM: {rpm_val}")
+            print(f"Redline Warning: {'YES' if data['redline_warning'] else 'NO'} (threshold: {REDLINE_RPM} RPM)")
             print(f"Calculated Transmission Deviation: {data['transmission_deviation']}")
             print(f"16-Feature Array Sent to AI: {raw_data_array}")
             print("========================\n")
@@ -340,16 +351,32 @@ class SafetyGateway:
         self.smoothed_sensor_state = {}
 
     def apply_low_pass_filter(self, raw_data: dict[str, float], alpha: float = 0.2) -> dict[str, float]:
-        """Filters out 0.1 sensor vibrations before evaluation."""
+        """Filters out minor vibrations but snaps instantly on manual slider jumps."""
         filtered_data = {}
         for sensor, value in raw_data.items():
+            # 1. EXEMPT DISCRETE STATES (Do not smooth mechanical gear shifts)
+            if sensor == "selected_gear":
+                self.smoothed_sensor_state[sensor] = value
+                filtered_data[sensor] = value
+                continue
+
+            # 2. SMOOTH ANALOG SENSORS
             if sensor not in self.smoothed_sensor_state:
                 self.smoothed_sensor_state[sensor] = value
                 filtered_data[sensor] = value
             else:
-                smoothed_val = (alpha * value) + ((1.0 - alpha) * self.smoothed_sensor_state[sensor])
+                previous = self.smoothed_sensor_state[sensor]
+                
+                # Bypass filter if jump is > 10% + 2.0 flat buffer
+                if abs(value - previous) > (abs(previous) * 0.1) + 2.0:
+                    dynamic_alpha = 1.0  
+                else:
+                    dynamic_alpha = alpha  
+                    
+                smoothed_val = (dynamic_alpha * value) + ((1.0 - dynamic_alpha) * previous)
                 self.smoothed_sensor_state[sensor] = smoothed_val
                 filtered_data[sensor] = smoothed_val
+                
         return filtered_data
 
     def evaluate(self, data: dict[str, float]) -> dict[str, Any]:
@@ -396,6 +423,9 @@ class SafetyGateway:
             self.ml_scout.evaluate(filtered_data)
         )
 
+        # Extract redline_warning that was stamped into filtered_data by MLScout
+        redline_warning = bool(filtered_data.get("redline_warning", 0.0))
+
         if is_ml_anomaly:
             self.warning_cooldown_time = current_time # Reset sticky UI timer
             
@@ -408,6 +438,19 @@ class SafetyGateway:
                 f"WARNING: ML anomaly (score: {ml_anomaly_score:.4f}, "
                 f"root_cause: {ml_root_cause}). Physical systems normal."
             )
+
+            # ── Layer 3: Cognitive Translation ──────────────────────────────
+            # Build the anomaly payload that Layer 3 will translate into a
+            # human-readable engineering diagnostic.  Sensor readings from
+            # filtered_data are forwarded so the LLM has numeric context.
+            anomaly_payload: dict[str, Any] = {
+                "root_cause": ml_root_cause,
+                "ml_anomaly_score": ml_anomaly_score,
+                **{k: v for k, v in filtered_data.items()},
+            }
+            layer_3_report: str = generate_diagnostic_report(anomaly_payload)
+            # ────────────────────────────────────────────────────────────────
+
             return {
                 "status": "WARNING",
                 "health_score": 87.5,
@@ -422,7 +465,9 @@ class SafetyGateway:
                 "layer_1_cause": None,
                 "is_physically_dangerous": False,
                 "safety_violations": [],
-                "trigger_gemini": trigger_gemini
+                "trigger_gemini": trigger_gemini,
+                "layer_3_report": layer_3_report,
+                "redline_warning": redline_warning,
             }
 
         # ── Layer 3: HYSTERESIS (Sticky UI) ───────────────────────────
@@ -443,7 +488,8 @@ class SafetyGateway:
                 "layer_1_cause": None,
                 "is_physically_dangerous": False,
                 "safety_violations": [],
-                "trigger_gemini": False
+                "trigger_gemini": False,
+                "redline_warning": redline_warning,
             }
 
         # ── Final Layer: ALL CLEAR ─────────────────────────────────────
@@ -461,7 +507,8 @@ class SafetyGateway:
             "layer_1_cause": None,
             "is_physically_dangerous": False,
             "safety_violations": [],
-            "trigger_gemini": False
+            "trigger_gemini": False,
+            "redline_warning": redline_warning,
         }
 
 _ml_scout = MLScout()

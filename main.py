@@ -74,7 +74,7 @@ class SimulationState:
             "engine_rpm": 1500.0,
             "throttle_pct": 20.0,
             "engine_load_pct": 35.0,
-            "maf_g_sec": 45.0,
+            "maf_g_sec": 11.0,
             "oil_pressure_psi": 45.0,
             "battery_voltage_v": 13.8,
             "fuel_level_pct": 85.0,
@@ -82,6 +82,8 @@ class SimulationState:
             "tire_pressure_fr_psi": 32.0,
             "tire_pressure_rl_psi": 32.0,
             "tire_pressure_rr_psi": 32.0,
+            # Manual transmission: user-selected gear (1–6). No noise applied.
+            "selected_gear": 6.0,
         }
         # Auto-drive state flag
         self.auto_drive_enabled = False
@@ -132,6 +134,8 @@ class SimulationState:
                 "tire_pressure_rr_psi": round(
                     self._baselines["tire_pressure_rr_psi"] + random.uniform(-0.4, 0.4), 1
                 ),
+                # selected_gear is a discrete integer — no noise applied
+                "selected_gear": int(self._baselines["selected_gear"]),
             }
 
     async def update(self, parameter: str, value: float) -> bool:
@@ -1028,6 +1032,8 @@ async def broadcast_telemetry() -> None:
         layer_1_triggered = gateway["layer_1_triggered"]
         layer_1_cause = gateway["layer_1_cause"]
         safety_violations = gateway["safety_violations"]
+        layer_3_report = gateway.get("layer_3_report", None)  # Only present on ML anomalies
+        redline_warning = gateway.get("redline_warning", False)  # True when expected_rpm > 6000
 
         structured_alerts = {
             "ml_anomaly": is_ml_anomaly,
@@ -1037,6 +1043,7 @@ async def broadcast_telemetry() -> None:
             "layer_1_triggered": layer_1_triggered,
             "layer_1_cause": layer_1_cause,
             "gateway_status": final_status,
+            "redline_warning": redline_warning,
         }
 
         # ── Broadcast to telemetry clients ─────────────────────────────
@@ -1055,6 +1062,10 @@ async def broadcast_telemetry() -> None:
                     "is_physically_dangerous": layer_1_triggered,
                     "safety_violations": safety_violations,
                     "root_cause": root_cause,
+                    # ─── Layer 3 Cognitive Translation ───
+                    "layer_3_report": layer_3_report,
+                    # ─── Manual Transmission ───
+                    "redline_warning": redline_warning,
                 }
             )
             stale: list[WebSocket] = []
@@ -1129,6 +1140,8 @@ async def broadcast_telemetry() -> None:
             analysis_result["is_physically_dangerous"] = layer_1_triggered
             analysis_result["safety_violations"] = safety_violations
             analysis_result["root_cause"] = root_cause
+            analysis_result["layer_3_report"] = layer_3_report  # None unless ML anomaly
+            analysis_result["redline_warning"] = redline_warning  # Manual transmission redline flag
 
             analysis_payload = json.dumps(
                 {

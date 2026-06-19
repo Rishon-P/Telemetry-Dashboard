@@ -176,8 +176,56 @@
     if (analysis.ai_status) {
       updateAIStatusBadge(analysis.ai_status);
     }
+
+    // ── Layer 3 Cognitive Diagnostic Report ─────────────────────────
+    updateLayer3Panel(analysis.layer_3_report, analysis.root_cause, analysis.gateway_alerts);
+    // ────────────────────────────────────────────────────────────────
     
+    // ── Redline Warning Banner ──────────────────────────────
+    const redlineBanner = document.getElementById("redline-banner");
+    if (redlineBanner) {
+      if (analysis.redline_warning) {
+        redlineBanner.classList.add("active");
+        const badgeEl = document.getElementById("redline-gear-badge");
+        if (badgeEl && analysis.current_values.selected_gear != null) {
+          badgeEl.textContent = `GEAR ${analysis.current_values.selected_gear} — UPSHIFT`;
+        }
+      } else {
+        redlineBanner.classList.remove("active");
+      }
+    }
+    // ────────────────────────────────────────────────────────────
+
     console.log("✅ Dashboard updated successfully");
+  }
+
+  /* ── Layer 3 Cognitive Diagnostic Panel ───────────────────────── */
+  function updateLayer3Panel(report, rootCause, gatewayAlerts) {
+    const panel       = document.getElementById("layer3-panel");
+    const reportText  = document.getElementById("layer3-report-text");
+    const rootCauseEl = document.getElementById("layer3-root-cause");
+    const scoreEl     = document.getElementById("layer3-score");
+
+    if (!panel) return;
+
+    if (report) {
+      reportText.textContent  = report;
+      rootCauseEl.textContent = rootCause
+        ? `⚙ Root Cause: ${rootCause.replace(/_/g, " ").toUpperCase()}`
+        : "";
+      const mlScore = gatewayAlerts && gatewayAlerts.ml_score != null
+        ? Number(gatewayAlerts.ml_score).toFixed(4)
+        : null;
+      scoreEl.textContent = mlScore ? `📊 ML Score: ${mlScore}` : "";
+
+      panel.style.display = "block";
+      panel.classList.remove("layer3-animate");
+      void panel.offsetWidth; // reflow to restart animation
+      panel.classList.add("layer3-animate");
+    } else {
+      panel.style.display = "none";
+      panel.classList.remove("layer3-animate");
+    }
   }
 
   /* ── ML Model Analysis (Layer 2 only — not physical gateway / not Gemini) ─ */

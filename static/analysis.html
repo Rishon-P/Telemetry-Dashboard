@@ -97,6 +97,20 @@
     </div>
   </section>
 
+  <!-- ─── Layer 3 Cognitive Diagnostic Report ──────── -->
+  <section id="layer3-panel" class="layer3-panel" style="display:none;">
+    <div class="layer3-header">
+      <span class="layer3-icon">🤖</span>
+      <span class="layer3-title">Layer 3 · SDV Cognitive Diagnostic</span>
+      <span id="layer3-badge" class="layer3-badge">ML ANOMALY</span>
+    </div>
+    <p id="layer3-report-text" class="layer3-report-text">—</p>
+    <div class="layer3-meta">
+      <span id="layer3-root-cause" class="layer3-meta-item"></span>
+      <span id="layer3-score" class="layer3-meta-item"></span>
+    </div>
+  </section>
+
   <!-- ─── AI Diagnosis Panel ──────────────────── -->
   <section class="ai-diagnosis-section" id="ai-diagnosis-section">
     <div class="ai-header">
@@ -348,7 +362,15 @@
     </div>
   </section>
 
-
+  <!-- ─── Redline Warning Banner ─────────────────── -->
+  <div class="redline-warning-banner" id="redline-banner">
+    <div class="redline-icon">🔴</div>
+    <div class="redline-text-block">
+      <div class="redline-title">REDLINE WARNING</div>
+      <div class="redline-subtitle">UPSHIFT IMMEDIATELY — Engine at physical RPM limit</div>
+    </div>
+    <div class="redline-gear-badge" id="redline-gear-badge">GEAR TOO LOW</div>
+  </div>
 
 </div>
 

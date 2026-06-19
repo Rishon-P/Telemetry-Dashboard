@@ -544,12 +544,12 @@
         <div class="inline-slider-col">
           <div class="slider-top-row">
             <div class="slider-minmax"><span>0</span><span>655</span></div>
-            <div class="slider-value-display">45 g/s</div>
+            <div class="slider-value-display">11 g/s</div>
           </div>
           <div class="slider-control-row">
             <div class="slider-wrap">
               <div class="slider-fill-track"></div>
-              <input type="range" min="0" max="655" step="1" value="45" data-gauge="maf" />
+              <input type="range" min="0" max="655" step="1" value="11" data-gauge="maf" />
             </div>
             <button class="btn-apply" id="btn-maf">APPLY</button>
           </div>
@@ -557,7 +557,46 @@
         </div>
       </div>
     </div>
+    <div class="gauge-card gear">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">⚙️</div>
+          <span class="gauge-title">Selected Gear</span>
+          <span class="status-badge" data-gauge="gear">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">6</span>
+          <span class="gauge-unit">GEAR</span>
+        </div>
+      </div>
+
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>N</span><span>6</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill gear-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>N</span><span>6</span></div>
+            <div class="slider-value-display">6 GEAR</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="6" step="1" value="6" data-gauge="gear" />
+            </div>
+            <button class="btn-apply" id="btn-gear">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
   </section>
+
 
   <!-- ─── Data Feed ──────────────────────────── -->
   <section class="feed-section">

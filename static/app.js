@@ -5,24 +5,26 @@
   /* ── Constants ─────────────────────────────────── */
   const GAUGE_RADIUS = 90;
   const CIRC = 2 * Math.PI * GAUGE_RADIUS;          // 565.49
-  const ARC  = CIRC * 0.75;                          // 424.12  (270°)
+  const ARC = CIRC * 0.75;                          // 424.12  (270°)
   const START_ANGLE = 135;                            // degrees
 
   const GAUGES = {
-    speed: { min: 0, max: 300, unit: "km/h", param: "speed_kmh",          key: "speed_kmh" },
-    temp:  { min: 0, max: 150, unit: "°C",   param: "engine_temp_c",      key: "engine_temp_c" },
-    psi:   { min: 0, max: 60,  unit: "PSI",  param: "tire_pressure_psi",  key: "tire_pressure_psi" },
-    rpm:   { min: 0, max: 7000, unit: "RPM", param: "engine_rpm",         key: "engine_rpm" },
+    speed: { min: 0, max: 300, unit: "km/h", param: "speed_kmh", key: "speed_kmh" },
+    temp: { min: 0, max: 150, unit: "°C", param: "engine_temp_c", key: "engine_temp_c" },
+    psi: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_psi", key: "tire_pressure_psi" },
+    rpm: { min: 0, max: 7000, unit: "RPM", param: "engine_rpm", key: "engine_rpm" },
     throttle: { min: 0, max: 100, unit: "%", param: "throttle_pct", key: "throttle_pct" },
     load: { min: 0, max: 100, unit: "%", param: "engine_load_pct", key: "engine_load_pct" },
     maf: { min: 0, max: 655, unit: "g/s", param: "maf_g_sec", key: "maf_g_sec" },
-    oil:   { min: 0, max: 100, unit: "PSI",  param: "oil_pressure_psi",   key: "oil_pressure_psi" },
-    battery: { min: 0, max: 16, unit: "V", param: "battery_voltage_v",  key: "battery_voltage_v" },
-    fuel:    { min: 0, max: 100, unit: "%", param: "fuel_level_pct",     key: "fuel_level_pct" },
+    oil: { min: 0, max: 100, unit: "PSI", param: "oil_pressure_psi", key: "oil_pressure_psi" },
+    battery: { min: 0, max: 16, unit: "V", param: "battery_voltage_v", key: "battery_voltage_v" },
+    fuel: { min: 0, max: 100, unit: "%", param: "fuel_level_pct", key: "fuel_level_pct" },
     tire_fl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fl_psi", key: "tire_pressure_fl_psi" },
     tire_fr: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_fr_psi", key: "tire_pressure_fr_psi" },
     tire_rl: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_rl_psi", key: "tire_pressure_rl_psi" },
     tire_rr: { min: 0, max: 60, unit: "PSI", param: "tire_pressure_rr_psi", key: "tire_pressure_rr_psi" },
+    // Manual transmission — sends selected_gear (integer 0=Neutral, 1–6) to the backend
+    gear: { min: 0, max: 6, unit: "GEAR", param: "selected_gear", key: "selected_gear" },
   };
 
   /* ── Optimal automotive ranges (real-world data) ── */
@@ -31,46 +33,46 @@
   /*  Tire pressure: 30-35 PSI recommended (US DOT / tire placard)        */
   const STATUS_RANGES = {
     speed: [
-      { max: 120,  status: "optimal", label: "NORMAL" },
-      { max: 160,  status: "warning", label: "HIGH SPEED" },
+      { max: 120, status: "optimal", label: "NORMAL" },
+      { max: 160, status: "warning", label: "HIGH SPEED" },
       { max: Infinity, status: "danger", label: "EXCESSIVE" },
     ],
     temp: [
-      { max: 60,   status: "cold",    label: "COLD ENGINE" },
-      { max: 105,  status: "optimal", label: "OPTIMAL" },
-      { max: 115,  status: "warning", label: "OVERHEATING" },
+      { max: 60, status: "cold", label: "COLD ENGINE" },
+      { max: 105, status: "optimal", label: "OPTIMAL" },
+      { max: 115, status: "warning", label: "OVERHEATING" },
       { max: Infinity, status: "danger", label: "CRITICAL" },
     ],
     psi: [
-      { max: 25,   status: "danger",  label: "LOW DANGER" },
-      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
-      { max: 35,   status: "optimal", label: "OPTIMAL" },
-      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: 25, status: "danger", label: "LOW DANGER" },
+      { max: 30, status: "warning", label: "UNDER-INFLATED" },
+      { max: 35, status: "optimal", label: "OPTIMAL" },
+      { max: 40, status: "warning", label: "OVER-INFLATED" },
       { max: Infinity, status: "danger", label: "HIGH DANGER" },
     ],
     rpm: [
-      { max: 500,  status: "danger",  label: "STALLED" },
+      { max: 500, status: "danger", label: "STALLED" },
       { max: 1000, status: "optimal", label: "IDLE" },
       { max: 3000, status: "optimal", label: "CRUISING" },
       { max: 5500, status: "warning", label: "HIGH RPM" },
-      { max: 6500, status: "danger",  label: "REDLINE" },
+      { max: 6500, status: "danger", label: "REDLINE" },
       { max: Infinity, status: "danger", label: "OVER-REV" },
     ],
     oil: [
-      { max: 15,   status: "danger",  label: "CRITICAL" },
-      { max: 25,   status: "warning", label: "LOW" },
-      { max: 65,   status: "optimal", label: "OPTIMAL" },
-      { max: 75,   status: "warning", label: "HIGH" },
+      { max: 15, status: "danger", label: "CRITICAL" },
+      { max: 25, status: "warning", label: "LOW" },
+      { max: 65, status: "optimal", label: "OPTIMAL" },
+      { max: 75, status: "warning", label: "HIGH" },
       { max: Infinity, status: "danger", label: "CRITICAL HIGH" },
     ],
     battery: [
-      { max: 12.0, status: "danger",  label: "CRITICAL" },
+      { max: 12.0, status: "danger", label: "CRITICAL" },
       { max: 12.6, status: "warning", label: "LOW" },
       { max: 14.7, status: "optimal", label: "OPTIMAL" },
       { max: 15.5, status: "warning", label: "HIGH" },
       { max: Infinity, status: "danger", label: "CRITICAL HIGH" },
     ],
-        throttle: [
+    throttle: [
       { max: 50, status: "optimal", label: "NORMAL" },
       { max: 85, status: "warning", label: "HIGH" },
       { max: Infinity, status: "danger", label: "WOT" },
@@ -86,36 +88,46 @@
       { max: Infinity, status: "danger", label: "MAX FLOW" },
     ],
     fuel: [
-      { max: 10,   status: "danger",  label: "CRITICAL LOW" },
-      { max: 25,   status: "warning", label: "LOW" },
+      { max: 10, status: "danger", label: "CRITICAL LOW" },
+      { max: 25, status: "warning", label: "LOW" },
       { max: Infinity, status: "optimal", label: "OPTIMAL" },
     ],
+    // Selected Gear — badge shows the gear name, always "optimal"; 0 = Neutral
+    gear: [
+      { max: 0, status: "optimal", label: "NEUTRAL" },
+      { max: 1, status: "optimal", label: "1ST" },
+      { max: 2, status: "optimal", label: "2ND" },
+      { max: 3, status: "optimal", label: "3RD" },
+      { max: 4, status: "optimal", label: "4TH" },
+      { max: 5, status: "optimal", label: "5TH" },
+      { max: Infinity, status: "optimal", label: "6TH" },
+    ],
     tire_fl: [
-      { max: 25,   status: "danger",  label: "LOW DANGER" },
-      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
-      { max: 35,   status: "optimal", label: "OPTIMAL" },
-      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: 25, status: "danger", label: "LOW DANGER" },
+      { max: 30, status: "warning", label: "UNDER-INFLATED" },
+      { max: 35, status: "optimal", label: "OPTIMAL" },
+      { max: 40, status: "warning", label: "OVER-INFLATED" },
       { max: Infinity, status: "danger", label: "HIGH DANGER" },
     ],
     tire_fr: [
-      { max: 25,   status: "danger",  label: "LOW DANGER" },
-      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
-      { max: 35,   status: "optimal", label: "OPTIMAL" },
-      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: 25, status: "danger", label: "LOW DANGER" },
+      { max: 30, status: "warning", label: "UNDER-INFLATED" },
+      { max: 35, status: "optimal", label: "OPTIMAL" },
+      { max: 40, status: "warning", label: "OVER-INFLATED" },
       { max: Infinity, status: "danger", label: "HIGH DANGER" },
     ],
     tire_rl: [
-      { max: 25,   status: "danger",  label: "LOW DANGER" },
-      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
-      { max: 35,   status: "optimal", label: "OPTIMAL" },
-      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: 25, status: "danger", label: "LOW DANGER" },
+      { max: 30, status: "warning", label: "UNDER-INFLATED" },
+      { max: 35, status: "optimal", label: "OPTIMAL" },
+      { max: 40, status: "warning", label: "OVER-INFLATED" },
       { max: Infinity, status: "danger", label: "HIGH DANGER" },
     ],
     tire_rr: [
-      { max: 25,   status: "danger",  label: "LOW DANGER" },
-      { max: 30,   status: "warning", label: "UNDER-INFLATED" },
-      { max: 35,   status: "optimal", label: "OPTIMAL" },
-      { max: 40,   status: "warning", label: "OVER-INFLATED" },
+      { max: 25, status: "danger", label: "LOW DANGER" },
+      { max: 30, status: "warning", label: "UNDER-INFLATED" },
+      { max: 35, status: "optimal", label: "OPTIMAL" },
+      { max: 40, status: "warning", label: "OVER-INFLATED" },
       { max: Infinity, status: "danger", label: "HIGH DANGER" },
     ],
   };
@@ -129,12 +141,12 @@
   }
 
   /* ── DOM refs ──────────────────────────────────── */
-  const $  = (s) => document.querySelector(s);
+  const $ = (s) => document.querySelector(s);
   const $$ = (s) => document.querySelectorAll(s);
 
-  const connDot   = $(".conn-dot");
+  const connDot = $(".conn-dot");
   const connLabel = $(".conn-label");
-  const feedLog   = $(".feed-log");
+  const feedLog = $(".feed-log");
 
 
   /* ── Gauge update ──────────────────────────────── */
@@ -154,14 +166,19 @@
     } else {
       cardClass = type;
     }
-    
+
     const fill = $(`.gauge-card.${cardClass} .horiz-gauge-fill`);
-    const num   = $(`.gauge-card.${cardClass} .gauge-number`);
+    const num = $(`.gauge-card.${cardClass} .gauge-number`);
     const badge = $(`.gauge-card.${cardClass} .status-badge`);
 
     if (fill) fill.style.width = pct + "%";
     if (num) {
-      animateNumber(num, parseFloat(num.textContent) || 0, clamped, 400);
+      if (type === "gear" && clamped === 0) {
+        // Display "N" for Neutral instead of animating to 0
+        num.textContent = "N";
+      } else {
+        animateNumber(num, parseFloat(num.textContent) || 0, clamped, 400);
+      }
     }
 
     /* Apply status coloring */
@@ -229,23 +246,29 @@
 
       if (msg.type === "telemetry" && msg.data) {
         setGaugeValue("speed", msg.data.speed_kmh);
-        setGaugeValue("temp",  msg.data.engine_temp_c);
-        setGaugeValue("psi",   msg.data.tire_pressure_psi);
-        setGaugeValue("rpm",   msg.data.engine_rpm);
+        setGaugeValue("temp", msg.data.engine_temp_c);
+        setGaugeValue("psi", msg.data.tire_pressure_psi);
+        setGaugeValue("rpm", msg.data.engine_rpm);
         setGaugeValue("throttle", msg.data.throttle_pct);
         setGaugeValue("load", msg.data.engine_load_pct);
         setGaugeValue("maf", msg.data.maf_g_sec);
-        setGaugeValue("oil",   msg.data.oil_pressure_psi);
+        setGaugeValue("oil", msg.data.oil_pressure_psi);
         setGaugeValue("battery", msg.data.battery_voltage_v);
-        setGaugeValue("fuel",  msg.data.fuel_level_pct);
+        setGaugeValue("fuel", msg.data.fuel_level_pct);
         setGaugeValue("tire_fl", msg.data.tire_pressure_fl_psi);
         setGaugeValue("tire_fr", msg.data.tire_pressure_fr_psi);
         setGaugeValue("tire_rl", msg.data.tire_pressure_rl_psi);
         setGaugeValue("tire_rr", msg.data.tire_pressure_rr_psi);
+        // Selected Gear: update live gauge with what the server echoes back
+        if (msg.data.selected_gear != null) {
+          setGaugeValue("gear", msg.data.selected_gear);
+        }
+
         addFeedEntry(
           `SPD <span class="val-speed">${msg.data.speed_kmh}</span> · ` +
           `TMP <span class="val-temp">${msg.data.engine_temp_c}</span> · ` +
-          `PSI <span class="val-psi">${msg.data.tire_pressure_psi}</span>`,
+          `PSI <span class="val-psi">${msg.data.tire_pressure_psi}</span> · ` +
+          `GEAR <span style="color:var(--purple)">${msg.data.selected_gear === 0 ? "N" : (msg.data.selected_gear ?? "N")}</span>`,
           "data"
         );
       } else if (msg.type === "ack") {
@@ -284,7 +307,12 @@
         const display = slider.closest(".gauge-card").querySelector(".slider-value-display");
         const cfg = GAUGES[slider.dataset.gauge];
         if (display && !display.querySelector("input")) {
-          display.textContent = `${slider.value} ${cfg.unit}`;
+          const val = parseFloat(slider.value);
+          if (slider.dataset.gauge === "gear" && val === 0) {
+            display.textContent = `N ${cfg.unit}`;
+          } else {
+            display.textContent = `${slider.value} ${cfg.unit}`;
+          }
         }
         updateSliderFill(slider);
         // Status badges update only from telemetry heartbeat, not local slider
@@ -295,14 +323,14 @@
     $$(".slider-value-display").forEach((display) => {
       display.style.cursor = "pointer";
       display.title = "Click to edit manually";
-      
-      display.addEventListener("click", function() {
+
+      display.addEventListener("click", function () {
         if (this.querySelector("input")) return;
-        
+
         const card = this.closest(".gauge-card");
         const slider = card.querySelector("input[type='range']");
         const cfg = GAUGES[slider.dataset.gauge];
-        
+
         const input = document.createElement("input");
         input.type = "number";
         input.value = slider.value;
@@ -319,30 +347,34 @@
         input.style.fontSize = "inherit";
         input.style.textAlign = "right";
         input.style.outline = "none";
-        
+
         const unitSpan = document.createElement("span");
         unitSpan.textContent = " " + cfg.unit;
-        
+
         this.innerHTML = "";
         this.appendChild(input);
         this.appendChild(unitSpan);
-        
+
         input.focus();
         input.select();
-        
+
         const applyValue = () => {
           let val = parseFloat(input.value);
           if (isNaN(val)) val = parseFloat(slider.value);
           val = Math.max(parseFloat(slider.min), Math.min(parseFloat(slider.max), val));
           slider.value = val;
-          display.textContent = `${slider.value} ${cfg.unit}`;
+          if (slider.dataset.gauge === "gear" && val === 0) {
+            display.textContent = `N ${cfg.unit}`;
+          } else {
+            display.textContent = `${slider.value} ${cfg.unit}`;
+          }
           slider.dispatchEvent(new Event('input'));
-          
+
           if (ws && ws.readyState === WebSocket.OPEN) {
             ws.send(JSON.stringify({ action: "update", parameter: cfg.param, value: val }));
           }
         };
-        
+
         input.addEventListener("blur", applyValue);
         input.addEventListener("keydown", (e) => {
           if (e.key === "Enter") {
@@ -400,17 +432,17 @@
         isAutomated = !isAutomated;
         btnAuto.textContent = `Toggle Auto-Drive: ${isAutomated ? "ON" : "OFF"}`;
         btnAuto.style.background = isAutomated ? "#00663a" : "#222";
-        
+
         // Send toggle_auto_drive action to backend
         if (ws && ws.readyState === WebSocket.OPEN) {
           ws.send(JSON.stringify({ action: "toggle_auto_drive" }));
         }
-        
+
         sliders.forEach(s => {
           s.disabled = isAutomated;
           s.style.opacity = isAutomated ? "0.5" : "1";
         });
-        
+
         if (isAutomated) {
           autoClock = 0;
         }
@@ -422,7 +454,7 @@
 
       // 90-second driving cycle with highway phases
       let tSpeed = 0, tRpm = 800, tThrottle = 0, tLoad = 15, tMaf = 4, tTemp = 90;
-      
+
       if (autoClock >= 0 && autoClock <= 10) {
         // Seconds 0-10: Idling
         tSpeed = 0; tRpm = 800; tThrottle = 0; tLoad = 15; tMaf = 4;
@@ -455,7 +487,9 @@
         tire_rl: 32,
         tire_rr: 32,
         battery: 14.2,
-        oil: 40
+        oil: 40,
+        // Auto-drive selects a sensible gear based on speed phase; 0 = Neutral when idling
+        gear: tSpeed >= 100 ? 5 : tSpeed >= 60 ? 4 : tSpeed >= 40 ? 3 : tSpeed >= 20 ? 2 : tSpeed > 0 ? 1 : 0,
       };
 
       const bulkData = {};
@@ -464,16 +498,16 @@
       sliders.forEach(slider => {
         const gauge = slider.dataset.gauge;
         let current = parseFloat(slider.value);
-        
+
         if (gauge === 'fuel') {
           current = Math.max(0, current - 0.01);
         } else if (targets[gauge] !== undefined) {
           current = current + (targets[gauge] - current) * 0.15;
         }
-        
+
         slider.value = current;
         slider.dispatchEvent(new Event('input'));
-        
+
         const cfg = GAUGES[gauge];
         if (cfg && cfg.param) {
           bulkData[cfg.param] = current;
@@ -502,4 +536,34 @@
       display.classList.add(`status-${st.status}`);
     }
   }
+
+  // --- GEAR UI OVERRIDE (NEUTRAL STATE FORMATTING) ---
+  const gearObserver = new MutationObserver((mutations) => {
+    mutations.forEach((mutation) => {
+      if (mutation.type === 'characterData' || mutation.type === 'childList') {
+        const text = mutation.target.textContent;
+        // Fix the live gauge number
+        if (mutation.target.classList && mutation.target.classList.contains('gauge-number') && text === "0") {
+          mutation.target.textContent = "N";
+        }
+        // Fix the slider text
+        if (mutation.target.classList && mutation.target.classList.contains('slider-value-display') && text.trim() === "0 GEAR") {
+          mutation.target.textContent = "N GEAR";
+        }
+      }
+    });
+  });
+
+  // Attach observer once DOM is fully loaded
+  document.addEventListener("DOMContentLoaded", () => {
+    const gearCard = document.querySelector('.gauge-card.gear');
+    if (gearCard) {
+      gearObserver.observe(gearCard, {
+        childList: true,
+        characterData: true,
+        subtree: true
+      });
+    }
+  });
+
 })();
