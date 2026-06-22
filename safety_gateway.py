@@ -374,20 +374,48 @@ def _build_deterministic_context(ml_root_cause: str, filtered_data: dict[str, fl
 
     # ── tire_thermal_deviation ────────────────────────────────────────────────
     if ml_root_cause == "tire_thermal_deviation":
-        actual_avg_tp = round((tp_fl + tp_fr + tp_rl + tp_rr) / 4.0, 1)
-        expected_tp   = round(32.0 + (speed_val / 38.0), 1)
-        deviation     = round(actual_avg_tp - expected_tp, 1)
-        direction     = "ABOVE" if deviation >= 0 else "BELOW"
-        abs_dev       = abs(deviation)
-        fault = (
-            "over-pressurization: tires have not released pressure despite speed-driven thermal load"
-            if deviation >= 0 else
-            "under-pressurization: tires are losing pressure faster than thermal expansion can compensate"
-        )
+        expected_tp = round(32.0 + (speed_val / 38.0), 1)
+
+        # Evaluate each tire individually — averaging masks mixed fault states
+        # (e.g. two over-inflated + two under-inflated = false "normal" average).
+        tire_readings = {
+            "FL": round(tp_fl, 1),
+            "FR": round(tp_fr, 1),
+            "RL": round(tp_rl, 1),
+            "RR": round(tp_rr, 1),
+        }
+
+        tire_parts: list[str] = []
+        problem_wheels: list[str] = []
+
+        for wheel, actual in tire_readings.items():
+            dev = round(actual - expected_tp, 1)
+            abs_dev = abs(dev)
+
+            if abs_dev < 0.5:
+                # Within rounding noise — treat as matching
+                status = "MATCHING"
+                tire_parts.append(f"{wheel}={actual} PSI (MATCHING expected)")
+            elif dev > 0:
+                status = "OVER"
+                tire_parts.append(f"{wheel}={actual} PSI ({abs_dev} PSI OVER)")
+                problem_wheels.append(f"{wheel} over-pressurized by {abs_dev} PSI")
+            else:
+                status = "UNDER"
+                tire_parts.append(f"{wheel}={actual} PSI ({abs_dev} PSI UNDER)")
+                problem_wheels.append(f"{wheel} under-pressurized by {abs_dev} PSI")
+
+        tire_summary = ", ".join(tire_parts)
+
+        if problem_wheels:
+            fault_detail = "; ".join(problem_wheels)
+        else:
+            fault_detail = "all tires near baseline — deviation is marginal"
+
         return (
-            f"At {speed_val:.1f} km/h, speed-adjusted thermodynamic baseline requires {expected_tp} PSI. "
-            f"Actual average tire pressure is {actual_avg_tp} PSI, which is {abs_dev} PSI {direction} "
-            f"the expected baseline. Confirmed condition: {fault}."
+            f"At {speed_val:.1f} km/h, thermodynamic baseline requires {expected_tp} PSI per tire. "
+            f"Individual readings: {tire_summary}. "
+            f"Confirmed per-wheel fault: {fault_detail}."
         )
 
     # ── airflow_deviation ─────────────────────────────────────────────────────
