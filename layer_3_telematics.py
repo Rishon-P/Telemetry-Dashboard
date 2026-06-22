@@ -49,7 +49,7 @@ else:
 # ---------------------------------------------------------------------------
 _MODEL_ID = "llama-3.1-8b-instant"
 _TEMPERATURE = 0.1          # Near-deterministic; avoids creative hallucination
-_MAX_TOKENS = 120           # Two concise sentences never exceed this
+_MAX_TOKENS = 60            # Single concise sentence never exceeds this
 
 # ---------------------------------------------------------------------------
 # System prompt — strict persona and output contract.
@@ -62,7 +62,8 @@ OUTPUT CONTRACT — obey these rules without exception:
 3. Sentence 2: State the single most immediate recommended mechanical action the driver or technician must take.
 4. Do NOT use Markdown, asterisks, bullet points, headers, or any formatting characters.
 5. Do NOT use conversational filler such as "I see", "It appears", "Based on the data", or "Please note".
-6. Do NOT repeat the root cause label verbatim as a sentence opener; describe the physical condition it represents instead."""
+6. Do NOT repeat the root cause label verbatim as a sentence opener; describe the physical condition it represents instead.
+Output ONLY a single, concise sentence summarizing the root cause and the required action. Do not include live data numbers, marginal errors, or paragraphs. Maximum 15 words."""
 
 
 def generate_diagnostic_report(payload: dict[str, Any]) -> str:

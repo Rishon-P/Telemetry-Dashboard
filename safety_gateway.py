@@ -72,8 +72,10 @@ _REVERSE_MAPPING = {v: k for k, v in FEATURE_MAPPING.items()}
 class SafetyBoundaryChecker:
     """Layer 1: deterministic physical limits evaluated before ML."""
 
-    @staticmethod
-    def check_physical_safety(data: dict[str, float]) -> tuple[bool, list[str], str | None]:
+    def __init__(self):
+        self.active_faults = set()
+
+    def check_physical_safety(self, data: dict[str, float]) -> tuple[bool, list[str], str | None]:
         """
         Returns (layer_1_triggered, violations, layer_1_cause).
         Any violation immediately implies EMERGENCY — ML must not run.
@@ -84,6 +86,7 @@ class SafetyBoundaryChecker:
         speed = data.get("speed_kmh", 0)
         rpm = data.get("engine_rpm", 0)
         throttle = data.get("throttle_pct", 0)
+        selected_gear = int(data.get("selected_gear", 6))
         engine_temp = data.get("engine_temp_c", 0)
         oil_pressure = data.get("oil_pressure_psi", 50)
         maf = data.get("maf_g_sec", 45)
@@ -93,20 +96,39 @@ class SafetyBoundaryChecker:
         tp_rl = data.get("tire_pressure_rl_psi", 32)
         tp_rr = data.get("tire_pressure_rr_psi", 32)
 
-        # Rule A: Dead MAF — sensor near zero while engine running
-        if maf < 5 and rpm > 1000:
-            layer_1_cause = layer_1_cause or "maf_sensor_dead"
-            violations.append(
-                f"CRITICAL: MAF sensor dead ({maf} g/s) while engine running at {rpm} RPM"
-            )
+        # Rule A: Dead MAF / Suffocation — ECU Hysteresis Logic
+        # Activation Threshold < 7.0 | Healing Threshold > 10.5
+        maf_is_faulty = "maf_sensor_dead" in self.active_faults
 
-        # Rule B: Transmission disconnect — high speed, low RPM, throttle applied
+        if not maf_is_faulty:
+            if maf < 7.0 and rpm > 1000:
+                self.active_faults.add("maf_sensor_dead")
+                layer_1_cause = layer_1_cause or "maf_sensor_dead"
+                violations.append(f"CRITICAL: MAF sensor restricted ({maf} g/s) while engine running at {rpm} RPM")
+        else:
+            # Fault is active. Require mathematically reachable healing margin to turn off.
+            if maf > 10.5 or rpm <= 1000:
+                self.active_faults.remove("maf_sensor_dead")
+            else:
+                layer_1_cause = layer_1_cause or "maf_sensor_dead"
+                violations.append(f"CRITICAL: MAF sensor restricted ({maf} g/s) while engine running at {rpm} RPM")
+
+        # Rule B: Kinematic Mismatches (Gear-Aware)
         if speed > 100 and rpm < 1000 and throttle > 20:
-            layer_1_cause = layer_1_cause or "transmission_disconnect"
-            violations.append(
-                f"CRITICAL: Possible transmission disconnect — "
-                f"Speed {speed} km/h, RPM {rpm}, Throttle {throttle}%"
-            )
+            if selected_gear > 0:
+                # Car is in gear, but engine is not spinning with the wheels
+                layer_1_cause = layer_1_cause or "transmission_disconnect"
+                violations.append(
+                    f"CRITICAL: Transmission disconnect — "
+                    f"Speed {speed} km/h, RPM {rpm} in Gear {selected_gear}"
+                )
+            else:
+                # Car is in Neutral. Transmission is fine, but engine won't rev.
+                layer_1_cause = layer_1_cause or "engine_unresponsive"
+                violations.append(
+                    f"CRITICAL: Engine unresponsive to throttle in Neutral — "
+                    f"Throttle {throttle}%, RPM {rpm}"
+                )
 
         # Rule C: Critical overheat
         if engine_temp > 115:
@@ -350,6 +372,10 @@ class SafetyGateway:
         # 2. THE SHOCK ABSORBER MEMORY
         self.smoothed_sensor_state = {}
 
+        # 3. LAYER 3 AI DIAGNOSTIC CACHE
+        self.cached_layer_3_report: str | None = None
+        self.last_root_cause: str | None = None
+
     def apply_low_pass_filter(self, raw_data: dict[str, float], alpha: float = 0.2) -> dict[str, float]:
         """Filters out minor vibrations but snaps instantly on manual slider jumps."""
         filtered_data = {}
@@ -382,6 +408,11 @@ class SafetyGateway:
     def evaluate(self, data: dict[str, float]) -> dict[str, Any]:
         current_time = time.time()
 
+        # ── Step 0: Extract baseline environmental context (used by Layer 2 payload) ──
+        speed = float(data.get("vehicle_speed_kmh", 0))
+        rpm   = float(data.get("engine_rpm", 0))
+        load  = float(data.get("engine_load_percent", 0))
+
         # ── Step 0: Apply the Shock Absorber ───────────────────────────────
         filtered_data = self.apply_low_pass_filter(data, alpha=0.2)
 
@@ -397,25 +428,42 @@ class SafetyGateway:
         trigger_gemini = False
 
         if layer_1_triggered:
-            self.warning_cooldown_time = current_time # Reset sticky UI timer
-            logger.critical(
-                f"EMERGENCY: {layer_1_cause} | Violations: {safety_violations}"
-            )
+            self.warning_cooldown_time = current_time
+
+            # 1. STRICT CACHE BARRIER
+            time_elapsed = (current_time - self.last_gemini_call_time) > 60
+            cause_changed = layer_1_cause != self.last_root_cause
+
+            if time_elapsed or cause_changed:
+                # 2. ANTI-HALLUCINATION PAYLOAD
+                # Do not send all 16 variables. Only send the exact physical violation.
+                strict_payload = {
+                    "root_cause": layer_1_cause,
+                    "violation_details": safety_violations[0] if safety_violations else "Critical limit exceeded."
+                }
+                self.cached_layer_3_report = generate_diagnostic_report(strict_payload)
+                self.last_gemini_call_time = current_time
+                self.last_root_cause = layer_1_cause
+
+            logger.critical(f"EMERGENCY: {layer_1_cause} | Violations: {safety_violations}")
+
             return {
                 "status": "EMERGENCY",
                 "health_score": 0.0,
                 "gateway_decision": "PHYSICAL_DANGER_DETECTED",
-                "gateway_note": "Critical physical safety threshold violated. Immediate action required.",
+                "gateway_note": "Critical physical safety threshold violated.",
                 "root_cause": layer_1_cause,
-                "ml_prediction": ml_prediction,
-                "ml_anomaly_score": ml_anomaly_score,
-                "ml_root_cause": ml_root_cause,
-                "is_ml_anomaly": is_ml_anomaly,
+                "ml_prediction": 1,
+                "ml_anomaly_score": -0.4,
+                "ml_root_cause": None,
+                "is_ml_anomaly": False,
                 "layer_1_triggered": True,
                 "layer_1_cause": layer_1_cause,
                 "is_physically_dangerous": True,
                 "safety_violations": safety_violations,
-                "trigger_gemini": False # Hard limits don't need AI explanation
+                "trigger_gemini": True,
+                "layer_3_report": self.cached_layer_3_report,
+                "redline_warning": False
             }
 
         # ── Layer 2: ML only when physical limits are safe ─────────────
@@ -426,48 +474,58 @@ class SafetyGateway:
         # Extract redline_warning that was stamped into filtered_data by MLScout
         redline_warning = bool(filtered_data.get("redline_warning", 0.0))
 
+        # ── Layer 2: ML only ─────────────────────────────────────────
         if is_ml_anomaly:
-            self.warning_cooldown_time = current_time # Reset sticky UI timer
-            
-            # API Debounce Check
-            if (current_time - self.last_gemini_call_time) > 60:
-                trigger_gemini = True
+            self.warning_cooldown_time = current_time
+
+            time_elapsed = (current_time - self.last_gemini_call_time) > 60
+            cause_changed = ml_root_cause != self.last_root_cause
+
+            if time_elapsed or cause_changed:
+                # 1. Define unit and physical context based on the specific anomaly
+                context_hint = "A statistical deviation was detected."
+                if ml_root_cause == "tire_thermal_deviation":
+                    expected_psi = round(32.0 + (speed / 38.0), 1)
+                    context_hint = f"Vehicle is traveling at {speed} km/h. At this speed, tires should heat up and expand to approximately {expected_psi} PSI. The current tire pressures are significantly lower than this expected baseline. The tires are dangerously under-pressurized for this velocity."
+                elif ml_root_cause == "airflow_deviation":
+                    context_hint = f"Engine is at {rpm} RPM under {load}% load. The mass air flow (g/s) is mathematically misaligned with the engine's current breathing requirements."
+                elif ml_root_cause == "transmission_deviation":
+                    context_hint = f"Vehicle is traveling at {speed} km/h but the engine is spinning at {rpm} RPM. The kinematic ratio does not match the selected gear, indicating drivetrain slip or disconnect."
+                elif ml_root_cause == "electrical_deviation":
+                    context_hint = f"Engine is running at {rpm} RPM, which should drive the alternator to provide ~13.8V, but the battery voltage (V) deviates significantly from this curve."
+
+                # 2. Build the Hybrid Payload
+                strict_ml_payload = {
+                    "diagnostic_layer": "Machine Learning Anomaly Detection",
+                    "root_cause": ml_root_cause,
+                    "anomaly_score_magnitude": float(round(abs(ml_anomaly_score), 4)),
+                    "physical_context": context_hint,
+                    "instruction": "Diagnose the issue based strictly on the provided physical context. Do not alter the cause-and-effect relationship. Do not invent external factors or specific sensor directions not explicitly provided."
+                }
+
+                self.cached_layer_3_report = generate_diagnostic_report(strict_ml_payload)
                 self.last_gemini_call_time = current_time
+                self.last_root_cause = ml_root_cause
 
-            logger.warning(
-                f"WARNING: ML anomaly (score: {ml_anomaly_score:.4f}, "
-                f"root_cause: {ml_root_cause}). Physical systems normal."
-            )
-
-            # ── Layer 3: Cognitive Translation ──────────────────────────────
-            # Build the anomaly payload that Layer 3 will translate into a
-            # human-readable engineering diagnostic.  Sensor readings from
-            # filtered_data are forwarded so the LLM has numeric context.
-            anomaly_payload: dict[str, Any] = {
-                "root_cause": ml_root_cause,
-                "ml_anomaly_score": ml_anomaly_score,
-                **{k: v for k, v in filtered_data.items()},
-            }
-            layer_3_report: str = generate_diagnostic_report(anomaly_payload)
-            # ────────────────────────────────────────────────────────────────
+            logger.warning(f"ML ANOMALY: {ml_root_cause}")
 
             return {
                 "status": "WARNING",
-                "health_score": 87.5,
+                "health_score": 50.0,
                 "gateway_decision": "ML_ANOMALY_DETECTED",
-                "gateway_note": "Machine Learning detected anomalous pattern. Physical systems normal.",
+                "gateway_note": "ML model detected anomalous telemetry.",
                 "root_cause": ml_root_cause,
-                "ml_prediction": ml_prediction,
-                "ml_anomaly_score": ml_anomaly_score,
+                "ml_prediction": -1,
+                "ml_anomaly_score": float(ml_anomaly_score),
                 "ml_root_cause": ml_root_cause,
                 "is_ml_anomaly": True,
                 "layer_1_triggered": False,
                 "layer_1_cause": None,
                 "is_physically_dangerous": False,
                 "safety_violations": [],
-                "trigger_gemini": trigger_gemini,
-                "layer_3_report": layer_3_report,
-                "redline_warning": redline_warning,
+                "trigger_gemini": True,
+                "layer_3_report": self.cached_layer_3_report,
+                "redline_warning": False
             }
 
         # ── Layer 3: HYSTERESIS (Sticky UI) ───────────────────────────
@@ -493,6 +551,9 @@ class SafetyGateway:
             }
 
         # ── Final Layer: ALL CLEAR ─────────────────────────────────────
+        self.cached_layer_3_report = None
+        self.last_gemini_call_time = 0.0
+        self.last_root_cause = None
         return {
             "status": "HEALTHY",
             "health_score": 97.5,
