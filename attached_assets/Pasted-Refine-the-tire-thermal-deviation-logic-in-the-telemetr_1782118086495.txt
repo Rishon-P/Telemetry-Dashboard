@@ -1,0 +1,16 @@
+Refine the tire thermal deviation logic in the telemetry dashboard's ML Context Injector to evaluate tires individually instead of averaging them.
+
+THE BUG:
+Currently, when the Layer 2 Isolation Forest detects a "tire_thermal_deviation", the Python backend calculates an average of all four tire pressures to compare against the expected thermodynamic baseline. This creates a critical mechanical blindspot: if two tires are dangerously over-pressurized and two are dangerously under-pressurized, the average appears normal, or it misreports the true state of individual wheels. The AI is outputting a blanket statement for the whole vehicle instead of identifying the specific failing tires.
+
+EXPECTED OUTPUT / REQUIRED BEHAVIOR:
+1. The Context Injector (inside `safety_gateway.py` under the `elif ml_root_cause == "tire_thermal_deviation":` block) must be updated. 
+2. It must still calculate the expected dynamic baseline (`expected_psi`).
+3. Instead of averaging the actual live pressures, the logic must evaluate the four tires (Front-Left, Front-Right, Rear-Left, Rear-Right) individually against the `expected_psi`.
+4. The logic must construct a highly granular context string that explicitly lists the status of each individual tire. For each tire, it must state whether it is specifically OVER, UNDER, or MATCHING the expected baseline, and by exactly how much.
+5. This new, granular context string must be passed into the `physical_context` variable for the Groq AI payload, ensuring the AI formats a diagnostic that addresses the specific problem wheels.
+
+STRICT CONSTRAINTS:
+- Do NOT modify the frontend UI, the dashboard logic, the WebSocket data loop, the Isolation Forest ML model itself, or the Layer 1 Hard Rules.
+- Do NOT alter the `generate_diagnostic_report` Groq API handler constraints, system prompts, or model parameters established in the previous fix.
+- Limit your modifications exclusively to the Python logic that parses the tire pressure variables and builds the `context_hint` string inside `safety_gateway.py`.
