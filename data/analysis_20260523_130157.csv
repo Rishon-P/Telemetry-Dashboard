@@ -1,0 +1,2 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,alerts
+1779521517.575,85.0,92.0,32.0,optimal,optimal,optimal,—,—,—,EXCELLENT,NONE

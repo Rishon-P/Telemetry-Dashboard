@@ -1,0 +1,7 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,alerts
+1779629998.128,81.7,90.9,31.9,optimal,optimal,optimal,—,—,—,✅ EXCELLENT,NONE
+1779629999.129,79.1,89.9,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,✅ EXCELLENT,NONE
+1779630000.13,82.7,91.5,31.9,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,✅ EXCELLENT,NONE
+1779630001.131,77.8,89.0,31.6,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,✅ EXCELLENT,NONE
+1779630002.133,81.4,89.0,32.4,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,✅ EXCELLENT,NONE
+1779630003.134,79.9,89.4,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,✅ EXCELLENT,NONE

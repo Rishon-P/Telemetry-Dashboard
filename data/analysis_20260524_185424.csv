@@ -1,0 +1,900 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,alerts
+1779629064.308,78.9,90.3,32.3,optimal,optimal,optimal,—,—,—,EXCELLENT,NONE
+1779629065.308,79.1,89.4,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629066.308,80.3,90.0,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629067.309,80.1,90.5,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629068.309,77.5,91.0,32.1,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629069.309,79.4,90.1,31.6,optimal,optimal,optimal,→ stable,→ stable,↓ decreasing,EXCELLENT,NONE
+1779629070.309,77.8,91.0,32.3,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629071.311,77.4,90.5,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629072.312,78.9,90.0,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629073.313,80.3,89.3,31.9,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629074.313,78.2,90.8,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629075.313,77.5,90.4,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629076.314,78.2,89.7,31.6,optimal,optimal,optimal,↓ decreasing,↓ decreasing,↓ decreasing,EXCELLENT,💨 PRESSURE_LEAK: Tire pressure dropping
+1779629077.314,81.5,90.0,31.7,optimal,optimal,optimal,↑ increasing,→ stable,↓ decreasing,EXCELLENT,💨 PRESSURE_LEAK: Tire pressure dropping
+1779629078.314,80.1,88.6,32.1,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629079.315,80.3,91.1,31.6,optimal,optimal,optimal,↑ increasing,↑ increasing,↓ decreasing,EXCELLENT,💨 PRESSURE_LEAK: Tire pressure dropping
+1779629080.317,78.9,91.1,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779629081.318,79.4,90.0,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629082.319,78.3,89.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629083.32,80.9,91.4,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629084.32,79.6,89.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629085.322,81.9,90.9,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629086.323,77.5,91.3,32.4,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629087.323,78.3,91.2,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629088.325,81.8,91.3,32.1,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629089.325,78.9,91.1,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629090.326,82.2,89.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629091.327,77.9,89.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629092.328,80.8,90.4,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629093.329,81.0,89.5,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629094.331,77.5,88.7,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629095.332,77.7,88.7,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629096.333,80.5,88.5,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629097.335,78.0,88.7,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629098.335,79.5,89.0,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629099.337,77.6,89.3,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629100.338,77.7,90.8,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629101.34,77.1,90.6,31.7,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629102.341,80.0,90.3,31.9,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629103.342,81.4,91.0,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629104.343,80.9,90.0,31.6,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629105.344,77.7,89.1,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629106.344,80.6,89.4,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779629107.346,77.2,91.5,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629108.346,77.7,91.2,31.9,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629109.348,77.5,89.8,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779629110.349,82.4,90.7,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779629111.35,77.2,89.9,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629112.351,80.1,89.5,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629113.353,80.9,90.2,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779629114.353,80.3,89.2,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629115.355,81.3,89.1,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779629116.355,81.2,89.9,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629117.355,82.6,91.2,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629118.356,81.3,89.0,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629119.358,79.4,89.9,32.2,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629120.358,80.0,89.9,31.7,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779629121.359,78.2,90.7,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629122.361,82.7,88.7,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629123.362,77.7,90.5,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779629124.364,300.4,90.7,32.2,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629125.364,297.1,88.6,32.1,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629126.366,298.7,89.8,32.1,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629127.368,298.7,91.4,32.2,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629128.369,298.2,89.5,31.6,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629129.371,299.3,88.8,32.4,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629130.372,297.3,90.8,32.2,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629131.374,299.2,90.3,31.7,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629132.375,298.3,91.0,32.1,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629133.375,301.3,89.7,32.3,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629134.377,298.1,90.4,32.3,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629135.378,302.6,90.2,31.6,danger,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits
+1779629136.378,300.1,89.5,0.1,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629137.379,297.5,90.8,0.2,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629138.38,298.2,90.5,0.2,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629139.381,300.7,91.1,-0.1,danger,optimal,danger,↑ increasing,↑ increasing,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629140.381,301.1,91.5,-0.4,danger,optimal,danger,↑ increasing,↑ increasing,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629141.383,302.7,90.1,0.1,danger,optimal,danger,↑ increasing,↑ increasing,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629142.384,302.1,88.6,-0.3,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629143.385,302.9,88.9,0.1,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629144.387,298.5,89.6,0.0,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629145.389,297.2,90.8,0.0,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629146.389,299.1,91.3,-0.2,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629147.391,300.3,91.3,0.2,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629148.393,297.8,88.6,-0.1,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629149.393,302.9,89.1,0.3,danger,optimal,danger,↑ increasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629150.395,298.4,90.6,-0.4,danger,optimal,danger,→ stable,↓ decreasing,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629151.396,299.1,90.2,-0.4,danger,optimal,danger,→ stable,↓ decreasing,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629152.397,298.7,88.6,0.3,danger,optimal,danger,↓ decreasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629153.399,300.2,89.2,-0.1,danger,optimal,danger,↓ decreasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629154.401,300.2,88.8,0.0,danger,optimal,danger,↓ decreasing,→ stable,↓ decreasing,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779629155.402,300.7,90.7,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629156.403,300.6,90.0,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629157.405,299.1,89.6,-0.3,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629158.407,302.5,90.0,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629159.407,297.4,89.6,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629160.408,301.6,88.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629161.41,298.3,91.2,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629162.413,297.5,89.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629163.413,299.9,90.1,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629164.415,300.1,90.1,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629165.416,297.9,89.3,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629166.417,301.0,90.3,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629167.417,298.7,88.5,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629168.419,299.7,89.8,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629169.42,299.0,89.8,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629170.422,302.7,91.2,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629171.423,298.0,90.6,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629172.424,301.2,89.5,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629173.425,301.2,89.1,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629174.427,299.5,90.6,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629175.428,301.6,89.2,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629176.43,298.5,91.4,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629177.432,301.3,91.2,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629178.432,301.4,89.7,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629179.434,300.5,90.8,0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629180.436,298.7,89.2,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629181.436,298.6,91.1,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629182.437,298.1,90.5,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629183.439,299.8,89.3,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629184.44,302.8,89.3,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629185.441,302.4,89.5,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629186.442,302.9,89.5,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629187.442,299.7,88.8,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629188.443,301.0,89.5,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629189.445,301.8,91.0,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629190.445,298.4,90.9,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629191.446,299.8,89.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629192.447,301.8,90.3,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629193.448,299.0,90.1,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629194.449,297.5,91.0,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629195.45,300.6,90.5,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629196.451,302.7,88.6,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629197.453,301.5,89.3,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629198.454,299.4,88.9,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629199.456,302.9,91.3,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629200.457,298.7,89.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629201.458,299.7,89.5,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629202.46,300.1,90.6,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629203.461,301.1,89.7,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629204.462,303.0,90.4,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629205.464,299.8,88.7,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629206.464,297.4,89.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629207.465,299.2,89.3,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629208.466,297.3,89.8,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629209.468,301.1,89.0,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629210.469,300.4,90.1,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629211.469,302.2,91.0,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629212.47,302.4,90.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629213.472,297.7,89.6,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629214.473,299.5,91.1,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629215.474,302.2,90.1,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629216.476,297.9,89.1,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629217.476,301.7,91.3,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629218.478,297.5,90.3,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629219.478,300.1,88.9,-0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629220.479,302.1,90.3,0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629221.481,300.4,88.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629222.482,299.1,90.6,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629223.484,302.6,89.4,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629224.484,297.0,89.1,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629225.485,300.0,89.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629226.486,301.3,90.1,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629227.488,302.4,91.3,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629228.488,300.8,90.3,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629229.49,302.4,90.4,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629230.49,301.8,89.2,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629231.491,302.0,91.4,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629232.492,301.8,89.2,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629233.492,298.0,88.6,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629234.493,302.7,89.9,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629235.495,298.0,89.4,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629236.495,298.6,89.2,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629237.498,301.9,89.5,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629238.498,299.8,88.9,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629239.5,302.5,90.0,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629240.501,300.1,89.4,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629241.501,300.6,89.7,0.1,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629242.503,301.8,90.9,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629243.503,299.3,89.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629244.504,298.4,89.9,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629245.504,297.8,89.9,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629246.506,301.5,91.1,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629247.506,302.0,88.7,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629248.508,303.0,90.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629249.509,299.8,91.3,-0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629250.51,297.4,89.4,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629251.511,299.0,88.6,0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629252.512,301.5,90.6,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629253.514,301.8,90.0,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629254.514,299.1,89.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629255.516,299.0,89.2,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629256.517,302.5,89.4,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629257.518,301.4,91.4,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629258.519,298.1,91.1,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629259.52,297.6,89.6,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629260.521,302.3,89.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629261.523,298.4,89.1,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629262.524,301.5,89.9,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629263.525,297.9,90.7,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629264.526,301.6,91.4,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629265.527,299.9,89.2,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629266.529,302.6,90.7,0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629267.529,297.6,89.7,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629268.53,297.5,89.4,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629269.531,302.9,89.5,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629270.532,302.5,90.5,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629271.533,301.0,91.2,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629272.533,301.3,89.4,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629273.534,298.2,89.6,0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629274.535,300.6,91.5,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629275.536,302.2,89.3,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629276.537,302.8,91.0,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629277.539,302.2,89.0,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629278.539,297.7,89.6,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629279.541,301.0,90.6,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629280.543,301.1,90.0,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629281.543,298.6,90.1,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629282.544,297.1,89.6,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629283.546,300.0,89.9,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629284.546,301.3,90.3,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629285.547,301.9,90.5,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629286.549,298.5,91.1,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629287.549,297.8,89.0,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629288.551,300.3,88.7,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629289.552,297.2,89.6,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629290.553,302.2,89.5,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629291.554,301.8,89.3,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629292.555,297.4,89.1,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629293.555,299.0,88.6,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629294.556,301.5,89.5,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629295.557,300.3,88.6,0.4,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629296.558,299.4,89.8,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629297.559,301.6,88.8,0.3,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629298.561,299.3,91.0,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629299.561,301.0,91.3,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629300.563,301.5,88.9,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629301.565,302.9,91.4,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629302.566,297.7,90.6,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629303.566,297.5,88.8,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629304.567,301.1,89.8,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629305.569,297.1,88.6,0.4,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629306.569,300.6,90.2,-0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629307.571,300.7,90.9,-0.4,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629308.572,298.0,90.2,-0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629309.572,300.5,89.9,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629310.573,301.5,90.7,-0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629311.576,297.4,88.6,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629312.576,302.2,89.0,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629313.577,297.7,88.6,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629314.578,299.8,91.4,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629315.579,301.8,88.9,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629316.578,302.5,89.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629317.579,299.1,90.6,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629318.58,299.1,90.4,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629319.582,300.0,91.0,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629320.583,298.3,90.9,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629321.583,299.6,91.0,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629322.585,297.4,88.9,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629323.586,299.0,90.3,0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629324.586,300.6,88.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629325.587,299.9,90.3,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629326.589,298.3,89.0,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629327.591,300.3,90.2,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629328.592,302.9,90.5,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629329.593,302.3,90.2,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629330.594,299.0,89.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629331.596,299.2,88.7,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629332.596,300.4,90.7,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629333.597,301.9,90.1,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629334.598,299.8,88.8,0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629335.599,302.5,89.3,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629336.6,300.7,90.4,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629337.601,298.2,89.9,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629338.603,301.4,89.2,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629339.604,297.2,91.5,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629340.604,298.8,89.0,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629341.606,302.5,90.1,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629342.607,300.4,88.9,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629343.608,297.6,91.0,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629344.61,301.5,91.5,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629345.611,302.3,91.3,-0.2,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629346.613,299.0,89.8,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629347.613,301.9,90.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629348.615,302.7,90.9,-0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629349.616,300.2,89.4,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629350.618,299.6,90.0,0.4,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629351.619,297.1,89.7,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629352.62,302.1,88.6,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629353.622,300.4,90.0,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629354.624,297.9,89.4,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629355.623,298.2,89.2,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629356.624,301.5,91.0,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629357.625,298.2,90.2,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629358.626,297.4,89.2,-0.2,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629359.628,302.0,89.1,0.4,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629360.628,301.5,88.6,0.3,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629361.63,301.2,90.9,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629362.631,302.0,90.7,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629363.633,299.5,89.2,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629364.634,297.2,90.3,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629365.635,298.8,90.9,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629366.636,300.7,90.3,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629367.637,301.9,91.2,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629368.639,298.6,88.7,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629369.641,301.2,89.8,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629370.641,298.7,88.5,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629371.642,299.9,88.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629372.644,298.2,89.5,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629373.645,297.1,90.5,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629374.646,302.7,88.5,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629375.647,300.7,91.5,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629376.649,301.6,89.1,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629377.65,298.8,89.3,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629378.653,301.4,89.3,0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629379.653,299.2,90.5,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629380.654,299.9,90.3,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629381.655,298.6,90.4,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629382.656,300.9,91.4,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629383.657,300.8,89.1,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629384.659,299.4,91.1,-0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629385.66,299.0,88.6,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629386.66,299.0,90.2,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629387.662,297.9,88.8,0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629388.664,301.5,90.8,-0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629389.665,302.7,89.6,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629390.666,301.5,89.9,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629391.667,299.9,89.3,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629392.669,302.1,89.0,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629393.671,299.8,90.6,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629394.672,302.7,90.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629395.674,299.1,88.5,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629396.676,297.9,88.6,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629397.676,301.4,88.6,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629398.677,301.0,91.5,0.0,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629399.679,302.6,89.3,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629400.681,297.6,89.5,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629401.681,300.4,89.2,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629402.683,297.9,90.7,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629403.684,300.9,90.1,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629404.686,298.3,91.5,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629405.687,299.0,91.1,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629406.689,299.0,91.0,-0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629407.69,300.5,89.8,0.2,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629408.691,297.1,90.2,-0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629409.691,302.7,90.2,0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629410.692,302.8,91.3,-0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629411.694,297.8,90.3,0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629412.694,300.5,90.2,-0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629413.696,299.2,88.7,0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629414.696,299.3,91.0,-0.4,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629415.697,300.6,90.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629416.698,297.6,88.6,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629417.699,297.3,89.3,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629418.7,298.5,89.7,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629419.701,299.8,89.2,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629420.702,299.1,88.8,0.2,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629421.704,301.5,90.0,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629422.705,302.2,90.1,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629423.706,299.9,89.2,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629424.707,297.9,89.4,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629425.709,299.5,90.2,-0.4,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629426.711,300.8,90.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629427.711,302.2,89.7,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629428.712,299.3,91.2,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629429.713,302.4,90.1,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629430.715,301.4,90.5,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629431.715,297.2,91.4,0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629432.716,302.0,88.6,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629433.717,301.4,90.7,0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629434.719,298.6,89.9,0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629435.721,298.5,90.7,0.1,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629436.721,302.8,89.1,-0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629437.723,301.2,90.3,-0.0,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629438.724,301.9,89.7,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629439.725,301.3,90.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629440.727,301.8,89.7,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629441.729,297.7,89.4,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629442.731,302.0,90.0,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629443.732,297.3,90.7,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629444.732,298.4,91.3,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629445.734,300.1,90.1,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629446.736,297.7,89.4,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629447.736,300.4,90.8,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629448.737,298.1,91.4,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629449.739,301.9,91.2,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629450.741,301.3,89.8,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629451.742,297.4,91.4,0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629452.744,298.6,89.8,0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629453.746,298.8,90.2,0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629454.747,302.9,90.7,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629455.748,300.8,90.7,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629456.75,300.9,89.9,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629457.75,300.2,89.5,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629458.752,302.5,89.3,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629459.752,299.8,90.8,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629460.754,300.3,89.4,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629461.756,300.0,88.9,-0.4,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629462.756,302.5,90.0,-0.4,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629463.758,300.7,91.3,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629464.759,299.4,89.8,-0.3,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629465.76,297.8,89.0,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629466.762,297.3,91.4,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629467.764,298.8,90.1,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629468.764,300.6,91.1,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629469.765,297.2,91.2,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629470.767,301.7,88.7,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629471.768,300.7,91.1,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629472.769,300.1,89.6,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629473.77,299.8,89.0,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629474.772,301.9,89.8,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629475.773,301.7,89.9,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629476.775,299.3,91.0,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629477.776,297.5,91.2,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629478.778,298.6,89.4,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629479.779,302.7,90.8,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629480.78,303.0,88.7,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629481.781,300.5,88.9,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629482.782,300.1,90.6,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629483.783,297.7,90.5,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629484.785,298.8,90.6,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629485.785,301.1,88.9,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629486.786,299.9,88.6,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629487.788,298.6,89.2,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629488.789,297.9,89.7,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629489.791,300.4,90.9,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629490.792,299.8,91.0,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629491.792,299.7,88.8,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629492.793,302.4,88.6,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629493.793,299.8,89.3,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629494.795,299.4,89.6,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629495.795,301.7,89.7,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629496.796,300.9,91.4,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629497.797,299.8,89.6,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629498.798,302.5,89.0,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629499.8,300.8,90.8,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629500.801,300.6,89.1,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629501.801,297.2,90.8,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629502.802,299.1,88.7,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629503.804,297.0,91.2,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629504.804,302.6,88.8,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629505.805,301.3,89.8,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629506.807,299.1,90.6,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629507.809,300.5,90.9,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629508.809,297.0,90.1,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629509.81,297.2,91.3,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629510.811,297.4,91.2,0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629511.813,301.4,91.1,0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629512.814,302.0,91.4,0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629513.814,299.8,90.2,0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629514.815,298.1,89.4,-0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629515.817,302.1,89.8,-0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629516.818,299.9,90.8,-0.0,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629517.818,298.1,89.3,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629518.82,297.9,89.2,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629519.821,301.3,89.4,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629520.821,298.5,91.2,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629521.823,297.1,89.6,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629522.824,300.2,88.5,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629523.826,299.2,88.6,-0.3,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629524.826,300.8,88.9,0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629525.83,299.1,89.3,-0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629526.832,301.6,88.8,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629527.832,297.5,89.6,-0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629528.834,299.1,90.9,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629529.836,301.4,88.6,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629530.836,298.5,90.8,0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629531.837,302.8,90.9,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629532.838,302.7,91.0,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629533.839,297.8,89.5,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629534.84,300.5,88.6,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629535.841,298.4,90.3,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629536.842,299.8,90.2,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629537.844,300.8,88.9,-0.0,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629538.845,298.2,90.2,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629539.845,302.1,89.0,0.1,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629540.846,297.1,90.0,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629541.848,297.7,89.7,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629542.848,298.1,90.6,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629543.849,299.4,90.8,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629544.851,301.6,90.9,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629545.852,297.8,91.4,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629546.853,298.7,89.1,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629547.854,297.3,90.9,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629548.855,300.8,88.7,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629549.856,299.7,90.8,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629550.858,298.8,90.2,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629551.859,299.3,90.9,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629552.861,299.6,90.8,0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629553.862,302.7,90.3,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629554.863,298.3,89.3,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629555.864,299.8,89.9,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629556.865,300.5,89.0,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629557.867,298.0,89.7,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629558.869,302.9,89.1,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629559.87,298.3,89.4,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629560.87,300.4,88.5,-0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629561.872,297.0,91.2,0.1,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629562.872,301.3,88.6,-0.4,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629563.874,298.7,90.8,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629564.874,301.7,88.8,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629565.875,300.0,91.3,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629566.876,302.3,89.7,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629567.877,302.1,91.3,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629568.876,301.2,90.6,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629569.878,300.6,91.2,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629570.879,297.2,89.7,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629571.88,301.0,89.1,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629572.881,297.3,88.7,-0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629573.882,301.3,91.3,-0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629574.882,300.5,90.5,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629575.883,301.4,90.4,-0.0,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629576.885,297.3,91.1,0.0,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629577.886,301.8,88.7,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629578.886,298.6,89.1,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629579.887,300.9,90.0,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629580.889,299.1,89.1,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629581.89,301.3,90.3,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629582.891,300.9,89.0,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629583.893,297.1,89.1,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629584.894,297.8,90.1,-0.0,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629585.895,302.5,90.6,0.1,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629586.895,298.2,90.0,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629587.896,298.2,91.1,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629588.897,302.2,89.3,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629589.897,299.6,90.6,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629590.898,298.3,88.6,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629591.899,300.8,89.6,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629592.899,302.8,89.2,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629593.901,298.5,88.7,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629594.901,302.0,91.4,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629595.901,297.1,88.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629596.902,299.8,88.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629597.902,301.2,89.9,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629598.902,299.5,89.8,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629599.903,299.5,89.6,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629600.904,300.5,89.2,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629601.906,299.4,90.7,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629602.906,297.0,88.5,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629603.908,297.9,89.7,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629604.909,300.8,90.4,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629605.91,302.4,90.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629606.911,300.2,90.3,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629607.911,301.1,89.3,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629608.913,302.3,89.5,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629609.914,300.8,88.9,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629610.915,303.0,90.8,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629611.917,299.0,90.5,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629612.917,297.4,90.7,0.1,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629613.918,299.8,89.9,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629614.919,297.2,89.8,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629615.922,302.9,89.2,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629616.923,302.0,90.6,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629617.924,297.5,89.1,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629618.925,297.8,89.0,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629619.925,302.1,90.4,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629620.927,297.8,89.6,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629621.929,298.1,90.3,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629622.93,298.5,90.1,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629623.931,297.9,90.5,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629624.931,299.5,88.6,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629625.932,302.4,89.6,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629626.933,299.2,89.7,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629627.935,298.6,88.9,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629628.935,299.4,91.3,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629629.936,297.2,90.4,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629630.936,298.9,91.4,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629631.937,297.6,90.0,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629632.938,301.5,89.6,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629633.939,298.3,90.0,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629634.941,301.4,90.1,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629635.942,298.2,91.1,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629636.943,299.5,89.0,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629637.944,298.5,91.2,0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629638.946,301.1,90.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629639.946,297.2,89.5,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629640.948,299.9,89.4,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629641.95,299.3,88.7,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629642.95,301.0,91.1,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629643.952,302.6,89.1,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629644.953,302.1,89.2,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629645.953,300.9,89.1,-0.3,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629646.954,298.3,88.7,-0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629647.956,299.7,91.2,0.0,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629648.957,297.5,89.5,-0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629649.957,299.3,90.9,-0.1,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629650.959,299.9,89.7,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629651.96,297.1,89.3,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629652.961,301.3,90.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629653.962,298.1,89.7,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629654.964,300.5,90.5,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629655.965,298.1,90.1,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629656.966,302.4,89.4,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629657.967,301.4,89.8,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629658.967,299.5,91.2,-0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629659.968,302.9,89.3,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629660.97,297.6,89.8,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629661.971,302.5,89.8,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629662.971,301.6,90.3,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629663.973,299.7,91.3,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629664.973,300.7,88.6,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629665.974,299.7,88.9,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629666.975,302.1,88.8,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629667.978,297.2,89.8,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629668.979,297.5,89.4,0.4,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629669.979,299.4,89.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629670.979,299.8,91.2,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629671.98,298.0,90.5,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629672.98,302.9,91.1,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629673.981,298.5,91.1,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629674.982,300.3,90.6,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629675.984,298.4,89.9,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629676.984,302.9,90.1,0.2,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629677.985,300.6,89.5,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629678.986,300.8,90.9,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629679.987,300.5,89.5,-0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629680.989,298.4,91.4,-0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629681.99,301.2,90.0,0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629682.991,298.6,89.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629683.992,301.1,91.2,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629684.994,299.7,90.8,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629685.995,298.6,90.7,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629686.996,299.5,88.5,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629687.997,302.5,89.6,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629688.998,298.4,88.7,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629689.998,297.9,90.4,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629690.999,301.9,89.8,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629692.001,301.4,89.4,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629693.002,301.7,90.2,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629694.003,301.6,90.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629695.004,299.2,90.1,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629696.006,300.5,89.8,-0.4,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629697.006,298.8,91.3,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629698.008,297.0,90.6,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629699.01,302.0,88.8,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629700.011,300.3,89.5,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629701.012,302.2,90.6,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629702.014,301.0,89.8,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629703.015,299.5,89.1,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629704.016,297.3,89.0,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629705.016,297.3,88.9,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629706.018,299.0,90.7,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629707.019,301.8,89.9,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629708.02,297.8,90.0,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629709.02,300.0,90.2,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629710.021,300.5,91.1,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629711.023,302.4,90.5,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629712.023,299.0,89.7,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629713.025,300.7,89.2,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629714.025,301.2,90.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629715.026,300.4,90.6,-0.3,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629716.027,297.4,91.4,0.0,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629717.028,298.6,89.8,-0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629718.028,299.4,89.6,-0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629719.029,298.6,89.0,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629720.031,298.4,89.5,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629721.032,302.2,90.8,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629722.032,300.5,91.4,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629723.032,300.5,90.4,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629724.034,299.4,91.5,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629725.035,298.5,90.6,0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629726.036,301.6,90.5,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629727.037,301.7,89.1,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629728.038,299.6,88.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629729.04,298.4,90.8,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629730.042,299.5,91.1,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629731.042,302.0,89.9,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629732.043,302.3,89.3,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629733.044,299.9,89.2,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629734.046,302.7,88.7,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629735.047,299.7,88.6,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629736.049,302.2,89.3,-0.1,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629737.049,301.6,90.1,0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629738.051,298.4,89.1,0.1,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629739.051,300.2,90.8,0.1,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629740.052,301.4,90.1,-0.2,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629741.053,299.4,89.9,-0.3,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629742.055,298.0,91.2,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629743.056,302.0,89.2,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629744.057,297.7,90.6,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629745.059,301.3,91.3,0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629746.059,298.6,89.3,0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629747.061,298.3,88.9,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629748.062,302.2,90.4,-0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629749.062,301.5,89.7,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629750.064,298.7,90.7,-0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629751.066,300.3,90.6,-0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629752.067,297.1,88.9,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629753.068,300.0,90.7,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629754.07,302.0,91.0,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629755.071,300.5,90.6,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629756.072,298.9,91.5,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629757.074,297.3,91.4,0.2,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629758.076,302.9,89.3,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629759.077,299.7,89.4,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629760.079,297.6,90.0,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629761.079,299.2,89.4,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629762.081,302.7,88.9,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629763.082,297.9,88.6,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629764.083,301.9,89.2,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629765.085,298.5,89.7,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629766.087,299.2,89.3,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629767.089,300.5,91.3,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629768.089,299.2,90.0,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629769.09,300.1,90.8,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629770.091,298.1,89.5,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629771.091,301.8,90.8,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629772.093,302.3,89.3,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629773.094,302.6,91.1,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629774.095,300.4,90.3,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629775.097,298.4,89.3,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629776.098,298.5,89.1,-0.0,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629777.098,299.8,89.2,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629778.099,298.9,89.9,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629779.101,299.9,89.6,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629780.101,301.0,88.9,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629781.101,301.5,91.3,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629782.103,300.5,90.1,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629783.105,299.8,90.0,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629784.105,301.6,89.5,-0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629785.106,301.2,89.7,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629786.107,299.8,88.7,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629787.109,297.8,88.8,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629788.109,300.3,89.5,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629789.109,299.5,91.3,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629790.11,297.1,91.5,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629791.111,302.8,90.7,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629792.113,297.4,89.4,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629793.113,297.3,90.7,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629794.116,297.9,89.4,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629795.117,300.4,90.6,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629796.117,297.5,89.4,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629797.118,297.8,90.0,-0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629798.119,297.8,90.8,0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629799.12,298.5,89.7,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629800.122,301.2,88.9,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629801.122,299.5,90.9,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629802.123,301.7,90.3,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629803.124,300.1,91.0,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629804.126,299.9,90.5,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629805.127,302.1,89.4,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629806.128,303.0,91.0,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629807.129,302.5,89.6,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629808.13,299.3,90.0,0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629809.132,297.3,88.7,0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629810.132,298.2,90.1,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629811.134,302.0,89.9,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629812.135,301.6,90.4,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629813.136,298.6,88.9,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629814.137,302.2,91.5,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629815.137,299.8,89.9,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629816.138,297.4,90.0,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629817.14,298.3,90.8,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629818.14,302.5,88.6,0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629819.142,301.8,89.3,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629820.142,301.1,88.5,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629821.144,297.2,91.0,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629822.145,297.9,89.1,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629823.145,302.5,90.3,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629824.146,297.7,91.0,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629825.148,302.6,89.5,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629826.148,297.6,89.2,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629827.149,299.3,89.7,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629828.151,298.7,89.6,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629829.151,298.8,89.6,-0.0,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629830.152,298.8,88.6,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629831.155,299.0,89.5,-0.4,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629832.155,302.1,89.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629833.157,300.6,88.9,0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629834.158,297.6,89.0,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629835.159,301.2,89.2,0.1,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629836.16,300.3,90.0,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629837.171,302.4,89.6,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629838.172,302.2,90.6,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629839.174,297.7,90.5,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629840.176,298.2,89.7,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629841.176,302.8,89.0,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629842.177,299.2,88.9,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629843.178,298.9,89.3,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629844.18,301.5,91.4,-0.0,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629845.181,300.9,90.1,0.1,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629846.182,302.7,89.9,-0.2,danger,optimal,danger,↑ increasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629847.183,298.4,89.8,0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629848.184,299.0,88.5,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629849.185,299.5,88.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629850.186,300.2,88.9,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629851.187,297.7,90.3,0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629852.189,297.6,88.6,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629853.189,302.8,88.7,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629854.191,301.1,88.7,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629855.192,297.0,88.6,-0.2,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629856.194,302.5,89.6,0.0,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629857.195,300.5,90.4,0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629858.197,302.7,88.8,-0.2,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629859.198,300.0,89.7,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629860.199,301.7,88.5,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629861.199,301.2,88.7,-0.3,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629862.2,300.1,89.5,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629863.2,298.3,90.4,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629864.217,299.7,90.1,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629865.218,297.0,90.0,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629866.219,297.8,88.7,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629867.22,298.3,91.0,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629868.221,297.3,91.1,0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629869.222,297.9,91.2,0.2,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629870.223,302.3,88.9,0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629871.223,297.7,90.1,0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629872.225,298.0,88.7,-0.4,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629873.226,297.2,91.3,0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629874.228,299.1,89.3,-0.3,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629875.229,299.3,88.9,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629876.231,297.9,91.5,0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629877.231,298.8,91.0,-0.2,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629878.231,298.4,90.1,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629879.232,297.9,89.9,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629880.234,298.4,90.6,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629881.236,302.2,89.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629882.237,299.6,90.1,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629883.238,298.8,90.9,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629884.24,301.2,88.6,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629885.241,301.4,90.4,-0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629886.243,298.4,90.0,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629887.243,298.6,90.5,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629888.244,300.5,88.6,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629889.246,297.7,91.4,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629890.248,299.4,90.5,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629891.248,300.2,89.6,0.0,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629892.248,299.9,90.3,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629893.25,301.4,90.1,0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629894.251,300.6,90.8,-0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629895.252,298.7,91.0,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629896.252,302.0,90.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629897.252,298.0,91.3,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629898.254,300.3,89.4,0.4,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629899.256,297.2,89.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629900.256,298.5,90.9,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629901.258,301.8,91.2,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629902.258,299.7,91.3,-0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629903.259,299.0,91.0,-0.1,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629904.26,301.6,89.5,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629905.261,301.9,91.4,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629906.262,298.2,89.2,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629907.262,300.3,89.3,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629908.264,302.9,90.6,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629909.266,299.1,90.3,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629910.266,297.6,89.3,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629911.268,302.0,88.6,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629912.268,299.3,91.5,-0.0,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629913.27,300.9,88.7,-0.1,danger,optimal,danger,↑ increasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629914.27,297.7,91.5,0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629915.272,301.3,90.9,-0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629916.273,298.9,90.2,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629917.273,299.8,89.1,-0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629918.275,302.5,90.1,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629919.277,298.0,91.2,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629920.279,301.1,91.2,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629921.281,298.6,89.0,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629922.282,299.6,88.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629923.283,302.0,90.7,-0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629924.285,301.7,90.4,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629925.286,298.1,88.6,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629926.288,298.6,89.0,-0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629927.29,297.4,89.2,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629928.291,302.2,91.2,0.0,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629929.293,302.6,88.9,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629930.294,298.5,89.4,0.1,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629931.295,297.6,91.4,-0.3,danger,optimal,danger,→ stable,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629932.296,299.3,91.4,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629933.297,298.5,91.0,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629934.298,301.5,90.4,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629935.299,299.9,90.0,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629936.3,298.9,90.9,0.0,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629937.302,297.2,90.2,-0.3,danger,optimal,danger,→ stable,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629938.304,298.3,89.5,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629939.304,297.1,90.3,0.1,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629940.305,299.9,89.8,-0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629941.306,302.0,89.9,0.0,danger,optimal,danger,↓ decreasing,↑ increasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629942.307,297.1,90.9,-0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629943.308,302.1,91.2,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629944.31,301.5,89.4,0.4,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629945.312,300.2,88.9,0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629946.313,301.6,89.1,-0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629947.314,299.3,91.1,0.1,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629948.314,300.2,90.0,-0.2,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629949.316,298.3,91.2,0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629950.317,299.9,90.4,-0.3,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629951.318,298.1,90.6,0.1,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629952.319,298.7,89.3,-0.4,danger,optimal,danger,↑ increasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629953.321,298.3,89.0,0.3,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629954.322,297.2,88.8,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629955.322,299.9,89.2,-0.2,danger,optimal,danger,→ stable,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629956.323,297.3,89.3,0.2,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629957.325,297.4,91.2,-0.1,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629958.326,298.5,89.1,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629959.327,298.0,89.1,0.2,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629960.328,299.1,90.0,0.4,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629961.329,297.9,89.0,-0.3,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629962.33,297.0,89.5,0.3,danger,optimal,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779629963.331,298.7,90.7,-0.3,danger,optimal,danger,↓ decreasing,→ stable,→ stable,GOOD,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🛞 LOW_PRESSURE: Tire pressure dangerously low

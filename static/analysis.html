@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Real-time vehicle health analysis and diagnostics dashboard" />
+  <title>Vehicle Health Analysis</title>
+  <link rel="stylesheet" href="/static/style.css" />
+  <link rel="stylesheet" href="/static/analysis-style.css" />
+
+  <!-- SVG gradient definitions -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#005f99"/>
+        <stop offset="100%" stop-color="#00e5ff"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#993d00"/>
+        <stop offset="100%" stop-color="#ffab00"/>
+      </linearGradient>
+      <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#00663a"/>
+        <stop offset="100%" stop-color="#69f0ae"/>
+      </linearGradient>
+      <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#990022"/>
+        <stop offset="100%" stop-color="#ff5577"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</head>
+<body>
+
+<!-- Animated background -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanlines"></div>
+
+<div class="dashboard analysis-dashboard">
+
+  <!-- ─── Header ──────────────────────────────── -->
+  <header class="dash-header">
+    <div class="logo">
+      <span class="logo-icon">🔬</span>
+      <h1>Vehicle Health Analysis</h1>
+    </div>
+    <div class="header-actions">
+      <a href="/" class="btn-nav">← Back to Dashboard</a>
+      <div class="conn-status">
+        <span class="conn-dot"></span>
+        <span class="conn-label">DISCONNECTED</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- ─── Health Score Card ──────────────────── -->
+  <section class="health-score-section">
+    <div class="health-card">
+      <div class="health-header">
+        <h2>Overall Vehicle Health</h2>
+        <span class="health-status">—</span>
+      </div>
+      <div class="health-score-display">
+        <svg class="health-gauge" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="90" class="health-bg-arc" />
+          <circle cx="100" cy="100" r="90" class="health-value-arc" />
+          <text x="100" y="100" class="health-number">—</text>
+          <text x="100" y="125" class="health-unit">%</text>
+        </svg>
+      </div>
+      <div class="health-components">
+        <div class="component-score">
+          <span class="comp-label">Speed</span>
+          <div class="comp-bar"><div class="comp-fill speed-fill"></div></div>
+          <span class="comp-value">—</span>
+        </div>
+        <div class="component-score">
+          <span class="comp-label">Temperature</span>
+          <div class="comp-bar"><div class="comp-fill temp-fill"></div></div>
+          <span class="comp-value">—</span>
+        </div>
+        <div class="component-score">
+          <span class="comp-label">Tire Pressure</span>
+          <div class="comp-bar"><div class="comp-fill psi-fill"></div></div>
+          <span class="comp-value">—</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── ML Model Analysis (Isolation Forest only) ─────────── -->
+  <section class="ml-analysis-section">
+    <h2 class="ml-analysis-title"><span>🤖</span> ML Model Analysis</h2>
+    <p class="ml-analysis-subtitle">Isolation Forest · scaled telemetry · Layer 2 only</p>
+    <div id="ml-analysis-content" class="ml-analysis-content">
+      Waiting for analysis stream…
+    </div>
+  </section>
+
+  <!-- ─── Layer 3 Cognitive Diagnostic Report ──────── -->
+  <section id="layer3-panel" class="layer3-panel" style="display:none;">
+    <div class="layer3-header">
+      <span class="layer3-icon">🤖</span>
+      <span class="layer3-title">Layer 3 · SDV Cognitive Diagnostic</span>
+      <span id="layer3-badge" class="layer3-badge">ML ANOMALY</span>
+    </div>
+    <p id="layer3-report-text" class="layer3-report-text">—</p>
+    <div class="layer3-meta">
+      <span id="layer3-root-cause" class="layer3-meta-item"></span>
+      <span id="layer3-score" class="layer3-meta-item"></span>
+    </div>
+  </section>
+
+  <!-- ─── AI Diagnosis Panel ──────────────────── -->
+  <section class="ai-diagnosis-section" id="ai-diagnosis-section">
+    <div class="ai-header">
+      <h2><span class="ai-brain-icon">🧠</span> AI Diagnosis</h2>
+      <div class="ai-meta">
+        <span class="ai-model-badge" id="ai-model-badge">
+          <span class="ai-dot"></span>
+          <span class="ai-model-name">INITIALIZING</span>
+        </span>
+        <button class="btn-force-ai" id="btn-force-ai" title="Force immediate AI analysis">
+          ⚡ Analyze Now
+        </button>
+      </div>
+    </div>
+
+    <div class="ai-card" id="ai-card">
+      <!-- Severity Banner -->
+      <div class="ai-severity-banner" id="ai-severity-banner">
+        <span class="ai-severity-icon" id="ai-severity-icon">🔄</span>
+        <span class="ai-severity-label" id="ai-severity-label">AWAITING DATA</span>
+        <span class="ai-confidence" id="ai-confidence">
+          <span class="ai-confidence-label">Confidence:</span>
+          <span class="ai-confidence-value" id="ai-confidence-value">—</span>
+        </span>
+      </div>
+
+      <!-- Main Diagnosis -->
+      <div class="ai-diagnosis-content">
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">🔍</span> Diagnosis
+          </div>
+          <div class="ai-field-text" id="ai-diagnosis-text">
+            Waiting for AI analysis... The AI engine analyzes telemetry every 10 seconds.
+          </div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">🔬</span> Root Cause
+          </div>
+          <div class="ai-field-text" id="ai-root-cause-text">—</div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">📈</span> Prediction
+          </div>
+          <div class="ai-field-text" id="ai-prediction-text">—</div>
+        </div>
+
+        <div class="ai-field">
+          <div class="ai-field-label">
+            <span class="ai-field-icon">🎯</span> Recommended Action
+          </div>
+          <div class="ai-field-text ai-action-text" id="ai-action-text">—</div>
+        </div>
+      </div>
+
+      <!-- Affected Systems Tags -->
+      <div class="ai-systems-row">
+        <span class="ai-systems-label">Affected Systems:</span>
+        <div class="ai-systems-tags" id="ai-systems-tags">
+          <span class="ai-tag ai-tag-none">None detected</span>
+        </div>
+      </div>
+
+      <!-- AI Stats Footer -->
+      <div class="ai-footer">
+        <span class="ai-stat" id="ai-call-count">AI Calls: 0</span>
+        <span class="ai-stat" id="ai-last-updated">Last updated: —</span>
+        <span class="ai-stat" id="ai-interval">Interval: 10s</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Real-time Metrics ──────────────────── -->
+  <section class="metrics-section">
+    <h2>Real-time Metrics</h2>
+    
+    <div class="metrics-grid">
+      <!-- Speed Metric -->
+      <div class="metric-card speed-metric">
+        <div class="metric-header">
+          <span class="metric-icon">⚡</span>
+          <span class="metric-title">Speed</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— km/h</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-speed">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Average:</span>
+            <span class="detail-value avg-speed">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Trend:</span>
+            <span class="detail-value trend-speed">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Temperature Metric -->
+      <div class="metric-card temp-metric">
+        <div class="metric-header">
+          <span class="metric-icon">🌡️</span>
+          <span class="metric-title">Engine Temp</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— °C</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-temp">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Average:</span>
+            <span class="detail-value avg-temp">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Trend:</span>
+            <span class="detail-value trend-temp">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tire Pressure Metric -->
+      <div class="metric-card psi-metric">
+        <div class="metric-header">
+          <span class="metric-icon">🛞</span>
+          <span class="metric-title">Tire Pressure</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— PSI</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-psi">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Average:</span>
+            <span class="detail-value avg-psi">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Trend:</span>
+            <span class="detail-value trend-psi">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- RPM Metric -->
+      <div class="metric-card rpm-metric">
+        <div class="metric-header">
+          <span class="metric-icon">⚙️</span>
+          <span class="metric-title">Engine RPM</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— RPM</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-rpm">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Status:</span>
+            <span class="detail-value rpm-status">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oil Pressure Metric -->
+      <div class="metric-card oil-metric">
+        <div class="metric-header">
+          <span class="metric-icon">🛢️</span>
+          <span class="metric-title">Oil Pressure</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— PSI</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-oil">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Status:</span>
+            <span class="detail-value oil-status">—</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Battery Voltage Metric -->
+      <div class="metric-card battery-metric">
+        <div class="metric-header">
+          <span class="metric-icon">🔋</span>
+          <span class="metric-title">Battery Voltage</span>
+          <span class="metric-status">—</span>
+        </div>
+        <div class="metric-value">— V</div>
+        <div class="metric-details">
+          <div class="detail-row">
+            <span>Current:</span>
+            <span class="detail-value current-battery">—</span>
+          </div>
+          <div class="detail-row">
+            <span>Status:</span>
+            <span class="detail-value battery-status">—</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Alerts & Diagnostics ──────────────── -->
+  <section class="alerts-section">
+    <div class="alerts-header">
+      <h2>🚨 Diagnostic Alerts</h2>
+      <span class="alert-count">0</span>
+    </div>
+    <div class="alerts-container">
+      <div class="alert-placeholder">No alerts — Vehicle operating normally</div>
+    </div>
+  </section>
+
+  <!-- ─── Service Center Recommendation ────────── -->
+  <section class="recommendation-section">
+    <h2>🔧 Service Center Recommendation</h2>
+    <div class="recommendation-card">
+      <div class="recommendation-status">
+        <span class="recommendation-icon">✅</span>
+        <span class="recommendation-text">Vehicle is safe to operate</span>
+      </div>
+      <div class="recommendation-details">
+        <div class="detail-item">
+          <span class="detail-label">Overall Health:</span>
+          <span class="detail-value recommendation-health">—</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Critical Issues:</span>
+          <span class="detail-value recommendation-critical">None</span>
+        </div>
+        <div class="detail-item">
+          <span class="detail-label">Recommendation:</span>
+          <span class="detail-value recommendation-action">Continue journey safely</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Redline Warning Banner ─────────────────── -->
+  <div class="redline-warning-banner" id="redline-banner">
+    <div class="redline-icon">🔴</div>
+    <div class="redline-text-block">
+      <div class="redline-title">REDLINE WARNING</div>
+      <div class="redline-subtitle">UPSHIFT IMMEDIATELY — Engine at physical RPM limit</div>
+    </div>
+    <div class="redline-gear-badge" id="redline-gear-badge">GEAR TOO LOW</div>
+  </div>
+
+</div>
+
+<script src="/static/bg.js"></script>
+<script src="/static/analysis.js"></script>
+</body>
+</html>

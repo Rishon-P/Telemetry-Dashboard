@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Real-time automotive telemetry dashboard with live WebSocket data streaming" />
+  <title>Telemetry Command Center</title>
+  <link rel="stylesheet" href="/static/style.css" />
+
+  <!-- SVG gradient definitions (referenced by gauge arcs) -->
+  <svg width="0" height="0" style="position:absolute">
+    <defs>
+      <linearGradient id="grad-blue" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#005f99"/>
+        <stop offset="100%" stop-color="#00e5ff"/>
+      </linearGradient>
+      <linearGradient id="grad-orange" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#993d00"/>
+        <stop offset="100%" stop-color="#ffab00"/>
+      </linearGradient>
+      <linearGradient id="grad-green" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#00663a"/>
+        <stop offset="100%" stop-color="#69f0ae"/>
+      </linearGradient>
+      <linearGradient id="grad-amber" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#996600"/>
+        <stop offset="100%" stop-color="#ffdd57"/>
+      </linearGradient>
+      <linearGradient id="grad-red" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#990022"/>
+        <stop offset="100%" stop-color="#ff5577"/>
+      </linearGradient>
+      <linearGradient id="grad-cold" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%"   stop-color="#1565c0"/>
+        <stop offset="100%" stop-color="#90caf9"/>
+      </linearGradient>
+    </defs>
+  </svg>
+</head>
+<body>
+
+<!-- Animated background -->
+<canvas id="bg-canvas"></canvas>
+<div class="scanlines"></div>
+
+<div class="dashboard">
+
+  <!-- ─── Header ──────────────────────────────── -->
+  <header class="dash-header">
+    <div class="logo">
+      <span class="logo-icon">🏎️</span>
+      <h1>Telemetry Command Center</h1>
+    </div>
+    <div class="header-controls" style="margin-left: auto; margin-right: 20px;">
+      <button id="btn-auto-drive" style="background: #222; color: #fff; border: 1px solid #444; padding: 8px 16px; border-radius: 4px; cursor: pointer; font-weight: bold; transition: all 0.3s;">Toggle Auto-Drive: OFF</button>
+    </div>
+    <div class="conn-status">
+      <span class="conn-dot"></span>
+      <span class="conn-label">DISCONNECTED</span>
+    </div>
+  </header>
+
+  <!-- ─── Gauge Cluster ──────────────────────── -->
+  <section class="gauge-cluster">
+    <div class="gauge-card temp">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🌡️</div>
+          <span class="gauge-title">Engine Temperature</span>
+          <span class="status-badge" data-gauge="temp">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">°C</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>150</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill temp-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>150</span></div>
+            <div class="slider-value-display">90 °C</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="150" step="0.5" value="90" data-gauge="temp" />
+            </div>
+            <button class="btn-apply" id="btn-temp">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card speed">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">⚡</div>
+          <span class="gauge-title">Vehicle Speed</span>
+          <span class="status-badge" data-gauge="speed">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">km/h</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>300</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill speed-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>300</span></div>
+            <div class="slider-value-display">80 km/h</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="300" step="1" value="80" data-gauge="speed" />
+            </div>
+            <button class="btn-apply" id="btn-speed">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card rpm">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">⚙️</div>
+          <span class="gauge-title">Engine RPM</span>
+          <span class="status-badge" data-gauge="rpm">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">RPM</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>7000</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill rpm-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>7000</span></div>
+            <div class="slider-value-display">1500 RPM</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="7000" step="100" value="1500" data-gauge="rpm" />
+            </div>
+            <button class="btn-apply" id="btn-rpm">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card oil">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🛢️</div>
+          <span class="gauge-title">Oil Pressure</span>
+          <span class="status-badge" data-gauge="oil">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">PSI</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>100</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill oil-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>100</span></div>
+            <div class="slider-value-display">45 PSI</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="100" step="1" value="45" data-gauge="oil" />
+            </div>
+            <button class="btn-apply" id="btn-oil">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card battery">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🔋</div>
+          <span class="gauge-title">Battery Voltage</span>
+          <span class="status-badge" data-gauge="battery">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">V</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>16</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill battery-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>16</span></div>
+            <div class="slider-value-display">13.8 V</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="16" step="0.1" value="13.8" data-gauge="battery" />
+            </div>
+            <button class="btn-apply" id="btn-battery">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card fuel">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">⛽</div>
+          <span class="gauge-title">Fuel Level</span>
+          <span class="status-badge" data-gauge="fuel">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">%</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>100</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill fuel-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>100</span></div>
+            <div class="slider-value-display">85 %</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="100" step="1" value="85" data-gauge="fuel" />
+            </div>
+            <button class="btn-apply" id="btn-fuel">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card tire-fl">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🛞</div>
+          <span class="gauge-title">Tire Pressure FL</span>
+          <span class="status-badge" data-gauge="tire_fl">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">PSI</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>60</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill tire-fl-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>60</span></div>
+            <div class="slider-value-display">32 PSI</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_fl" />
+            </div>
+            <button class="btn-apply" id="btn-tire-fl">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card tire-fr">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🛞</div>
+          <span class="gauge-title">Tire Pressure FR</span>
+          <span class="status-badge" data-gauge="tire_fr">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">PSI</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>60</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill tire-fr-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>60</span></div>
+            <div class="slider-value-display">32 PSI</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_fr" />
+            </div>
+            <button class="btn-apply" id="btn-tire-fr">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card tire-rl">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🛞</div>
+          <span class="gauge-title">Tire Pressure RL</span>
+          <span class="status-badge" data-gauge="tire_rl">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">PSI</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>60</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill tire-rl-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>60</span></div>
+            <div class="slider-value-display">32 PSI</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_rl" />
+            </div>
+            <button class="btn-apply" id="btn-tire-rl">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card tire-rr">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🛞</div>
+          <span class="gauge-title">Tire Pressure RR</span>
+          <span class="status-badge" data-gauge="tire_rr">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">PSI</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>60</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill tire-rr-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>60</span></div>
+            <div class="slider-value-display">32 PSI</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="60" step="0.5" value="32" data-gauge="tire_rr" />
+            </div>
+            <button class="btn-apply" id="btn-tire-rr">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="gauge-card throttle">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">🚀</div>
+          <span class="gauge-title">Throttle Position</span>
+          <span class="status-badge" data-gauge="throttle">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">%</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>100</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill throttle-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>100</span></div>
+            <div class="slider-value-display">20 %</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="100" step="1" value="20" data-gauge="throttle" />
+            </div>
+            <button class="btn-apply" id="btn-throttle">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card load">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">⚙️</div>
+          <span class="gauge-title">Engine Load</span>
+          <span class="status-badge" data-gauge="load">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">%</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>100</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill load-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>100</span></div>
+            <div class="slider-value-display">35 %</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="100" step="1" value="35" data-gauge="load" />
+            </div>
+            <button class="btn-apply" id="btn-load">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card maf">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">💨</div>
+          <span class="gauge-title">Mass Air Flow</span>
+          <span class="status-badge" data-gauge="maf">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">0</span>
+          <span class="gauge-unit">g/s</span>
+        </div>
+      </div>
+      
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>0</span><span>655</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill maf-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>0</span><span>655</span></div>
+            <div class="slider-value-display">11 g/s</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="655" step="1" value="11" data-gauge="maf" />
+            </div>
+            <button class="btn-apply" id="btn-maf">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+    <div class="gauge-card gear">
+      <div class="gauge-card-header">
+        <div class="header-left">
+          <div class="ctrl-icon">⚙️</div>
+          <span class="gauge-title">Selected Gear</span>
+          <span class="status-badge" data-gauge="gear">—</span>
+        </div>
+        <div class="gauge-value">
+          <span class="gauge-number">6</span>
+          <span class="gauge-unit">GEAR</span>
+        </div>
+      </div>
+
+      <div class="gauge-row">
+        <div class="horiz-gauge-col">
+          <div class="gauge-minmax"><span>N</span><span>6</span></div>
+          <div class="horiz-gauge-track">
+            <div class="horiz-gauge-fill gear-fill"></div>
+          </div>
+          <div class="gauge-label-sub">LIVE METRIC</div>
+        </div>
+
+        <div class="inline-slider-col">
+          <div class="slider-top-row">
+            <div class="slider-minmax"><span>N</span><span>6</span></div>
+            <div class="slider-value-display">6 GEAR</div>
+          </div>
+          <div class="slider-control-row">
+            <div class="slider-wrap">
+              <div class="slider-fill-track"></div>
+              <input type="range" min="0" max="6" step="1" value="6" data-gauge="gear" />
+            </div>
+            <button class="btn-apply" id="btn-gear">APPLY</button>
+          </div>
+          <div class="gauge-label-sub">BASELINE CONTROL</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ─── Data Feed ──────────────────────────── -->
+  <section class="feed-section">
+    <div class="feed-header">
+      <h3>📡 Live Telemetry Feed</h3>
+      <span class="feed-toggle open">▼</span>
+    </div>
+    <div class="feed-log"></div>
+  </section>
+
+</div>
+
+<script src="/static/bg.js"></script>
+<script src="/static/app.js"></script>
+</body>
+</html>

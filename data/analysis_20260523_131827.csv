@@ -1,0 +1,537 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,speed_status,temp_status,psi_status,speed_trend,temp_trend,psi_trend,overall_health,alerts
+1779522507.603,80.1,90.4,32.2,optimal,optimal,optimal,—,—,—,EXCELLENT,NONE
+1779522508.603,82.8,90.4,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522509.604,80.7,89.6,32.0,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522510.605,80.6,90.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522511.606,81.6,90.2,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522512.607,78.8,90.0,32.1,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522513.607,81.4,91.2,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522514.608,78.2,88.7,32.2,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522515.61,82.3,88.7,31.9,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522516.61,80.0,89.1,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522517.611,79.6,90.5,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522518.612,77.7,88.9,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522519.613,80.1,90.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522520.614,79.2,91.5,32.2,optimal,optimal,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522521.615,77.8,88.9,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522522.615,81.2,89.6,31.7,optimal,optimal,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522523.616,78.7,90.7,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522524.617,82.4,90.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522525.617,79.2,90.5,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522526.617,82.1,90.9,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522527.618,77.5,89.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522528.619,83.0,91.4,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522529.619,78.8,91.0,32.3,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522530.62,79.0,89.0,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522531.621,80.0,90.9,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522532.622,77.0,90.6,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522533.622,81.2,91.0,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522534.622,80.9,90.6,32.2,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522535.623,82.0,89.7,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522536.623,77.3,89.3,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522537.624,80.7,88.7,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522538.624,80.1,91.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522539.625,82.8,91.2,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522540.626,77.7,90.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522541.627,79.3,89.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522542.628,80.9,89.0,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522543.629,81.0,88.9,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522544.63,79.9,91.3,32.3,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522545.63,79.9,89.2,32.2,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522546.63,78.9,89.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522547.631,78.0,88.7,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522548.631,81.7,89.1,31.8,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522549.632,77.3,89.7,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522550.632,80.7,88.9,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522551.632,81.6,90.5,32.1,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522552.633,82.1,89.8,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522553.633,80.7,91.2,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522554.633,82.4,90.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522555.633,77.2,91.3,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522556.634,77.8,91.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522557.635,80.8,89.3,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522558.636,78.8,89.7,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522559.637,82.1,90.2,32.2,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522560.638,81.8,89.4,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522561.639,79.6,90.7,32.0,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522562.639,78.7,88.9,31.9,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522563.64,79.4,89.1,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522564.64,82.5,89.6,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522565.641,82.0,90.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522566.641,82.5,91.4,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522567.642,78.7,91.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522568.643,80.4,91.4,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522569.643,78.2,89.8,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522570.644,78.7,90.9,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522571.645,79.0,89.3,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522572.646,82.1,90.7,31.9,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522573.647,81.4,88.6,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522574.647,81.5,90.1,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522575.648,77.7,88.7,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522576.648,79.0,88.9,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522577.648,77.1,91.2,32.0,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522578.649,81.0,88.6,32.3,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522579.649,80.9,90.7,32.4,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522580.649,77.2,91.1,31.9,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522581.649,81.5,90.1,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522582.649,77.7,90.2,32.0,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522583.651,79.7,91.3,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522584.652,82.2,90.8,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522585.653,80.6,89.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522586.654,79.3,89.4,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522587.653,77.8,90.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522588.655,79.4,89.4,32.1,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522589.656,82.7,88.6,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522590.656,78.5,91.2,32.0,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522591.657,79.6,91.0,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522592.657,82.7,90.0,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522593.658,78.7,91.1,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522594.659,80.5,90.8,31.9,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522595.659,81.6,90.6,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522596.66,82.3,89.4,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522597.661,81.0,90.6,31.8,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522598.662,77.1,90.5,32.0,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522599.662,80.5,90.7,31.7,optimal,optimal,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,NONE
+1779522600.663,78.4,90.1,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522601.664,80.1,90.0,32.1,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522602.665,78.4,89.2,31.6,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522603.665,78.1,90.1,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522604.666,80.1,91.1,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522605.667,79.2,89.6,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522606.668,77.2,89.4,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522607.668,79.3,91.4,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522608.669,79.3,88.8,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522609.669,79.3,91.1,31.8,optimal,optimal,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522610.669,78.0,89.1,31.8,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522611.67,80.5,90.2,32.2,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522612.671,82.7,89.9,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522613.671,82.3,91.3,32.4,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522614.672,79.7,90.9,32.1,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522615.672,79.8,91.5,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522616.673,81.3,91.3,32.3,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522617.674,77.6,91.1,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522618.675,80.8,89.1,32.3,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522619.675,78.4,89.2,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522620.676,78.3,90.4,32.0,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522621.676,77.6,90.5,31.8,optimal,optimal,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,NONE
+1779522622.678,79.5,88.6,31.8,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522623.679,80.6,91.3,31.7,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522624.68,77.3,89.9,31.7,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522625.681,81.2,89.0,32.3,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522626.682,81.9,91.4,31.9,optimal,optimal,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,NONE
+1779522627.683,82.2,90.2,32.0,optimal,optimal,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,NONE
+1779522628.684,81.3,90.4,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522629.685,81.3,88.6,32.3,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522630.685,82.4,91.0,32.2,optimal,optimal,optimal,→ stable,→ stable,→ stable,EXCELLENT,NONE
+1779522631.684,81.7,91.3,31.7,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522632.685,79.1,91.4,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522633.686,81.6,91.0,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522634.687,78.8,88.7,31.6,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522635.688,79.2,89.2,32.2,optimal,optimal,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,NONE
+1779522636.69,80.3,151.4,32.0,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522637.691,81.8,149.2,32.3,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522638.692,80.5,150.5,32.2,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522639.692,78.9,150.7,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522640.693,80.2,149.0,32.3,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522641.694,78.7,151.1,32.2,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522642.695,79.0,149.3,31.8,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522643.696,77.8,151.3,32.1,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522644.697,80.6,150.7,32.1,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522645.697,81.6,150.9,32.2,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522646.698,78.0,149.2,31.6,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522647.699,78.4,149.3,31.8,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522648.7,77.4,148.6,31.9,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522649.701,80.9,150.8,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522650.701,79.6,148.8,31.6,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522651.702,79.5,149.4,31.8,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522652.703,81.7,150.4,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522653.704,77.2,148.9,31.6,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522654.705,80.3,150.9,32.1,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522655.706,77.9,151.4,31.9,optimal,danger,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522656.707,78.7,150.4,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522657.708,78.6,151.2,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522658.709,80.2,149.6,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522659.71,79.0,149.7,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522660.711,82.4,150.0,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522661.712,81.9,149.4,32.3,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522662.713,80.9,148.8,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522663.713,80.5,150.2,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522664.714,78.9,149.7,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522665.716,82.6,149.4,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522666.717,78.6,150.6,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522667.719,77.1,149.1,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522668.719,78.7,150.5,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522669.719,81.5,148.8,31.6,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522670.72,80.7,150.8,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522671.721,78.6,149.5,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522672.722,81.8,149.0,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522673.722,80.8,148.9,32.1,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522674.723,77.6,148.8,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522675.725,83.0,151.2,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522676.726,78.4,150.4,31.6,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522677.727,78.9,150.6,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522678.728,79.5,150.7,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522679.728,82.8,149.8,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522680.728,79.5,148.6,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522681.729,79.6,149.8,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522682.73,81.8,149.9,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522683.73,79.0,150.4,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522684.731,79.6,150.4,32.1,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522685.732,79.9,150.3,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522686.734,80.4,150.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522687.734,81.9,148.9,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522688.735,81.3,150.5,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522689.736,77.8,151.1,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522690.737,79.7,151.4,32.1,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522691.738,81.2,148.8,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522692.74,79.1,148.7,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522693.741,77.8,149.9,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522694.742,77.4,149.2,31.6,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522695.743,79.7,149.4,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522696.744,83.0,149.8,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522697.745,78.6,151.1,32.2,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522698.746,80.6,149.0,31.6,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522699.747,80.1,151.1,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522700.748,78.7,151.0,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522701.749,77.7,148.5,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522702.75,81.6,149.9,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522703.751,78.0,150.4,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522704.753,82.1,148.8,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522705.753,77.1,150.4,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522706.754,80.1,151.3,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522707.755,80.7,150.1,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522708.756,81.5,150.6,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522709.757,78.2,151.2,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522710.758,82.7,149.0,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522711.759,80.7,149.0,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522712.76,81.8,150.4,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522713.761,77.1,151.3,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522714.762,80.6,149.8,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522715.763,78.0,150.3,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522716.763,79.1,150.3,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522717.764,82.7,150.1,31.6,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522718.765,80.3,151.2,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522719.766,82.7,150.5,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522720.766,77.5,149.5,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522721.767,79.0,149.2,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522722.768,80.1,149.5,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522723.769,80.7,148.6,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522724.77,82.4,149.2,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522725.77,83.0,149.9,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522726.77,82.1,148.8,31.9,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522727.771,80.1,150.0,32.2,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522728.772,77.8,149.1,32.2,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522729.773,82.9,150.6,31.8,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522730.774,80.4,148.8,31.8,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522731.775,79.7,149.2,32.1,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522732.776,78.0,151.5,32.0,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522733.777,82.0,150.3,32.4,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522734.778,82.4,149.3,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522735.779,78.9,151.2,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522736.78,79.1,149.7,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522737.78,82.6,148.8,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522738.781,77.0,149.3,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522739.782,80.9,151.0,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522740.783,79.8,150.3,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522741.784,77.5,150.4,31.9,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522742.785,81.8,150.6,32.0,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522743.785,82.6,151.2,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522744.786,80.4,150.5,31.8,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522745.787,81.2,151.3,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522746.787,82.9,151.4,31.7,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522747.787,80.8,150.1,32.1,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522748.787,79.3,150.0,32.0,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522749.788,79.3,150.5,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522750.788,81.1,150.1,32.0,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522751.789,78.0,149.0,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522752.79,82.1,151.0,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522753.791,78.7,149.0,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522754.792,79.4,151.4,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522755.793,77.4,150.2,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522756.794,82.3,150.8,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522757.795,78.6,149.0,31.7,optimal,danger,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522758.796,82.0,150.1,32.2,optimal,danger,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522759.796,82.0,151.1,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522760.797,81.4,149.2,32.4,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522761.798,80.4,150.7,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522762.799,81.7,150.0,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522763.8,82.7,150.6,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522764.8,79.1,151.2,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522765.801,78.1,148.5,31.8,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522766.802,79.8,150.9,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522767.803,80.9,150.0,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522768.804,81.3,149.7,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522769.805,81.0,149.0,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522770.806,80.7,151.1,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522771.807,80.7,149.7,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522772.808,80.9,151.0,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522773.808,81.8,149.6,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522774.809,81.5,148.6,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522775.811,81.1,149.9,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522776.81,79.2,148.8,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522777.811,81.2,148.8,31.9,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522778.811,82.0,149.0,31.9,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522779.812,79.0,148.9,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522780.813,82.6,149.5,31.7,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522781.813,78.1,150.4,32.1,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522782.813,82.1,149.7,32.0,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522783.814,78.9,148.9,32.0,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522784.814,80.5,151.2,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522785.816,78.0,149.4,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522786.818,81.6,149.7,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522787.818,81.2,151.3,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522788.819,78.5,150.1,32.2,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522789.821,77.4,150.7,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522790.822,82.9,148.8,31.7,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522791.823,78.9,149.1,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522792.825,80.7,149.1,32.1,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522793.826,82.7,151.2,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522794.826,77.6,151.3,32.0,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522795.827,80.7,150.0,31.9,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522796.828,82.2,150.7,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522797.829,80.9,151.5,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522798.83,82.0,150.1,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522799.831,81.0,149.3,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522800.832,79.9,149.1,32.2,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522801.833,79.5,149.6,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522802.833,82.8,151.2,31.8,optimal,danger,optimal,↑ increasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522803.833,82.4,150.5,32.4,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522804.834,77.2,149.6,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522805.835,80.0,150.7,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522806.836,81.5,148.5,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522807.837,81.7,148.6,32.0,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522808.838,81.3,149.8,32.3,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522809.839,80.4,151.4,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522810.84,82.8,148.8,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522811.841,78.8,151.4,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522812.842,79.8,149.0,32.2,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522813.842,79.1,149.9,32.3,optimal,danger,optimal,↓ decreasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522814.843,83.0,151.5,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522815.844,79.4,150.4,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522816.845,80.1,151.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522817.846,80.8,149.9,32.4,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522818.846,82.2,150.2,31.7,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522819.847,78.0,148.7,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522820.848,82.5,150.7,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522821.849,78.2,150.1,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522822.85,80.2,151.4,32.0,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522823.849,77.7,148.7,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522824.85,82.3,148.7,32.1,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522825.851,82.9,149.2,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522826.851,80.4,150.5,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522827.852,79.2,149.1,32.3,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522828.853,82.4,149.1,32.1,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522829.854,77.9,149.5,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522830.855,79.4,148.7,32.1,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522831.855,83.0,151.5,31.7,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522832.855,80.7,150.9,31.9,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522833.856,77.5,149.7,31.9,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522834.856,79.8,149.7,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522835.857,78.5,148.9,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522836.858,77.3,149.7,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522837.859,81.5,148.7,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522838.86,77.1,149.7,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522839.861,78.3,149.7,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522840.862,77.7,151.5,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522841.863,81.0,148.7,32.2,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522842.864,78.3,150.0,32.2,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522843.865,83.0,151.1,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522844.866,77.5,150.7,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522845.867,81.2,151.4,32.3,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522846.868,79.2,148.5,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522847.868,77.0,150.5,31.6,optimal,danger,optimal,↓ decreasing,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522848.869,80.2,148.8,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522849.869,82.3,149.1,31.6,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522850.869,79.2,149.1,31.8,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522851.87,82.2,150.0,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522852.871,77.7,149.0,32.4,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522853.872,82.8,148.8,31.8,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522854.873,77.3,150.5,32.3,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522855.874,80.6,150.7,32.4,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522856.875,80.2,151.4,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522857.876,79.8,149.4,32.3,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522858.877,78.7,149.0,31.7,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522859.878,82.9,151.1,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522860.879,79.9,150.9,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522861.879,78.5,150.2,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522862.88,81.9,149.6,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522863.881,82.7,149.1,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522864.882,77.5,150.6,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522865.882,78.3,149.6,31.9,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522866.883,78.0,151.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522867.884,79.1,149.6,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522868.885,79.3,151.0,31.8,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522869.886,83.0,150.2,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522870.887,80.6,151.4,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522871.888,82.4,149.7,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522872.889,77.5,149.7,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522873.89,79.7,148.7,31.9,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522874.891,78.4,149.6,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522875.892,77.9,150.8,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522876.893,79.4,151.0,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522877.894,78.3,149.8,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522878.894,79.3,150.2,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522879.895,80.3,150.9,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522880.896,77.8,151.3,31.7,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522881.897,77.3,150.8,31.8,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522882.898,82.3,150.0,32.0,optimal,danger,optimal,↓ decreasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522883.899,80.1,150.6,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522884.9,81.1,151.4,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522885.9,81.9,150.3,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522886.9,80.2,149.2,32.4,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522887.9,80.3,149.7,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522888.901,79.2,148.5,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522889.901,77.2,150.2,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522890.901,77.3,150.6,31.8,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522891.902,82.4,151.4,31.9,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522892.902,80.4,149.2,32.0,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522893.903,80.1,148.8,32.2,optimal,danger,optimal,↑ increasing,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522894.904,78.5,150.3,31.7,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522895.904,80.9,151.0,32.4,optimal,danger,optimal,→ stable,↓ decreasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522896.904,78.6,151.3,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522897.904,81.2,149.3,31.7,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522898.905,80.8,150.1,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522899.906,77.1,148.8,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522900.906,81.3,149.9,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522901.906,81.7,151.2,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522902.907,77.7,150.8,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522903.907,81.7,151.5,32.3,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522904.908,80.0,149.4,32.2,optimal,danger,optimal,→ stable,↑ increasing,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522905.908,77.0,150.4,31.8,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522906.909,81.2,150.7,32.2,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522907.91,82.3,149.3,31.9,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522908.912,79.0,149.2,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522909.913,82.2,148.9,32.1,optimal,danger,optimal,↑ increasing,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522910.915,82.9,150.6,32.1,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522911.915,80.9,150.7,32.0,optimal,danger,optimal,→ stable,→ stable,→ stable,EXCELLENT,🔥 OVERHEATING: Engine temperature critical
+1779522912.916,79.8,151.2,0.2,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522913.917,80.6,149.6,-0.0,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522914.918,80.8,150.7,-0.1,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522915.919,81.0,151.2,-0.2,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522916.92,77.5,149.5,-0.3,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522917.921,82.9,149.7,-0.0,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522918.922,78.9,148.6,0.3,optimal,danger,danger,↑ increasing,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522919.923,82.5,151.5,-0.4,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522920.925,81.1,150.9,-0.1,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522921.927,82.2,149.5,0.3,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522922.928,81.1,148.6,-0.0,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522923.93,81.5,149.8,0.1,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522924.931,80.3,150.5,-0.0,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522925.932,80.3,150.5,-0.2,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522926.933,81.0,150.0,0.3,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522927.933,77.4,151.1,0.1,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522928.934,80.6,149.7,0.2,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522929.935,80.7,151.5,0.1,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522930.936,79.5,150.9,-0.2,optimal,danger,danger,→ stable,→ stable,↓ decreasing,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|💨 PRESSURE_LEAK: Tire pressure dropping
+1779522931.937,82.0,150.7,-0.3,optimal,danger,danger,→ stable,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522932.938,81.2,150.6,-0.3,optimal,danger,danger,→ stable,↑ increasing,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522933.939,78.6,150.6,0.0,optimal,danger,danger,↓ decreasing,↑ increasing,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522934.939,81.0,149.5,0.1,optimal,danger,danger,↓ decreasing,↑ increasing,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522935.94,77.6,149.0,-0.4,optimal,danger,danger,↓ decreasing,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522936.94,77.5,151.5,-0.1,optimal,danger,danger,↓ decreasing,↑ increasing,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522937.94,79.5,149.3,0.3,optimal,danger,danger,↓ decreasing,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522938.941,79.5,149.8,-0.1,optimal,danger,danger,↓ decreasing,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522939.943,81.6,150.2,-0.3,optimal,danger,danger,↓ decreasing,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522940.943,77.0,149.6,-0.2,optimal,danger,danger,↓ decreasing,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522941.943,77.1,149.0,-0.1,optimal,danger,danger,↓ decreasing,→ stable,→ stable,GOOD,🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522942.945,1.8,-1.2,-0.1,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522943.946,-3.0,1.1,-0.1,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522944.947,2.5,-1.0,0.1,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522945.948,-1.8,1.1,-0.2,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522946.948,0.4,1.3,0.1,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522947.949,0.5,0.2,-0.1,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522948.95,1.9,0.8,0.3,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522949.951,-2.1,-0.7,-0.3,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522950.951,-1.0,1.0,0.3,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522951.952,1.6,-0.8,0.2,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522952.952,-1.2,-0.7,-0.1,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522953.952,1.1,-0.2,-0.3,optimal,cold,danger,↓ decreasing,↓ decreasing,→ stable,GOOD,❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522954.954,299.9,-1.3,0.0,danger,cold,danger,↓ decreasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522955.955,299.2,-0.7,0.2,danger,cold,danger,↑ increasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522956.956,298.5,1.2,0.3,danger,cold,danger,↑ increasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522957.957,301.9,0.4,-0.3,danger,cold,danger,↑ increasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522958.958,300.0,-0.8,0.3,danger,cold,danger,↑ increasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522959.958,299.5,0.1,-0.3,danger,cold,danger,↑ increasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522960.959,302.8,0.4,0.3,danger,cold,danger,↑ increasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522961.96,301.8,0.5,-0.3,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522962.961,303.0,0.8,-0.2,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522963.961,298.6,-0.5,0.1,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522964.962,297.7,-0.5,-0.1,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522965.964,301.4,0.6,-0.2,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522966.966,297.8,-0.7,0.1,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522967.967,303.0,0.3,0.2,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522968.968,299.2,0.0,0.2,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522969.969,297.5,-1.5,0.4,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522970.969,299.2,0.3,0.0,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522971.971,302.8,0.3,0.4,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522972.972,301.0,1.3,0.3,danger,cold,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522973.972,299.6,-1.2,0.1,danger,cold,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522974.973,300.9,-1.4,0.2,danger,cold,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522975.974,297.0,-1.2,-0.2,danger,cold,danger,↓ decreasing,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522976.975,299.1,1.2,0.1,danger,cold,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522977.976,300.9,1.2,0.3,danger,cold,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522978.976,300.5,1.3,0.0,danger,cold,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522979.977,298.8,0.9,-0.4,danger,cold,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|❄️ COLD_ENGINE: Engine not warmed up properly|🛞 LOW_PRESSURE: Tire pressure dangerously low
+1779522980.977,300.6,150.9,0.0,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522981.978,297.3,150.6,0.1,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522982.979,300.3,149.6,-0.1,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522983.979,300.4,151.4,0.3,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522984.98,302.9,150.6,-0.3,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522985.98,298.4,148.9,0.0,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522986.982,299.4,148.9,-0.1,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522987.983,302.6,151.1,0.2,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522988.984,297.2,151.2,-0.2,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522989.985,302.4,151.3,0.4,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522990.985,297.1,149.8,0.2,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522991.986,302.0,150.5,0.3,danger,danger,danger,↑ increasing,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522992.987,302.3,149.0,-0.2,danger,danger,danger,↑ increasing,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522993.988,299.2,149.0,0.1,danger,danger,danger,↑ increasing,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522994.988,300.1,148.6,-0.1,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522995.988,300.7,148.6,0.2,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522996.989,301.1,148.5,0.2,danger,danger,danger,↑ increasing,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522997.99,298.4,149.0,-0.2,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|🛞 LOW_PRESSURE: Tire pressure dangerously low|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522998.991,300.0,149.8,60.0,danger,danger,danger,↑ increasing,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range|📈 RAPID_TEMP_RISE: Engine temperature rising quickly
+1779522999.992,300.4,148.6,59.8,danger,danger,danger,→ stable,↓ decreasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523000.993,300.1,150.2,60.4,danger,danger,danger,↑ increasing,↓ decreasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523001.993,297.5,150.3,60.2,danger,danger,danger,→ stable,↓ decreasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523002.994,300.6,149.0,60.1,danger,danger,danger,↓ decreasing,↓ decreasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523003.995,303.0,149.2,59.9,danger,danger,danger,→ stable,↓ decreasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523004.997,300.4,151.4,60.3,danger,danger,danger,→ stable,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523005.998,302.2,151.2,60.2,danger,danger,danger,→ stable,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523006.999,297.5,149.2,60.3,danger,danger,danger,→ stable,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523008.0,301.5,149.3,60.2,danger,danger,danger,→ stable,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523009.001,297.1,149.8,59.9,danger,danger,danger,→ stable,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523010.002,301.0,149.8,60.0,danger,danger,danger,→ stable,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523011.003,299.6,151.0,59.9,danger,danger,danger,→ stable,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523012.003,300.7,150.1,59.7,danger,danger,danger,→ stable,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523013.004,302.0,148.5,60.0,danger,danger,danger,↑ increasing,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523014.005,297.5,151.1,59.6,danger,danger,danger,→ stable,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523015.006,299.8,151.4,59.9,danger,danger,danger,→ stable,↑ increasing,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523016.007,301.6,150.8,59.7,danger,danger,danger,↓ decreasing,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523017.007,300.5,148.6,60.4,danger,danger,danger,→ stable,→ stable,↑ increasing,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523018.008,297.0,149.0,60.0,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523019.009,298.9,150.3,60.3,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523020.01,300.1,150.6,60.1,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523021.011,301.1,149.2,59.6,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523022.012,298.5,150.3,59.8,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523023.013,300.5,149.2,59.7,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523024.014,297.2,148.9,59.8,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523025.015,299.9,148.9,60.4,danger,danger,danger,→ stable,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523026.016,302.1,150.2,60.3,danger,danger,danger,→ stable,↓ decreasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523027.017,297.3,149.3,60.1,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523028.018,298.7,149.1,60.2,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523029.019,298.3,150.7,60.4,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523030.019,297.3,151.2,60.2,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523031.02,297.5,150.3,60.0,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523032.02,300.2,150.5,59.8,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523033.021,298.0,149.1,60.1,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523034.022,302.2,150.3,60.2,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523035.023,302.8,150.8,60.0,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523036.024,297.7,148.9,59.9,danger,danger,danger,↓ decreasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523037.023,299.6,149.4,60.3,danger,danger,danger,→ stable,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523038.024,301.7,151.4,60.4,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523039.025,301.6,150.8,60.0,danger,danger,danger,→ stable,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523040.025,302.4,150.9,60.0,danger,danger,danger,↑ increasing,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523041.026,302.2,150.6,59.8,danger,danger,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523042.027,301.4,150.9,60.0,danger,danger,danger,↑ increasing,→ stable,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range
+1779523043.028,297.1,150.2,59.9,danger,danger,danger,↑ increasing,↑ increasing,→ stable,FAIR,⚠️ EXCESSIVE_SPEED: Vehicle speed exceeds safe limits|🔥 OVERHEATING: Engine temperature critical|⚠️ OVER_INFLATED: Tire pressure above safe range

@@ -1,0 +1,2 @@
+timestamp,speed_kmh,engine_temp_c,tire_pressure_psi,engine_rpm,oil_pressure_psi,battery_voltage_v,tire_pressure_fl_psi,tire_pressure_fr_psi,tire_pressure_rl_psi,tire_pressure_rr_psi,speed_status,temp_status,psi_status,rpm_status,oil_status,battery_status,speed_trend,temp_trend,psi_trend,overall_health,health_status,emergency,contradictions,tire_speed_risk,temp_correlation_penalty,alerts
+1780032181.417,77.5,90.8,32.1,1496.0,46.0,13.79,32.2,32.3,31.7,31.8,optimal,optimal,optimal,optimal,optimal,optimal,—,—,—,100.0,✅ EXCELLENT,False,NONE,3.2,0.0,NONE
