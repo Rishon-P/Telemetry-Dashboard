@@ -5,7 +5,7 @@ Three-layer safety evaluation system for vehicle telemetry:
 
 LAYER 1: Hard-coded physical limits (overrides everything)
 LAYER 2: Machine Learning Scout (IsolationForest — only if Layer 1 is safe)
-LAYER 3: Gemini AI (diagnostic breakdown — rate-limited in main.py)
+LAYER 3: Groq AI (diagnostic breakdown — rate-limited in main.py)
 """
 
 from __future__ import annotations
@@ -228,7 +228,7 @@ class MLScout:
             maf_val = data.get(_REVERSE_MAPPING.get("maf", "maf_g_sec"), 2.45)
             speed_val = data.get(_REVERSE_MAPPING.get("speed", "vehicle_speed"), 0.0)
             throttle_val = data.get(_REVERSE_MAPPING.get("throttle", "throttle_position"), 0.0)
-            
+
             # 1. Air Intake Diagnostics
             safe_rpm = max(1.0, float(rpm_val))
             safe_load = max(1.0, float(load_val))
@@ -238,26 +238,25 @@ class MLScout:
             # 2. Drivetrain & Kinematic Diagnostics — MANUAL TRANSMISSION (user-selected gear)
             expected_gear = int(data.get("selected_gear", 6))
             # Clamp to valid range: 0 (Neutral) to 6
-            expected_gear = max(0, min(6, expected_gear)) 
+            expected_gear = max(0, min(6, expected_gear))
 
             if expected_gear == 0:
-                # NEUTRAL STATE: Drivetrain disconnected. 
+                # NEUTRAL STATE: Drivetrain disconnected.
                 # RPM is dictated purely by engine idle (800) and free-revving throttle multiplier.
                 expected_rpm = 800.0 + (float(throttle_val) * 30.0)
             else:
                 # IN-GEAR STATE: Drivetrain connected.
                 base_rpm = (float(speed_val) * GEAR_RATIOS[expected_gear] * FINAL_DRIVE / TIRE_RADIUS_M) * 2.65258
                 expected_rpm = max(400.0, base_rpm + (float(throttle_val) * 5.0))
-                
+
             data["transmission_deviation"] = abs(float(rpm_val) - expected_rpm)
 
             # Redline Warning: high speed + low gear → expected_rpm spikes over REDLINE_RPM
             data["redline_warning"] = 1.0 if expected_rpm > REDLINE_RPM else 0.0
 
-            # --- PASTE THE NEW RULE 3 RIGHT HERE ---
             # 3. Tire Thermal & Asymmetry Diagnostics
             expected_tp = 32.0 + (float(speed_val) / 38.0)
-            
+
             tp_fl = float(data.get(_REVERSE_MAPPING.get("tp_fl", "tire_pressure_fl"), 32.0))
             tp_fr = float(data.get(_REVERSE_MAPPING.get("tp_fr", "tire_pressure_fr"), 32.0))
             tp_rl = float(data.get(_REVERSE_MAPPING.get("tp_rl", "tire_pressure_rl"), 32.0))
@@ -267,57 +266,49 @@ class MLScout:
                 abs(tp_fl - expected_tp), abs(tp_fr - expected_tp),
                 abs(tp_rl - expected_tp), abs(tp_rr - expected_tp)
             )
-            # ---------------------------------------
 
             # 4. Electrical System Diagnostics
             expected_voltage = 13.8 if float(rpm_val) > 400.0 else 12.6
             batt_val = float(data.get(_REVERSE_MAPPING.get("battery_voltage", "battery_voltage"), 12.6))
-            
+
             data["electrical_deviation"] = abs(batt_val - expected_voltage)
-            # ---------------------------------------
 
             raw_data_array = [
                 data.get(_REVERSE_MAPPING.get(feat, feat), 0) for feat in FEATURE_NAMES
             ]
 
-            # --- DIAGNOSTIC PROOF BLOCK ---
-            print("\n=== DIAGNOSTIC PROOF ===")
-            print(f"Live Speed: {speed_val} | Live Throttle: {throttle_val}")
-            print(f"Selected Gear: {expected_gear} | Expected RPM: {expected_rpm:.0f} | Actual RPM: {rpm_val}")
-            print(f"Redline Warning: {'YES' if data['redline_warning'] else 'NO'} (threshold: {REDLINE_RPM} RPM)")
-            print(f"Calculated Transmission Deviation: {data['transmission_deviation']}")
-            print(f"16-Feature Array Sent to AI: {raw_data_array}")
-            print("========================\n")
+            logger.debug(
+                "MLScout feature array: speed=%.1f rpm=%.0f gear=%d expected_rpm=%.0f "
+                "transmission_dev=%.1f tire_thermal_dev=%.2f airflow_dev=%.2f electrical_dev=%.2f",
+                float(speed_val), float(rpm_val), expected_gear, expected_rpm,
+                data["transmission_deviation"], data["tire_thermal_deviation"],
+                data["airflow_deviation"], data["electrical_deviation"],
+            )
 
             scaled_data = self.scaler.transform([raw_data_array])
-            
+
             # 1. Base ML Predictions
             prediction = int(self.model.predict(scaled_data)[0])
             anomaly_score = float(self.model.score_samples(scaled_data)[0])
 
             # 2. Z-Score Calculations
             abs_z_scores = np.abs(scaled_data[0])
-            
+
             # --- THE WEIGHTING FIX ---
             # Discount the tire pressures so they don't steal the root cause
             # from complex engine anomalies due to minor 2 PSI fluctuations.
             # Indices 9, 10, 11, 12 are the four tires.
             for i in range(9, 13):
-                abs_z_scores[i] = abs_z_scores[i] * 0.3 # Reduce their mathematical loudness by 70%
+                abs_z_scores[i] = abs_z_scores[i] * 0.3
 
             max_z_score = float(np.max(abs_z_scores))
             max_dev_index = int(np.argmax(abs_z_scores))
 
-            # === PASTE THIS DIAGNOSTIC PROBE HERE ===
-            print("\n--- Z-SCORE DIAGNOSTIC DUMP ---")
-            for name, z_val in zip(FEATURE_NAMES, abs_z_scores):
-                print(f"{name}: {z_val:.3f}")
-            print("-------------------------------")
-            # ========================================
-            
-            is_ml_anomaly = False
-            root_cause = None
-            
+            logger.debug(
+                "MLScout z-scores: max=%.3f feature=%s",
+                max_z_score, FEATURE_NAMES[max_dev_index],
+            )
+
             is_ml_anomaly = False
             root_cause = None
 
@@ -331,13 +322,13 @@ class MLScout:
                 # Scenario A: Isolation Forest found a complex, multi-sensor anomaly
                 is_ml_anomaly = True
                 root_cause = FEATURE_NAMES[max_dev_index]
-                
+
             elif max_z_score > 5.0:
                 # Scenario B: Isolation Forest is blind, but Z-Score caught a massive single-sensor drop
                 logger.warning(f"Z-Score Fallback Triggered! {FEATURE_NAMES[max_dev_index]} hit {max_z_score:.1f} standard deviations.")
                 is_ml_anomaly = True
                 root_cause = FEATURE_NAMES[max_dev_index]
-                prediction = -1 # Force the prediction to -1 so the gateway understands it
+                prediction = -1  # Force the prediction to -1 so the gateway understands it
 
             elif fuel_val < 10.0:
                 # Scenario C: Predictive Maintenance (Low Fuel Warning)
@@ -347,10 +338,131 @@ class MLScout:
                 prediction = -1
 
             return prediction, anomaly_score, root_cause, is_ml_anomaly
-            
+
         except Exception as e:
             logger.error(f"ML Scout evaluation error: {e}")
             return 1, -0.4, None, False
+
+
+def _build_deterministic_context(ml_root_cause: str, filtered_data: dict[str, float]) -> str:
+    """
+    Build a strictly calculated, direction-explicit context string for the Groq AI.
+
+    For every anomaly type, this function:
+      1. Reads the actual live sensor values from filtered_data.
+      2. Recalculates the same expected baseline that the ML used.
+      3. Computes the signed deviation (actual - expected).
+      4. States the direction (ABOVE / BELOW) and the magnitude explicitly.
+
+    The returned string contains only mathematical facts — no guesses, no ambiguity.
+    The Groq AI receives this string and must reformat it, not interpret it.
+    """
+    # --- Extract live sensor values (correct key names, post-filter) ---
+    speed_val   = float(filtered_data.get("speed_kmh", 0.0))
+    rpm_val     = float(filtered_data.get("engine_rpm", 800.0))
+    load_val    = float(filtered_data.get("engine_load_pct", 15.0))
+    throttle_val = float(filtered_data.get("throttle_pct", 0.0))
+    actual_maf  = float(filtered_data.get("maf_g_sec", 0.0))
+    actual_volt = float(filtered_data.get("battery_voltage_v", 13.8))
+    gear        = int(filtered_data.get("selected_gear", 1))
+    fuel_val    = float(filtered_data.get("fuel_level_pct", 100.0))
+
+    tp_fl = float(filtered_data.get("tire_pressure_fl_psi", 32.0))
+    tp_fr = float(filtered_data.get("tire_pressure_fr_psi", 32.0))
+    tp_rl = float(filtered_data.get("tire_pressure_rl_psi", 32.0))
+    tp_rr = float(filtered_data.get("tire_pressure_rr_psi", 32.0))
+
+    # ── tire_thermal_deviation ────────────────────────────────────────────────
+    if ml_root_cause == "tire_thermal_deviation":
+        actual_avg_tp = round((tp_fl + tp_fr + tp_rl + tp_rr) / 4.0, 1)
+        expected_tp   = round(32.0 + (speed_val / 38.0), 1)
+        deviation     = round(actual_avg_tp - expected_tp, 1)
+        direction     = "ABOVE" if deviation >= 0 else "BELOW"
+        abs_dev       = abs(deviation)
+        fault = (
+            "over-pressurization: tires have not released pressure despite speed-driven thermal load"
+            if deviation >= 0 else
+            "under-pressurization: tires are losing pressure faster than thermal expansion can compensate"
+        )
+        return (
+            f"At {speed_val:.1f} km/h, speed-adjusted thermodynamic baseline requires {expected_tp} PSI. "
+            f"Actual average tire pressure is {actual_avg_tp} PSI, which is {abs_dev} PSI {direction} "
+            f"the expected baseline. Confirmed condition: {fault}."
+        )
+
+    # ── airflow_deviation ─────────────────────────────────────────────────────
+    if ml_root_cause == "airflow_deviation":
+        safe_rpm      = max(1.0, rpm_val)
+        safe_load     = max(1.0, load_val)
+        expected_maf  = round((safe_rpm * safe_load * 2.0 * 1.225) / 12000.0, 2)
+        deviation     = round(actual_maf - expected_maf, 2)
+        direction     = "ABOVE" if deviation >= 0 else "BELOW"
+        abs_dev       = abs(deviation)
+        fault = (
+            "excess airflow: intake air leak or MAF sensor reading falsely high"
+            if deviation >= 0 else
+            "insufficient airflow: intake restriction, clogged air filter, or failing MAF sensor"
+        )
+        return (
+            f"At {rpm_val:.0f} RPM under {load_val:.0f}% engine load, calculated MAF requirement is "
+            f"{expected_maf} g/s. Actual MAF is {actual_maf} g/s, which is {abs_dev} g/s {direction} "
+            f"the breathing baseline. Confirmed condition: {fault}."
+        )
+
+    # ── transmission_deviation ────────────────────────────────────────────────
+    if ml_root_cause == "transmission_deviation":
+        clamped_gear = max(0, min(6, gear))
+        if clamped_gear == 0:
+            expected_rpm_val = round(800.0 + (throttle_val * 30.0), 0)
+        else:
+            base_rpm = (
+                speed_val * GEAR_RATIOS[clamped_gear] * FINAL_DRIVE / TIRE_RADIUS_M
+            ) * 2.65258
+            expected_rpm_val = round(max(400.0, base_rpm + (throttle_val * 5.0)), 0)
+        deviation    = round(rpm_val - expected_rpm_val, 0)
+        direction    = "ABOVE" if deviation >= 0 else "BELOW"
+        abs_dev      = abs(deviation)
+        fault = (
+            "RPM exceeds kinematic prediction: wheel slip, torque converter lockup failure, or gear ratio mismatch"
+            if deviation >= 0 else
+            "RPM below kinematic prediction: drivetrain disconnect, clutch slip, or transmission fault"
+        )
+        return (
+            f"In Gear {clamped_gear} at {speed_val:.1f} km/h, kinematic ratio requires "
+            f"{expected_rpm_val:.0f} RPM. Actual RPM is {rpm_val:.0f}, which is {abs_dev:.0f} RPM "
+            f"{direction} the drivetrain baseline. Confirmed condition: {fault}."
+        )
+
+    # ── electrical_deviation ──────────────────────────────────────────────────
+    if ml_root_cause == "electrical_deviation":
+        expected_volt = 13.8 if rpm_val > 400.0 else 12.6
+        deviation     = round(actual_volt - expected_volt, 2)
+        direction     = "ABOVE" if deviation >= 0 else "BELOW"
+        abs_dev       = abs(deviation)
+        fault = (
+            "voltage regulator failure or alternator overcharging the battery"
+            if deviation >= 0 else
+            "alternator underperformance, excessive parasitic drain, or failing alternator diode"
+        )
+        return (
+            f"At {rpm_val:.0f} RPM, alternator output must maintain {expected_volt}V. "
+            f"Actual battery voltage is {actual_volt}V, which is {abs_dev}V {direction} "
+            f"the charging baseline. Confirmed condition: {fault}."
+        )
+
+    # ── fuel_level (predictive maintenance) ──────────────────────────────────
+    if ml_root_cause == "fuel_level":
+        return (
+            f"Fuel level is at {fuel_val:.1f}%, which is below the 10% predictive maintenance "
+            f"threshold. Refuel immediately to prevent engine starvation."
+        )
+
+    # ── generic fallback ──────────────────────────────────────────────────────
+    return (
+        f"Anomaly detected in feature '{ml_root_cause}'. "
+        f"Physical inspection required to determine root cause."
+    )
+
 
 class SafetyGateway:
     """
@@ -361,14 +473,13 @@ class SafetyGateway:
     """
 
     def __init__(self, ml_scout=None) -> None:
-        # Assuming SafetyBoundaryChecker and MLScout are imported
         self.boundary_checker = SafetyBoundaryChecker()
         self.ml_scout = ml_scout or MLScout()
-        
+
         # 1. THE TIMERS (For API Rate Limiting & UI Hysteresis)
         self.last_gemini_call_time = 0.0
         self.warning_cooldown_time = 0.0
-        
+
         # 2. THE SHOCK ABSORBER MEMORY
         self.smoothed_sensor_state = {}
 
@@ -392,31 +503,26 @@ class SafetyGateway:
                 filtered_data[sensor] = value
             else:
                 previous = self.smoothed_sensor_state[sensor]
-                
+
                 # Bypass filter if jump is > 10% + 2.0 flat buffer
                 if abs(value - previous) > (abs(previous) * 0.1) + 2.0:
-                    dynamic_alpha = 1.0  
+                    dynamic_alpha = 1.0
                 else:
-                    dynamic_alpha = alpha  
-                    
+                    dynamic_alpha = alpha
+
                 smoothed_val = (dynamic_alpha * value) + ((1.0 - dynamic_alpha) * previous)
                 self.smoothed_sensor_state[sensor] = smoothed_val
                 filtered_data[sensor] = smoothed_val
-                
+
         return filtered_data
 
     def evaluate(self, data: dict[str, float]) -> dict[str, Any]:
         current_time = time.time()
 
-        # ── Step 0: Extract baseline environmental context (used by Layer 2 payload) ──
-        speed = float(data.get("vehicle_speed_kmh", 0))
-        rpm   = float(data.get("engine_rpm", 0))
-        load  = float(data.get("engine_load_percent", 0))
-
-        # ── Step 0: Apply the Shock Absorber ───────────────────────────────
+        # ── Apply the Shock Absorber ────────────────────────────────────────
         filtered_data = self.apply_low_pass_filter(data, alpha=0.2)
 
-        # ── Layer 1: physical limits FIRST ───────────────────────────────
+        # ── Layer 1: physical limits FIRST ─────────────────────────────────
         layer_1_triggered, safety_violations, layer_1_cause = (
             self.boundary_checker.check_physical_safety(filtered_data)
         )
@@ -425,18 +531,17 @@ class SafetyGateway:
         ml_anomaly_score = -0.4
         ml_root_cause = None
         is_ml_anomaly = False
-        trigger_gemini = False
 
         if layer_1_triggered:
             self.warning_cooldown_time = current_time
 
-            # 1. STRICT CACHE BARRIER
+            # STRICT CACHE BARRIER: only regenerate if time elapsed or cause changed
             time_elapsed = (current_time - self.last_gemini_call_time) > 60
             cause_changed = layer_1_cause != self.last_root_cause
 
             if time_elapsed or cause_changed:
-                # 2. ANTI-HALLUCINATION PAYLOAD
-                # Do not send all 16 variables. Only send the exact physical violation.
+                # ANTI-HALLUCINATION PAYLOAD for Layer 1:
+                # Send only the exact physical violation string — no ambiguous sensor arrays.
                 strict_payload = {
                     "root_cause": layer_1_cause,
                     "violation_details": safety_violations[0] if safety_violations else "Critical limit exceeded."
@@ -466,15 +571,14 @@ class SafetyGateway:
                 "redline_warning": False
             }
 
-        # ── Layer 2: ML only when physical limits are safe ─────────────
+        # ── Layer 2: ML only when physical limits are safe ──────────────────
         ml_prediction, ml_anomaly_score, ml_root_cause, is_ml_anomaly = (
             self.ml_scout.evaluate(filtered_data)
         )
 
-        # Extract redline_warning that was stamped into filtered_data by MLScout
+        # Extract redline_warning stamped into filtered_data by MLScout
         redline_warning = bool(filtered_data.get("redline_warning", 0.0))
 
-        # ── Layer 2: ML only ─────────────────────────────────────────
         if is_ml_anomaly:
             self.warning_cooldown_time = current_time
 
@@ -482,30 +586,30 @@ class SafetyGateway:
             cause_changed = ml_root_cause != self.last_root_cause
 
             if time_elapsed or cause_changed:
-                # 1. Define unit and physical context based on the specific anomaly
-                context_hint = "A statistical deviation was detected."
-                if ml_root_cause == "tire_thermal_deviation":
-                    expected_psi = round(32.0 + (speed / 38.0), 1)
-                    context_hint = f"Vehicle is traveling at {speed} km/h. At this speed, tires should heat up and expand to approximately {expected_psi} PSI. The current tire pressures are significantly lower than this expected baseline. The tires are dangerously under-pressurized for this velocity."
-                elif ml_root_cause == "airflow_deviation":
-                    context_hint = f"Engine is at {rpm} RPM under {load}% load. The mass air flow (g/s) is mathematically misaligned with the engine's current breathing requirements."
-                elif ml_root_cause == "transmission_deviation":
-                    context_hint = f"Vehicle is traveling at {speed} km/h but the engine is spinning at {rpm} RPM. The kinematic ratio does not match the selected gear, indicating drivetrain slip or disconnect."
-                elif ml_root_cause == "electrical_deviation":
-                    context_hint = f"Engine is running at {rpm} RPM, which should drive the alternator to provide ~13.8V, but the battery voltage (V) deviates significantly from this curve."
+                # ── DETERMINISTIC CONTEXT INJECTION ────────────────────────
+                # Build a mathematically precise context string that explicitly
+                # states the actual value, the expected baseline, and the
+                # signed direction of the deviation. The AI receives facts only
+                # — it must reformat them, not interpret or guess.
+                deterministic_context = _build_deterministic_context(
+                    ml_root_cause, filtered_data
+                )
 
-                # 2. Build the Hybrid Payload
                 strict_ml_payload = {
                     "diagnostic_layer": "Machine Learning Anomaly Detection",
                     "root_cause": ml_root_cause,
                     "anomaly_score_magnitude": float(round(abs(ml_anomaly_score), 4)),
-                    "physical_context": context_hint,
-                    "instruction": "Diagnose the issue based strictly on the provided physical context. Do not alter the cause-and-effect relationship. Do not invent external factors or specific sensor directions not explicitly provided."
+                    "physical_context": deterministic_context,
                 }
 
                 self.cached_layer_3_report = generate_diagnostic_report(strict_ml_payload)
                 self.last_gemini_call_time = current_time
                 self.last_root_cause = ml_root_cause
+
+                logger.info(
+                    "Layer 3 context built for %s: %s",
+                    ml_root_cause, deterministic_context,
+                )
 
             logger.warning(f"ML ANOMALY: {ml_root_cause}")
 
@@ -528,9 +632,8 @@ class SafetyGateway:
                 "redline_warning": False
             }
 
-        # ── Layer 3: HYSTERESIS (Sticky UI) ───────────────────────────
-        # Even if the ML model thinks the car is safe, we force it to stay in 
-        # a Warning state for 3 seconds to prevent UI flickering.
+        # ── HYSTERESIS (Sticky UI) ──────────────────────────────────────────
+        # Keep WARNING state for 3 seconds after clearing to prevent UI flickering.
         if (current_time - self.warning_cooldown_time) < 3.0:
             return {
                 "status": "WARNING",
@@ -550,7 +653,7 @@ class SafetyGateway:
                 "redline_warning": redline_warning,
             }
 
-        # ── Final Layer: ALL CLEAR ─────────────────────────────────────
+        # ── ALL CLEAR ───────────────────────────────────────────────────────
         self.cached_layer_3_report = None
         self.last_gemini_call_time = 0.0
         self.last_root_cause = None
@@ -571,6 +674,7 @@ class SafetyGateway:
             "trigger_gemini": False,
             "redline_warning": redline_warning,
         }
+
 
 _ml_scout = MLScout()
 safety_gateway = SafetyGateway(ml_scout=_ml_scout)
