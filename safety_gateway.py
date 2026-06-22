@@ -492,6 +492,89 @@ def _build_deterministic_context(ml_root_cause: str, filtered_data: dict[str, fl
     )
 
 
+def _compute_anomaly_signature(ml_root_cause: str, filtered_data: dict[str, float]) -> str:
+    """
+    Compute a compact structural state signature for the current anomaly.
+
+    Returns a string that changes only when the physical fault state changes
+    meaningfully — e.g. a wheel transitions from UNDER → MATCHING, or a MAF
+    deviation crosses zero.  When the signature changes, the 60-second Groq
+    cooldown is bypassed immediately so the AI reflects the new reality.
+
+    Bucketed magnitudes (2 g/s MAF, 200 RPM transmission, 0.2 V electrical,
+    5 % fuel) suppress sensor jitter so routine noise never triggers spurious
+    Groq calls — only genuine structural transitions do.
+    """
+    speed_val    = float(filtered_data.get("speed_kmh", 0.0))
+    rpm_val      = float(filtered_data.get("engine_rpm", 800.0))
+    load_val     = float(filtered_data.get("engine_load_pct", 15.0))
+    actual_maf   = float(filtered_data.get("maf_g_sec", 0.0))
+    actual_volt  = float(filtered_data.get("battery_voltage_v", 13.8))
+    gear         = int(filtered_data.get("selected_gear", 1))
+    throttle_val = float(filtered_data.get("throttle_pct", 0.0))
+    fuel_val     = float(filtered_data.get("fuel_level_pct", 100.0))
+
+    tp_fl = float(filtered_data.get("tire_pressure_fl_psi", 32.0))
+    tp_fr = float(filtered_data.get("tire_pressure_fr_psi", 32.0))
+    tp_rl = float(filtered_data.get("tire_pressure_rl_psi", 32.0))
+    tp_rr = float(filtered_data.get("tire_pressure_rr_psi", 32.0))
+
+    # ── tire_thermal_deviation ────────────────────────────────────────────────
+    if ml_root_cause == "tire_thermal_deviation":
+        expected_tp = 32.0 + (speed_val / 38.0)
+
+        def _wheel_state(actual: float) -> str:
+            dev = actual - expected_tp
+            if abs(dev) < 0.5:
+                return "M"  # Matching
+            return f"O{round(dev, 1)}" if dev > 0 else f"U{round(abs(dev), 1)}"
+
+        return (
+            f"tire|{_wheel_state(tp_fl)}|{_wheel_state(tp_fr)}"
+            f"|{_wheel_state(tp_rl)}|{_wheel_state(tp_rr)}"
+        )
+
+    # ── airflow_deviation ─────────────────────────────────────────────────────
+    if ml_root_cause == "airflow_deviation":
+        safe_rpm  = max(1.0, rpm_val)
+        safe_load = max(1.0, load_val)
+        expected_maf = (safe_rpm * safe_load * 2.0 * 1.225) / 12000.0
+        dev = actual_maf - expected_maf
+        direction = "H" if dev >= 0 else "L"
+        magnitude = round(abs(dev) / 2.0) * 2  # 2 g/s buckets — suppresses jitter
+        return f"maf|{direction}|{magnitude}"
+
+    # ── transmission_deviation ────────────────────────────────────────────────
+    if ml_root_cause == "transmission_deviation":
+        clamped_gear = max(0, min(6, gear))
+        if clamped_gear == 0:
+            expected_rpm_val = 800.0 + (throttle_val * 30.0)
+        else:
+            base_rpm = (
+                speed_val * GEAR_RATIOS[clamped_gear] * FINAL_DRIVE / TIRE_RADIUS_M
+            ) * 2.65258
+            expected_rpm_val = max(400.0, base_rpm + (throttle_val * 5.0))
+        dev = rpm_val - expected_rpm_val
+        direction = "H" if dev >= 0 else "L"
+        magnitude = round(abs(dev) / 200) * 200  # 200 RPM buckets
+        return f"trans|{direction}|{magnitude}"
+
+    # ── electrical_deviation ──────────────────────────────────────────────────
+    if ml_root_cause == "electrical_deviation":
+        expected_volt = 13.8 if rpm_val > 400.0 else 12.6
+        dev = actual_volt - expected_volt
+        direction = "H" if dev >= 0 else "L"
+        magnitude = round(abs(dev) / 0.2) * 0.2  # 0.2 V buckets
+        return f"elec|{direction}|{magnitude:.1f}"
+
+    # ── fuel_level ────────────────────────────────────────────────────────────
+    if ml_root_cause == "fuel_level":
+        fuel_bucket = round(fuel_val / 5) * 5  # 5 % buckets
+        return f"fuel|{fuel_bucket}"
+
+    return f"generic|{ml_root_cause}"
+
+
 class SafetyGateway:
     """
     Gateway hierarchy (Layer 1 overrides Layer 2):
@@ -514,6 +597,7 @@ class SafetyGateway:
         # 3. LAYER 3 AI DIAGNOSTIC CACHE
         self.cached_layer_3_report: str | None = None
         self.last_root_cause: str | None = None
+        self.last_anomaly_signature: str | None = None
 
     def apply_low_pass_filter(self, raw_data: dict[str, float], alpha: float = 0.2) -> dict[str, float]:
         """Filters out minor vibrations but snaps instantly on manual slider jumps."""
@@ -613,7 +697,14 @@ class SafetyGateway:
             time_elapsed = (current_time - self.last_gemini_call_time) > 60
             cause_changed = ml_root_cause != self.last_root_cause
 
-            if time_elapsed or cause_changed:
+            # Compute the structural state fingerprint for this anomaly.
+            # Bypasses the 60-second cooldown instantly when a sensor parameter
+            # crosses a meaningful threshold — e.g. a tire goes from UNDER →
+            # MATCHING — even if the root-cause label hasn't changed.
+            current_signature = _compute_anomaly_signature(ml_root_cause, filtered_data)
+            signature_changed = current_signature != self.last_anomaly_signature
+
+            if time_elapsed or cause_changed or signature_changed:
                 # ── DETERMINISTIC CONTEXT INJECTION ────────────────────────
                 # Build a mathematically precise context string that explicitly
                 # states the actual value, the expected baseline, and the
@@ -633,6 +724,7 @@ class SafetyGateway:
                 self.cached_layer_3_report = generate_diagnostic_report(strict_ml_payload)
                 self.last_gemini_call_time = current_time
                 self.last_root_cause = ml_root_cause
+                self.last_anomaly_signature = current_signature
 
                 logger.info(
                     "Layer 3 context built for %s: %s",
@@ -685,6 +777,7 @@ class SafetyGateway:
         self.cached_layer_3_report = None
         self.last_gemini_call_time = 0.0
         self.last_root_cause = None
+        self.last_anomaly_signature = None
         return {
             "status": "HEALTHY",
             "health_score": 97.5,

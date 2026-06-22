@@ -1,0 +1,14 @@
+Fix the critical latency and UI rendering bugs in the telemetry dashboard's AI diagnostic display.
+
+THE BUGS:
+1. Extreme Latency (Data to AI Update Delay): When a user adjusts a parameter (e.g., changing a single tire pressure from a failing state back to a healthy state), the AI diagnostic message takes an unacceptable amount of time (roughly 60 seconds) to update and reflect the new reality. The system is failing to trigger rapid recalculations when live, meaningful state changes occur in the telemetry data.
+2. UI Flickering (Layer 3 Diagnostic Box): The "Layer 3 - SDV Cognitive Diagnostic" UI component that displays the AI text is constantly and aggressively flickering. This creates a severe readability issue for the user, indicating a flaw in how the frontend is handling state updates, re-renders, or WebSocket message ingestion for that specific component.
+
+EXPECTED OUTPUT / REQUIRED BEHAVIOR:
+1. Fix the Latency: The Python backend (`safety_gateway.py`) must be updated to intelligently and immediately bypass any hardcoded cooldown timers *only* if the incoming telemetry data indicates a significant structural change in the anomaly state (e.g., a parameter transitioning from an anomalous value to an expected baseline value, or vice versa). The AI payload must be re-triggered and dispatched instantly upon a meaningful state change.
+2. Fix the Flickering: Inspect and resolve the frontend React/UI component responsible for rendering the AI diagnostic text. Ensure that the component only re-renders when the actual string content of the AI message changes, preventing unnecessary DOM repaints caused by the high-frequency WebSocket loop.
+
+STRICT CONSTRAINTS:
+- Do NOT alter the underlying Isolation Forest ML logic, the Layer 1 Hard Rules, or the granular individual-tire context injection math established in previous fixes.
+- Do NOT alter the Groq API handler constraints, system prompts, or model parameters.
+- Limit modifications strictly to the timing/trigger logic in the Python backend (`safety_gateway.py`) and the React component lifecycle/state management responsible for the UI flickering.
